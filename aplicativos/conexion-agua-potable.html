@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15171c">
-<title>Escaleras de Concreto Armado — Aplicativo · Luis Miguel Cruz Efus</title>
+<title>Conexión Domiciliaria de Agua Potable — Aplicativo · Luis Miguel Cruz Efus</title>
 
 <link rel="icon" type="image/png" href="../imagenes/lm_ingenieria/marca_lm/logo.png">
 
@@ -261,7 +261,7 @@
   }
   .lightbox-counter span{ color: var(--accent); }
 
-  /* ===== Capa viva (atmósfera) + logo limpio — mejora rev.03 ===== */
+  /* ===== Capa viva (atmosfera) + logo limpio ===== */
   .atmosphere{ position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none; }
   .atmosphere .orb{ position:absolute; border-radius:50%; filter:blur(120px); will-change:transform; }
   .atmosphere .orb-amber{ width:46vw; height:46vw; min-width:360px; min-height:360px; background:radial-gradient(circle, oklch(0.78 0.14 65 / 0.50), transparent 68%); top:-16vh; right:-8vw; opacity:.5; animation:driftA 30s ease-in-out infinite alternate; }
@@ -271,7 +271,7 @@
   @keyframes driftB{ to{ transform:translate(8vw,-6vh) scale(1.15); } }
   @keyframes driftC{ to{ transform:translate(-6vw,-7vh) scale(1.2); } }
   @media (prefers-reduced-motion: reduce){ .atmosphere .orb{ animation:none; } }
-  /* Logo sin recuadro amarillo, más presencia */
+  /* Logo sin recuadro amarillo, mas presencia */
   .logo-bezel{ width:auto !important; height:42px !important; border:none !important; background:transparent !important; overflow:visible !important; padding:0 !important; }
   .logo-bezel img{ width:auto !important; height:100% !important; max-width:175px; object-fit:contain; }
 
@@ -299,7 +299,7 @@
   .hcar-dots{ display:flex; gap:7px; justify-content:center; flex-wrap:wrap; margin-top:16px; }
   .hcar-dot{ width:28px; height:4px; border-radius:2px; background:var(--line); cursor:pointer; transition:background .25s,transform .25s; border:none; padding:0; }
   .hcar-dot.is-active{ background:var(--accent); transform:scaleY(1.6); }
-  /* ===== Datos técnicos horizontales ===== */
+  /* ===== Datos tecnicos horizontales ===== */
   .spec-strip{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line-soft); border:1px solid var(--line-soft); border-radius:6px; overflow:hidden; }
   @media (min-width:768px){ .spec-strip{ grid-template-columns:repeat(4,1fr); } }
   .spec{ background:oklch(0.16 0.012 250); padding:18px 20px; }
@@ -313,12 +313,12 @@
 
 <header class="fixed top-0 left-0 right-0 z-50 nav-bg border-b" style="border-color: var(--line-soft);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-4">
-    <a href="../index.html" class="flex items-center gap-3">
+    <a href="../index.html#aplicativos" class="flex items-center gap-3">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color: var(--accent);"><path d="M13 7H1m0 0l5-5m-5 5l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       <span class="mono text-xs uppercase tracking-[0.18em]" style="color: var(--text-dim);">Volver al portafolio</span>
     </a>
     <div class="hidden md:flex items-center gap-3">
-      <span class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">Aplicativo N.05</span>
+      <span class="chip accent">Publicado</span>
     </div>
   </div>
 </header>
@@ -328,44 +328,44 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
 
     <div class="flex items-center justify-between mb-12">
-      <div class="coord">N.05 / Aplicativo</div>
-      <div class="coord hidden md:flex">E.060 · E.020</div>
+      <div class="coord">N.IS.010 — 2026</div>
+      <div class="coord hidden md:flex">IS.010 · OS.050 · SEDAPAL</div>
     </div>
 
     <div class="grid lg:grid-cols-12 gap-12 items-start">
       <div class="lg:col-span-7">
         <div class="flex flex-wrap items-center gap-3 mb-8">
-          <span class="chip accent">Estructuras</span>
-          <span class="chip">E.060</span>
-          <span class="chip">E.020</span>
-          <span class="chip">Web app</span>
-          <span class="chip">Offline</span>
+          <span class="chip accent">Publicado</span>
+          <span class="chip">IS.010</span>
+          <span class="chip">OS.050</span>
+          <span class="chip">SEDAPAL</span>
         </div>
         <h1 class="display text-5xl md:text-6xl lg:text-7xl mb-10" data-reveal>
-          Escaleras de <em>Concreto<br>Armado</em>.
+          Conexión <em>Domiciliaria</em>.
         </h1>
         <p class="text-lg leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          Diseñador de escaleras de concreto armado tipo losa maciza, con verificación geométrica Blondel y armado positivo, negativo y de temperatura bajo Norma E.060.
-        </p>
-        <p class="text-base leading-relaxed max-w-2xl" style="color: var(--text-dim);" data-reveal>
-          Convierte el cálculo manual de cada tramo y descanso en un flujo trazable: cargas E.020 → momentos → cuantías → despiece, con resumen imprimible para detalle de planos.
+          Herramienta profesional para dimensionar y verificar conexiones prediales de agua potable. Define la demanda del predio, construye la ruta hidráulica tramo a tramo con Darcy-Weisbach y Colebrook-White, integra el catálogo de medidores SEDAPAL y genera una verificación completa de presiones, velocidades y cumplimiento IS.010 / OS.050.
         </p>
       </div>
 
       <div class="lg:col-span-5" data-reveal>
         <div class="hero-carousel" data-hcar>
           <div class="hcar-stage hcar-frame">
-          <div class="hcar-slide is-active" data-lightbox data-src="../imagenes/lm_ingenieria/escaleras_ca/01_escaleras_ca.png" data-num="N.01" data-caption="Geometría y verificación Blondel"><img src="../imagenes/lm_ingenieria/escaleras_ca/01_escaleras_ca.png" alt="N.01" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/escaleras_ca/02_escaleras_ca.png" data-num="N.02" data-caption="Análisis y despiece de armado"><img src="../imagenes/lm_ingenieria/escaleras_ca/02_escaleras_ca.png" alt="N.02" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
+          <div class="hcar-slide is-active" data-lightbox data-src="../imagenes/lm_ingenieria/conexion_agua_potable/01.png" data-num="N.01" data-caption="Datos del proyecto y demanda"><img src="../imagenes/lm_ingenieria/conexion_agua_potable/01.png" alt="N.01" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
+          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/conexion_agua_potable/02.png" data-num="N.02" data-caption="Ruta hidráulica multitramo"><img src="../imagenes/lm_ingenieria/conexion_agua_potable/02.png" alt="N.02" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
+          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/conexion_agua_potable/03.png" data-num="N.03" data-caption="Motor hidráulico y verificación"><img src="../imagenes/lm_ingenieria/conexion_agua_potable/03.png" alt="N.03" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
+          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/conexion_agua_potable/04.png" data-num="N.04" data-caption="Memoria de cálculo y resultados"><img src="../imagenes/lm_ingenieria/conexion_agua_potable/04.png" alt="N.04" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
             <button class="hcar-nav prev" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M9 1L3 7l6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
             <button class="hcar-nav next" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M5 1l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
             <button class="hcar-zoom" data-hcar-zoom><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Ampliar</button>
-            <div class="hcar-caption"><span class="num" data-hcar-num>N.01</span><span data-hcar-cap>Geometría y verificación Blondel</span></div>
+            <div class="hcar-caption"><span class="num" data-hcar-num>N.01</span><span data-hcar-cap>Datos del proyecto y demanda</span></div>
             <div class="hcar-progress"><span></span></div>
           </div>
           <div class="hcar-dots">
         <button class="hcar-dot is-active" aria-label="Imagen 1"></button>
         <button class="hcar-dot" aria-label="Imagen 2"></button>
+        <button class="hcar-dot" aria-label="Imagen 3"></button>
+        <button class="hcar-dot" aria-label="Imagen 4"></button>
           </div>
         </div>
         <p class="mono text-[0.66rem] uppercase tracking-[0.14em] mt-4 text-center" style="color: var(--muted);">El recorrido avanza solo · usa ‹ › o desliza · clic en la imagen para ampliar</p>
@@ -373,8 +373,8 @@
     </div>
 
     <div class="spec-strip mt-14" data-reveal>
-        <div class="spec"><span class="k">Categoría</span><span class="v">Diseño estructural</span></div>
-        <div class="spec"><span class="k">Normativa</span><span class="v">E.060 · E.020 (Perú)</span></div>
+        <div class="spec"><span class="k">Categoría</span><span class="v">Agua Potable · Sanitarias</span></div>
+        <div class="spec"><span class="k">Normativa</span><span class="v">IS.010 · OS.050 — RNE</span></div>
         <div class="spec"><span class="k">Plataforma</span><span class="v">Web · Funciona offline</span><span class="sub">Móvil · Tablet · PC</span></div>
         <div class="spec"><span class="k">Acceso</span><span class="v">Web · Sin instalación</span><span class="sub">Móvil · Tablet · PC</span></div>
     </div>
@@ -391,24 +391,36 @@
 
     <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
       <div class="feature" data-reveal>
-        <h4>Geometría y verificación Blondel</h4>
-        <p>Pasos, contrapasos, garganta y peralte mínimo con chequeo de la regla 60 ≤ 2cp + p ≤ 64.</p>
+        <h4>Datos del proyecto</h4>
+        <p>Tipo de edificación, sistema de abastecimiento, dotación diaria y caudal de diseño.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Cargas E.020 y combinaciones LRFD</h4>
-        <p>Peso propio del tramo inclinado, acabados, sobrecarga normativa y factores de mayoración.</p>
+        <h4>Catálogo de tuberías</h4>
+        <p>HDPE PE100, PVC-U y acero galvanizado con diámetro interior y rugosidad.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Análisis tramo + descansos</h4>
-        <p>Modelo simplificado con momentos positivos, negativos y reacciones en apoyos.</p>
+        <h4>Medidor configurable</h4>
+        <p>Catálogo SEDAPAL (Zenner MTKD/MTKDI) con pérdida OIML R49, o ingreso manual.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Acero positivo, negativo y de temperatura</h4>
-        <p>Cuantías mínimas E.060, distribución de barras y verificación de adherencia.</p>
+        <h4>Ruta multitramo</h4>
+        <p>Cada tramo con material, diámetro, longitud, cotas y accesorios editables.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Despiece imprimible</h4>
-        <p>Resumen listo para integrar al detalle de planos estructurales con cantidades por barra.</p>
+        <h4>Motor hidráulico</h4>
+        <p>Darcy-Weisbach con Colebrook-White para fricción, y método Crane TP-410 para pérdidas locales.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Verificación IS.010 / OS.050</h4>
+        <p>Presión mínima en llegada, velocidades, longitud máxima y diagnóstico del medidor.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Memoria de cálculo</h4>
+        <p>Desarrollo paso a paso con datos, resultados, verificación y conclusión.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Persistencia</h4>
+        <p>Ejemplo predefinido (edificio 8 pisos), guardado en JSON e impresión en PDF A4.</p>
       </div>
     </div>
   </div>
@@ -416,16 +428,16 @@
 
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
   <div class="max-w-5xl mx-auto px-6 lg:px-10">
-    <div class="coord mb-6">§ C / Notas de desarrollo</div>
+    <div class="coord mb-6">§ B / Notas de desarrollo</div>
     <h2 class="display text-4xl md:text-5xl mb-10" data-reveal>
       Cómo lo <em>construí</em>.
     </h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
       <p>
-        Parto de la Norma E.060, E.020 y bibliografía especializada de losas y escaleras. Cada fórmula y tabla se codificó verificando artículo por artículo antes de escribir una sola línea del aplicativo.
+        El punto de partida fue la normativa IS.010 y OS.050 del Reglamento Nacional de Edificaciones, junto con los catálogos vigentes de SEDAPAL para medidores y diámetros de conexión. La lógica de cálculo se construyó cotejando directamente cada artículo y tabla de la norma IS.010 y OS.050, sin interpolaciones manuales ni supuestos implícitos.
       </p>
       <p>
-        Las escaleras son un cálculo recurrente que muchas veces se resuelve con plantillas que no documentan supuestos. Aquí cada paso del análisis queda visible: geometría → cargas → momentos → acero.
+        El dimensionamiento de una conexión domiciliaria suele dispersarse entre fichas de la EPS, tablas de pérdidas y hojas Excel sueltas. Aquí se concentra en un flujo continuo: demanda → ruta hidráulica → motor de cálculo → verificación → memoria imprimible.
       </p>
       <p>
         Stack deliberadamente simple: HTML, CSS y JavaScript puros. Cero dependencias, cero instalación, funciona offline. El usuario abre un archivo y trabaja.
@@ -446,8 +458,8 @@
         Ver ecosistema completo
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
-      <a href="vigas-ca.html" class="btn btn-outline">
-        Ver Vigas
+      <a href="sistema-bombeo.html" class="btn btn-outline">
+        Ver Sistema de Bombeo
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
       <a href="../index.html#contacto" class="btn btn-ghost">Contactar</a>
@@ -461,7 +473,7 @@
       <div class="text-sm font-medium">Luis Miguel Cruz Efus</div>
     </a>
     <div class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--muted);">
-      Aplicativo N.05 · Escaleras de Concreto Armado
+      Conexión Domiciliaria de Agua Potable
     </div>
   </div>
 </footer>
@@ -502,7 +514,7 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
 
-  /* ===== Carrusel-hero automático ===== */
+  /* ===== Carrusel-hero automatico ===== */
   document.querySelectorAll('[data-hcar]').forEach(car => {
     const slides = Array.from(car.querySelectorAll('.hcar-slide'));
     const dots = Array.from(car.querySelectorAll('.hcar-dot'));

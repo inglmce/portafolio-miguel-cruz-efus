@@ -349,7 +349,7 @@
   }
   .mobile-menu a:last-child{ border-bottom: none; }
 
-  /* ===== Capa viva (atmósfera) + logo limpio — mejora rev.03 ===== */
+  /* Capa de atmósfera */
   .atmosphere{ position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none; }
   .atmosphere .orb{ position:absolute; border-radius:50%; filter:blur(120px); will-change:transform; }
   .atmosphere .orb-amber{ width:46vw; height:46vw; min-width:360px; min-height:360px; background:radial-gradient(circle, oklch(0.78 0.14 65 / 0.50), transparent 68%); top:-16vh; right:-8vw; opacity:.5; animation:driftA 30s ease-in-out infinite alternate; }
@@ -724,11 +724,11 @@
     <div class="grid md:grid-cols-12 gap-8 mb-16" data-reveal>
       <div class="md:col-span-7">
         <p class="text-lg leading-relaxed" style="color: var(--text-dim);">
-          Aplicativos web que desarrollo bajo mi marca <span style="color: var(--text);">LM Ingeniería e Innovación</span>: cada uno automatiza un cálculo bajo normativa (E.030, E.060, IS.010, ACI 318, AASHTO 93), con verificación trazable y memoria exportable. Funcionan <span style="color: var(--text);">sin instalación y offline</span>, en cualquier dispositivo.
+          Aplicativos web que desarrollo bajo mi marca <span style="color: var(--text);">LM Ingeniería e Innovación</span>: cada uno automatiza un cálculo bajo normativa (E.030, E.060, IS.010, ACI 318, ACI 350, AASHTO 93, OS.090), con verificación trazable y memoria exportable. Funcionan <span style="color: var(--text);">sin instalación y offline</span>, en cualquier dispositivo.
         </p>
       </div>
       <div class="md:col-span-5 flex md:justify-end items-end">
-        <div class="tick-row w-full"><span>8 publicados · 5 en hoja de ruta</span></div>
+        <div class="tick-row w-full"><span>12 publicados · 5 en hoja de ruta</span></div>
       </div>
     </div>
 
@@ -894,6 +894,86 @@
         </div>
       </a>
 
+      <!-- App 9: Reservorio Rectangular — PUBLISHED -->
+      <a href="aplicativos/reservorio-rectangular.html" class="card group" data-reveal>
+        <div class="cover-portrait">
+          <img src="imagenes/lm_ingenieria/reservorios_rectangulares/00_reservorios_rectangulares.png" alt="Reservorio Rectangular ACI 350 — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>ACI 350 / E.060</div><div class=&quot;serif text-3xl leading-tight&quot;>Reservorio <em style=&quot;color: var(--accent); font-style: italic;&quot;>Rectangular</em></div></div></div>';">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="chip accent">Publicado</span>
+            <span class="chip">ACI 350 / E.060</span>
+          </div>
+          <h3 class="font-medium text-lg mb-2">Reservorio Rectangular — ACI 350 + Robot</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--muted);">
+            Memoria completa para reservorios de concreto armado, con modelo FEM automático en Robot, cargas sísmicas ACI 350.3-20 y diseño del refuerzo integrado.
+          </p>
+          <div class="mt-5 flex items-center justify-between">
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicativo →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- App 10: Cámara Distribuidora — PUBLISHED -->
+      <a href="aplicativos/camara-distribuidora.html" class="card group" data-reveal>
+        <div class="cover-portrait">
+          <img src="imagenes/lm_ingenieria/camara_distribuidora/00_caratula_camara_distribuidora.png" alt="Cámara Distribuidora de Caudal — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>Hidráulica</div><div class=&quot;serif text-3xl leading-tight&quot;>Cámara <em style=&quot;color: var(--accent); font-style: italic;&quot;>Distribuidora</em></div></div></div>';">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="chip accent">Publicado</span>
+            <span class="chip">Hidráulica</span>
+          </div>
+          <h3 class="font-medium text-lg mb-2">Cámara Distribuidora de Caudal</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--muted);">
+            Diseño de cámaras de reparto por gravedad con vertederos Kindsvater-Carter, verificación de salidas y planos SVG automáticos.
+          </p>
+          <div class="mt-5 flex items-center justify-between">
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicativo →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- App 11: Lechos de Secado — PUBLISHED -->
+      <a href="aplicativos/lechos-de-secado.html" class="card group" data-reveal>
+        <div class="cover-portrait">
+          <img src="imagenes/lm_ingenieria/lecho_secado_lodos/00_caratula_lechos_secado_lodos.png" alt="Lechos de Secado de Lodos — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>OS.090</div><div class=&quot;serif text-3xl leading-tight&quot;>Lechos de <em style=&quot;color: var(--accent); font-style: italic;&quot;>Secado</em></div></div></div>';">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="chip accent">Publicado</span>
+            <span class="chip">OS.090</span>
+          </div>
+          <h3 class="font-medium text-lg mb-2">Lechos de Secado de Lodos</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--muted);">
+            Dimensionamiento de lechos para PTAR: producción de lodos, doble criterio de área, ciclo operativo y optimización de huella.
+          </p>
+          <div class="mt-5 flex items-center justify-between">
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicativo →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- App 12: Conexión Agua Potable — PUBLISHED -->
+      <a href="aplicativos/conexion-agua-potable.html" class="card group" data-reveal>
+        <div class="cover-portrait">
+          <img src="imagenes/lm_ingenieria/conexion_agua_potable/caratula_conexion_domiciliaria.png" alt="Conexión Domiciliaria de Agua Potable — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>IS.010 / OS.050</div><div class=&quot;serif text-3xl leading-tight&quot;>Conexión <em style=&quot;color: var(--accent); font-style: italic;&quot;>Domiciliaria</em></div></div></div>';">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="chip accent">Publicado</span>
+            <span class="chip">IS.010 / OS.050</span>
+          </div>
+          <h3 class="font-medium text-lg mb-2">Conexión Domiciliaria de Agua Potable</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--muted);">
+            Ruta hidráulica multitramo con Darcy-Weisbach, catálogo de medidores SEDAPAL y verificación completa IS.010 / OS.050.
+          </p>
+          <div class="mt-5 flex items-center justify-between">
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicativo →</span>
+          </div>
+        </div>
+      </a>
+
       <!-- Roadmap apps (sin imágenes propias todavía) -->
 
       <div class="card group" data-reveal>
@@ -1028,7 +1108,7 @@
       <span class="stack-item">MS Project</span>
       <span class="stack-item">Robot Structural</span>
       <span class="stack-item">Twinmotion</span>
-      <span class="stack-item">Claude Code</span>
+      <span class="stack-item">APIs de Automatización</span>
       <span class="stack-item">Excel Avanzado</span>
       <span class="stack-item">ETABS</span>
       <span class="stack-item">INVIERTE.PE</span>
@@ -1040,7 +1120,7 @@
       <span class="stack-item">MS Project</span>
       <span class="stack-item">Robot Structural</span>
       <span class="stack-item">Twinmotion</span>
-      <span class="stack-item">Claude Code</span>
+      <span class="stack-item">APIs de Automatización</span>
       <span class="stack-item">Excel Avanzado</span>
       <span class="stack-item">ETABS</span>
       <span class="stack-item">INVIERTE.PE</span>
@@ -1063,7 +1143,7 @@
       </div>
       <div class="border-l pl-5" style="border-color: var(--accent);">
         <div class="mono text-[0.62rem] uppercase tracking-[0.18em] mb-2" style="color: var(--accent);">Diferencial</div>
-        <div class="text-sm leading-relaxed">Desarrollo de aplicativos web · Claude Code · Migración de flujos AutoCAD → Revit</div>
+        <div class="text-sm leading-relaxed">Desarrollo de aplicativos web · Automatización con APIs (ETABS / Robot) · Migración de flujos AutoCAD → Revit</div>
       </div>
     </div>
   </div>
