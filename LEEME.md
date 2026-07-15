@@ -7,7 +7,7 @@
 - proyectos/ptar-tocache.html
 
 ## Cómo subir a tu repo en GitHub
-1. Entra a tu repo PORTAFOLIO-PROFESIONAL en GitHub.
+1. Entra a tu repo portafolio-miguel-cruz-efus en GitHub.
 2. Para cada archivo de este paquete:
    - Navega a la misma ruta en tu repo (raíz, aplicativos/, proyectos/).
    - Abre el archivo, click en el lápiz (✏️), borra todo, pega el nuevo contenido y "Commit changes".
