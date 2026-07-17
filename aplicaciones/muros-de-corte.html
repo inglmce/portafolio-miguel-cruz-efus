@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15171c">
-<title>Sistema de Bombeo e Impulsión — Aplicativo · Luis Miguel Cruz Efus</title>
+<title>Muros de Corte E.060 / ACI 318-25 — Aplicación · Luis Miguel Cruz Efus</title>
 
 <link rel="icon" type="image/png" href="../imagenes/lm_ingenieria/marca_lm/logo.png">
 
@@ -43,24 +43,28 @@
   .mono{ font-family:'JetBrains Mono', monospace; }
   .display{ font-family:'Instrument Serif', serif; font-weight:400; letter-spacing:-0.018em; line-height:0.95; }
   .display em{ font-style:italic; color: var(--accent); }
+
   .blueprint-bg{
     background-image:
       linear-gradient(oklch(0.35 0.012 250 / 0.18) 1px, transparent 1px),
       linear-gradient(90deg, oklch(0.35 0.012 250 / 0.18) 1px, transparent 1px);
     background-size: 56px 56px;
   }
+
   .coord{
     font-family:'JetBrains Mono', monospace;
     font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
     color: var(--muted); display:inline-flex; align-items:center; gap:0.5rem;
   }
   .coord::before{ content:""; width: 18px; height:1px; background: var(--accent); }
+
   .chip{
     display:inline-flex; padding: 4px 10px; border: 1px solid var(--line); border-radius: 99px;
     font-family:'JetBrains Mono', monospace; font-size: 0.66rem;
     color: var(--text-dim); letter-spacing: 0.06em; text-transform: uppercase;
   }
   .chip.accent{ border-color: var(--accent); color: var(--accent); }
+
   .btn{
     display:inline-flex; align-items:center; gap: 10px;
     padding: 12px 20px; border-radius: 4px; font-weight: 500; font-size: 0.9rem;
@@ -72,9 +76,12 @@
   .btn-ghost:hover{ border-color: var(--accent); color: var(--accent); }
   .btn-outline{ background: transparent; color: var(--text); border-color: var(--accent); }
   .btn-outline:hover{ background: var(--accent-soft); color: var(--accent); }
+
   [data-reveal]{ opacity:0; transform:translateY(14px); transition: opacity .9s ease, transform .9s ease; }
   [data-reveal].in{ opacity:1; transform:translateY(0); }
+
   .nav-bg{ background: oklch(0.16 0.012 250 / 0.82); backdrop-filter: blur(14px); }
+
   .logo-bezel{
     width: 34px; height: 34px;
     border: 1px solid var(--accent);
@@ -82,12 +89,15 @@
     overflow: hidden; background: oklch(0.10 0.012 250);
   }
   .logo-bezel img{ width: 78%; height: 78%; object-fit: contain; }
+
   .feature{
     border-left: 1px solid var(--accent);
     padding: 4px 0 4px 18px;
   }
   .feature h4{ font-size: 0.95rem; font-weight: 500; margin-bottom: 4px; }
   .feature p{ font-size: 0.85rem; color: var(--text-dim); line-height: 1.5; }
+
+    /* HERO COVER (portrait 9:16) */
   .hero-cover{
     background: oklch(0.10 0.012 250);
     border: 1px solid var(--line-soft);
@@ -97,6 +107,12 @@
     aspect-ratio: 9/16;
     max-width: 360px;
     margin: 0 auto;
+    cursor: zoom-in;
+    transition: border-color .25s ease, transform .25s ease;
+  }
+  .hero-cover:hover{
+    border-color: var(--accent);
+    transform: translateY(-2px);
   }
   .hero-cover img{ width:100%; height:100%; object-fit: cover; display:block; }
   .hero-cover::before, .hero-cover::after{
@@ -105,6 +121,8 @@
   }
   .hero-cover::before{ top: 8px; left: 8px; border-right:none; border-bottom:none; }
   .hero-cover::after{ bottom: 8px; right: 8px; border-left:none; border-top:none; }
+
+  /* CAROUSEL */
   .carousel{ position: relative; }
   .carousel-track{
     display: flex; gap: 18px;
@@ -119,6 +137,7 @@
   .carousel-track::-webkit-scrollbar{ height: 6px; }
   .carousel-track::-webkit-scrollbar-track{ background: transparent; }
   .carousel-track::-webkit-scrollbar-thumb{ background: var(--line); border-radius: 3px; }
+
   .carousel-slide{
     flex: 0 0 auto;
     width: 260px;
@@ -176,6 +195,7 @@
     transition: opacity .25s ease;
   }
   .carousel-slide:hover .zoom-hint{ opacity: 1; }
+
   .carousel-nav{
     position: absolute; top: 50%; transform: translateY(-50%);
     width: 44px; height: 44px; border-radius: 50%;
@@ -191,6 +211,8 @@
   .carousel-nav.next{ right: -10px; }
   .carousel-nav:disabled{ opacity: 0.3; cursor: not-allowed; }
   @media (max-width: 640px){ .carousel-nav{ display: none; } }
+
+  /* LIGHTBOX */
   .lightbox{
     position: fixed; inset: 0;
     background: oklch(0.06 0.012 250 / 0.96);
@@ -219,6 +241,7 @@
   }
   .lightbox-img.zoomed{ cursor: grab; }
   .lightbox-img.dragging{ cursor: grabbing; transition: none; }
+
   .lightbox-close, .lightbox-prev, .lightbox-next,
   .lightbox-zoom-in, .lightbox-zoom-out, .lightbox-zoom-reset{
     position: absolute;
@@ -275,7 +298,7 @@
   .logo-bezel{ width:auto !important; height:42px !important; border:none !important; background:transparent !important; overflow:visible !important; padding:0 !important; }
   .logo-bezel img{ width:auto !important; height:100% !important; max-width:175px; object-fit:contain; }
 
-  /* ===== Carrusel-hero (aplicativo · retrato) ===== */
+  /* ===== Carrusel-hero (aplicación · retrato) ===== */
   .hero-carousel{ position:relative; }
   .hcar-stage{ position:relative; border:1px solid var(--line-soft); background:oklch(0.09 0.012 250); border-radius:8px; overflow:hidden; aspect-ratio:9/16; max-width:320px; margin:0 auto; }
   .hcar-stage::before{ content:""; position:absolute; inset:0; background-image:linear-gradient(oklch(0.35 0.012 250 / 0.10) 1px,transparent 1px),linear-gradient(90deg,oklch(0.35 0.012 250 / 0.10) 1px,transparent 1px); background-size:26px 26px; z-index:0; }
@@ -311,6 +334,7 @@
 <body>
 <div class="atmosphere" aria-hidden="true"><span class="orb orb-amber"></span><span class="orb orb-blue"></span><span class="orb orb-cyan"></span></div>
 
+<!-- NAV -->
 <header class="fixed top-0 left-0 right-0 z-50 nav-bg border-b" style="border-color: var(--line-soft);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-4">
     <a href="../index.html" class="flex items-center gap-3">
@@ -318,79 +342,64 @@
       <span class="mono text-xs uppercase tracking-[0.18em]" style="color: var(--text-dim);">Volver al portafolio</span>
     </a>
     <div class="hidden md:flex items-center gap-3">
-      <span class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">Aplicativo N.08</span>
+      <span class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">Aplicación N.02</span>
     </div>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
   <div class="absolute inset-0 blueprint-bg" style="opacity:0.4"></div>
   <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
 
     <div class="flex items-center justify-between mb-12">
-      <div class="coord">N.08 / Aplicativo</div>
-      <div class="coord hidden md:flex">IS.010 · Hidráulica</div>
+      <div class="coord">N.02 / Aplicación</div>
+      <div class="coord hidden md:flex">E.060 · ACI 318-25</div>
     </div>
 
     <div class="grid lg:grid-cols-12 gap-12 items-start">
       <div class="lg:col-span-7">
         <div class="flex flex-wrap items-center gap-3 mb-8">
-          <span class="chip accent">Inst. Sanitarias</span>
-          <span class="chip">IS.010</span>
-          <span class="chip">Hidráulica</span>
+          <span class="chip accent">Estructuras</span>
+          <span class="chip">E.060</span>
+          <span class="chip">ACI 318-25</span>
           <span class="chip">Web app</span>
           <span class="chip">Offline</span>
         </div>
         <h1 class="display text-5xl md:text-6xl lg:text-7xl mb-10" data-reveal>
-          Sistema de <em>Bombeo<br>e Impulsión</em>.
+          Muros de <em>Corte</em><br>
+          de Concreto Armado.
         </h1>
         <p class="text-lg leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          Calculador integral para sistemas de bombeo de agua y alcantarillado: punto de operación, curva del sistema, NPSH, golpe de ariete y dimensionamiento de línea de impulsión.
+          Diseñador y verificador especializado para ingenieros estructurales, proyectistas y estudiantes avanzados que necesitan revisar muros estructurales de concreto armado, con o sin elementos de borde especiales.
         </p>
         <p class="text-base leading-relaxed max-w-2xl" style="color: var(--text-dim);" data-reveal>
-          Convierte el dimensionamiento manual en un flujo trazable: caudal y altura → curva del sistema → punto de operación → NPSH y golpe de ariete → memoria final, manteniendo cada decisión visible y justificada.
+          Integra geometría, materiales, refuerzo del alma, solicitaciones desde ETABS, verificación de esfuerzos extremos, análisis P-M por fibras, cortante directo y por capacidad, confinamiento, cuantías, sección transversal gráfica y diagrama de interacción — convirtiendo una verificación compleja en un flujo ordenado, visual y trazable.
         </p>
-      </div>
-
-      <div class="lg:col-span-5" data-reveal>
-        <div class="hero-carousel" data-hcar>
-          <div class="hcar-stage hcar-frame">
-          <div class="hcar-slide is-active" data-lightbox data-src="../imagenes/lm_ingenieria/sistema_bombeo/01_sistema_bombeo.png" data-num="N.01" data-caption="Caudal y altura del sistema"><img src="../imagenes/lm_ingenieria/sistema_bombeo/01_sistema_bombeo.png" alt="N.01" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/sistema_bombeo/02_sistema_bombeo.png" data-num="N.02" data-caption="Pérdidas y curva del sistema"><img src="../imagenes/lm_ingenieria/sistema_bombeo/02_sistema_bombeo.png" alt="N.02" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/sistema_bombeo/03_sistema_bombeo.png" data-num="N.03" data-caption="Curva característica de la bomba"><img src="../imagenes/lm_ingenieria/sistema_bombeo/03_sistema_bombeo.png" alt="N.03" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/sistema_bombeo/04_sistema_bombeo.png" data-num="N.04" data-caption="Punto de operación"><img src="../imagenes/lm_ingenieria/sistema_bombeo/04_sistema_bombeo.png" alt="N.04" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/sistema_bombeo/05_sistema_bombeo.png" data-num="N.05" data-caption="Verificación de NPSH"><img src="../imagenes/lm_ingenieria/sistema_bombeo/05_sistema_bombeo.png" alt="N.05" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/sistema_bombeo/06_sistema_bombeo.png" data-num="N.06" data-caption="Diámetro económico de impulsión"><img src="../imagenes/lm_ingenieria/sistema_bombeo/06_sistema_bombeo.png" alt="N.06" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/sistema_bombeo/07_sistema_bombeo.png" data-num="N.07" data-caption="Golpe de ariete y memoria"><img src="../imagenes/lm_ingenieria/sistema_bombeo/07_sistema_bombeo.png" alt="N.07" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-            <button class="hcar-nav prev" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M9 1L3 7l6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
-            <button class="hcar-nav next" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M5 1l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
-            <button class="hcar-zoom" data-hcar-zoom><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Ampliar</button>
-            <div class="hcar-caption"><span class="num" data-hcar-num>N.01</span><span data-hcar-cap>Caudal y altura del sistema</span></div>
-            <div class="hcar-progress"><span></span></div>
-          </div>
-          <div class="hcar-dots">
-        <button class="hcar-dot is-active" aria-label="Imagen 1"></button>
-        <button class="hcar-dot" aria-label="Imagen 2"></button>
-        <button class="hcar-dot" aria-label="Imagen 3"></button>
-        <button class="hcar-dot" aria-label="Imagen 4"></button>
-        <button class="hcar-dot" aria-label="Imagen 5"></button>
-        <button class="hcar-dot" aria-label="Imagen 6"></button>
-        <button class="hcar-dot" aria-label="Imagen 7"></button>
-          </div>
+        <div class="flex flex-wrap gap-4 mt-8" data-reveal>
+          <a href="https://apps.microsoft.com/detail/9NCK2VT9R5DV" target="_blank" class="btn btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0" style="margin-right: 2px;"><path d="M0 0h11.4v11.4H0V0zm12.6 0H24v11.4H12.6V0zM0 12.6h11.4V24H0V12.6zm12.6 0H24V24H12.6V12.6z"/></svg>
+            Descargar en Microsoft Store
+          </a>
         </div>
-        <p class="mono text-[0.66rem] uppercase tracking-[0.14em] mt-4 text-center" style="color: var(--muted);">El recorrido avanza solo · usa ‹ › o desliza · clic en la imagen para ampliar</p>
+      </div>      <div class="lg:col-span-5" data-reveal>
+        <div class="hero-cover" data-lightbox data-src="../imagenes/lm_ingenieria/muros_de_corte_e060_aci318/00_caratula.png" data-num="Carátula" data-caption="Muros de Corte de Concreto Armado">
+          <img src="../imagenes/lm_ingenieria/muros_de_corte_e060_aci318/00_caratula.png" alt="Muros de Corte de Concreto Armado">
+        </div>
+        <p class="mono text-[0.66rem] uppercase tracking-[0.14em] mt-4 text-center" style="color: var(--muted);">Clic en la imagen para ampliar</p>
       </div>
     </div>
 
     <div class="spec-strip mt-14" data-reveal>
-        <div class="spec"><span class="k">Categoría</span><span class="v">Hidráulica · Sanitarias</span></div>
-        <div class="spec"><span class="k">Normativa</span><span class="v">IS.010 — RNE (Perú)</span></div>
+        <div class="spec"><span class="k">Categoría</span><span class="v">Diseño estructural</span></div>
+        <div class="spec"><span class="k">Normativa</span><span class="v">E.060 (Perú) · ACI 318-25</span></div>
         <div class="spec"><span class="k">Plataforma</span><span class="v">Web · Funciona offline</span><span class="sub">Móvil · Tablet · PC</span></div>
         <div class="spec"><span class="k">Acceso</span><span class="v">Web · Sin instalación</span><span class="sub">Móvil · Tablet · PC</span></div>
     </div>
   </div>
 </section>
 
+<!-- WHAT IT DOES -->
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
@@ -401,29 +410,30 @@
 
     <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
       <div class="feature" data-reveal>
-        <h4>Caudal de bombeo y curva del sistema</h4>
-        <p>Determinación de Q a partir de demanda IS.010, altura estática y pérdidas por fricción y singularidades.</p>
+        <h4>Importación de Pier Forces (ETABS)</h4>
+        <p>Lectura de .xlsx o .csv con detección automática de combinaciones críticas: M+, M−, Vu máx, Pu máx y severidad combinada.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Punto de operación contra curva de bomba</h4>
-        <p>Intersección curva del sistema vs. curva característica para verificar eficiencia y holgura operativa.</p>
+        <h4>Análisis P–M por fibras y diagrama de interacción</h4>
+        <p>Curva de interacción flexocompresión, interpolación Mn/φMn y relación demanda/capacidad por cada combinación.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>NPSH disponible vs. requerido</h4>
-        <p>Verificación contra cavitación con altura geométrica, pérdidas en succión y tensión de vapor.</p>
+        <h4>Cortante directo y por capacidad</h4>
+        <p>Contribución Vc, Vs, resistencia φVn, límite máximo y verificación sísmica con Ve y Vu(R=1) según ACI 318.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Diámetro económico de impulsión</h4>
-        <p>Cálculo del diámetro óptimo por velocidades admisibles y verificación normativa.</p>
+        <h4>Elementos de borde y confinamiento</h4>
+        <p>Evaluación SBE por esfuerzo extremo, Ash requerido/provisto en dos direcciones y espaciamiento máximo normativo.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Golpe de ariete y memoria</h4>
-        <p>Sobrepresión por método de Joukowsky y resumen imprimible con curvas y punto de operación.</p>
+        <h4>Sección transversal gráfica y memoria</h4>
+        <p>Representación en planta del alma, bordes, barras, estribos y cotas. Resumen imprimible con fórmulas normativas.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- DEVELOPMENT NOTE -->
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
   <div class="max-w-5xl mx-auto px-6 lg:px-10">
     <div class="coord mb-6">§ C / Notas de desarrollo</div>
@@ -432,10 +442,10 @@
     </h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
       <p>
-        Parto de bibliografía hidráulica seria —Streeter, Sotelo y Norma IS.010—. Cada correlación y constante está trazada a su fuente original y verificada contra ejercicios resueltos antes de implementarla.
+        El aplicación parte de fuentes serias —Norma E.060, ACI 318-25 y bibliografía especializada en diseño de muros—. Cada fórmula y criterio está referenciado a su artículo normativo de origen y verificado numéricamente antes de implementarlo en código.
       </p>
       <p>
-        El dimensionamiento de bombeo suele dispersarse entre fichas técnicas, hojas Excel y catálogos. Aquí se concentra en un flujo trazable: caudal → curva del sistema → punto de operación → NPSH y golpe de ariete.
+        La verificación de muros suele estar dispersa entre la norma, ACI 318, hojas de Excel y la salida de Pier Forces. Aquí se concentra en un solo flujo trazable: combinación → curva P–M → φMn → relación D/C, con la sección dibujada en vivo.
       </p>
       <p>
         Stack deliberadamente simple: HTML, CSS y JavaScript puros. Cero dependencias, cero instalación, funciona offline. El usuario abre un archivo y trabaja.
@@ -444,20 +454,21 @@
   </div>
 </section>
 
+<!-- CTA -->
 <section class="py-24 lg:py-32 relative overflow-hidden">
   <div class="absolute inset-0 blueprint-bg" style="opacity:0.3"></div>
   <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
-    <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más aplicativos</div>
+    <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más aplicaciones</div>
     <h2 class="display text-4xl md:text-5xl mb-10">
-      Hay <em>otros aplicativos</em><br>en el ecosistema.
+      Hay <em>otros aplicaciones</em><br>en el ecosistema.
     </h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="../index.html#aplicativos" class="btn btn-outline">
+      <a href="../index.html#aplicaciones" class="btn btn-outline">
         Ver ecosistema completo
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
-      <a href="dotaciones-agua.html" class="btn btn-outline">
-        Ver Dotaciones IS.010
+      <a href="asistente-sismico.html" class="btn btn-outline">
+        Ver Asistente Sísmico
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
       <a href="../index.html#contacto" class="btn btn-ghost">Contactar</a>
@@ -465,17 +476,19 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="py-10 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-between gap-4">
     <a href="../index.html" class="flex items-center gap-3">
       <div class="text-sm font-medium">Luis Miguel Cruz Efus</div>
     </a>
     <div class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--muted);">
-      Aplicativo N.08 · Sistema de Bombeo e Impulsión
+      Aplicación N.02 · Muros de Corte E.060 / ACI 318-25
     </div>
   </div>
 </footer>
 
+<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
   <div class="lightbox-caption" id="lightboxCaption"><span class="num">N.00</span><span id="lightboxCaptionText"></span></div>
   <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
@@ -589,6 +602,12 @@
 
   const items = Array.from(document.querySelectorAll('[data-lightbox]'));
   lbTotal.textContent = items.length;
+  if (items.length <= 1) {
+    if (lbPrev) lbPrev.style.display = 'none';
+    if (lbNext) lbNext.style.display = 'none';
+    const lbCounterDiv = document.querySelector('.lightbox-counter');
+    if (lbCounterDiv) lbCounterDiv.style.display = 'none';
+  }
   let currentIdx = 0;
   let zoom = 1, panX = 0, panY = 0;
 

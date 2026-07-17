@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15171c">
-<title>Columnas Rectangulares CºAº — Aplicativo · Luis Miguel Cruz Efus</title>
+<title>Escaleras de Concreto Armado — Aplicación · Luis Miguel Cruz Efus</title>
 
 <link rel="icon" type="image/png" href="../imagenes/lm_ingenieria/marca_lm/logo.png">
 
@@ -43,28 +43,24 @@
   .mono{ font-family:'JetBrains Mono', monospace; }
   .display{ font-family:'Instrument Serif', serif; font-weight:400; letter-spacing:-0.018em; line-height:0.95; }
   .display em{ font-style:italic; color: var(--accent); }
-
   .blueprint-bg{
     background-image:
       linear-gradient(oklch(0.35 0.012 250 / 0.18) 1px, transparent 1px),
       linear-gradient(90deg, oklch(0.35 0.012 250 / 0.18) 1px, transparent 1px);
     background-size: 56px 56px;
   }
-
   .coord{
     font-family:'JetBrains Mono', monospace;
     font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
     color: var(--muted); display:inline-flex; align-items:center; gap:0.5rem;
   }
   .coord::before{ content:""; width: 18px; height:1px; background: var(--accent); }
-
   .chip{
     display:inline-flex; padding: 4px 10px; border: 1px solid var(--line); border-radius: 99px;
     font-family:'JetBrains Mono', monospace; font-size: 0.66rem;
     color: var(--text-dim); letter-spacing: 0.06em; text-transform: uppercase;
   }
   .chip.accent{ border-color: var(--accent); color: var(--accent); }
-
   .btn{
     display:inline-flex; align-items:center; gap: 10px;
     padding: 12px 20px; border-radius: 4px; font-weight: 500; font-size: 0.9rem;
@@ -76,12 +72,9 @@
   .btn-ghost:hover{ border-color: var(--accent); color: var(--accent); }
   .btn-outline{ background: transparent; color: var(--text); border-color: var(--accent); }
   .btn-outline:hover{ background: var(--accent-soft); color: var(--accent); }
-
   [data-reveal]{ opacity:0; transform:translateY(14px); transition: opacity .9s ease, transform .9s ease; }
   [data-reveal].in{ opacity:1; transform:translateY(0); }
-
   .nav-bg{ background: oklch(0.16 0.012 250 / 0.82); backdrop-filter: blur(14px); }
-
   .logo-bezel{
     width: 34px; height: 34px;
     border: 1px solid var(--accent);
@@ -89,14 +82,12 @@
     overflow: hidden; background: oklch(0.10 0.012 250);
   }
   .logo-bezel img{ width: 78%; height: 78%; object-fit: contain; }
-
   .feature{
     border-left: 1px solid var(--accent);
     padding: 4px 0 4px 18px;
   }
   .feature h4{ font-size: 0.95rem; font-weight: 500; margin-bottom: 4px; }
   .feature p{ font-size: 0.85rem; color: var(--text-dim); line-height: 1.5; }
-
   .hero-cover{
     background: oklch(0.10 0.012 250);
     border: 1px solid var(--line-soft);
@@ -114,7 +105,6 @@
   }
   .hero-cover::before{ top: 8px; left: 8px; border-right:none; border-bottom:none; }
   .hero-cover::after{ bottom: 8px; right: 8px; border-left:none; border-top:none; }
-
   .carousel{ position: relative; }
   .carousel-track{
     display: flex; gap: 18px;
@@ -129,7 +119,6 @@
   .carousel-track::-webkit-scrollbar{ height: 6px; }
   .carousel-track::-webkit-scrollbar-track{ background: transparent; }
   .carousel-track::-webkit-scrollbar-thumb{ background: var(--line); border-radius: 3px; }
-
   .carousel-slide{
     flex: 0 0 auto;
     width: 260px;
@@ -187,7 +176,6 @@
     transition: opacity .25s ease;
   }
   .carousel-slide:hover .zoom-hint{ opacity: 1; }
-
   .carousel-nav{
     position: absolute; top: 50%; transform: translateY(-50%);
     width: 44px; height: 44px; border-radius: 50%;
@@ -203,7 +191,6 @@
   .carousel-nav.next{ right: -10px; }
   .carousel-nav:disabled{ opacity: 0.3; cursor: not-allowed; }
   @media (max-width: 640px){ .carousel-nav{ display: none; } }
-
   .lightbox{
     position: fixed; inset: 0;
     background: oklch(0.06 0.012 250 / 0.96);
@@ -232,7 +219,6 @@
   }
   .lightbox-img.zoomed{ cursor: grab; }
   .lightbox-img.dragging{ cursor: grabbing; transition: none; }
-
   .lightbox-close, .lightbox-prev, .lightbox-next,
   .lightbox-zoom-in, .lightbox-zoom-out, .lightbox-zoom-reset{
     position: absolute;
@@ -289,7 +275,7 @@
   .logo-bezel{ width:auto !important; height:42px !important; border:none !important; background:transparent !important; overflow:visible !important; padding:0 !important; }
   .logo-bezel img{ width:auto !important; height:100% !important; max-width:175px; object-fit:contain; }
 
-  /* ===== Carrusel-hero (aplicativo · retrato) ===== */
+  /* ===== Carrusel-hero (aplicación · retrato) ===== */
   .hero-carousel{ position:relative; }
   .hcar-stage{ position:relative; border:1px solid var(--line-soft); background:oklch(0.09 0.012 250); border-radius:8px; overflow:hidden; aspect-ratio:9/16; max-width:320px; margin:0 auto; }
   .hcar-stage::before{ content:""; position:absolute; inset:0; background-image:linear-gradient(oklch(0.35 0.012 250 / 0.10) 1px,transparent 1px),linear-gradient(90deg,oklch(0.35 0.012 250 / 0.10) 1px,transparent 1px); background-size:26px 26px; z-index:0; }
@@ -332,7 +318,7 @@
       <span class="mono text-xs uppercase tracking-[0.18em]" style="color: var(--text-dim);">Volver al portafolio</span>
     </a>
     <div class="hidden md:flex items-center gap-3">
-      <span class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">Aplicativo N.04</span>
+      <span class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">Aplicación N.05</span>
     </div>
   </div>
 </header>
@@ -342,8 +328,8 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
 
     <div class="flex items-center justify-between mb-12">
-      <div class="coord">N.04 / Aplicativo</div>
-      <div class="coord hidden md:flex">E.060 · E.030</div>
+      <div class="coord">N.05 / Aplicación</div>
+      <div class="coord hidden md:flex">E.060 · E.020</div>
     </div>
 
     <div class="grid lg:grid-cols-12 gap-12 items-start">
@@ -351,50 +337,35 @@
         <div class="flex flex-wrap items-center gap-3 mb-8">
           <span class="chip accent">Estructuras</span>
           <span class="chip">E.060</span>
-          <span class="chip">E.030</span>
+          <span class="chip">E.020</span>
           <span class="chip">Web app</span>
           <span class="chip">Offline</span>
         </div>
         <h1 class="display text-5xl md:text-6xl lg:text-7xl mb-10" data-reveal>
-          Columnas <em>Rectangulares</em><br>
-          de Concreto Armado.
+          Escaleras de <em>Concreto<br>Armado</em>.
         </h1>
         <p class="text-lg leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          Verificador de columnas rectangulares por flexocompresión biaxial, alineado a la Norma E.060 y compatible con los archivos de salida de ETABS.
+          Diseñador de escaleras de concreto armado tipo losa maciza, con verificación geométrica Blondel y armado positivo, negativo y de temperatura bajo Norma E.060.
         </p>
         <p class="text-base leading-relaxed max-w-2xl" style="color: var(--text-dim);" data-reveal>
-          Integra geometría, materiales, refuerzo longitudinal, importación directa de Column Forces, esbeltez, momentos amplificados, superficie de interacción 3D y confinamiento sísmico — concentrando la verificación en un flujo trazable y visual.
+          Convierte el cálculo manual de cada tramo y descanso en un flujo trazable: cargas E.020 → momentos → cuantías → despiece, con resumen imprimible para detalle de planos.
         </p>
-        <div class="flex flex-wrap gap-4 mt-8" data-reveal>
-          <a href="https://apps.microsoft.com/detail/9NQ3B7P20Q8Z" target="_blank" class="btn btn-primary">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0" style="margin-right: 2px;"><path d="M0 0h11.4v11.4H0V0zm12.6 0H24v11.4H12.6V0zM0 12.6h11.4V24H0V12.6zm12.6 0H24V24H12.6V12.6z"/></svg>
-            Descargar en Microsoft Store
-          </a>
-        </div>
       </div>
 
       <div class="lg:col-span-5" data-reveal>
         <div class="hero-carousel" data-hcar>
           <div class="hcar-stage hcar-frame">
-          <div class="hcar-slide is-active" data-lightbox data-src="../imagenes/lm_ingenieria/columnas_rectangulares_ca/01_columnas_rectangulares.png" data-num="N.01" data-caption="Geometría y materiales de la columna"><img src="../imagenes/lm_ingenieria/columnas_rectangulares_ca/01_columnas_rectangulares.png" alt="N.01" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/columnas_rectangulares_ca/02_columnas_rectangulares.png" data-num="N.02" data-caption="Refuerzo longitudinal"><img src="../imagenes/lm_ingenieria/columnas_rectangulares_ca/02_columnas_rectangulares.png" alt="N.02" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/columnas_rectangulares_ca/03_columnas_rectangulares.png" data-num="N.03" data-caption="Importación de Column Forces ETABS"><img src="../imagenes/lm_ingenieria/columnas_rectangulares_ca/03_columnas_rectangulares.png" alt="N.03" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/columnas_rectangulares_ca/04_columnas_rectangulares.png" data-num="N.04" data-caption="Esbeltez y momentos amplificados"><img src="../imagenes/lm_ingenieria/columnas_rectangulares_ca/04_columnas_rectangulares.png" alt="N.04" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/columnas_rectangulares_ca/05_columnas_rectangulares.png" data-num="N.05" data-caption="Superficie de interacción Pn–Mn2–Mn3"><img src="../imagenes/lm_ingenieria/columnas_rectangulares_ca/05_columnas_rectangulares.png" alt="N.05" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/columnas_rectangulares_ca/06_columnas_rectangulares.png" data-num="N.06" data-caption="Confinamiento sísmico y sección transversal"><img src="../imagenes/lm_ingenieria/columnas_rectangulares_ca/06_columnas_rectangulares.png" alt="N.06" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
+          <div class="hcar-slide is-active" data-lightbox data-src="../imagenes/lm_ingenieria/escaleras_ca/01_escaleras_ca.png" data-num="N.01" data-caption="Geometría y verificación Blondel"><img src="../imagenes/lm_ingenieria/escaleras_ca/01_escaleras_ca.png" alt="N.01" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
+          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/escaleras_ca/02_escaleras_ca.png" data-num="N.02" data-caption="Análisis y despiece de armado"><img src="../imagenes/lm_ingenieria/escaleras_ca/02_escaleras_ca.png" alt="N.02" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
             <button class="hcar-nav prev" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M9 1L3 7l6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
             <button class="hcar-nav next" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M5 1l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
             <button class="hcar-zoom" data-hcar-zoom><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Ampliar</button>
-            <div class="hcar-caption"><span class="num" data-hcar-num>N.01</span><span data-hcar-cap>Geometría y materiales de la columna</span></div>
+            <div class="hcar-caption"><span class="num" data-hcar-num>N.01</span><span data-hcar-cap>Geometría y verificación Blondel</span></div>
             <div class="hcar-progress"><span></span></div>
           </div>
           <div class="hcar-dots">
         <button class="hcar-dot is-active" aria-label="Imagen 1"></button>
         <button class="hcar-dot" aria-label="Imagen 2"></button>
-        <button class="hcar-dot" aria-label="Imagen 3"></button>
-        <button class="hcar-dot" aria-label="Imagen 4"></button>
-        <button class="hcar-dot" aria-label="Imagen 5"></button>
-        <button class="hcar-dot" aria-label="Imagen 6"></button>
           </div>
         </div>
         <p class="mono text-[0.66rem] uppercase tracking-[0.14em] mt-4 text-center" style="color: var(--muted);">El recorrido avanza solo · usa ‹ › o desliza · clic en la imagen para ampliar</p>
@@ -403,7 +374,7 @@
 
     <div class="spec-strip mt-14" data-reveal>
         <div class="spec"><span class="k">Categoría</span><span class="v">Diseño estructural</span></div>
-        <div class="spec"><span class="k">Normativa</span><span class="v">E.060 · E.030 (Perú)</span></div>
+        <div class="spec"><span class="k">Normativa</span><span class="v">E.060 · E.020 (Perú)</span></div>
         <div class="spec"><span class="k">Plataforma</span><span class="v">Web · Funciona offline</span><span class="sub">Móvil · Tablet · PC</span></div>
         <div class="spec"><span class="k">Acceso</span><span class="v">Web · Sin instalación</span><span class="sub">Móvil · Tablet · PC</span></div>
     </div>
@@ -420,24 +391,24 @@
 
     <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
       <div class="feature" data-reveal>
-        <h4>Importación directa de Column Forces (ETABS)</h4>
-        <p>Lectura del .xlsx con detección automática de combinaciones críticas de Pu, Mu2 y Mu3.</p>
+        <h4>Geometría y verificación Blondel</h4>
+        <p>Pasos, contrapasos, garganta y peralte mínimo con chequeo de la regla 60 ≤ 2cp + p ≤ 64.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Flexocompresión biaxial — superficie M-N 3D</h4>
-        <p>Diagrama de interacción Pn–Mn2–Mn3 y relación demanda/capacidad por cada combinación.</p>
+        <h4>Cargas E.020 y combinaciones LRFD</h4>
+        <p>Peso propio del tramo inclinado, acabados, sobrecarga normativa y factores de mayoración.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Esbeltez, momentos amplificados y P–Δ</h4>
-        <p>Clasificación corto/esbelto, factores δns y δs, y amplificación normativa de momentos.</p>
+        <h4>Análisis tramo + descansos</h4>
+        <p>Modelo simplificado con momentos positivos, negativos y reacciones en apoyos.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Cuantía longitudinal y armado</h4>
-        <p>Verificación de cuantía mínima y máxima, distribución de barras y simetría del armado.</p>
+        <h4>Acero positivo, negativo y de temperatura</h4>
+        <p>Cuantías mínimas E.060, distribución de barras y verificación de adherencia.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Confinamiento sísmico</h4>
-        <p>Ash requerido en dos direcciones, ganchos sísmicos y espaciamiento máximo en zonas de rótula.</p>
+        <h4>Despiece imprimible</h4>
+        <p>Resumen listo para integrar al detalle de planos estructurales con cantidades por barra.</p>
       </div>
     </div>
   </div>
@@ -451,10 +422,10 @@
     </h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
       <p>
-        Codifiqué cada ecuación de la E.060 y E.030 contrastando artículo por artículo con la bibliografía especializada y realizando verificaciones numéricas exhaustivas para garantizar la máxima precisión.
+        Parto de la Norma E.060, E.020 y bibliografía especializada de losas y escaleras. Cada fórmula y tabla se codificó verificando artículo por artículo antes de escribir una sola línea del aplicación.
       </p>
       <p>
-        La verificación biaxial suele dispersarse entre la norma, la salida de Column Forces y hojas Excel. Aquí se concentra en un flujo trazable: combinación → momento amplificado → superficie M-N 3D → relación D/C, con la sección dibujada en vivo.
+        Las escaleras son un cálculo recurrente que muchas veces se resuelve con plantillas que no documentan supuestos. Aquí cada paso del análisis queda visible: geometría → cargas → momentos → acero.
       </p>
       <p>
         Stack deliberadamente simple: HTML, CSS y JavaScript puros. Cero dependencias, cero instalación, funciona offline. El usuario abre un archivo y trabaja.
@@ -466,12 +437,12 @@
 <section class="py-24 lg:py-32 relative overflow-hidden">
   <div class="absolute inset-0 blueprint-bg" style="opacity:0.3"></div>
   <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
-    <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más aplicativos</div>
+    <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más aplicaciones</div>
     <h2 class="display text-4xl md:text-5xl mb-10">
-      Hay <em>otros aplicativos</em><br>en el ecosistema.
+      Hay <em>otros aplicaciones</em><br>en el ecosistema.
     </h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="../index.html#aplicativos" class="btn btn-outline">
+      <a href="../index.html#aplicaciones" class="btn btn-outline">
         Ver ecosistema completo
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
@@ -490,7 +461,7 @@
       <div class="text-sm font-medium">Luis Miguel Cruz Efus</div>
     </a>
     <div class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--muted);">
-      Aplicativo N.04 · Columnas Rectangulares CºAº
+      Aplicación N.05 · Escaleras de Concreto Armado
     </div>
   </div>
 </footer>

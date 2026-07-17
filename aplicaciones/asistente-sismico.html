@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15171c">
-<title>Reservorio Rectangular — ACI 350 + Robot · Luis Miguel Cruz Efus</title>
+<title>Asistente Sísmico E.030 — Aplicación · Luis Miguel Cruz Efus</title>
 
 <link rel="icon" type="image/png" href="../imagenes/lm_ingenieria/marca_lm/logo.png">
 
@@ -43,24 +43,28 @@
   .mono{ font-family:'JetBrains Mono', monospace; }
   .display{ font-family:'Instrument Serif', serif; font-weight:400; letter-spacing:-0.018em; line-height:0.95; }
   .display em{ font-style:italic; color: var(--accent); }
+
   .blueprint-bg{
     background-image:
       linear-gradient(oklch(0.35 0.012 250 / 0.18) 1px, transparent 1px),
       linear-gradient(90deg, oklch(0.35 0.012 250 / 0.18) 1px, transparent 1px);
     background-size: 56px 56px;
   }
+
   .coord{
     font-family:'JetBrains Mono', monospace;
     font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
     color: var(--muted); display:inline-flex; align-items:center; gap:0.5rem;
   }
   .coord::before{ content:""; width: 18px; height:1px; background: var(--accent); }
+
   .chip{
     display:inline-flex; padding: 4px 10px; border: 1px solid var(--line); border-radius: 99px;
     font-family:'JetBrains Mono', monospace; font-size: 0.66rem;
     color: var(--text-dim); letter-spacing: 0.06em; text-transform: uppercase;
   }
   .chip.accent{ border-color: var(--accent); color: var(--accent); }
+
   .btn{
     display:inline-flex; align-items:center; gap: 10px;
     padding: 12px 20px; border-radius: 4px; font-weight: 500; font-size: 0.9rem;
@@ -72,9 +76,12 @@
   .btn-ghost:hover{ border-color: var(--accent); color: var(--accent); }
   .btn-outline{ background: transparent; color: var(--text); border-color: var(--accent); }
   .btn-outline:hover{ background: var(--accent-soft); color: var(--accent); }
+
   [data-reveal]{ opacity:0; transform:translateY(14px); transition: opacity .9s ease, transform .9s ease; }
   [data-reveal].in{ opacity:1; transform:translateY(0); }
+
   .nav-bg{ background: oklch(0.16 0.012 250 / 0.82); backdrop-filter: blur(14px); }
+
   .logo-bezel{
     width: 34px; height: 34px;
     border: 1px solid var(--accent);
@@ -82,12 +89,13 @@
     overflow: hidden; background: oklch(0.10 0.012 250);
   }
   .logo-bezel img{ width: 78%; height: 78%; object-fit: contain; }
+
   .feature{
     border-left: 1px solid var(--accent);
     padding: 4px 0 4px 18px;
   }
   .feature h4{ font-size: 0.95rem; font-weight: 500; margin-bottom: 4px; }
-  .feature p{ font-size: 0.85rem; color: var(--text-dim); line-height: 1.5; }
+  .feature p{ font-size: 0.85rem; color: var(--text-dim); line-height: 1.5; }  /* HERO COVER (portrait 9:16) */
   .hero-cover{
     background: oklch(0.10 0.012 250);
     border: 1px solid var(--line-soft);
@@ -97,6 +105,12 @@
     aspect-ratio: 9/16;
     max-width: 360px;
     margin: 0 auto;
+    cursor: zoom-in;
+    transition: border-color .25s ease, transform .25s ease;
+  }
+  .hero-cover:hover{
+    border-color: var(--accent);
+    transform: translateY(-2px);
   }
   .hero-cover img{ width:100%; height:100%; object-fit: cover; display:block; }
   .hero-cover::before, .hero-cover::after{
@@ -105,9 +119,14 @@
   }
   .hero-cover::before{ top: 8px; left: 8px; border-right:none; border-bottom:none; }
   .hero-cover::after{ bottom: 8px; right: 8px; border-left:none; border-top:none; }
-  .carousel{ position: relative; }
+
+  /* ============ CAROUSEL ============ */
+  .carousel{
+    position: relative;
+  }
   .carousel-track{
-    display: flex; gap: 18px;
+    display: flex;
+    gap: 18px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -119,6 +138,7 @@
   .carousel-track::-webkit-scrollbar{ height: 6px; }
   .carousel-track::-webkit-scrollbar-track{ background: transparent; }
   .carousel-track::-webkit-scrollbar-thumb{ background: var(--line); border-radius: 3px; }
+
   .carousel-slide{
     flex: 0 0 auto;
     width: 260px;
@@ -130,9 +150,16 @@
     overflow: hidden;
     transition: border-color .25s ease, transform .25s ease;
   }
-  @media (min-width: 640px){ .carousel-slide{ width: 300px; } }
-  @media (min-width: 1024px){ .carousel-slide{ width: 340px; } }
-  .carousel-slide:hover{ border-color: var(--accent); transform: translateY(-2px); }
+  @media (min-width: 640px){
+    .carousel-slide{ width: 300px; }
+  }
+  @media (min-width: 1024px){
+    .carousel-slide{ width: 340px; }
+  }
+  .carousel-slide:hover{
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
   .carousel-slide .img-wrap{
     aspect-ratio: 9/16;
     overflow: hidden;
@@ -157,8 +184,8 @@
     font-size: 0.66rem;
     letter-spacing: 0.08em;
     color: var(--text-dim);
-    background: oklch(0.18 0.012 250);
     display: flex; justify-content: space-between; align-items: center;
+    background: oklch(0.18 0.012 250);
   }
   .carousel-slide .caption .num{ color: var(--accent); }
   .carousel-slide .zoom-hint{
@@ -176,40 +203,57 @@
     transition: opacity .25s ease;
   }
   .carousel-slide:hover .zoom-hint{ opacity: 1; }
+
   .carousel-nav{
-    position: absolute; top: 50%; transform: translateY(-50%);
-    width: 44px; height: 44px; border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px; height: 44px;
+    border-radius: 50%;
     background: oklch(0.12 0.012 250 / 0.92);
     backdrop-filter: blur(8px);
-    border: 1px solid var(--accent); color: var(--accent);
+    border: 1px solid var(--accent);
+    color: var(--accent);
     display: flex; align-items: center; justify-content: center;
-    cursor: pointer; z-index: 4;
-    transition: background .25s ease;
+    cursor: pointer;
+    z-index: 4;
+    transition: background .25s ease, transform .25s ease;
   }
   .carousel-nav:hover{ background: var(--accent); color: var(--ink-deep); }
   .carousel-nav.prev{ left: -10px; }
   .carousel-nav.next{ right: -10px; }
   .carousel-nav:disabled{ opacity: 0.3; cursor: not-allowed; }
-  @media (max-width: 640px){ .carousel-nav{ display: none; } }
+  @media (max-width: 640px){
+    .carousel-nav{ display: none; }
+  }
+
+  /* ============ LIGHTBOX ============ */
   .lightbox{
-    position: fixed; inset: 0;
+    position: fixed;
+    inset: 0;
     background: oklch(0.06 0.012 250 / 0.96);
     backdrop-filter: blur(10px);
     z-index: 100;
     display: none;
-    align-items: center; justify-content: center;
+    align-items: center;
+    justify-content: center;
     padding: 24px;
   }
   .lightbox.open{ display: flex; }
   .lightbox-stage{
     position: relative;
-    width: 100%; max-width: 1100px;
-    height: 100%; max-height: 92vh;
-    display: flex; align-items: center; justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+    height: 100%;
+    max-height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
   }
   .lightbox-img{
-    max-width: 100%; max-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
     transform-origin: center center;
     transition: transform .3s ease;
@@ -219,18 +263,30 @@
   }
   .lightbox-img.zoomed{ cursor: grab; }
   .lightbox-img.dragging{ cursor: grabbing; transition: none; }
-  .lightbox-close, .lightbox-prev, .lightbox-next,
-  .lightbox-zoom-in, .lightbox-zoom-out, .lightbox-zoom-reset{
+
+  .lightbox-close,
+  .lightbox-prev,
+  .lightbox-next,
+  .lightbox-zoom-in,
+  .lightbox-zoom-out,
+  .lightbox-zoom-reset{
     position: absolute;
-    width: 44px; height: 44px; border-radius: 50%;
+    width: 44px; height: 44px;
+    border-radius: 50%;
     background: oklch(0.12 0.012 250 / 0.92);
-    border: 1px solid var(--accent); color: var(--accent);
+    border: 1px solid var(--accent);
+    color: var(--accent);
     display: flex; align-items: center; justify-content: center;
-    cursor: pointer; z-index: 5;
+    cursor: pointer;
+    z-index: 5;
     transition: background .25s ease;
   }
-  .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover,
-  .lightbox-zoom-in:hover, .lightbox-zoom-out:hover, .lightbox-zoom-reset:hover{
+  .lightbox-close:hover,
+  .lightbox-prev:hover,
+  .lightbox-next:hover,
+  .lightbox-zoom-in:hover,
+  .lightbox-zoom-out:hover,
+  .lightbox-zoom-reset:hover{
     background: var(--accent); color: var(--ink-deep);
   }
   .lightbox-close{ top: 16px; right: 16px; }
@@ -242,10 +298,13 @@
   }
   .lightbox-controls > *{ position: static; transform: none; }
   .lightbox-caption{
-    position: absolute; top: 16px; left: 16px;
+    position: absolute;
+    top: 16px; left: 16px;
     font-family:'JetBrains Mono', monospace;
-    font-size: 0.7rem; letter-spacing: 0.12em;
-    color: var(--text-dim); text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    text-transform: uppercase;
     background: oklch(0.12 0.012 250 / 0.9);
     padding: 8px 14px;
     border: 1px solid var(--line-soft);
@@ -256,8 +315,10 @@
   .lightbox-counter{
     position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%);
     font-family:'JetBrains Mono', monospace;
-    font-size: 0.72rem; color: var(--text-dim);
-    letter-spacing: 0.14em; z-index: 5;
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    letter-spacing: 0.14em;
+    z-index: 5;
   }
   .lightbox-counter span{ color: var(--accent); }
 
@@ -275,7 +336,7 @@
   .logo-bezel{ width:auto !important; height:42px !important; border:none !important; background:transparent !important; overflow:visible !important; padding:0 !important; }
   .logo-bezel img{ width:auto !important; height:100% !important; max-width:175px; object-fit:contain; }
 
-  /* ===== Carrusel-hero (aplicativo · retrato) ===== */
+  /* ===== Carrusel-hero (aplicación · retrato) ===== */
   .hero-carousel{ position:relative; }
   .hcar-stage{ position:relative; border:1px solid var(--line-soft); background:oklch(0.09 0.012 250); border-radius:8px; overflow:hidden; aspect-ratio:9/16; max-width:320px; margin:0 auto; }
   .hcar-stage::before{ content:""; position:absolute; inset:0; background-image:linear-gradient(oklch(0.35 0.012 250 / 0.10) 1px,transparent 1px),linear-gradient(90deg,oklch(0.35 0.012 250 / 0.10) 1px,transparent 1px); background-size:26px 26px; z-index:0; }
@@ -311,90 +372,71 @@
 <body>
 <div class="atmosphere" aria-hidden="true"><span class="orb orb-amber"></span><span class="orb orb-blue"></span><span class="orb orb-cyan"></span></div>
 
+<!-- NAV -->
 <header class="fixed top-0 left-0 right-0 z-50 nav-bg border-b" style="border-color: var(--line-soft);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-4">
-    <a href="../index.html#aplicativos" class="flex items-center gap-3">
+    <a href="../index.html" class="flex items-center gap-3">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color: var(--accent);"><path d="M13 7H1m0 0l5-5m-5 5l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       <span class="mono text-xs uppercase tracking-[0.18em]" style="color: var(--text-dim);">Volver al portafolio</span>
     </a>
     <div class="hidden md:flex items-center gap-3">
-      <span class="chip accent">Publicado</span>
+      <span class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">Aplicación N.01</span>
     </div>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
   <div class="absolute inset-0 blueprint-bg" style="opacity:0.4"></div>
   <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
 
     <div class="flex items-center justify-between mb-12">
-      <div class="coord">N.ACI 350 — 2026</div>
-      <div class="coord hidden md:flex">Estructuras · Concreto Armado</div>
+      <div class="coord">N.01 / Aplicación</div>
+      <div class="coord hidden md:flex">Norma E.030 — 2026</div>
     </div>
 
     <div class="grid lg:grid-cols-12 gap-12 items-start">
       <div class="lg:col-span-7">
         <div class="flex flex-wrap items-center gap-3 mb-8">
-          <span class="chip accent">ACI 350-20</span>
-          <span class="chip">E.060</span>
-          <span class="chip">E.030</span>
-          <span class="chip">ACI 350.3-20</span>
+          <span class="chip accent">Estructuras</span>
+          <span class="chip">E.030 · 2026</span>
+          <span class="chip">Web app</span>
+          <span class="chip">Offline</span>
         </div>
         <h1 class="display text-5xl md:text-6xl lg:text-7xl mb-10" data-reveal>
-          Reservorio <em>Rectangular</em>.
+          Asistente <em>Sísmico</em><br>
+          E.030 — 2026.
         </h1>
         <p class="text-lg leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          Asistente de escritorio que integra la memoria de cálculo completa para reservorios rectangulares de concreto armado contenedores de líquido. Desde el dimensionamiento inicial hasta el diseño del refuerzo, pasando por la generación automática del modelo de elementos finitos en Autodesk Robot y la importación de resultados con criterio Wood &amp; Armer.
+          Herramienta de apoyo para ingenieros civiles, proyectistas y estudiantes avanzados que necesitan acelerar y ordenar la verificación sísmica de edificaciones conforme a la Norma E.030 vigente.
+        </p>
+        <p class="text-base leading-relaxed max-w-2xl" style="color: var(--text-dim);" data-reveal>
+          Integra parámetros de sitio, espectros, cortantes estáticos, control modal, derivas, escalamiento dinámico, verificación posterior del sistema estructural y revisión automática de irregularidades. Convierte un proceso usualmente disperso entre norma, hojas Excel y ETABS en un flujo claro, trazable y exportable — manteniendo siempre el criterio del ingeniero como eje central.
         </p>
         <div class="flex flex-wrap gap-4 mt-8" data-reveal>
-          <a href="https://apps.microsoft.com/detail/9NLD74PFQHH0" target="_blank" class="btn btn-primary">
+          <a href="https://apps.microsoft.com/detail/9NVQQMMG032Q" target="_blank" class="btn btn-primary">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0" style="margin-right: 2px;"><path d="M0 0h11.4v11.4H0V0zm12.6 0H24v11.4H12.6V0zM0 12.6h11.4V24H0V12.6zm12.6 0H24V24H12.6V12.6z"/></svg>
             Descargar en Microsoft Store
           </a>
         </div>
-      </div>
-
-      <div class="lg:col-span-5" data-reveal>
-        <div class="hero-carousel" data-hcar>
-          <div class="hcar-stage hcar-frame">
-          <div class="hcar-slide is-active" data-lightbox data-src="../imagenes/lm_ingenieria/reservorios_rectangulares/01.png" data-num="N.01" data-caption="01 / 08"><img src="../imagenes/lm_ingenieria/reservorios_rectangulares/01.png" alt="N.01" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/reservorios_rectangulares/02.png" data-num="N.02" data-caption="02 / 08"><img src="../imagenes/lm_ingenieria/reservorios_rectangulares/02.png" alt="N.02" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/reservorios_rectangulares/03.png" data-num="N.03" data-caption="03 / 08"><img src="../imagenes/lm_ingenieria/reservorios_rectangulares/03.png" alt="N.03" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/reservorios_rectangulares/04.png" data-num="N.04" data-caption="04 / 08"><img src="../imagenes/lm_ingenieria/reservorios_rectangulares/04.png" alt="N.04" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/reservorios_rectangulares/05.png" data-num="N.05" data-caption="05 / 08"><img src="../imagenes/lm_ingenieria/reservorios_rectangulares/05.png" alt="N.05" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/reservorios_rectangulares/06.png" data-num="N.06" data-caption="06 / 08"><img src="../imagenes/lm_ingenieria/reservorios_rectangulares/06.png" alt="N.06" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/reservorios_rectangulares/07.png" data-num="N.07" data-caption="07 / 08"><img src="../imagenes/lm_ingenieria/reservorios_rectangulares/07.png" alt="N.07" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/reservorios_rectangulares/08.png" data-num="N.08" data-caption="08 / 08"><img src="../imagenes/lm_ingenieria/reservorios_rectangulares/08.png" alt="N.08" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-            <button class="hcar-nav prev" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M9 1L3 7l6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
-            <button class="hcar-nav next" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M5 1l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
-            <button class="hcar-zoom" data-hcar-zoom><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Ampliar</button>
-            <div class="hcar-caption"><span class="num" data-hcar-num>N.01</span><span data-hcar-cap>01 / 08</span></div>
-            <div class="hcar-progress"><span></span></div>
-          </div>
-          <div class="hcar-dots">
-        <button class="hcar-dot is-active" aria-label="Imagen 1"></button>
-        <button class="hcar-dot" aria-label="Imagen 2"></button>
-        <button class="hcar-dot" aria-label="Imagen 3"></button>
-        <button class="hcar-dot" aria-label="Imagen 4"></button>
-        <button class="hcar-dot" aria-label="Imagen 5"></button>
-        <button class="hcar-dot" aria-label="Imagen 6"></button>
-        <button class="hcar-dot" aria-label="Imagen 7"></button>
-        <button class="hcar-dot" aria-label="Imagen 8"></button>
-          </div>
+      </div>      <div class="lg:col-span-5" data-reveal>
+        <div class="hero-cover" data-lightbox data-src="../imagenes/lm_ingenieria/asistente_sismico_e030_2026/00_caratula.png" data-num="Carátula" data-caption="Asistente Sísmico E.030 — 2026">
+          <img src="../imagenes/lm_ingenieria/asistente_sismico_e030_2026/00_caratula.png" alt="Asistente Sísmico E.030 — 2026">
         </div>
-        <p class="mono text-[0.66rem] uppercase tracking-[0.14em] mt-4 text-center" style="color: var(--muted);">El recorrido avanza solo · usa ‹ › o desliza · clic en la imagen para ampliar</p>
+        <p class="mono text-[0.66rem] uppercase tracking-[0.14em] mt-4 text-center" style="color: var(--muted);">Clic en la imagen para ampliar</p>
       </div>
     </div>
 
     <div class="spec-strip mt-14" data-reveal>
-        <div class="spec"><span class="k">Categoría</span><span class="v">Estructuras · Concreto Armado</span></div>
-        <div class="spec"><span class="k">Normativa</span><span class="v">ACI 350-20 · E.060 · E.030</span></div>
-        <div class="spec"><span class="k">Plataforma</span><span class="v">Escritorio · Windows</span><span class="sub">.NET 8 + Autodesk Robot</span></div>
-        <div class="spec"><span class="k">Estado</span><span class="v">Publicado</span><span class="sub">2026</span></div>
+        <div class="spec"><span class="k">Categoría</span><span class="v">Análisis estructural</span></div>
+        <div class="spec"><span class="k">Normativa</span><span class="v">E.030 — 2026 (Perú)</span></div>
+        <div class="spec"><span class="k">Plataforma</span><span class="v">Web · Funciona offline</span><span class="sub">Móvil · Tablet · PC</span></div>
+        <div class="spec"><span class="k">Acceso</span><span class="v">Web · Sin instalación</span><span class="sub">Móvil · Tablet · PC</span></div>
     </div>
   </div>
 </section>
 
+<!-- WHAT IT DOES -->
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
@@ -405,71 +447,65 @@
 
     <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
       <div class="feature" data-reveal>
-        <h4>Memoria §1–§10</h4>
-        <p>Flujo completo de cálculo organizado en diez secciones editables, desde datos generales hasta el diseño del refuerzo.</p>
+        <h4>Parámetros sísmicos y espectros exportables</h4>
+        <p>Zona, factor Z, perfil de suelo, S, Tp, TL. Genera espectros X/Y/Z en TXT compatible con ETABS.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Cargas sísmicas ACI 350.3-20</h4>
-        <p>Presión impulsiva, convectiva y oleaje calculadas con SRSS, combinadas en ambas direcciones.</p>
+        <h4>Importación directa de ETABS</h4>
+        <p>Mass Summary, Modal Ratios, Story Drifts, Pier Forces y Story Forces — todo en un solo flujo trazable.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Modelo FEM en Robot</h4>
-        <p>Geometría, materiales, mallado, cargas y 22 combinaciones creadas automáticamente vía COM.</p>
+        <h4>Derivas y escalamiento dinámico</h4>
+        <p>Distorsiones de entrepiso con amplificación normativa y factores de escalamiento por dirección contra el mínimo estático.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Importación de resultados</h4>
-        <p>Envolvente de momentos por grupo (muros X/Y, fondo, techo) con criterio Wood &amp; Armer.</p>
+        <h4>Irregularidades automatizadas</h4>
+        <p>Masa, torsión, torsión extrema, piso blando y rigidez extrema — señalando cuáles requieren criterio manual del ingeniero.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Diseño del refuerzo</h4>
-        <p>Flexotracción con demanda sanitaria, cuantías mínimas ACI 350-20 y separaciones por retracción.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Estabilidad global</h4>
-        <p>Verificación de flotación, deslizamiento, volteo y presión de contacto (E.050).</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Diagramas SVG</h4>
-        <p>Presiones, cortes y armado integrados visualmente en la memoria.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Persistencia</h4>
-        <p>Guardado en JSON e impresión en PDF A4 con trazabilidad completa.</p>
+        <h4>Memoria normativa exportable</h4>
+        <p>Resumen con parámetros, resultados, advertencias y recomendaciones, exportable a PDF para revisión o archivo.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- DEVELOPMENT NOTE -->
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
   <div class="max-w-5xl mx-auto px-6 lg:px-10">
-    <div class="coord mb-6">§ B / Notas de desarrollo</div>
+    <div class="coord mb-6">§ C / Notas de desarrollo</div>
     <h2 class="display text-4xl md:text-5xl mb-10" data-reveal>
       Cómo lo <em>construí</em>.
     </h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
       <p>
-        Partí de la ACI 350-20 y ACI 350.3-20 para estructuras contenedoras de líquido, más las normas E.060 y E.030 para concreto armado y sismicidad peruana. Cada fórmula fue contrastada con ejemplos publicados y verificada numéricamente antes de escribir una sola línea de código.
+        El aplicación nace de mi iniciativa por optimizar el análisis sísmico. Desarrollé una metodología que traduce el rigor de la E.030 y la literatura especializada directamente en lógica de cálculo verificable, priorizando la trazabilidad normativa y el control del ingeniero en cada decisión.
       </p>
       <p>
-        El diseño de un reservorio rectangular suele dispersarse entre la salida de Robot, hojas Excel de cuantías y memorias intermedias. Aquí se concentra en un flujo trazable: dimensionamiento → cargas sísmicas SRSS → modelo FEM automático → envolvente Wood &amp; Armer → diseño del refuerzo, con diagramas SVG integrados.
+        El objetivo no es sustituir a ETABS ni el criterio del especialista estructural, sino erradicar las horas de trabajo manual en Excel. El mayor salto en productividad lo logré al diseñar la importación directa de los archivos de salida de ETABS.
       </p>
       <p>
-        Aplicación de escritorio en C# sobre .NET 8 con integración COM a Autodesk Robot. El modelo se genera, se resuelve y se importan resultados sin salir del flujo de cálculo.
+        El stack es deliberadamente simple: HTML, CSS y JavaScript puros. Cero dependencias, cero instalación, funciona offline. El usuario abre un archivo y trabaja.
       </p>
     </div>
   </div>
 </section>
 
+<!-- CTA -->
 <section class="py-24 lg:py-32 relative overflow-hidden">
   <div class="absolute inset-0 blueprint-bg" style="opacity:0.3"></div>
   <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
-    <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más aplicativos</div>
+    <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más aplicaciones</div>
     <h2 class="display text-4xl md:text-5xl mb-10">
-      Hay <em>otros aplicativos</em><br>en el ecosistema.
+      Hay <em>otros aplicaciones</em><br>en el ecosistema.
     </h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="../index.html#aplicativos" class="btn btn-outline">
+      <a href="../index.html#aplicaciones" class="btn btn-outline">
         Ver ecosistema completo
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+      <a href="muros-de-corte.html" class="btn btn-outline">
+        Ver Muros de Corte
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
       <a href="../index.html#contacto" class="btn btn-ghost">Contactar</a>
@@ -477,17 +513,19 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="py-10 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-between gap-4">
     <a href="../index.html" class="flex items-center gap-3">
       <div class="text-sm font-medium">Luis Miguel Cruz Efus</div>
     </a>
     <div class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--muted);">
-      Reservorio Rectangular — ACI 350 + Robot
+      Aplicación N.01 · Asistente Sísmico E.030 — 2026
     </div>
   </div>
 </footer>
 
+<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
   <div class="lightbox-caption" id="lightboxCaption"><span class="num">N.00</span><span id="lightboxCaptionText"></span></div>
   <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
@@ -517,12 +555,15 @@
 </div>
 
 <script>
+  // Reveal on scroll
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+  /* ===== CAROUSEL NAVIGATION ===== */
 
   /* ===== Carrusel-hero automático ===== */
   document.querySelectorAll('[data-hcar]').forEach(car => {
@@ -567,6 +608,7 @@
     const prev = carousel.querySelector('.carousel-nav.prev');
     const next = carousel.querySelector('.carousel-nav.next');
     if (!track) return;
+
     const scrollBy = (dir) => {
       const slide = track.querySelector('.carousel-slide');
       if (!slide) return;
@@ -576,6 +618,7 @@
     };
     if (prev) prev.addEventListener('click', () => scrollBy(-1));
     if (next) next.addEventListener('click', () => scrollBy(1));
+
     const updateBtns = () => {
       const max = track.scrollWidth - track.clientWidth - 4;
       if (prev) prev.disabled = track.scrollLeft <= 4;
@@ -586,6 +629,7 @@
     updateBtns();
   });
 
+  /* ===== LIGHTBOX ===== */
   const lightbox = document.getElementById('lightbox');
   const lbImg = document.getElementById('lightboxImg');
   const lbCaptionText = document.getElementById('lightboxCaptionText');
@@ -601,13 +645,21 @@
 
   const items = Array.from(document.querySelectorAll('[data-lightbox]'));
   lbTotal.textContent = items.length;
+  if (items.length <= 1) {
+    if (lbPrev) lbPrev.style.display = 'none';
+    if (lbNext) lbNext.style.display = 'none';
+    const lbCounterDiv = document.querySelector('.lightbox-counter');
+    if (lbCounterDiv) lbCounterDiv.style.display = 'none';
+  }
   let currentIdx = 0;
-  let zoom = 1, panX = 0, panY = 0;
+  let zoom = 1;
+  let panX = 0, panY = 0;
 
   function applyTransform(){
     lbImg.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
     lbImg.classList.toggle('zoomed', zoom > 1);
   }
+
   function show(idx){
     currentIdx = (idx + items.length) % items.length;
     const el = items[currentIdx];
@@ -618,6 +670,7 @@
     zoom = 1; panX = 0; panY = 0;
     applyTransform();
   }
+
   function open(idx){
     show(idx);
     lightbox.classList.add('open');
@@ -627,11 +680,17 @@
     lightbox.classList.remove('open');
     document.body.style.overflow = '';
   }
-  items.forEach((el, i) => { el.addEventListener('click', () => open(i)); });
+
+  items.forEach((el, i) => {
+    el.addEventListener('click', () => open(i));
+  });
+
   lbClose.addEventListener('click', close);
   lbPrev.addEventListener('click', () => show(currentIdx - 1));
   lbNext.addEventListener('click', () => show(currentIdx + 1));
-  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
   document.addEventListener('keydown', (e) => {
     if (!lightbox.classList.contains('open')) return;
     if (e.key === 'Escape') close();
@@ -641,16 +700,20 @@
     if (e.key === '-' || e.key === '_') { zoom = Math.max(zoom - 0.25, 1); if (zoom === 1) { panX = panY = 0; } applyTransform(); }
     if (e.key === '0') { zoom = 1; panX = panY = 0; applyTransform(); }
   });
+
   lbZoomIn.addEventListener('click', () => { zoom = Math.min(zoom + 0.25, 4); applyTransform(); });
   lbZoomOut.addEventListener('click', () => { zoom = Math.max(zoom - 0.25, 1); if (zoom === 1) { panX = panY = 0; } applyTransform(); });
   lbZoomReset.addEventListener('click', () => { zoom = 1; panX = panY = 0; applyTransform(); });
 
+  // Click on image: toggle zoom 1↔2
   lbImg.addEventListener('click', (e) => {
     e.stopPropagation();
-    if (zoom > 1) { zoom = 1; panX = panY = 0; } else { zoom = 2; }
+    if (zoom > 1) { zoom = 1; panX = panY = 0; }
+    else { zoom = 2; }
     applyTransform();
   });
 
+  // Drag-to-pan when zoomed
   let isDragging = false, dragStartX = 0, dragStartY = 0, panStartX = 0, panStartY = 0;
   lbImg.addEventListener('mousedown', (e) => {
     if (zoom <= 1) return;
@@ -666,8 +729,12 @@
     panY = panStartY + (e.clientY - dragStartY);
     applyTransform();
   });
-  window.addEventListener('mouseup', () => { isDragging = false; lbImg.classList.remove('dragging'); });
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+    lbImg.classList.remove('dragging');
+  });
 
+  // Touch pan
   let touchStartX = 0, touchStartY = 0;
   lbImg.addEventListener('touchstart', (e) => {
     if (zoom <= 1 || e.touches.length !== 1) return;
@@ -685,6 +752,7 @@
   }, { passive: false });
   lbImg.addEventListener('touchend', () => { isDragging = false; });
 
+  // Mouse wheel zoom
   lightbox.addEventListener('wheel', (e) => {
     if (!lightbox.classList.contains('open')) return;
     e.preventDefault();

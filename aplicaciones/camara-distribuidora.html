@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15171c">
-<title>Lechos de Secado de Lodos — Aplicativo · Luis Miguel Cruz Efus</title>
+<title>Cámara Distribuidora de Caudal — CONAGUA · PNSR · Luis Miguel Cruz Efus</title>
 
 <link rel="icon" type="image/png" href="../imagenes/lm_ingenieria/marca_lm/logo.png">
 
@@ -261,7 +261,7 @@
   }
   .lightbox-counter span{ color: var(--accent); }
 
-  /* ===== Capa viva (atmosfera) + logo limpio ===== */
+  /* ===== Capa viva (atmósfera) + logo limpio ===== */
   .atmosphere{ position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none; }
   .atmosphere .orb{ position:absolute; border-radius:50%; filter:blur(120px); will-change:transform; }
   .atmosphere .orb-amber{ width:46vw; height:46vw; min-width:360px; min-height:360px; background:radial-gradient(circle, oklch(0.78 0.14 65 / 0.50), transparent 68%); top:-16vh; right:-8vw; opacity:.5; animation:driftA 30s ease-in-out infinite alternate; }
@@ -271,11 +271,10 @@
   @keyframes driftB{ to{ transform:translate(8vw,-6vh) scale(1.15); } }
   @keyframes driftC{ to{ transform:translate(-6vw,-7vh) scale(1.2); } }
   @media (prefers-reduced-motion: reduce){ .atmosphere .orb{ animation:none; } }
-  /* Logo sin recuadro amarillo, mas presencia */
   .logo-bezel{ width:auto !important; height:42px !important; border:none !important; background:transparent !important; overflow:visible !important; padding:0 !important; }
   .logo-bezel img{ width:auto !important; height:100% !important; max-width:175px; object-fit:contain; }
 
-  /* ===== Carrusel-hero (aplicativo - retrato) ===== */
+  /* ===== Carrusel-hero (aplicación · retrato) ===== */
   .hero-carousel{ position:relative; }
   .hcar-stage{ position:relative; border:1px solid var(--line-soft); background:oklch(0.09 0.012 250); border-radius:8px; overflow:hidden; aspect-ratio:9/16; max-width:320px; margin:0 auto; }
   .hcar-stage::before{ content:""; position:absolute; inset:0; background-image:linear-gradient(oklch(0.35 0.012 250 / 0.10) 1px,transparent 1px),linear-gradient(90deg,oklch(0.35 0.012 250 / 0.10) 1px,transparent 1px); background-size:26px 26px; z-index:0; }
@@ -299,7 +298,7 @@
   .hcar-dots{ display:flex; gap:7px; justify-content:center; flex-wrap:wrap; margin-top:16px; }
   .hcar-dot{ width:28px; height:4px; border-radius:2px; background:var(--line); cursor:pointer; transition:background .25s,transform .25s; border:none; padding:0; }
   .hcar-dot.is-active{ background:var(--accent); transform:scaleY(1.6); }
-  /* ===== Datos tecnicos horizontales ===== */
+  /* ===== Datos horizontales ===== */
   .spec-strip{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line-soft); border:1px solid var(--line-soft); border-radius:6px; overflow:hidden; }
   @media (min-width:768px){ .spec-strip{ grid-template-columns:repeat(4,1fr); } }
   .spec{ background:oklch(0.16 0.012 250); padding:18px 20px; }
@@ -313,7 +312,7 @@
 
 <header class="fixed top-0 left-0 right-0 z-50 nav-bg border-b" style="border-color: var(--line-soft);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-4">
-    <a href="../index.html#aplicativos" class="flex items-center gap-3">
+    <a href="../index.html#aplicaciones" class="flex items-center gap-3">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color: var(--accent);"><path d="M13 7H1m0 0l5-5m-5 5l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       <span class="mono text-xs uppercase tracking-[0.18em]" style="color: var(--text-dim);">Volver al portafolio</span>
     </a>
@@ -328,42 +327,41 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
 
     <div class="flex items-center justify-between mb-12">
-      <div class="coord">N.OS.090 — 2026</div>
-      <div class="coord hidden md:flex">OS.090 · CONAGUA · OPS/CEPIS</div>
+      <div class="coord">N.CONAGUA — 2026</div>
+      <div class="coord hidden md:flex">Hidráulica · Agua Potable Rural</div>
     </div>
 
     <div class="grid lg:grid-cols-12 gap-12 items-start">
       <div class="lg:col-span-7">
         <div class="flex flex-wrap items-center gap-3 mb-8">
-          <span class="chip accent">Publicado</span>
-          <span class="chip">OS.090</span>
-          <span class="chip">CONAGUA</span>
-          <span class="chip">OPS/CEPIS</span>
+          <span class="chip accent">CONAGUA</span>
+          <span class="chip">PNSR</span>
+          <span class="chip">French</span>
+          <span class="chip">Sotelo</span>
         </div>
         <h1 class="display text-5xl md:text-6xl lg:text-7xl mb-10" data-reveal>
-          Lechos de <em>Secado</em>.
+          Cámara <em>Distribuidora</em>.
         </h1>
         <p class="text-lg leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          Aplicativo de apoyo para dimensionar lechos de secado de lodos en plantas de tratamiento de aguas residuales. Integra produccion de lodos, doble criterio de area (volumen/profundidad y carga superficial), ciclo operativo, balance de agua y evaporacion, y optimizacion de la huella construida.
-        </p>
-        <p class="text-base leading-relaxed max-w-2xl" style="color: var(--text-dim);" data-reveal>
-          Todo en un flujo unificado con verificaciones y esquemas graficos.
+          Herramienta de apoyo para diseñar y verificar cámaras de distribución de caudal por gravedad, con vertederos de cresta delgada (triangulares o rectangulares) y el método de coeficientes efectivos de Kindsvater-Carter. Automatiza desde la determinación de caudales por salida hasta la generación de planos en SVG, con trazabilidad completa de cada paso intermedio.
         </p>
       </div>
 
       <div class="lg:col-span-5" data-reveal>
         <div class="hero-carousel" data-hcar>
           <div class="hcar-stage hcar-frame">
-          <div class="hcar-slide is-active" data-lightbox data-src="../imagenes/lm_ingenieria/lecho_secado_lodos/01.png" data-num="N.01" data-caption="Vista general del aplicativo"><img src="../imagenes/lm_ingenieria/lecho_secado_lodos/01.png" alt="N.01" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/lecho_secado_lodos/02.png" data-num="N.02" data-caption="Origen y produccion de lodos"><img src="../imagenes/lm_ingenieria/lecho_secado_lodos/02.png" alt="N.02" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/lecho_secado_lodos/03.png" data-num="N.03" data-caption="Doble criterio de area"><img src="../imagenes/lm_ingenieria/lecho_secado_lodos/03.png" alt="N.03" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/lecho_secado_lodos/04.png" data-num="N.04" data-caption="Ciclo operativo y celdas"><img src="../imagenes/lm_ingenieria/lecho_secado_lodos/04.png" alt="N.04" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/lecho_secado_lodos/05.png" data-num="N.05" data-caption="Balance de agua y evaporacion"><img src="../imagenes/lm_ingenieria/lecho_secado_lodos/05.png" alt="N.05" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/lecho_secado_lodos/06.png" data-num="N.06" data-caption="Verificaciones y esquemas"><img src="../imagenes/lm_ingenieria/lecho_secado_lodos/06.png" alt="N.06" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
+          <div class="hcar-slide is-active" data-lightbox data-src="../imagenes/lm_ingenieria/camara_distribuidora/01.png" data-num="N.01" data-caption="01 / 08"><img src="../imagenes/lm_ingenieria/camara_distribuidora/01.png" alt="N.01" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
+          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/camara_distribuidora/02.png" data-num="N.02" data-caption="02 / 08"><img src="../imagenes/lm_ingenieria/camara_distribuidora/02.png" alt="N.02" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
+          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/camara_distribuidora/03.png" data-num="N.03" data-caption="03 / 08"><img src="../imagenes/lm_ingenieria/camara_distribuidora/03.png" alt="N.03" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
+          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/camara_distribuidora/04.png" data-num="N.04" data-caption="04 / 08"><img src="../imagenes/lm_ingenieria/camara_distribuidora/04.png" alt="N.04" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
+          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/camara_distribuidora/05.png" data-num="N.05" data-caption="05 / 08"><img src="../imagenes/lm_ingenieria/camara_distribuidora/05.png" alt="N.05" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
+          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/camara_distribuidora/06.png" data-num="N.06" data-caption="06 / 08"><img src="../imagenes/lm_ingenieria/camara_distribuidora/06.png" alt="N.06" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
+          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/camara_distribuidora/07.png" data-num="N.07" data-caption="07 / 08"><img src="../imagenes/lm_ingenieria/camara_distribuidora/07.png" alt="N.07" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
+          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/camara_distribuidora/08.png" data-num="N.08" data-caption="08 / 08"><img src="../imagenes/lm_ingenieria/camara_distribuidora/08.png" alt="N.08" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
             <button class="hcar-nav prev" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M9 1L3 7l6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
             <button class="hcar-nav next" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M5 1l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
             <button class="hcar-zoom" data-hcar-zoom><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Ampliar</button>
-            <div class="hcar-caption"><span class="num" data-hcar-num>N.01</span><span data-hcar-cap>Vista general del aplicativo</span></div>
+            <div class="hcar-caption"><span class="num" data-hcar-num>N.01</span><span data-hcar-cap>01 / 08</span></div>
             <div class="hcar-progress"><span></span></div>
           </div>
           <div class="hcar-dots">
@@ -373,6 +371,8 @@
         <button class="hcar-dot" aria-label="Imagen 4"></button>
         <button class="hcar-dot" aria-label="Imagen 5"></button>
         <button class="hcar-dot" aria-label="Imagen 6"></button>
+        <button class="hcar-dot" aria-label="Imagen 7"></button>
+        <button class="hcar-dot" aria-label="Imagen 8"></button>
           </div>
         </div>
         <p class="mono text-[0.66rem] uppercase tracking-[0.14em] mt-4 text-center" style="color: var(--muted);">El recorrido avanza solo · usa ‹ › o desliza · clic en la imagen para ampliar</p>
@@ -380,10 +380,10 @@
     </div>
 
     <div class="spec-strip mt-14" data-reveal>
-        <div class="spec"><span class="k">Categoria</span><span class="v">Saneamiento · PTAR</span></div>
-        <div class="spec"><span class="k">Normativa</span><span class="v">OS.090 · CONAGUA · OPS/CEPIS</span></div>
-        <div class="spec"><span class="k">Plataforma</span><span class="v">Web · Funciona offline</span><span class="sub">Movil · Tablet · PC</span></div>
-        <div class="spec"><span class="k">Acceso</span><span class="v">Web · Sin instalacion</span><span class="sub">Movil · Tablet · PC</span></div>
+        <div class="spec"><span class="k">Categoría</span><span class="v">Hidráulica · Agua Potable</span></div>
+        <div class="spec"><span class="k">Referencia</span><span class="v">CONAGUA · PNSR · French</span></div>
+        <div class="spec"><span class="k">Plataforma</span><span class="v">Web · Navegador</span><span class="sub">HTML + JavaScript</span></div>
+        <div class="spec"><span class="k">Estado</span><span class="v">Publicado</span><span class="sub">2026</span></div>
     </div>
   </div>
 </section>
@@ -393,41 +393,41 @@
 
     <div class="flex items-baseline gap-5 mb-12">
       <span class="mono text-sm" style="color: var(--accent);">§ A</span>
-      <h2 class="serif text-3xl lg:text-4xl">Que <em style="color: var(--accent); font-style:italic;">automatiza</em></h2>
+      <h2 class="serif text-3xl lg:text-4xl">Qué <em style="color: var(--accent); font-style:italic;">automatiza</em></h2>
     </div>
 
     <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
       <div class="feature" data-reveal>
-        <h4>Origen del lodo</h4>
-        <p>Primario, activados, UASB/RAFA o mixto, con produccion por caudal directo o por DQO removida.</p>
+        <h4>Vertederos Kindsvater-Carter</h4>
+        <p>Calcula vertederos triangulares o rectangulares de cresta delgada con coeficientes efectivos Cₑ y correcciones Kₕ / Kᵦ interpoladas de tablas normalizadas.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Doble criterio de area</h4>
-        <p>Por volumen/profundidad y por carga superficial; adopta la mayor segun OS.090.</p>
+        <h4>Tres modos de cálculo</h4>
+        <p>Dimensionar (θ o b a partir de la carga), despejar h₁ (carga a partir de la geometría) o verificar (caudal real vs. caudal de diseño y porcentaje de error).</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Ciclo operativo</h4>
-        <p>Secado, limpieza, preparacion, intervalo entre descargas y celdas de reserva.</p>
+        <h4>2 a 12 salidas</h4>
+        <p>Distribución uniforme o diferenciada por cada salida, con caudal total de ingreso definido por el usuario y reparto automático o manual.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Lixiviados y drenaje</h4>
-        <p>Estimacion por balance de agua (CONAGUA) o metodo porcentual, con caudal de diseno.</p>
+        <h4>Cámara de calma</h4>
+        <p>Dimensionamiento interior sumando anchos de salida y tabiques, tirante de agua y verificación de velocidad de aproximación (≤ 0.40 m/s).</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Balance anual</h4>
-        <p>Agua, evaporacion y volumen de torta seca para dimensionar la evacuacion.</p>
+        <h4>Verificación de salidas</h4>
+        <p>Velocidad real en tuberías, carga requerida con coeficiente 1.56, detección de ahogamiento y alertas cuando la velocidad excede el límite admisible.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Verificaciones geometricas</h4>
-        <p>Ancho por metodo de retiro, largo, profundidad, losa de impacto y borde libre.</p>
+        <h4>Planos SVG</h4>
+        <p>Vista en planta, corte longitudinal y vista frontal de vertederos generados automáticamente con escala ajustable e impresión directa.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Optimizacion</h4>
-        <p>Minimiza la huella total (W x L) respetando criterios de profundidad y carga superficial.</p>
+        <h4>Guía integrada</h4>
+        <p>Pestaña con la teoría, ecuaciones, fuentes (French, Sotelo, CONAGUA, PNSR), tablas de coeficientes y reglas de validación que aplica el cálculo.</p>
       </div>
       <div class="feature" data-reveal>
         <h4>Persistencia</h4>
-        <p>Esquemas SVG de corte y planta, ejemplo predefinido, JSON y PDF.</p>
+        <p>Guardado y carga de proyectos en JSON, con memoria de cálculo imprimible que incluye fórmulas, valores parciales y resumen de cumplimiento.</p>
       </div>
     </div>
   </div>
@@ -441,10 +441,10 @@
     </h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
       <p>
-        La base parte de la OS.090 para plantas de tratamiento, complementada con Metcalf &amp; Eddy y guías de CONAGUA para el dimensionamiento de lechos. Cada ecuación está referenciada a su artículo normativo de origen y fue verificada numéricamente antes de implementarla.
+        El punto de partida fue French (Cap. 8), Sotelo y las guías de CONAGUA y PNSR para sistemas rurales por gravedad. Los coeficientes Kindsvater-Carter se implementaron a partir de las tablas de Bos (1976), interpoladas directamente en código.
       </p>
       <p>
-        El dimensionamiento de lechos de secado suele dispersarse entre manuales, tablas de digestión y hojas Excel sueltas. Aquí se concentra en un flujo trazable: volumen de lodo → área de secado → capas de medio filtrante → drenaje → memoria de cálculo imprimible.
+        Diseñar una cámara distribuidora suele implicar ir y venir entre tablas de coeficientes, catálogos de tuberías y croquis a mano. Aquí se concentra en un flujo trazable: caudal total → geometría del vertedero → cámara de calma → verificación de salidas → tres planos SVG listos para imprimir.
       </p>
       <p>
         Stack deliberadamente simple: HTML, CSS y JavaScript puros. Cero dependencias, cero instalación, funciona offline. El usuario abre un archivo y trabaja.
@@ -456,12 +456,12 @@
 <section class="py-24 lg:py-32 relative overflow-hidden">
   <div class="absolute inset-0 blueprint-bg" style="opacity:0.3"></div>
   <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
-    <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Mas aplicativos</div>
+    <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más aplicaciones</div>
     <h2 class="display text-4xl md:text-5xl mb-10">
-      Hay <em>otros aplicativos</em><br>en el ecosistema.
+      Hay <em>otros aplicaciones</em><br>en el ecosistema.
     </h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="../index.html#aplicativos" class="btn btn-outline">
+      <a href="../index.html#aplicaciones" class="btn btn-outline">
         Ver ecosistema completo
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
@@ -476,7 +476,7 @@
       <div class="text-sm font-medium">Luis Miguel Cruz Efus</div>
     </a>
     <div class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--muted);">
-      Lechos de Secado de Lodos
+      Cámara Distribuidora — CONAGUA + PNSR
     </div>
   </div>
 </footer>
@@ -517,7 +517,7 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
 
-  /* ===== Carrusel-hero automatico ===== */
+  /* ===== Carrusel-hero automático ===== */
   document.querySelectorAll('[data-hcar]').forEach(car => {
     const slides = Array.from(car.querySelectorAll('.hcar-slide'));
     const dots = Array.from(car.querySelectorAll('.hcar-dot'));
@@ -687,6 +687,5 @@
     applyTransform();
   }, { passive: false });
 </script>
-
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15171c">
-<title>Dotaciones de Agua IS.010 — Aplicativo · Luis Miguel Cruz Efus</title>
+<title>Reservorio Rectangular — ACI 350 + Robot · Luis Miguel Cruz Efus</title>
 
 <link rel="icon" type="image/png" href="../imagenes/lm_ingenieria/marca_lm/logo.png">
 
@@ -88,6 +88,7 @@
   }
   .feature h4{ font-size: 0.95rem; font-weight: 500; margin-bottom: 4px; }
   .feature p{ font-size: 0.85rem; color: var(--text-dim); line-height: 1.5; }
+    /* HERO COVER (portrait 9:16) */
   .hero-cover{
     background: oklch(0.10 0.012 250);
     border: 1px solid var(--line-soft);
@@ -97,6 +98,12 @@
     aspect-ratio: 9/16;
     max-width: 360px;
     margin: 0 auto;
+    cursor: zoom-in;
+    transition: border-color .25s ease, transform .25s ease;
+  }
+  .hero-cover:hover{
+    border-color: var(--accent);
+    transform: translateY(-2px);
   }
   .hero-cover img{ width:100%; height:100%; object-fit: cover; display:block; }
   .hero-cover::before, .hero-cover::after{
@@ -275,7 +282,7 @@
   .logo-bezel{ width:auto !important; height:42px !important; border:none !important; background:transparent !important; overflow:visible !important; padding:0 !important; }
   .logo-bezel img{ width:auto !important; height:100% !important; max-width:175px; object-fit:contain; }
 
-  /* ===== Carrusel-hero (aplicativo · retrato) ===== */
+  /* ===== Carrusel-hero (aplicación · retrato) ===== */
   .hero-carousel{ position:relative; }
   .hcar-stage{ position:relative; border:1px solid var(--line-soft); background:oklch(0.09 0.012 250); border-radius:8px; overflow:hidden; aspect-ratio:9/16; max-width:320px; margin:0 auto; }
   .hcar-stage::before{ content:""; position:absolute; inset:0; background-image:linear-gradient(oklch(0.35 0.012 250 / 0.10) 1px,transparent 1px),linear-gradient(90deg,oklch(0.35 0.012 250 / 0.10) 1px,transparent 1px); background-size:26px 26px; z-index:0; }
@@ -313,12 +320,12 @@
 
 <header class="fixed top-0 left-0 right-0 z-50 nav-bg border-b" style="border-color: var(--line-soft);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-4">
-    <a href="../index.html" class="flex items-center gap-3">
+    <a href="../index.html#aplicaciones" class="flex items-center gap-3">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color: var(--accent);"><path d="M13 7H1m0 0l5-5m-5 5l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       <span class="mono text-xs uppercase tracking-[0.18em]" style="color: var(--text-dim);">Volver al portafolio</span>
     </a>
     <div class="hidden md:flex items-center gap-3">
-      <span class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">Aplicativo N.07</span>
+      <span class="chip accent">Publicado</span>
     </div>
   </div>
 </header>
@@ -328,57 +335,43 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
 
     <div class="flex items-center justify-between mb-12">
-      <div class="coord">N.07 / Aplicativo</div>
-      <div class="coord hidden md:flex">Norma IS.010</div>
+      <div class="coord">N.ACI 350 — 2026</div>
+      <div class="coord hidden md:flex">Estructuras · Concreto Armado</div>
     </div>
 
     <div class="grid lg:grid-cols-12 gap-12 items-start">
       <div class="lg:col-span-7">
         <div class="flex flex-wrap items-center gap-3 mb-8">
-          <span class="chip accent">Inst. Sanitarias</span>
-          <span class="chip">IS.010</span>
-          <span class="chip">Web app</span>
-          <span class="chip">Offline</span>
+          <span class="chip accent">ACI 350-20</span>
+          <span class="chip">E.060</span>
+          <span class="chip">E.030</span>
+          <span class="chip">ACI 350.3-20</span>
         </div>
         <h1 class="display text-5xl md:text-6xl lg:text-7xl mb-10" data-reveal>
-          Dotaciones de <em>Agua</em><br>
-          IS.010.
+          Reservorio <em>Rectangular</em>.
         </h1>
         <p class="text-lg leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          Calculador de dotaciones de agua para edificaciones bajo la Norma IS.010, alineado a los usos definidos en el Reglamento Nacional de Edificaciones.
+          Asistente de escritorio que integra la memoria de cálculo completa para reservorios rectangulares de concreto armado contenedores de líquido. Desde el dimensionamiento inicial hasta el diseño del refuerzo, pasando por la generación automática del modelo de elementos finitos en Autodesk Robot y la importación de resultados con criterio Wood &amp; Armer.
         </p>
-        <p class="text-base leading-relaxed max-w-2xl" style="color: var(--text-dim);" data-reveal>
-          Permite componer múltiples destinos en simultáneo (vivienda, comercio, oficina, hospedaje, áreas verdes, piscinas), resolver demandas diarias y máximas, y exportar el resumen normativo listo para integrarse a la memoria de instalaciones sanitarias.
-        </p>
-      </div>
-
-      <div class="lg:col-span-5" data-reveal>
-        <div class="hero-carousel" data-hcar>
-          <div class="hcar-stage hcar-frame">
-          <div class="hcar-slide is-active" data-lightbox data-src="../imagenes/lm_ingenieria/dotacion_agua_IS010/01_dotaciones_is010.png" data-num="N.01" data-caption="Selección de uso edificatorio"><img src="../imagenes/lm_ingenieria/dotacion_agua_IS010/01_dotaciones_is010.png" alt="N.01" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/dotacion_agua_IS010/02_dotaciones_is010.png" data-num="N.02" data-caption="Composición de destinos y demanda total"><img src="../imagenes/lm_ingenieria/dotacion_agua_IS010/02_dotaciones_is010.png" alt="N.02" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-          <div class="hcar-slide" data-lightbox data-src="../imagenes/lm_ingenieria/dotacion_agua_IS010/03_dotaciones_is010.png" data-num="N.03" data-caption="Resumen normativo imprimible"><img src="../imagenes/lm_ingenieria/dotacion_agua_IS010/03_dotaciones_is010.png" alt="N.03" onerror="this.closest('.hcar-slide').classList.add('ph')"></div>
-            <button class="hcar-nav prev" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M9 1L3 7l6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
-            <button class="hcar-nav next" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M5 1l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
-            <button class="hcar-zoom" data-hcar-zoom><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Ampliar</button>
-            <div class="hcar-caption"><span class="num" data-hcar-num>N.01</span><span data-hcar-cap>Selección de uso edificatorio</span></div>
-            <div class="hcar-progress"><span></span></div>
-          </div>
-          <div class="hcar-dots">
-        <button class="hcar-dot is-active" aria-label="Imagen 1"></button>
-        <button class="hcar-dot" aria-label="Imagen 2"></button>
-        <button class="hcar-dot" aria-label="Imagen 3"></button>
-          </div>
+        <div class="flex flex-wrap gap-4 mt-8" data-reveal>
+          <a href="https://apps.microsoft.com/detail/9NLD74PFQHH0" target="_blank" class="btn btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0" style="margin-right: 2px;"><path d="M0 0h11.4v11.4H0V0zm12.6 0H24v11.4H12.6V0zM0 12.6h11.4V24H0V12.6zm12.6 0H24V24H12.6V12.6z"/></svg>
+            Descargar en Microsoft Store
+          </a>
         </div>
-        <p class="mono text-[0.66rem] uppercase tracking-[0.14em] mt-4 text-center" style="color: var(--muted);">El recorrido avanza solo · usa ‹ › o desliza · clic en la imagen para ampliar</p>
+      </div>      <div class="lg:col-span-5" data-reveal>
+        <div class="hero-cover" data-lightbox data-src="../imagenes/lm_ingenieria/reservorios_rectangulares/00_reservorios_rectangulares.png" data-num="Carátula" data-caption="Reservorio Rectangular de Concreto Armado">
+          <img src="../imagenes/lm_ingenieria/reservorios_rectangulares/00_reservorios_rectangulares.png" alt="Reservorio Rectangular de Concreto Armado">
+        </div>
+        <p class="mono text-[0.66rem] uppercase tracking-[0.14em] mt-4 text-center" style="color: var(--muted);">Clic en la imagen para ampliar</p>
       </div>
     </div>
 
     <div class="spec-strip mt-14" data-reveal>
-        <div class="spec"><span class="k">Categoría</span><span class="v">Instalaciones sanitarias</span></div>
-        <div class="spec"><span class="k">Normativa</span><span class="v">IS.010 — RNE (Perú)</span></div>
-        <div class="spec"><span class="k">Plataforma</span><span class="v">Web · Funciona offline</span><span class="sub">Móvil · Tablet · PC</span></div>
-        <div class="spec"><span class="k">Acceso</span><span class="v">Web · Sin instalación</span><span class="sub">Móvil · Tablet · PC</span></div>
+        <div class="spec"><span class="k">Categoría</span><span class="v">Estructuras · Concreto Armado</span></div>
+        <div class="spec"><span class="k">Normativa</span><span class="v">ACI 350-20 · E.060 · E.030</span></div>
+        <div class="spec"><span class="k">Plataforma</span><span class="v">Escritorio · Windows</span><span class="sub">.NET 8 + Autodesk Robot</span></div>
+        <div class="spec"><span class="k">Estado</span><span class="v">Publicado</span><span class="sub">2026</span></div>
     </div>
   </div>
 </section>
@@ -393,24 +386,36 @@
 
     <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
       <div class="feature" data-reveal>
-        <h4>Selección por uso edificatorio</h4>
-        <p>Vivienda, comercio, oficina, hospedaje, salud, educación, áreas verdes y piscinas según IS.010.</p>
+        <h4>Memoria §1–§10</h4>
+        <p>Flujo completo de cálculo organizado en diez secciones editables, desde datos generales hasta el diseño del refuerzo.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Composición de múltiples destinos</h4>
-        <p>Suma de demandas parciales por uso dentro del mismo proyecto sin pasar por hojas Excel intermedias.</p>
+        <h4>Cargas sísmicas ACI 350.3-20</h4>
+        <p>Presión impulsiva, convectiva y oleaje calculadas con SRSS, combinadas en ambas direcciones.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Demanda diaria y máxima horaria</h4>
-        <p>Cálculo del consumo Qd, Qmáxdiario y Qmáxhorario para dimensionamiento de cisterna y tanque elevado.</p>
+        <h4>Modelo FEM en Robot</h4>
+        <p>Geometría, materiales, mallado, cargas y 22 combinaciones creadas automáticamente vía COM.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Trazabilidad normativa</h4>
-        <p>Cada renglón referencia la tabla IS.010 utilizada — sin números mágicos ni supuestos opacos.</p>
+        <h4>Importación de resultados</h4>
+        <p>Envolvente de momentos por grupo (muros X/Y, fondo, techo) con criterio Wood &amp; Armer.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Reporte imprimible para memoria sanitaria</h4>
-        <p>Resumen estructurado listo para integrarse al expediente técnico de instalaciones sanitarias.</p>
+        <h4>Diseño del refuerzo</h4>
+        <p>Flexotracción con demanda sanitaria, cuantías mínimas ACI 350-20 y separaciones por retracción.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Estabilidad global</h4>
+        <p>Verificación de flotación, deslizamiento, volteo y presión de contacto (E.050).</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Diagramas SVG</h4>
+        <p>Presiones, cortes y armado integrados visualmente en la memoria.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Persistencia</h4>
+        <p>Guardado en JSON e impresión en PDF A4 con trazabilidad completa.</p>
       </div>
     </div>
   </div>
@@ -418,19 +423,19 @@
 
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
   <div class="max-w-5xl mx-auto px-6 lg:px-10">
-    <div class="coord mb-6">§ C / Notas de desarrollo</div>
+    <div class="coord mb-6">§ B / Notas de desarrollo</div>
     <h2 class="display text-4xl md:text-5xl mb-10" data-reveal>
       Cómo lo <em>construí</em>.
     </h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
       <p>
-        Traduje la Norma IS.010 directamente en una lógica de cálculo exacta, conservando todas las tablas y referencias para garantizar que cada resultado sea 100% verificable contra el reglamento.
+        Partí de la ACI 350-20 y ACI 350.3-20 para estructuras contenedoras de líquido, más las normas E.060 y E.030 para concreto armado y sismicidad peruana. Cada fórmula fue contrastada con ejemplos publicados y verificada numéricamente antes de escribir una sola línea de código.
       </p>
       <p>
-        El cálculo de dotaciones suele resolverse con Excel personalizado proyecto a proyecto. Aquí se concentra en un flujo único: selección de uso → demanda parcial → composición → cisterna/tanque, con cada valor trazado a su tabla normativa.
+        El diseño de un reservorio rectangular suele dispersarse entre la salida de Robot, hojas Excel de cuantías y memorias intermedias. Aquí se concentra en un flujo trazable: dimensionamiento → cargas sísmicas SRSS → modelo FEM automático → envolvente Wood &amp; Armer → diseño del refuerzo, con diagramas SVG integrados.
       </p>
       <p>
-        Stack deliberadamente simple: HTML, CSS y JavaScript puros. Cero dependencias, cero instalación, funciona offline. El usuario abre un archivo y trabaja.
+        Aplicación de escritorio en C# sobre .NET 8 con integración COM a Autodesk Robot. El modelo se genera, se resuelve y se importan resultados sin salir del flujo de cálculo.
       </p>
     </div>
   </div>
@@ -439,17 +444,13 @@
 <section class="py-24 lg:py-32 relative overflow-hidden">
   <div class="absolute inset-0 blueprint-bg" style="opacity:0.3"></div>
   <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
-    <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más aplicativos</div>
+    <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más aplicaciones</div>
     <h2 class="display text-4xl md:text-5xl mb-10">
-      Hay <em>otros aplicativos</em><br>en el ecosistema.
+      Hay <em>otros aplicaciones</em><br>en el ecosistema.
     </h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="../index.html#aplicativos" class="btn btn-outline">
+      <a href="../index.html#aplicaciones" class="btn btn-outline">
         Ver ecosistema completo
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </a>
-      <a href="sistema-bombeo.html" class="btn btn-outline">
-        Ver Sistema de Bombeo
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
       <a href="../index.html#contacto" class="btn btn-ghost">Contactar</a>
@@ -463,7 +464,7 @@
       <div class="text-sm font-medium">Luis Miguel Cruz Efus</div>
     </a>
     <div class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--muted);">
-      Aplicativo N.07 · Dotaciones de Agua IS.010
+      Reservorio Rectangular — ACI 350 + Robot
     </div>
   </div>
 </footer>
@@ -581,6 +582,12 @@
 
   const items = Array.from(document.querySelectorAll('[data-lightbox]'));
   lbTotal.textContent = items.length;
+  if (items.length <= 1) {
+    if (lbPrev) lbPrev.style.display = 'none';
+    if (lbNext) lbNext.style.display = 'none';
+    const lbCounterDiv = document.querySelector('.lightbox-counter');
+    if (lbCounterDiv) lbCounterDiv.style.display = 'none';
+  }
   let currentIdx = 0;
   let zoom = 1, panX = 0, panY = 0;
 
