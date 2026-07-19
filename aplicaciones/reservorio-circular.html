@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#15171c">
+<title>Reservorio Circular — ACI 350 + Robot · Luis Miguel Cruz Efus</title>
+
+<link rel="icon" type="image/png" href="../imagenes/lm_ingenieria/marca_lm/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  :root{
+    --ink: oklch(0.16 0.012 250);
+    --ink-deep: oklch(0.12 0.012 250);
+    --surface: oklch(0.21 0.012 250);
+    --line: oklch(0.35 0.012 250 / 0.6);
+    --line-soft: oklch(0.35 0.012 250 / 0.25);
+    --text: oklch(0.94 0.008 80);
+    --text-dim: oklch(0.75 0.008 80);
+    --muted: oklch(0.6 0.012 250);
+    --accent: oklch(0.78 0.14 65);
+    --accent-deep: oklch(0.68 0.14 65);
+    --accent-soft: oklch(0.78 0.14 65 / 0.12);
+    --accent-2: oklch(0.72 0.10 245);
+    --accent-2-deep: oklch(0.60 0.11 245);
+    --accent-2-soft: oklch(0.72 0.10 245 / 0.12);
+  }
+  *{ -webkit-tap-highlight-color: transparent; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background: var(--ink); color: var(--text);
+    font-family: 'Geist', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .serif{ font-family:'Instrument Serif', Georgia, serif; }
+  .mono{ font-family:'JetBrains Mono', monospace; }
+  .display{ font-family:'Instrument Serif', serif; font-weight:400; letter-spacing:-0.018em; line-height:0.95; }
+  .display em{ font-style:italic; color: var(--accent); }
+  .blueprint-bg{
+    background-image:
+      linear-gradient(oklch(0.35 0.012 250 / 0.18) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.35 0.012 250 / 0.18) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .coord{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted); display:inline-flex; align-items:center; gap:0.5rem;
+  }
+  .coord::before{ content:""; width: 18px; height:1px; background: var(--accent); }
+  .chip{
+    display:inline-flex; padding: 4px 10px; border: 1px solid var(--line); border-radius: 99px;
+    font-family:'JetBrains Mono', monospace; font-size: 0.66rem;
+    color: var(--text-dim); letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .chip.accent{ border-color: var(--accent); color: var(--accent); }
+  .btn{
+    display:inline-flex; align-items:center; gap: 10px;
+    padding: 12px 20px; border-radius: 4px; font-weight: 500; font-size: 0.9rem;
+    transition: all .25s ease; border: 1px solid transparent; cursor: pointer;
+  }
+  .btn-primary{ background: var(--accent); color: var(--ink-deep); }
+  .btn-primary:hover{ background: var(--accent-deep); }
+  .btn-ghost{ background:transparent; color:var(--text); border-color: var(--line); }
+  .btn-ghost:hover{ border-color: var(--accent); color: var(--accent); }
+  .btn-outline{ background: transparent; color: var(--text); border-color: var(--accent); }
+  .btn-outline:hover{ background: var(--accent-soft); color: var(--accent); }
+  [data-reveal]{ opacity:0; transform:translateY(14px); transition: opacity .9s ease, transform .9s ease; }
+  [data-reveal].in{ opacity:1; transform:translateY(0); }
+  .nav-bg{ background: oklch(0.16 0.012 250 / 0.82); backdrop-filter: blur(14px); }
+  .logo-bezel{
+    width: auto !important; height: 42px !important; border: none !important; background: transparent !important; overflow: visible !important; padding: 0 !important;
+  }
+  .logo-bezel img{ width: auto !important; height: 100% !important; max-width: 175px; object-fit: contain; }
+  .feature{
+    border-left: 1px solid var(--accent);
+    padding: 4px 0 4px 18px;
+  }
+  .feature h4{ font-size: 0.95rem; font-weight: 500; margin-bottom: 4px; }
+  .feature p{ font-size: 0.85rem; color: var(--text-dim); line-height: 1.5; }
+    /* HERO COVER (portrait 9:16) */
+  .hero-cover{
+    background: oklch(0.10 0.012 250);
+    border: 1px solid var(--line-soft);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 9/16;
+    max-width: 360px;
+    margin: 0 auto;
+    cursor: zoom-in;
+    transition: border-color .25s ease, transform .25s ease;
+  }
+  .hero-cover:hover{
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .hero-cover img{ width:100%; height:100%; object-fit: cover; display:block; }
+  .hero-cover::before, .hero-cover::after{
+    content:""; position:absolute; width: 14px; height: 14px;
+    border: 1px solid var(--accent); z-index: 2;
+  }
+  .hero-cover::before{ top: 8px; left: 8px; border-right:none; border-bottom:none; }
+  .hero-cover::after{ bottom: 8px; right: 8px; border-left:none; border-top:none; }
+  
+  .lightbox{
+    position: fixed; inset: 0;
+    background: oklch(0.06 0.012 250 / 0.96);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    display: none;
+    align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  .lightbox.open{ display: flex; }
+  .lightbox-stage{
+    position: relative;
+    width: 100%; max-width: 1100px;
+    height: 100%; max-height: 92vh;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .lightbox-img{
+    max-width: 100%; max-height: 100%;
+    object-fit: contain;
+    transform-origin: center center;
+    transition: transform .3s ease;
+    cursor: zoom-in;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+  .lightbox-img.zoomed{ cursor: grab; }
+  .lightbox-img.dragging{ cursor: grabbing; transition: none; }
+  .lightbox-close, .lightbox-zoom-in, .lightbox-zoom-out, .lightbox-zoom-reset{
+    position: absolute;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: oklch(0.12 0.012 250 / 0.92);
+    border: 1px solid var(--accent); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; z-index: 5;
+    transition: background .25s ease;
+  }
+  .lightbox-close:hover, .lightbox-zoom-in:hover, .lightbox-zoom-out:hover, .lightbox-zoom-reset:hover{
+    background: var(--accent); color: var(--ink-deep);
+  }
+  .lightbox-close{ top: 16px; right: 16px; }
+  .lightbox-controls{
+    position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 8px; z-index: 5;
+  }
+  .lightbox-controls > *{ position: static; transform: none; }
+  .lightbox-caption{
+    position: absolute; top: 16px; left: 16px;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.12em;
+    color: var(--text-dim); text-transform: uppercase;
+    background: oklch(0.12 0.012 250 / 0.9);
+    padding: 8px 14px;
+    border: 1px solid var(--line-soft);
+    z-index: 5;
+    max-width: calc(100% - 80px);
+  }
+  .lightbox-caption .num{ color: var(--accent); margin-right: 10px; }
+
+  /* ===== Capa viva (atmósfera) ===== */
+  .atmosphere{ position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none; }
+  .atmosphere .orb{ position:absolute; border-radius:50%; filter:blur(120px); will-change:transform; }
+  .atmosphere .orb-amber{ width:46vw; height:46vw; min-width:360px; min-height:360px; background:radial-gradient(circle, oklch(0.78 0.14 65 / 0.50), transparent 68%); top:-16vh; right:-8vw; opacity:.5; animation:driftA 30s ease-in-out infinite alternate; }
+  .atmosphere .orb-blue{ width:52vw; height:52vw; min-width:400px; min-height:400px; background:radial-gradient(circle, oklch(0.62 0.12 245 / 0.55), transparent 68%); bottom:-22vh; left:-12vw; opacity:.55; animation:driftB 38s ease-in-out infinite alternate; }
+  .atmosphere .orb-cyan{ width:34vw; height:34vw; min-width:280px; min-height:280px; background:radial-gradient(circle, oklch(0.72 0.10 215 / 0.42), transparent 70%); top:36%; left:40%; opacity:.4; animation:driftC 34s ease-in-out infinite alternate; }
+  @keyframes driftA{ to{ transform:translate(-7vw,8vh) scale(1.12); } }
+  @keyframes driftB{ to{ transform:translate(8vw,-6vh) scale(1.15); } }
+  @keyframes driftC{ to{ transform:translate(-6vw,-7vh) scale(1.2); } }
+  @media (prefers-reduced-motion: reduce){ .atmosphere .orb{ animation:none; } }
+
+  /* ===== Datos técnicos horizontales ===== */
+  .spec-strip{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line-soft); border:1px solid var(--line-soft); border-radius:6px; overflow:hidden; }
+  @media (min-width:768px){ .spec-strip{ grid-template-columns:repeat(4,1fr); } }
+  .spec{ background:oklch(0.16 0.012 250); padding:18px 20px; }
+  .spec .k{ font-family:'JetBrains Mono',monospace; font-size:0.58rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); display:block; margin-bottom:8px; }
+  .spec .v{ font-size:1rem; color:var(--text); line-height:1.3; }
+  .spec .sub{ display:block; font-size:0.78rem; color:var(--muted); margin-top:3px; }
+</style>
+</head>
+<body>
+<div class="atmosphere" aria-hidden="true"><span class="orb orb-amber"></span><span class="orb orb-blue"></span><span class="orb orb-cyan"></span></div>
+
+<header class="fixed top-0 left-0 right-0 z-50 nav-bg border-b" style="border-color: var(--line-soft);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-4">
+    <a href="../index.html#aplicaciones" class="flex items-center gap-3">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color: var(--accent);"><path d="M13 7H1m0 0l5-5m-5 5l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span class="mono text-xs uppercase tracking-[0.18em]" style="color: var(--text-dim);">Volver al portafolio</span>
+    </a>
+    <div class="hidden md:flex items-center gap-3">
+      <span class="chip accent">Publicado</span>
+    </div>
+  </div>
+</header>
+
+<section class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
+  <div class="absolute inset-0 blueprint-bg" style="opacity:0.4"></div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
+
+    <div class="flex items-center justify-between mb-12">
+      <div class="coord">N.ACI 350 — 2026</div>
+      <div class="coord hidden md:flex">Estructuras · Concreto Armado</div>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-7">
+        <div class="flex flex-wrap items-center gap-3 mb-8">
+          <span class="chip accent">ACI 350-20</span>
+          <span class="chip">E.060</span>
+          <span class="chip">E.030</span>
+          <span class="chip">ACI 350.3-20</span>
+        </div>
+        <h1 class="display text-5xl md:text-6xl lg:text-7xl mb-10" data-reveal>
+          Reservorio <em>Circular</em>.
+        </h1>
+        <p class="text-lg leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
+          Asistente de escritorio que integra la memoria de cálculo completa para reservorios circulares de concreto armado contenedores de líquido (tanto apoyados como elevados). Desde el dimensionamiento inicial y la verificación sísmica bajo ACI 350.3-20, pasando por la modelación de elementos finitos automática en Autodesk Robot y el diseño optimizado del refuerzo por tracción circunferencial, flexión y cortante crítico.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-8" data-reveal>
+          <a href="https://apps.microsoft.com/detail/9N0K6K8Z0P6T" target="_blank" class="btn btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0" style="margin-right: 2px;"><path d="M0 0h11.4v11.4H0V0zm12.6 0H24v11.4H12.6V0zM0 12.6h11.4V24H0V12.6zm12.6 0H24V24H12.6V12.6z"/></svg>
+            Descargar en Microsoft Store
+          </a>
+        </div>
+      </div>
+      <div class="lg:col-span-5" data-reveal>
+        <div class="hero-cover" data-lightbox data-src="../imagenes/lm_ingenieria/reservorios_circulares/00_reservorios_circulares.png" data-num="Carátula" data-caption="Reservorio Circular de Concreto Armado">
+          <img src="../imagenes/lm_ingenieria/reservorios_circulares/00_reservorios_circulares.png" alt="Reservorio Circular de Concreto Armado">
+        </div>
+        <p class="mono text-[0.66rem] uppercase tracking-[0.14em] mt-4 text-center" style="color: var(--muted);">Clic en la imagen para ampliar</p>
+      </div>
+    </div>
+
+    <div class="spec-strip mt-14" data-reveal>
+        <div class="spec"><span class="k">Categoría</span><span class="v">Estructuras · Concreto Armado</span></div>
+        <div class="spec"><span class="k">Normativa</span><span class="v">ACI 350-20 · E.060 · E.030</span></div>
+        <div class="spec"><span class="k">Plataforma</span><span class="v">Escritorio · Windows</span><span class="sub">.NET 8 + Autodesk Robot</span></div>
+        <div class="spec"><span class="k">Estado</span><span class="v">Publicado</span><span class="sub">2026</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="flex items-baseline gap-5 mb-12">
+      <span class="mono text-sm" style="color: var(--accent);">§ A</span>
+      <h2 class="serif text-3xl lg:text-4xl">Qué <em style="color: var(--accent); font-style:italic;">automatiza</em></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+      <div class="feature" data-reveal>
+        <h4>Memoria §1–§10</h4>
+        <p>Flujo completo de cálculo estructurado en diez secciones interactivas, desde parámetros geométricos hasta cuantías de acero finales.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Cargas sísmicas ACI 350.3-20</h4>
+        <p>Cálculo preciso de masas y presiones hidrodinámicas (impulsiva, convectiva y oleaje) con su respectiva distribución vertical.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Cortante en Sección Crítica</h4>
+        <p>Determinación del cortante de diseño a una distancia $d$ de la cara del apoyo (ACI 350-20 §11.1.3.1 y RNE E.060 §11.1.3) para evitar singularidades y sobreseccionamiento.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Modelo FEM en Robot</h4>
+        <p>Generación automatizada de cáscaras y losas cilíndricas, materiales, mallado estructurado y 22 combinaciones dinámicas vía COM.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Refuerzo con Demanda Sanitaria</h4>
+        <p>Diseño por flexotracción y tracción circunferencial pura incorporando los factores de durabilidad ambiental y cuantías mínimas de la ACI 350.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Estabilidad Global</h4>
+        <p>Verificación de flotación bajo niveles de freática crítica, vuelco, deslizamiento y presiones sobre el terreno (reservorio lleno y vacío).</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Diagramas Dinámicos</h4>
+        <p>Generación de perfiles SVG y visualizaciones matemáticas en tiempo real de presiones, momentos y distribución de cuantías.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Persistencia y PDF</h4>
+        <p>Guardado estructurado en JSON para recuperación del proyecto y generación de la memoria de cálculo en PDF con alta calidad gráfica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
+  <div class="max-w-5xl mx-auto px-6 lg:px-10">
+    <div class="coord mb-6">§ B / Notas de desarrollo</div>
+    <h2 class="display text-4xl md:text-5xl mb-10" data-reveal>
+      Cómo lo <em>construí</em>.
+    </h2>
+    <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
+      <p>
+        Partí de la ACI 350-20 y ACI 350.3-20 para estructuras de concreto contenedoras de líquido, en armonía con las normas peruanas E.060 y E.030. La principal dificultad física en tanques cilíndricos es el cálculo del cortante en la base del muro, donde la unión rígida con la losa genera picos numéricos irreales. Implementé filtros dinámicos por altura $z$ para evaluar la sección crítica a una distancia $d$, logrando un diseño eficiente y seguro.
+      </p>
+      <p>
+        La integración con Autodesk Robot se realiza mediante automatización COM en C# sobre .NET 8. El software genera de forma dinámica el cilindro, aplica las presiones trapezoidales de sismo y fluidos, realiza la corrida y extrae la envolvente de momentos y fuerzas axiales para su diseño directo.
+      </p>
+      <p>
+        La persistencia se maneja localmente mediante archivos serializados en JSON, lo que garantiza la portabilidad del modelo y un flujo de trabajo rápido y 100% offline.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 lg:py-32 relative overflow-hidden">
+  <div class="absolute inset-0 blueprint-bg" style="opacity:0.3"></div>
+  <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
+    <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más aplicaciones</div>
+    <h2 class="display text-4xl md:text-5xl mb-10">
+      Hay <em>otras aplicaciones</em><br>en el ecosistema.
+    </h2>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="../index.html#aplicaciones" class="btn btn-outline">
+        Ver ecosistema completo
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+      <a href="../index.html#contacto" class="btn btn-ghost">Contactar</a>
+    </div>
+  </div>
+</section>
+
+<footer class="py-10 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-between gap-4">
+    <a href="../index.html" class="flex items-center gap-3">
+      <div class="text-sm font-medium">Luis Miguel Cruz Efus</div>
+    </a>
+    <div class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--muted);">
+      Reservorio Circular — ACI 350 + Robot
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+  <div class="lightbox-caption" id="lightboxCaption"><span class="num">N.00</span><span id="lightboxCaptionText"></span></div>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
+    <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lightbox-stage" id="lightboxStage">
+    <img class="lightbox-img" id="lightboxImg" alt="">
+  </div>
+  <div class="lightbox-controls">
+    <button class="lightbox-zoom-out" id="lightboxZoomOut" aria-label="Reducir zoom" title="Reducir">
+      <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M2 7h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+    <button class="lightbox-zoom-reset" id="lightboxZoomReset" aria-label="Restablecer" title="Restablecer">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <button class="lightbox-zoom-in" id="lightboxZoomIn" aria-label="Ampliar zoom" title="Ampliar">
+      <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightboxImg');
+  const lbCaptionText = document.getElementById('lightboxCaptionText');
+  const lbCaptionNum = document.querySelector('#lightboxCaption .num');
+  const lbClose = document.getElementById('lightboxClose');
+  const lbZoomIn = document.getElementById('lightboxZoomIn');
+  const lbZoomOut = document.getElementById('lightboxZoomOut');
+  const lbZoomReset = document.getElementById('lightboxZoomReset');
+
+  const items = Array.from(document.querySelectorAll('[data-lightbox]'));
+  let zoom = 1, panX = 0, panY = 0;
+
+  function applyTransform(){
+    lbImg.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
+    lbImg.classList.toggle('zoomed', zoom > 1);
+  }
+  function openLightbox(el){
+    lbImg.src = el.dataset.src;
+    lbCaptionText.textContent = ' ' + (el.dataset.caption || '');
+    lbCaptionNum.textContent = el.dataset.num || '';
+    zoom = 1; panX = 0; panY = 0;
+    applyTransform();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(){
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  items.forEach((el) => { el.addEventListener('click', () => openLightbox(el)); });
+  lbClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === '+' || e.key === '=') { zoom = Math.min(zoom + 0.25, 4); applyTransform(); }
+    if (e.key === '-' || e.key === '_') { zoom = Math.max(zoom - 0.25, 1); if (zoom === 1) { panX = panY = 0; } applyTransform(); }
+    if (e.key === '0') { zoom = 1; panX = panY = 0; applyTransform(); }
+  });
+  lbZoomIn.addEventListener('click', () => { zoom = Math.min(zoom + 0.25, 4); applyTransform(); });
+  lbZoomOut.addEventListener('click', () => { zoom = Math.max(zoom - 0.25, 1); if (zoom === 1) { panX = panY = 0; } applyTransform(); });
+  lbZoomReset.addEventListener('click', () => { zoom = 1; panX = panY = 0; applyTransform(); });
+
+  lbImg.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (zoom > 1) { zoom = 1; panX = panY = 0; } else { zoom = 2; }
+    applyTransform();
+  });
+
+  let isDragging = false, dragStartX = 0, dragStartY = 0, panStartX = 0, panStartY = 0;
+  lbImg.addEventListener('mousedown', (e) => {
+    if (zoom <= 1) return;
+    isDragging = true;
+    lbImg.classList.add('dragging');
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    panStartX = panX; panStartY = panY;
+    e.preventDefault();
+  });
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    panX = panStartX + (e.clientX - dragStartX);
+    panY = panStartY + (e.clientY - dragStartY);
+    applyTransform();
+  });
+  window.addEventListener('mouseup', () => { isDragging = false; lbImg.classList.remove('dragging'); });
+
+  let touchStartX = 0, touchStartY = 0;
+  lbImg.addEventListener('touchstart', (e) => {
+    if (zoom <= 1 || e.touches.length !== 1) return;
+    isDragging = true;
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    panStartX = panX; panStartY = panY;
+  }, { passive: true });
+  lbImg.addEventListener('touchmove', (e) => {
+    if (!isDragging || e.touches.length !== 1) return;
+    panX = panStartX + (e.touches[0].clientX - touchStartX);
+    panY = panStartY + (e.touches[0].clientY - touchStartY);
+    applyTransform();
+    e.preventDefault();
+  }, { passive: false });
+  lbImg.addEventListener('touchend', () => { isDragging = false; });
+
+  lightbox.addEventListener('wheel', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    e.preventDefault();
+    const delta = -Math.sign(e.deltaY) * 0.2;
+    zoom = Math.max(1, Math.min(4, zoom + delta));
+    if (zoom === 1) { panX = panY = 0; }
+    applyTransform();
+  }, { passive: false });
+</script>
+
+</body>
+</html>

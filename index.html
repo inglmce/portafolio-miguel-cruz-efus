@@ -349,16 +349,8 @@
   }
   .mobile-menu a:last-child{ border-bottom: none; }
 
-  /* Capa de atmósfera */
-  .atmosphere{ position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none; }
-  .atmosphere .orb{ position:absolute; border-radius:50%; filter:blur(120px); will-change:transform; }
-  .atmosphere .orb-amber{ width:46vw; height:46vw; min-width:360px; min-height:360px; background:radial-gradient(circle, oklch(0.78 0.14 65 / 0.50), transparent 68%); top:-16vh; right:-8vw; opacity:.5; animation:driftA 30s ease-in-out infinite alternate; }
-  .atmosphere .orb-blue{ width:52vw; height:52vw; min-width:400px; min-height:400px; background:radial-gradient(circle, oklch(0.62 0.12 245 / 0.55), transparent 68%); bottom:-22vh; left:-12vw; opacity:.55; animation:driftB 38s ease-in-out infinite alternate; }
-  .atmosphere .orb-cyan{ width:34vw; height:34vw; min-width:280px; min-height:280px; background:radial-gradient(circle, oklch(0.72 0.10 215 / 0.42), transparent 70%); top:36%; left:40%; opacity:.4; animation:driftC 34s ease-in-out infinite alternate; }
-  @keyframes driftA{ to{ transform:translate(-7vw,8vh) scale(1.12); } }
-  @keyframes driftB{ to{ transform:translate(8vw,-6vh) scale(1.15); } }
-  @keyframes driftC{ to{ transform:translate(-6vw,-7vh) scale(1.2); } }
-  @media (prefers-reduced-motion: reduce){ .atmosphere .orb{ animation:none; } }
+  /* Canvas nebulosa-MEF — fondo interactivo */
+  #nebula-canvas{ position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none; display:block; }
   /* Logo sin recuadro amarillo, más presencia */
   .logo-bezel{ width:auto !important; height:42px !important; border:none !important; background:transparent !important; overflow:visible !important; padding:0 !important; }
   .logo-bezel img{ width:auto !important; height:100% !important; max-width:175px; object-fit:contain; }
@@ -401,7 +393,7 @@
 </style>
 </head>
 <body>
-<div class="atmosphere" aria-hidden="true"><span class="orb orb-amber"></span><span class="orb orb-blue"></span><span class="orb orb-cyan"></span></div>
+<canvas id="nebula-canvas" aria-hidden="true"></canvas>
 
 <!-- ============ NAV ============ -->
 <header class="fixed top-0 left-0 right-0 z-50 nav-bg border-b" style="border-color: var(--line-soft);">
@@ -794,23 +786,27 @@
         </div>
       </a>
 
-      <div class="card group" data-reveal>
+      <!-- App 4: Reservorio Circular — PUBLISHED -->
+      <a href="aplicaciones/reservorio-circular.html" class="card group" data-reveal>
         <div class="cover-portrait">
           <img src="imagenes/lm_ingenieria/reservorios_circulares/00_reservorios_circulares.png" alt="Reservorio Circular ACI 350 — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>ACI 350 / E.060</div><div class=&quot;serif text-3xl leading-tight&quot;>Reservorio <em style=&quot;color: var(--accent); font-style: italic;&quot;>Circular</em></div></div></div>';">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
-            <span class="chip">En desarrollo</span>
+            <span class="chip accent">Publicado</span>
             <span class="chip">ACI 350 / E.060</span>
           </div>
           <h3 class="font-medium text-lg mb-2">Reservorio Circular — ACI 350</h3>
           <p class="text-sm leading-relaxed" style="color: var(--muted);">
             Memoria de cálculo para reservorios circulares de concreto armado contenedores de líquido, con diseño del refuerzo y verificación sísmica ACI 350.3-20.
           </p>
+          <div class="mt-5 flex items-center justify-between">
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicación →</span>
+          </div>
         </div>
-      </div>
+      </a>
 
-      <!-- App 4: Muros de Corte — PUBLISHED -->
+      <!-- App 5: Muros de Corte — PUBLISHED -->
       <a href="aplicaciones/muros-de-corte.html" class="card group" data-reveal>
         <div class="cover-portrait">
           <img src="imagenes/lm_ingenieria/muros_de_corte_e060_aci318/00_caratula.png" alt="Muros de Corte E.060 / ACI 318 — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>ACI 318 / E.060</div><div class=&quot;serif text-3xl leading-tight&quot;>Muros de <em style=&quot;color: var(--accent); font-style: italic;&quot;>Corte</em></div></div></div>';">
@@ -830,7 +826,7 @@
         </div>
       </a>
 
-      <!-- App 5: Vigas — PUBLISHED -->
+      <!-- App 6: Vigas — PUBLISHED -->
       <a href="aplicaciones/vigas-ca.html" class="card group" data-reveal>
         <div class="cover-portrait">
           <img src="imagenes/lm_ingenieria/vigas_ca/00_vigas_ca.png" alt="Vigas de Concreto Armado — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>E.060</div><div class=&quot;serif text-3xl leading-tight&quot;>Vigas <em style=&quot;color: var(--accent); font-style: italic;&quot;>CºAº</em></div></div></div>';">
@@ -850,7 +846,7 @@
         </div>
       </a>
 
-      <!-- App 6: Columnas — PUBLISHED -->
+      <!-- App 7: Columnas — PUBLISHED -->
       <a href="aplicaciones/columnas-rectangulares.html" class="card group" data-reveal>
         <div class="cover-portrait">
           <img src="imagenes/lm_ingenieria/columnas_rectangulares_ca/00_columnas_rectangulares.png" alt="Columnas Rectangulares — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>E.060 / E.030</div><div class=&quot;serif text-3xl leading-tight&quot;>Columnas <em style=&quot;color: var(--accent); font-style: italic;&quot;>RC</em></div></div></div>';">
@@ -870,25 +866,6 @@
         </div>
       </a>
 
-      <!-- App 7: Escaleras — PUBLISHED -->
-      <a href="aplicaciones/escaleras-ca.html" class="card group" data-reveal>
-        <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/escaleras_ca/00_escaleras_ca.png" alt="Escaleras CºAº — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>E.060 / E.020</div><div class=&quot;serif text-3xl leading-tight&quot;>Escaleras <em style=&quot;color: var(--accent); font-style: italic;&quot;>CºAº</em></div></div></div>';">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="chip accent">Publicado</span>
-            <span class="chip">E.060 / E.020</span>
-          </div>
-          <h3 class="font-medium text-lg mb-2">Escaleras de CºAº</h3>
-          <p class="text-sm leading-relaxed" style="color: var(--muted);">
-            Verificación Blondel, combinaciones LRFD/ACI y armado positivo, negativo y de temperatura.
-          </p>
-          <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicación →</span>
-          </div>
-        </div>
-      </a>
 
       <!-- App 8: Pavimentos — PUBLISHED -->
       <a href="aplicaciones/pavimentos-flexibles.html" class="card group" data-reveal>
@@ -1383,5 +1360,7 @@
     map.forEach(x => spy.observe(x.sec));
   })();
 </script>
+
+<script src="nebula-mesh.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 # 📱 Aplicativos en la Microsoft Store — Luis Miguel Cruz Efus
 
-Este documento recopila los enlaces y Store IDs oficiales de las 6 aplicaciones de ingeniería civil que se encuentran publicadas y disponibles en la Microsoft Store.
+Este documento recopila los enlaces y Store IDs oficiales de las 7 aplicaciones de ingeniería civil que se encuentran publicadas y disponibles en la Microsoft Store.
 
 ---
 
@@ -14,6 +14,7 @@ Este documento recopila los enlaces y Store IDs oficiales de las 6 aplicaciones 
 | 4 | **Diseño de Muros de Corte** | `9NCK2VT9R5DV` | [Ver en la Microsoft Store](https://apps.microsoft.com/detail/9NCK2VT9R5DV) |
 | 5 | **Diseño de Reservorios Rectangulares** | `9NLD74PFQHH0` | [Ver en la Microsoft Store](https://apps.microsoft.com/detail/9NLD74PFQHH0) |
 | 6 | **Diseño de Reservorios Circulares** | `9N0K6K8Z0P6T` | [Ver en la Microsoft Store](https://apps.microsoft.com/detail/9N0K6K8Z0P6T) |
+| 7 | **LM Metrados** | `9P4ZPPLQTH1M` | [Ver en la Microsoft Store](https://apps.microsoft.com/detail/9P4ZPPLQTH1M) |
 
 ---
 
@@ -48,3 +49,9 @@ Este documento recopila los enlaces y Store IDs oficiales de las 6 aplicaciones 
 * **ID de la Tienda:** `9N0K6K8Z0P6T`
 * **URL:** `https://apps.microsoft.com/detail/9N0K6K8Z0P6T`
 * **Descripción:** Cálculo y modelamiento automatizado en Robot Structural Analysis para reservorios apoyados y elevados de forma cilíndrica.
+
+### 7. LM Metrados
+* **ID de la Tienda:** `9P4ZPPLQTH1M`
+* **URL:** `https://apps.microsoft.com/detail/9P4ZPPLQTH1M`
+* **Descripción:** Software de escritorio para la automatización inteligente de planillas de metrados (Resumen, Sustento y Acero) con integración bidireccional a Excel, atajos rápidos, importación de WBS de Delphin Express y un Asistente de IA multimodal (Gemini).
+
