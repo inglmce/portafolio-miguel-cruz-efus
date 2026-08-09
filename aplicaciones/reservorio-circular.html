@@ -298,19 +298,19 @@
 
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
   <div class="max-w-5xl mx-auto px-6 lg:px-10">
-    <div class="coord mb-6">§ B / Notas de desarrollo</div>
+    <div class="coord mb-6">§ B / Criterio Estructural e Integración con Robot</div>
     <h2 class="display text-4xl md:text-5xl mb-10" data-reveal>
-      Cómo lo <em>construí</em>.
+      Cálculo de tanques cilíndricos y <em>evaluación de sección crítica</em>.
     </h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
       <p>
-        Partí de la ACI 350-20 y ACI 350.3-20 para estructuras de concreto contenedoras de líquido, en armonía con las normas peruanas E.060 y E.030. La principal dificultad física en tanques cilíndricos es el cálculo del cortante en la base del muro, donde la unión rígida con la losa genera picos numéricos irreales. Implementé filtros dinámicos por altura $z$ para evaluar la sección crítica a una distancia $d$, logrando un diseño eficiente y seguro.
+        Diseño estructural de reservorios apoyados y elevados de forma cilíndrica bajo las normas ACI 350-20, ACI 350.3-20, NTE E.060, E.030 y E.050. Resuelve el desafío físico del cortante en la base del muro mediante la verificación de la sección crítica a distancia $d$ del empotramiento, garantizando secciones optimizadas y seguras.
       </p>
       <p>
-        La integración con Autodesk Robot se realiza mediante automatización COM en C# sobre .NET 8. El software genera de forma dinámica el cilindro, aplica las presiones trapezoidales de sismo y fluidos, realiza la corrida y extrae la envolvente de momentos y fuerzas axiales para su diseño directo.
+        Conecta directamente con Autodesk Robot Structural Analysis para generar la geometría cilíndrica, aplicar combinaciones dinámicas de sismo y presión hidrostática, e importar la envolvente de momentos y fuerzas axiales para el diseño automático del refuerzo.
       </p>
       <p>
-        La persistencia se maneja localmente mediante archivos serializados en JSON, lo que garantiza la portabilidad del modelo y un flujo de trabajo rápido y 100% offline.
+        Produce memorias de cálculo completas en PDF A4 listas para la sustentación ante evaluadores y supervisores de obra, asegurando la inmediata aprobación de expedientes de saneamiento e infraestructura.
       </p>
     </div>
   </div>
