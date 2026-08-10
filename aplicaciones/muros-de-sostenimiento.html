@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15171c">
-<title>Asistente Sísmico E.030 — Aplicación · Luis Miguel Cruz Efus</title>
+<title>Muros de Sostenimiento — Aplicación · Luis Miguel Cruz Efus</title>
 
 <link rel="icon" type="image/png" href="../imagenes/lm_ingenieria/marca_lm/logo.png">
 
@@ -95,7 +95,9 @@
     padding: 4px 0 4px 18px;
   }
   .feature h4{ font-size: 0.95rem; font-weight: 500; margin-bottom: 4px; }
-  .feature p{ font-size: 0.85rem; color: var(--text-dim); line-height: 1.5; }  /* HERO COVER (portrait 9:16) */
+  .feature p{ font-size: 0.85rem; color: var(--text-dim); line-height: 1.5; }
+
+  /* HERO COVER (portrait 9:16) */
   .hero-cover{
     background: oklch(0.10 0.012 250);
     border: 1px solid var(--line-soft);
@@ -120,140 +122,26 @@
   .hero-cover::before{ top: 8px; left: 8px; border-right:none; border-bottom:none; }
   .hero-cover::after{ bottom: 8px; right: 8px; border-left:none; border-top:none; }
 
-  /* ============ CAROUSEL ============ */
-  .carousel{
-    position: relative;
-  }
-  .carousel-track{
-    display: flex;
-    gap: 18px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    padding: 4px 4px 18px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--line) transparent;
-  }
-  .carousel-track::-webkit-scrollbar{ height: 6px; }
-  .carousel-track::-webkit-scrollbar-track{ background: transparent; }
-  .carousel-track::-webkit-scrollbar-thumb{ background: var(--line); border-radius: 3px; }
-
-  .carousel-slide{
-    flex: 0 0 auto;
-    width: 260px;
-    scroll-snap-align: start;
-    cursor: zoom-in;
-    position: relative;
-    border: 1px solid var(--line-soft);
-    background: oklch(0.10 0.012 250);
-    overflow: hidden;
-    transition: border-color .25s ease, transform .25s ease;
-  }
-  @media (min-width: 640px){
-    .carousel-slide{ width: 300px; }
-  }
-  @media (min-width: 1024px){
-    .carousel-slide{ width: 340px; }
-  }
-  .carousel-slide:hover{
-    border-color: var(--accent);
-    transform: translateY(-2px);
-  }
-  .carousel-slide .img-wrap{
-    aspect-ratio: 9/16;
-    overflow: hidden;
-    background: oklch(0.10 0.012 250);
-    position: relative;
-  }
-  .carousel-slide .img-wrap img{
-    width:100%; height:100%; object-fit: cover;
-    transition: transform .5s ease;
-  }
-  .carousel-slide:hover .img-wrap img{ transform: scale(1.04); }
-  .carousel-slide::before, .carousel-slide::after{
-    content:""; position:absolute; width: 12px; height: 12px;
-    border: 1px solid var(--accent); z-index: 3; pointer-events:none;
-  }
-  .carousel-slide::before{ top: 6px; left: 6px; border-right:none; border-bottom:none; }
-  .carousel-slide::after{ bottom: 6px; right: 6px; border-left:none; border-top:none; }
-  .carousel-slide .caption{
-    padding: 10px 14px;
-    border-top: 1px solid var(--line-soft);
-    font-family:'JetBrains Mono', monospace;
-    font-size: 0.66rem;
-    letter-spacing: 0.08em;
-    color: var(--text-dim);
-    display: flex; justify-content: space-between; align-items: center;
-    background: oklch(0.18 0.012 250);
-  }
-  .carousel-slide .caption .num{ color: var(--accent); }
-  .carousel-slide .zoom-hint{
-    position:absolute; top: 10px; right: 10px;
-    background: oklch(0.10 0.012 250 / 0.8);
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    padding: 4px 8px;
-    font-family:'JetBrains Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    z-index: 3;
-    opacity: 0;
-    transition: opacity .25s ease;
-  }
-  .carousel-slide:hover .zoom-hint{ opacity: 1; }
-
-  .carousel-nav{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    background: oklch(0.12 0.012 250 / 0.92);
-    backdrop-filter: blur(8px);
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer;
-    z-index: 4;
-    transition: background .25s ease, transform .25s ease;
-  }
-  .carousel-nav:hover{ background: var(--accent); color: var(--ink-deep); }
-  .carousel-nav.prev{ left: -10px; }
-  .carousel-nav.next{ right: -10px; }
-  .carousel-nav:disabled{ opacity: 0.3; cursor: not-allowed; }
-  @media (max-width: 640px){
-    .carousel-nav{ display: none; }
-  }
-
   /* ============ LIGHTBOX ============ */
   .lightbox{
-    position: fixed;
-    inset: 0;
+    position: fixed; inset: 0;
     background: oklch(0.06 0.012 250 / 0.96);
     backdrop-filter: blur(10px);
     z-index: 100;
     display: none;
-    align-items: center;
-    justify-content: center;
+    align-items: center; justify-content: center;
     padding: 24px;
   }
   .lightbox.open{ display: flex; }
   .lightbox-stage{
     position: relative;
-    width: 100%;
-    max-width: 1100px;
-    height: 100%;
-    max-height: 92vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%; max-width: 1100px;
+    height: 100%; max-height: 92vh;
+    display: flex; align-items: center; justify-content: center;
     overflow: hidden;
   }
   .lightbox-img{
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 100%; max-height: 100%;
     object-fit: contain;
     transform-origin: center center;
     transition: transform .3s ease;
@@ -264,29 +152,18 @@
   .lightbox-img.zoomed{ cursor: grab; }
   .lightbox-img.dragging{ cursor: grabbing; transition: none; }
 
-  .lightbox-close,
-  .lightbox-prev,
-  .lightbox-next,
-  .lightbox-zoom-in,
-  .lightbox-zoom-out,
-  .lightbox-zoom-reset{
+  .lightbox-close, .lightbox-prev, .lightbox-next,
+  .lightbox-zoom-in, .lightbox-zoom-out, .lightbox-zoom-reset{
     position: absolute;
-    width: 44px; height: 44px;
-    border-radius: 50%;
+    width: 44px; height: 44px; border-radius: 50%;
     background: oklch(0.12 0.012 250 / 0.92);
-    border: 1px solid var(--accent);
-    color: var(--accent);
+    border: 1px solid var(--accent); color: var(--accent);
     display: flex; align-items: center; justify-content: center;
-    cursor: pointer;
-    z-index: 5;
+    cursor: pointer; z-index: 5;
     transition: background .25s ease;
   }
-  .lightbox-close:hover,
-  .lightbox-prev:hover,
-  .lightbox-next:hover,
-  .lightbox-zoom-in:hover,
-  .lightbox-zoom-out:hover,
-  .lightbox-zoom-reset:hover{
+  .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover,
+  .lightbox-zoom-in:hover, .lightbox-zoom-out:hover, .lightbox-zoom-reset:hover{
     background: var(--accent); color: var(--ink-deep);
   }
   .lightbox-close{ top: 16px; right: 16px; }
@@ -298,31 +175,21 @@
   }
   .lightbox-controls > *{ position: static; transform: none; }
   .lightbox-caption{
-    position: absolute;
-    top: 16px; left: 16px;
-    font-family:'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    background: oklch(0.12 0.012 250 / 0.9);
-    padding: 8px 14px;
-    border: 1px solid var(--line-soft);
-    z-index: 5;
-    max-width: calc(100% - 80px);
+    position: absolute; top: 16px; left: 16px;
+    font-family:'JetBrains Mono', monospace; font-size: 0.7rem;
+    letter-spacing: 0.12em; color: var(--text-dim); text-transform: uppercase;
+    background: oklch(0.12 0.012 250 / 0.9); padding: 8px 14px;
+    border: 1px solid var(--line-soft); z-index: 5; max-width: calc(100% - 80px);
   }
   .lightbox-caption .num{ color: var(--accent); margin-right: 10px; }
   .lightbox-counter{
     position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%);
-    font-family:'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    color: var(--text-dim);
-    letter-spacing: 0.14em;
-    z-index: 5;
+    font-family:'JetBrains Mono', monospace; font-size: 0.72rem;
+    color: var(--text-dim); letter-spacing: 0.14em; z-index: 5;
   }
   .lightbox-counter span{ color: var(--accent); }
 
-  /* ===== Capa viva (atmósfera) + logo limpio — mejora rev.03 ===== */
+  /* Atmosphere */
   .atmosphere{ position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none; }
   .atmosphere .orb{ position:absolute; border-radius:50%; filter:blur(120px); will-change:transform; }
   .atmosphere .orb-amber{ width:46vw; height:46vw; min-width:360px; min-height:360px; background:radial-gradient(circle, oklch(0.78 0.14 65 / 0.50), transparent 68%); top:-16vh; right:-8vw; opacity:.5; animation:driftA 30s ease-in-out infinite alternate; }
@@ -332,35 +199,7 @@
   @keyframes driftB{ to{ transform:translate(8vw,-6vh) scale(1.15); } }
   @keyframes driftC{ to{ transform:translate(-6vw,-7vh) scale(1.2); } }
   @media (prefers-reduced-motion: reduce){ .atmosphere .orb{ animation:none; } }
-  /* Logo sin recuadro amarillo, más presencia */
-  .logo-bezel{ width:auto !important; height:42px !important; border:none !important; background:transparent !important; overflow:visible !important; padding:0 !important; }
-  .logo-bezel img{ width:auto !important; height:100% !important; max-width:175px; object-fit:contain; }
 
-  /* ===== Carrusel-hero (aplicación · retrato) ===== */
-  .hero-carousel{ position:relative; }
-  .hcar-stage{ position:relative; border:1px solid var(--line-soft); background:oklch(0.09 0.012 250); border-radius:8px; overflow:hidden; aspect-ratio:9/16; max-width:320px; margin:0 auto; }
-  .hcar-stage::before{ content:""; position:absolute; inset:0; background-image:linear-gradient(oklch(0.35 0.012 250 / 0.10) 1px,transparent 1px),linear-gradient(90deg,oklch(0.35 0.012 250 / 0.10) 1px,transparent 1px); background-size:26px 26px; z-index:0; }
-  .hcar-frame::before,.hcar-frame::after{ content:""; position:absolute; width:14px; height:14px; border:1px solid var(--accent); z-index:6; pointer-events:none; }
-  .hcar-frame::before{ top:9px; left:9px; border-right:none; border-bottom:none; }
-  .hcar-frame::after{ bottom:9px; right:9px; border-left:none; border-top:none; }
-  .hcar-slide{ position:absolute; inset:0; opacity:0; transition:opacity .7s ease; display:flex; align-items:center; justify-content:center; z-index:1; cursor:zoom-in; }
-  .hcar-slide.is-active{ opacity:1; z-index:2; }
-  .hcar-slide img{ width:100%; height:100%; object-fit:cover; }
-  .hcar-slide.ph img{ display:none; }
-  .hcar-slide.ph::after{ content:"\2295 "attr(data-num); font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.16em; color:var(--muted); }
-  .hcar-nav{ position:absolute; top:50%; transform:translateY(-50%); width:42px; height:42px; border-radius:50%; background:oklch(0.10 0.012 250 / 0.7); backdrop-filter:blur(8px); border:1px solid var(--accent); color:var(--accent); display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:6; transition:background .25s,color .25s; }
-  .hcar-nav:hover{ background:var(--accent); color:var(--ink-deep); }
-  .hcar-nav.prev{ left:10px; } .hcar-nav.next{ right:10px; }
-  .hcar-zoom{ position:absolute; top:12px; right:12px; z-index:6; display:inline-flex; align-items:center; gap:6px; padding:6px 10px; background:oklch(0.10 0.012 250 / 0.72); backdrop-filter:blur(8px); border:1px solid var(--accent); color:var(--accent); font-family:'JetBrains Mono',monospace; font-size:0.58rem; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:background .25s,color .25s; }
-  .hcar-zoom:hover{ background:var(--accent); color:var(--ink-deep); }
-  .hcar-caption{ position:absolute; left:12px; right:12px; bottom:16px; z-index:6; display:flex; align-items:center; gap:9px; padding:7px 11px; background:oklch(0.10 0.012 250 / 0.82); backdrop-filter:blur(8px); border:1px solid var(--line-soft); font-family:'JetBrains Mono',monospace; font-size:0.62rem; letter-spacing:0.04em; color:var(--text-dim); }
-  .hcar-caption .num{ color:var(--accent); }
-  .hcar-progress{ position:absolute; left:0; right:0; bottom:0; height:3px; background:oklch(0.30 0.012 250 / 0.4); z-index:6; }
-  .hcar-progress span{ display:block; height:100%; width:0; background:var(--accent); }
-  .hcar-dots{ display:flex; gap:7px; justify-content:center; flex-wrap:wrap; margin-top:16px; }
-  .hcar-dot{ width:28px; height:4px; border-radius:2px; background:var(--line); cursor:pointer; transition:background .25s,transform .25s; border:none; padding:0; }
-  .hcar-dot.is-active{ background:var(--accent); transform:scaleY(1.6); }
-  /* ===== Datos técnicos horizontales ===== */
   .spec-strip{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line-soft); border:1px solid var(--line-soft); border-radius:6px; overflow:hidden; }
   @media (min-width:768px){ .spec-strip{ grid-template-columns:repeat(4,1fr); } }
   .spec{ background:oklch(0.16 0.012 250); padding:18px 20px; }
@@ -380,7 +219,7 @@
       <span class="mono text-xs uppercase tracking-[0.18em]" style="color: var(--text-dim);">Volver al portafolio</span>
     </a>
     <div class="hidden md:flex items-center gap-3">
-      <span class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">Aplicación N.01</span>
+      <span class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">Aplicación N.12</span>
     </div>
   </div>
 </header>
@@ -391,47 +230,49 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
 
     <div class="flex items-center justify-between mb-12">
-      <div class="coord">N.01 / Aplicación</div>
-      <div class="coord hidden md:flex">Norma E.030 — 2026</div>
+      <div class="coord">N.12 / Aplicación</div>
+      <div class="coord hidden md:flex">E.060 · E.050 · ACI 318 · ACI 350.3 · Robot FEM</div>
     </div>
 
     <div class="grid lg:grid-cols-12 gap-12 items-start">
       <div class="lg:col-span-7">
         <div class="flex flex-wrap items-center gap-3 mb-8">
-          <span class="chip accent">Estructuras</span>
-          <span class="chip">E.030 · 2026</span>
-          <span class="chip">Web app</span>
-          <span class="chip">Offline</span>
+          <span class="chip accent">Publicado</span>
+          <span class="chip">Geotecnia y Estructuras</span>
+          <span class="chip">E.060 / E.050</span>
+          <span class="chip">Autodesk Robot FEM</span>
+          <span class="chip">Microsoft Store</span>
         </div>
         <h1 class="display text-5xl md:text-6xl lg:text-7xl mb-10" data-reveal>
-          Asistente <em>Sísmico</em><br>
-          E.030 — 2026.
+          Muros de <em>Sostenimiento</em>.
         </h1>
         <p class="text-lg leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          Herramienta de apoyo para ingenieros civiles, proyectistas y estudiantes avanzados que necesitan acelerar y ordenar la verificación sísmica de edificaciones conforme a la Norma E.030 vigente.
+          Muros de Sostenimiento es la suite profesional para el análisis geotécnico y dimensionamiento estructural de muros de contención en voladizo bajo los lineamientos de las normas E.060, E.050, ACI 318 y ACI 350.3. Equipado con un motor multicapa en tiempo real, evalúa la estabilidad al deslizamiento, volteo y presiones de contacto mediante las metodologías de Mononobe-Okabe y Morales, integrando empujes dinámicos de Westergaard y uña de cimentación automática con pasivo profundo.
         </p>
         <p class="text-base leading-relaxed max-w-2xl" style="color: var(--text-dim);" data-reveal>
-          Integra parámetros de sitio, espectros, cortantes estáticos, control modal, derivas, escalamiento dinámico, verificación posterior del sistema estructural y revisión automática de irregularidades. Convierte un proceso usualmente disperso entre norma, hojas Excel y ETABS en un flujo claro, trazable y exportable — manteniendo siempre el criterio del ingeniero como eje central.
+          El software ofrece una integración bidireccional en deformación plana con Autodesk Robot Structural Analysis mediante elementos finitos (FEM), capturando momentos de diseño Wood & Armer y la reacción elástica del suelo. Incorpora un algoritmo de optimización de geometría por volumen mínimo de concreto y cálculo flexional por solución cuadrática cerrada con distribución de acero por tramos en el fuste. Genera memorias de cálculo en PDF A4 con ecuaciones KaTeX y reportes en Microsoft Excel (.xlsx) con fórmulas vivas.
         </p>
         <div class="flex flex-wrap gap-4 mt-8" data-reveal>
-          <a href="https://apps.microsoft.com/detail/9NVQQMMG032Q" target="_blank" class="btn btn-primary">
+          <a href="https://apps.microsoft.com/detail/9N0758BVD70N" target="_blank" class="btn btn-primary">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0" style="margin-right: 2px;"><path d="M0 0h11.4v11.4H0V0zm12.6 0H24v11.4H12.6V0zM0 12.6h11.4V24H0V12.6zm12.6 0H24V24H12.6V12.6z"/></svg>
             Descargar en Microsoft Store
           </a>
         </div>
-      </div>      <div class="lg:col-span-5" data-reveal>
-        <div class="hero-cover" data-lightbox data-src="../imagenes/lm_ingenieria/asistente_sismico_e030_2026/00_caratula.png" data-num="Carátula" data-caption="Asistente Sísmico E.030 — 2026">
-          <img src="../imagenes/lm_ingenieria/asistente_sismico_e030_2026/00_caratula.png" alt="Asistente Sísmico E.030 — 2026">
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="hero-cover" data-lightbox data-src="../imagenes/lm_ingenieria/muros_sostenimiento/00_caratula.png" data-num="Carátula" data-caption="Muros de Sostenimiento — Análisis Geotécnico y Estructural">
+          <img src="../imagenes/lm_ingenieria/muros_sostenimiento/00_caratula.png" alt="Muros de Sostenimiento">
         </div>
         <p class="mono text-[0.66rem] uppercase tracking-[0.14em] mt-4 text-center" style="color: var(--muted);">Clic en la imagen para ampliar</p>
       </div>
     </div>
 
     <div class="spec-strip mt-14" data-reveal>
-        <div class="spec"><span class="k">Categoría</span><span class="v">Análisis estructural</span></div>
-        <div class="spec"><span class="k">Normativa</span><span class="v">E.030 — 2026 (Perú)</span></div>
-        <div class="spec"><span class="k">Plataforma</span><span class="v">Web · Funciona offline</span><span class="sub">Móvil · Tablet · PC</span></div>
-        <div class="spec"><span class="k">Plataforma</span><span class="v">Escritorio • Windows</span><span class="sub">Microsoft Store</span></div>
+        <div class="spec"><span class="k">Categoría</span><span class="v">Geotecnia y Estructuras</span></div>
+        <div class="spec"><span class="k">Normativa</span><span class="v">E.060 · E.050 (Perú)</span><span class="sub">ACI 318 · ACI 350.3</span></div>
+        <div class="spec"><span class="k">Plataforma</span><span class="v">Escritorio · Windows</span><span class="sub">.NET 8 + WebView2</span></div>
+        <div class="spec"><span class="k">Acceso</span><span class="v">Microsoft Store</span><span class="sub">Integración Autodesk Robot</span></div>
     </div>
   </div>
 </section>
@@ -447,24 +288,24 @@
 
     <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
       <div class="feature" data-reveal>
-        <h4>Parámetros sísmicos y espectros exportables</h4>
-        <p>Zona, factor Z, perfil de suelo, S, Tp, TL. Genera espectros X/Y/Z en TXT compatible con ETABS.</p>
+        <h4>Motor geotécnico multicapa y empuje dinámico</h4>
+        <p>Cálculo en tiempo real de empujes de tierra (Mononobe-Okabe y Morales), grieta de tracción y presiones hidrostáticas/dinámicas de Westergaard.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Importación directa de ETABS</h4>
-        <p>Mass Summary, Modal Ratios, Story Drifts, Pier Forces y Story Forces — todo en un solo flujo trazable.</p>
+        <h4>Dimensionamiento de uña y pasivo profundo</h4>
+        <p>Generación y verificación automática de la uña de cimentación considerando la contribución del pasivo profundo para garantizar la estabilidad al deslizamiento.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Derivas y escalamiento dinámico</h4>
-        <p>Distorsiones de entrepiso con amplificación normativa y factores de escalamiento por dirección contra el mínimo estático.</p>
+        <h4>Integración FEM bidireccional con Autodesk Robot</h4>
+        <p>Modelo automático en deformación plana para análisis de esfuerzos en el fuste y zapata con momentos Wood & Armer y reacción elástica del suelo.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Irregularidades automatizadas</h4>
-        <p>Masa, torsión, torsión extrema, piso blando y rigidez extrema — señalando cuáles requieren criterio manual del ingeniero.</p>
+        <h4>Optimizador geométrico por volumen mínimo</h4>
+        <p>Algoritmo de búsqueda iterativa que determina las dimensiones óptimas del muro minimizando la huella de concreto y garantizando factores de seguridad normativos.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Memoria normativa exportable</h4>
-        <p>Resumen con parámetros, resultados, advertencias y recomendaciones, exportable a PDF para revisión o archivo.</p>
+        <h4>Diseño de armadura por tramos y memorias PDF/Excel</h4>
+        <p>Solución cuadrática cerrada para flexión con control de ductilidad, despiece por altura del fuste y exportación directa a PDF con KaTeX y Excel con fórmulas vivas.</p>
       </div>
     </div>
   </div>
@@ -473,19 +314,19 @@
 <!-- ENGINEERING VALUE -->
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
   <div class="max-w-5xl mx-auto px-6 lg:px-10">
-    <div class="coord mb-6">§ C / Integración con ETABS y Criterio Estructural</div>
+    <div class="coord mb-6">§ B / Rigor Geotécnico y Diseño Estructural</div>
     <h2 class="display text-4xl md:text-5xl mb-10" data-reveal>
-      Rigor sismorresistente y <em>trazabilidad normativa</em>.
+      Estabilidad de empujes y <em>modelo FEM bidireccional</em>.
     </h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
       <p>
-        La aplicación traduce el rigor de la Norma E.030 de Diseño Sismorresistente en una metodología de verificación automatizada, priorizando el control del ingeniero estructural en cada parámetro y toma de decisión.
+        Muros de Sostenimiento resuelve la brecha entre la verificación de estabilidad geotécnica de suelos y el detallado de concreto armado. Evalúa simultáneamente los factores de seguridad ante volteo, deslizamiento y capacidad portante del terreno bajo combinaciones estáticas y sísmicas.
       </p>
       <p>
-        Erradica horas de procesamiento manual en hojas dispersas al integrar la lectura directa de reportes de salida de ETABS (Mass Summary, Modal Ratios, Story Drifts, Pier Forces). Evalúa derivas, irregularidades de masa/rigidez/torsión y cortante dinámico mínimo en segundos.
+        Su conexión con Autodesk Robot Structural Analysis permite contrastar los métodos analíticos clásicos con el comportamiento por elementos finitos, asegurando una distribución de refuerzo óptima y ajustada a la deformación real del conjunto suelo-estructura.
       </p>
       <p>
-        Genera memorias normativas exportables a PDF con sustento transparente y formal, listas para revisiones municipales, de supervisión o auditorías de proyectos estructurales.
+        Los entregables se generan de forma transparente en hojas de cálculo de Excel (.xlsx) with fórmulas matemáticas auditables y memorias impresas en PDF A4 listas para sustentación ante supervisores y revisores de proyectos.
       </p>
     </div>
   </div>
@@ -504,8 +345,8 @@
         Ver ecosistema completo
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
-      <a href="muros-de-corte.html" class="btn btn-outline">
-        Ver Muros de Corte
+      <a href="asistente-sismico.html" class="btn btn-outline">
+        Ver Asistente Sísmico
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
       <a href="../index.html#contacto" class="btn btn-ghost">Contactar</a>
@@ -520,7 +361,7 @@
       <div class="text-sm font-medium">Luis Miguel Cruz Efus</div>
     </a>
     <div class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--muted);">
-      Aplicación N.01 · Asistente Sísmico E.030 — 2026
+      Aplicación N.12 · Muros de Sostenimiento
     </div>
   </div>
 </footer>
@@ -562,72 +403,6 @@
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
-
-  /* ===== CAROUSEL NAVIGATION ===== */
-
-  /* ===== Carrusel-hero automático ===== */
-  document.querySelectorAll('[data-hcar]').forEach(car => {
-    const slides = Array.from(car.querySelectorAll('.hcar-slide'));
-    const dots = Array.from(car.querySelectorAll('.hcar-dot'));
-    const prog = car.querySelector('.hcar-progress span');
-    const capEl = car.querySelector('[data-hcar-cap]');
-    const numEl = car.querySelector('[data-hcar-num]');
-    const prev = car.querySelector('.hcar-nav.prev');
-    const next = car.querySelector('.hcar-nav.next');
-    const zoom = car.querySelector('[data-hcar-zoom]');
-    const stage = car.querySelector('.hcar-stage');
-    if(!slides.length) return;
-    let idx = 0, raf = null, t0 = 0;
-    const DUR = 4800;
-    function go(n){
-      idx = (n + slides.length) % slides.length;
-      slides.forEach((s,i)=>s.classList.toggle('is-active', i===idx));
-      dots.forEach((d,i)=>d.classList.toggle('is-active', i===idx));
-      const el = slides[idx];
-      if(capEl) capEl.textContent = ' ' + (el.dataset.caption||'');
-      if(numEl) numEl.textContent = el.dataset.num||'';
-      restart();
-    }
-    function tick(ts){ if(!t0) t0=ts; const p=Math.min(1,(ts-t0)/DUR); if(prog) prog.style.width=(p*100)+'%'; if(p>=1){ go(idx+1); return; } raf=requestAnimationFrame(tick); }
-    function restart(){ if(raf) cancelAnimationFrame(raf); t0=0; if(prog) prog.style.width='0%'; raf=requestAnimationFrame(tick); }
-    function pause(){ if(raf) cancelAnimationFrame(raf); raf=null; }
-    if(prev) prev.addEventListener('click', e=>{ e.stopPropagation(); go(idx-1); });
-    if(next) next.addEventListener('click', e=>{ e.stopPropagation(); go(idx+1); });
-    dots.forEach((d,i)=>d.addEventListener('click', e=>{ e.stopPropagation(); go(i); }));
-    if(zoom) zoom.addEventListener('click', e=>{ e.stopPropagation(); slides[idx].click(); });
-    car.addEventListener('mouseenter', pause);
-    car.addEventListener('mouseleave', restart);
-    let sx=0;
-    stage.addEventListener('touchstart', e=>{ sx=e.touches[0].clientX; pause(); }, {passive:true});
-    stage.addEventListener('touchend', e=>{ const dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>40){ go(idx+(dx<0?1:-1)); } else { restart(); } });
-    go(0);
-  });
-
-  document.querySelectorAll('[data-carousel]').forEach(carousel => {
-    const track = carousel.querySelector('[data-carousel-track]');
-    const prev = carousel.querySelector('.carousel-nav.prev');
-    const next = carousel.querySelector('.carousel-nav.next');
-    if (!track) return;
-
-    const scrollBy = (dir) => {
-      const slide = track.querySelector('.carousel-slide');
-      if (!slide) return;
-      const gap = 18;
-      const step = slide.offsetWidth + gap;
-      track.scrollBy({ left: dir * step, behavior: 'smooth' });
-    };
-    if (prev) prev.addEventListener('click', () => scrollBy(-1));
-    if (next) next.addEventListener('click', () => scrollBy(1));
-
-    const updateBtns = () => {
-      const max = track.scrollWidth - track.clientWidth - 4;
-      if (prev) prev.disabled = track.scrollLeft <= 4;
-      if (next) next.disabled = track.scrollLeft >= max;
-    };
-    track.addEventListener('scroll', updateBtns);
-    window.addEventListener('resize', updateBtns);
-    updateBtns();
-  });
 
   /* ===== LIGHTBOX ===== */
   const lightbox = document.getElementById('lightbox');
@@ -705,7 +480,6 @@
   lbZoomOut.addEventListener('click', () => { zoom = Math.max(zoom - 0.25, 1); if (zoom === 1) { panX = panY = 0; } applyTransform(); });
   lbZoomReset.addEventListener('click', () => { zoom = 1; panX = panY = 0; applyTransform(); });
 
-  // Click on image: toggle zoom 1↔2
   lbImg.addEventListener('click', (e) => {
     e.stopPropagation();
     if (zoom > 1) { zoom = 1; panX = panY = 0; }
@@ -713,7 +487,6 @@
     applyTransform();
   });
 
-  // Drag-to-pan when zoomed
   let isDragging = false, dragStartX = 0, dragStartY = 0, panStartX = 0, panStartY = 0;
   lbImg.addEventListener('mousedown', (e) => {
     if (zoom <= 1) return;
@@ -734,7 +507,6 @@
     lbImg.classList.remove('dragging');
   });
 
-  // Touch pan
   let touchStartX = 0, touchStartY = 0;
   lbImg.addEventListener('touchstart', (e) => {
     if (zoom <= 1 || e.touches.length !== 1) return;
@@ -752,7 +524,6 @@
   }, { passive: false });
   lbImg.addEventListener('touchend', () => { isDragging = false; });
 
-  // Mouse wheel zoom
   lightbox.addEventListener('wheel', (e) => {
     if (!lightbox.classList.contains('open')) return;
     e.preventDefault();

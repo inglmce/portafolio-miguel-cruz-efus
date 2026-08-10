@@ -16,6 +16,7 @@ Este documento recopila los enlaces y Store IDs oficiales de las 7 aplicaciones 
 | 6 | **Diseño de Reservorios Circulares** | `9N0K6K8Z0P6T` | [Ver en la Microsoft Store](https://apps.microsoft.com/detail/9N0K6K8Z0P6T) |
 | 7 | **CopiMetrados** | `9P4ZPPLQTH1M` | [Ver en la Microsoft Store](https://apps.microsoft.com/detail/9P4ZPPLQTH1M) |
 | 8 | **CopiSanitario** | `9NMHFJ8HVTTW` | [Ver en la Microsoft Store](https://apps.microsoft.com/detail/9NMHFJ8HVTTW) |
+| 9 | **Muros de Sostenimiento** | `9N0758BVD70N` | [Ver en la Microsoft Store](https://apps.microsoft.com/detail/9N0758BVD70N) |
 
 ---
 
@@ -60,5 +61,11 @@ Este documento recopila los enlaces y Store IDs oficiales de las 7 aplicaciones 
 * **ID de la Tienda:** `9NMHFJ8HVTTW`
 * **URL:** `https://apps.microsoft.com/detail/9NMHFJ8HVTTW`
 * **Descripción:** Suite profesional de 13 módulos especializados para el diseño, cálculo hidráulico y generación de memorias descriptivas y de cálculo de instalaciones sanitarias según RNE IS.010, IS.020 y OS.090.
+
+### 9. Muros de Sostenimiento
+* **ID de la Tienda:** `9N0758BVD70N`
+* **URL:** `https://apps.microsoft.com/detail/9N0758BVD70N`
+* **Descripción:** Análisis geotécnico y dimensionamiento estructural en tiempo real de muros de contención en voladizo (E.060, E.050, ACI 318, Mononobe-Okabe, uña automática y Robot FEM).
+
 
 
