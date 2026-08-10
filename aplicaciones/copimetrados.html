@@ -271,7 +271,7 @@
         <div class="flex flex-wrap items-center gap-3 mb-8">
           <span class="chip accent">Metrados</span>
           <span class="chip">Delphin Express</span>
-          <span class="chip">QuestPDF</span>
+          <span class="chip">Reportes PDF/Excel</span>
           <span class="chip">Inteligencia Artificial</span>
         </div>
         <h1 class="display text-5xl md:text-6xl lg:text-7xl mb-10" data-reveal>
@@ -281,7 +281,7 @@
           CopiMetrados v1.0.6 es la suite especializada de ingeniería civil para el cómputo métrico y automatización de planillas de metrados de obras de edificación y saneamiento, desarrollada bajo los criterios del Reglamento de Metrados para Obras de Edificación y Habilitaciones Urbanas y los pesos unitarios de varillas de acero ASTM A615. El software realiza la cuantificación rigurosa de partidas en planillas dinámicas de Resumen, Sustento y Acero de Refuerzo, calculando automáticamente longitudes de despiece, pesos nominales y ganchos doblados estandarizados a 90°, 180°, estribos y grapas sísmicas para varillas de acero estructural.
         </p>
         <p class="text-base leading-relaxed max-w-2xl" style="color: var(--text-dim);" data-reveal>
-          El sistema ofrece una interoperabilidad fluida mediante la lectura directa de la estructura WBS de presupuestos desde bases de datos SQLite de Delphin Express y la integración de un Asistente de IA multimodal (Google Gemini API) capaz de interpretar planos en PDF, imágenes y documentos de proyecto. Permite la exportación directa a hojas de cálculo de Microsoft Excel (.xlsx) con fórmulas matemáticas dinámicas y la generación de reportes impresos en PDF de alta resolución con orientación mixta de páginas y tipografía Arial Narrow. CopiMetrados se encuentra disponible para su descarga oficial en la Microsoft Store.
+          El sistema ofrece una interoperabilidad fluida mediante la sincronización directa del árbol de partidas (WBS) con presupuestos de Delphin Express y la integración de un Asistente de Inteligencia Artificial capaz de extraer metrados desde planos en PDF, imágenes y documentos de obra. Permite la exportación a hojas de cálculo en Microsoft Excel (.xlsx) con fórmulas matemáticas vinculadas y la generación de planillas de metrados en PDF normadas para supervisión de obras. CopiMetrados se encuentra disponible para su descarga oficial en la Microsoft Store.
         </p>
         <div class="flex flex-wrap gap-4 mt-8" data-reveal>
           <a href="https://apps.microsoft.com/detail/9P4ZPPLQTH1M" target="_blank" class="btn btn-primary">
@@ -302,8 +302,8 @@
     <div class="spec-strip mt-14" data-reveal>
         <div class="spec"><span class="k">Categoría</span><span class="v">Metrados y Presupuestos</span></div>
         <div class="spec"><span class="k">Normativa</span><span class="v">NTP (Perú) · Reglas de Metrados</span></div>
-        <div class="spec"><span class="k">Plataforma</span><span class="v">Escritorio · Windows</span><span class="sub">.NET 8 + SQLite</span></div>
-        <div class="spec"><span class="k">Acceso</span><span class="v">WebView2 + Delphin Express</span></div>
+        <div class="spec"><span class="k">Plataforma</span><span class="v">Escritorio · Windows</span><span class="sub">Procesamiento Local</span></div>
+        <div class="spec"><span class="k">Acceso</span><span class="v">Delphin Express · Excel · PDF</span></div>
     </div>
   </div>
 </section>
@@ -324,19 +324,19 @@
       </div>
       <div class="feature" data-reveal>
         <h4>Conexión con Delphin Express</h4>
-        <p>Lector directo de la base de datos SQLite de Delphin para importar el árbol de partidas, códigos, descripciones y unidades sin errores manuales.</p>
+        <p>Importación directa de la estructura de partidas, códigos y unidades del presupuesto de Delphin Express, eliminando errores de transcripción manual.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Edición Notion-Style y Reordenamiento</h4>
-        <p>Uso dinámico del teclado (Enter/Tab/Shift+Tab) y esquema lateral drag-and-drop para reordenar bloques jerárquicos completos con numeración en tiempo real.</p>
+        <h4>Estructuración y reordenamiento de partidas</h4>
+        <p>Organización intuitiva de jerarquías de trabajo con renumeración automática de ítems en tiempo real para adaptarse a modificaciones del proyecto.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Asistente de IA (Gemini) con rotación de claves</h4>
-        <p>Generación de filas de metrados detalladas por conversación, extracción de datos desde planos PDF o imágenes e importación automática de planillas antiguas.</p>
+        <h4>Asistente de IA para extracción de metrados</h4>
+        <p>Asistente inteligente para la cuantificación rápida de partidas a partir de lectura de planos PDF e imágenes de detalles constructivos.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Inyector determinista y visualizador de especificaciones</h4>
-        <p>Consolidación de archivos de metrados directo a la base de datos de Delphin y dock lateral para consultar el pliego de especificaciones técnicas en Markdown.</p>
+        <h4>Sincronización de metrados y pliego técnico</h4>
+        <p>Consolidación de sustentos métricos en el presupuesto de obra y panel de consulta instantánea del pliego de especificaciones técnicas.</p>
       </div>
     </div>
   </div>
