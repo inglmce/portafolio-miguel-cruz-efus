@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inglmce.github.io/portafolio-miguel-cruz-efus/sitemap.xml
