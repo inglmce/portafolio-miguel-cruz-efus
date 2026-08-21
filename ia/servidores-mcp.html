@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#15171c">
+<title>Servidores MCP — Delphin, Word y Excel para agentes de IA · Luis Miguel Cruz Efus</title>
+<meta name="description" content="Tres servidores MCP (Model Context Protocol) de desarrollo propio y ejecución local: delphin-presupuestos con 27 herramientas sobre la base SQLite de Delphin Express, más Word MCP y Excel MCP para entregables con maquetación profesional.">
+<link rel="canonical" href="https://luismiguelcruzefus.com/ia/servidores-mcp.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="LM Ingeniería e Innovación — Luis Miguel Cruz Efus">
+<meta property="og:title" content="Servidores MCP — Delphin, Word y Excel para agentes de IA · Luis Miguel Cruz Efus">
+<meta property="og:description" content="Tres servidores MCP (Model Context Protocol) de desarrollo propio y ejecución local: delphin-presupuestos con 27 herramientas sobre la base SQLite de Delphin Express, más Word MCP y Excel MCP para entregables con maquetación profesional.">
+<meta property="og:url" content="https://luismiguelcruzefus.com/ia/servidores-mcp.html">
+<meta property="og:image" content="https://luismiguelcruzefus.com/imagenes/lm_ingenieria/servidores_mcp/00_caratula.png">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Servidores MCP — Delphin, Word y Excel para agentes de IA · Luis Miguel Cruz Efus">
+<meta name="twitter:description" content="Tres servidores MCP (Model Context Protocol) de desarrollo propio y ejecución local: delphin-presupuestos con 27 herramientas sobre la base SQLite de Delphin Express, más Word MCP y Excel MCP para entregables con maquetación profesional.">
+<meta name="twitter:image" content="https://luismiguelcruzefus.com/imagenes/lm_ingenieria/servidores_mcp/00_caratula.png">
+
+<link rel="icon" type="image/png" href="../imagenes/lm_ingenieria/marca_lm/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  :root{
+    --ink: oklch(0.16 0.012 250);
+    --ink-deep: oklch(0.12 0.012 250);
+    --surface: oklch(0.21 0.012 250);
+    --line: oklch(0.35 0.012 250 / 0.6);
+    --line-soft: oklch(0.35 0.012 250 / 0.25);
+    --text: oklch(0.94 0.008 80);
+    --text-dim: oklch(0.75 0.008 80);
+    --muted: oklch(0.6 0.012 250);
+    --accent: oklch(0.78 0.14 65);
+    --accent-deep: oklch(0.68 0.14 65);
+    --accent-soft: oklch(0.78 0.14 65 / 0.12);
+    --accent-2: oklch(0.72 0.10 245);
+    --accent-2-soft: oklch(0.72 0.10 245 / 0.12);
+  }
+  *{ -webkit-tap-highlight-color: transparent; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background: var(--ink); color: var(--text);
+    font-family: 'Geist', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .serif{ font-family:'Instrument Serif', Georgia, serif; }
+  .mono{ font-family:'JetBrains Mono', monospace; }
+  .display{ font-family:'Instrument Serif', serif; font-weight:400; letter-spacing:-0.018em; line-height:0.95; }
+  .display em{ font-style:italic; color: var(--accent); }
+
+  .blueprint-bg{
+    background-image:
+      linear-gradient(oklch(0.35 0.012 250 / 0.18) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.35 0.012 250 / 0.18) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .coord{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted); display:inline-flex; align-items:center; gap:0.5rem;
+  }
+  .coord::before{ content:""; width: 18px; height:1px; background: var(--accent); }
+
+  .chip{
+    display:inline-flex; padding: 4px 10px; border: 1px solid var(--line); border-radius: 99px;
+    font-family:'JetBrains Mono', monospace; font-size: 0.66rem;
+    color: var(--text-dim); letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .chip.accent{ border-color: var(--accent); color: var(--accent); }
+
+  .btn{
+    display:inline-flex; align-items:center; gap: 10px;
+    padding: 12px 20px; border-radius: 4px; font-weight: 500; font-size: 0.9rem;
+    transition: all .25s ease; border: 1px solid transparent; cursor: pointer;
+  }
+  .btn-primary{ background: var(--accent); color: var(--ink-deep); }
+  .btn-primary:hover{ background: var(--accent-deep); }
+  .btn-ghost{ background:transparent; color:var(--text); border-color: var(--line); }
+  .btn-ghost:hover{ border-color: var(--accent); color: var(--accent); }
+  .btn-outline{ background: transparent; color: var(--text); border-color: var(--accent); }
+  .btn-outline:hover{ background: var(--accent-soft); color: var(--accent); }
+
+  [data-reveal]{ opacity:0; transform:translateY(14px); transition: opacity .9s ease, transform .9s ease; }
+  [data-reveal].in{ opacity:1; transform:translateY(0); }
+
+  .nav-bg{ background: oklch(0.16 0.012 250 / 0.82); backdrop-filter: blur(14px); }
+
+  .feature{ border-left: 1px solid var(--accent); padding: 4px 0 4px 18px; }
+  .feature h4{ font-size: 0.95rem; font-weight: 500; margin-bottom: 4px; }
+  .feature p{ font-size: 0.85rem; color: var(--text-dim); line-height: 1.5; }
+
+  .hero-cover{
+    background: oklch(0.10 0.012 250);
+    border: 1px solid var(--line-soft);
+    border-radius: 6px; overflow: hidden; position: relative;
+    aspect-ratio: 9/16; max-width: 360px; margin: 0 auto;
+    transition: border-color .25s ease, transform .25s ease;
+  }
+  .hero-cover:hover{ border-color: var(--accent); transform: translateY(-2px); }
+  .hero-cover img{ width:100%; height:100%; object-fit: cover; display:block; }
+  .hero-cover::before, .hero-cover::after{
+    content:""; position:absolute; width: 14px; height: 14px;
+    border: 1px solid var(--accent); z-index: 2;
+  }
+  .hero-cover::before{ top: 8px; left: 8px; border-right:none; border-bottom:none; }
+  .hero-cover::after{ bottom: 8px; right: 8px; border-left:none; border-top:none; }
+  .hero-cover .fallback{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    text-align:center; padding: 0 24px;
+  }
+
+  .atmosphere{ position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none; }
+  .atmosphere .orb{ position:absolute; border-radius:50%; filter:blur(120px); will-change:transform; }
+  .atmosphere .orb-amber{ width:46vw; height:46vw; min-width:360px; min-height:360px; background:radial-gradient(circle, oklch(0.78 0.14 65 / 0.50), transparent 68%); top:-16vh; right:-8vw; opacity:.5; animation:driftA 30s ease-in-out infinite alternate; }
+  .atmosphere .orb-blue{ width:52vw; height:52vw; min-width:400px; min-height:400px; background:radial-gradient(circle, oklch(0.62 0.12 245 / 0.55), transparent 68%); bottom:-22vh; left:-12vw; opacity:.55; animation:driftB 38s ease-in-out infinite alternate; }
+  .atmosphere .orb-cyan{ width:34vw; height:34vw; min-width:280px; min-height:280px; background:radial-gradient(circle, oklch(0.72 0.10 215 / 0.42), transparent 70%); top:36%; left:40%; opacity:.4; animation:driftC 34s ease-in-out infinite alternate; }
+  @keyframes driftA{ to{ transform:translate(-7vw,8vh) scale(1.12); } }
+  @keyframes driftB{ to{ transform:translate(8vw,-6vh) scale(1.15); } }
+  @keyframes driftC{ to{ transform:translate(-6vw,-7vh) scale(1.2); } }
+  @media (prefers-reduced-motion: reduce){ .atmosphere .orb{ animation:none; } }
+
+  .spec-strip{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line-soft); border:1px solid var(--line-soft); border-radius:6px; overflow:hidden; }
+  @media (min-width:768px){ .spec-strip{ grid-template-columns:repeat(4,1fr); } }
+  .spec{ background:oklch(0.16 0.012 250); padding:18px 20px; }
+  .spec .k{ font-family:'JetBrains Mono',monospace; font-size:0.58rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); display:block; margin-bottom:8px; }
+  .spec .v{ font-size:1rem; color:var(--text); line-height:1.3; }
+  .spec .sub{ display:block; font-size:0.78rem; color:var(--muted); margin-top:3px; }
+
+  /* Listado tecnico (herramienta / que hace) */
+  .tool-row{
+    display:grid; grid-template-columns: 1fr; gap: 4px;
+    padding: 16px 0; border-bottom: 1px solid var(--line-soft);
+  }
+  @media (min-width:768px){ .tool-row{ grid-template-columns: 260px 1fr; gap: 28px; align-items:baseline; } }
+  .tool-row .n{ font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); }
+  .tool-row .d{ font-size:0.9rem; color:var(--text-dim); line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="atmosphere" aria-hidden="true"><span class="orb orb-amber"></span><span class="orb orb-blue"></span><span class="orb orb-cyan"></span></div>
+
+<!-- NAV -->
+<header class="fixed top-0 left-0 right-0 z-50 nav-bg border-b" style="border-color: var(--line-soft);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-4">
+    <a href="../index.html#ia-automatizacion" class="flex items-center gap-3">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color: var(--accent);"><path d="M13 7H1m0 0l5-5m-5 5l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span class="mono text-xs uppercase tracking-[0.18em]" style="color: var(--text-dim);">Volver al portafolio</span>
+    </a>
+    <div class="hidden md:flex items-center gap-3">
+      <span class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">IA.02 · Model Context Protocol</span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
+  <div class="absolute inset-0 blueprint-bg" style="opacity:0.4"></div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
+
+    <div class="flex items-center justify-between mb-12">
+      <div class="coord">IA.02 / Model Context Protocol</div>
+      <div class="coord hidden md:flex">3 servidores · 39 herramientas · Ejecución local</div>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-7">
+        <div class="flex flex-wrap items-center gap-3 mb-8">
+          <span class="chip accent">Desarrollo propio</span>
+          <span class="chip">Model Context Protocol</span>
+          <span class="chip">Python</span>
+          <span class="chip">39 herramientas</span>
+        </div>
+        <h1 class="display text-5xl md:text-6xl lg:text-7xl mb-10" data-reveal>
+          Servidores <em>MCP</em>.
+        </h1>
+        <p class="text-lg leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
+          Un modelo de lenguaje sabe redactar, pero no sabe tocar tus archivos. El <span style="color: var(--text);">Model Context Protocol</span> es el estándar por el que un agente de IA recibe herramientas concretas, y estos tres servidores son las que yo le doy: <span style="color: var(--text);">delphin-presupuestos</span>, que abre la base SQLite de Delphin Express con 27 herramientas; <span style="color: var(--text);">Word MCP</span> y <span style="color: var(--text);">Excel MCP</span>, que producen los entregables ya maquetados. Los tres corren en mi propia máquina, sobre mis propios datos, sin subir nada a la nube.
+        </p>
+        <p class="text-base leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
+          La regla de diseño es la misma en los tres: <span style="color: var(--text);">el agente describe el contenido y el servidor decide la presentación</span>. No hay parámetros para elegir tipografía, color ni bordes, y es deliberado —si el agente pudiera elegirlos, los elegiría mal, que es justamente el problema que estos servidores existen para eliminar. Lo mismo vale para los datos: las herramientas de presupuesto se niegan a inventar rendimientos o precios que ya están en el catálogo.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-8" data-reveal>
+          <a href="automatizacion-presupuestos.html" class="btn btn-outline">
+            Ver el pipeline de presupuestos
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="../index.html#contacto" class="btn btn-ghost">
+            Conversemos sobre integración
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="hero-cover">
+          <img src="../imagenes/lm_ingenieria/servidores_mcp/00_caratula.png" alt="Suite de servidores MCP — Delphin, Word y Excel" onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend', '<div class=&quot;fallback&quot;><div><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>Model Context Protocol</div><div class=&quot;serif text-3xl leading-tight&quot;>Servidores <em style=&quot;color: var(--accent); font-style: italic;&quot;>MCP</em></div></div></div>');">
+        </div>
+        <p class="mono text-[0.66rem] uppercase tracking-[0.14em] mt-4 text-center" style="color: var(--muted);">Infraestructura propia · uso interno</p>
+      </div>
+    </div>
+
+    <div class="spec-strip mt-14" data-reveal>
+        <div class="spec"><span class="k">Categoría</span><span class="v">Infraestructura de IA</span><span class="sub">Herramientas para agentes</span></div>
+        <div class="spec"><span class="k">Protocolo</span><span class="v">Model Context Protocol</span><span class="sub">Claude Code · OpenCode · Antigravity</span></div>
+        <div class="spec"><span class="k">Alcance</span><span class="v">3 servidores</span><span class="sub">39 herramientas expuestas</span></div>
+        <div class="spec"><span class="k">Ejecución</span><span class="v">100 % local</span><span class="sub">Sin envío de datos a la nube</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION A -->
+<section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="flex items-baseline gap-5 mb-12">
+      <span class="mono text-sm" style="color: var(--accent);">§ A</span>
+      <h2 class="serif text-3xl lg:text-4xl">Qué <em style="color: var(--accent); font-style:italic;">resuelven</em></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+      <div class="feature" data-reveal>
+        <h4>Presupuestos sin salir del agente</h4>
+        <p>delphin-presupuestos consulta el banco de APUs, valida, crea el presupuesto en la base de Delphin Express y lo corrige en sitio, con respaldo numerado antes de cada escritura.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Ninguna cifra inventada</h4>
+        <p>Los rendimientos salen del APU y los precios del catálogo. Solo un insumo verdaderamente nuevo admite precio estimado, y debe declarar de dónde sale.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Corrección en sitio, nunca regeneración</h4>
+        <p>Regenerar un presupuesto cambia los identificadores de costo unitario y con ellos se pierden los metrados de las planillas y las dependencias del cronograma. Por eso las herramientas de edición existen y el servidor empuja hacia ellas.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Maquetación que el agente no puede estropear</h4>
+        <p>Word MCP aplica jerarquía de títulos, cabeceras sombreadas que se repiten entre páginas, columnas numéricas alineadas y pie con «Página X de Y», siempre igual en todo el documento.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Numeración que se recoloca sola</h4>
+        <p>Las leyendas de tabla y figura se insertan con campo SEQ, como lo hace Word: si se añade una tabla en medio, el resto se renumera solo en lugar de romperse.</p>
+      </div>
+      <div class="feature" data-reveal>
+        <h4>Hojas de cálculo vivas, no capturas</h4>
+        <p>Excel MCP entrega libros con ancho de columna ajustado, formato numérico real, cabecera fija con autofiltro, fila de totales con SUBTOTAL que respeta el filtro y gráficos rotulados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION B -->
+<section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div class="flex items-baseline gap-5 mb-10">
+      <span class="mono text-sm" style="color: var(--accent);">§ B</span>
+      <h2 class="serif text-3xl lg:text-4xl">Los tres <em style="color: var(--accent); font-style:italic;">servidores</em></h2>
+    </div>
+
+    <div class="mt-2">
+      <div class="tool-row" data-reveal>
+        <div class="n">delphin-presupuestos · 27 herramientas</div>
+        <div class="d">Trabaja directamente sobre las bases SQLite de Delphin Express. Consulta y compara APUs, busca insumos y precios de referencia, valida e inyecta presupuestos completos, edita partidas una a una, carga metrados desde planillas, ordena las carpetas del catálogo, cuida el banco de APUs (duplicados, fusiones, altas) y verifica la base antes de abrirla. Respalda de forma numerada antes de cada escritura y se niega a escribir si Delphin está abierto.</div>
+      </div>
+      <div class="tool-row" data-reveal>
+        <div class="n">Word MCP · 6 herramientas</div>
+        <div class="d">Crea el documento entero de una sola llamada a partir de bloques —títulos, párrafos, tablas, listas, imágenes, índice, citas— y aplica por su cuenta tipografía, sombreados, bordes y espaciados. También lee un .docx existente devolviéndolo en el mismo formato que acepta para crearlo, y rellena plantillas del cliente por reemplazo sin destrozar su encabezado ni su logo.</div>
+      </div>
+      <div class="tool-row" data-reveal>
+        <div class="n">Excel MCP · 6 herramientas</div>
+        <div class="d">Crea el libro completo de una llamada: hojas con título, encabezados, filas, formatos por columna y gráficos declarados por nombre de columna. Exige los números como números y no como texto, que es el error que más estropea una hoja, y sabe dejar fórmulas vivas para plantillas de cálculo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION C -->
+<section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
+  <div class="max-w-5xl mx-auto px-6 lg:px-10">
+    <div class="coord mb-6">§ C / Por qué los construí</div>
+    <h2 class="display text-4xl md:text-5xl mb-10" data-reveal>
+      Los agentes redactan bien<br>y <em>maquetan mal</em>.
+    </h2>
+    <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
+      <p>No es falta de capacidad del modelo: maquetar exige acordarse de treinta detalles que nadie tiene en la cabeza mientras redacta. Los síntomas siempre son los mismos —tablas con la rejilla negra de Word, índices escritos como texto que no se actualizan, leyendas «Tabla 1» escritas a mano que se rompen a la primera inserción, números como 1234.5599999999999 alineados a la izquierda y, lo peor, plantillas del cliente destrozadas.</p>
+      <p>La solución no fue pedirle al agente que maquetara mejor, sino quitarle esa decisión: el servidor se queda con toda la presentación y el agente aporta únicamente estructura y contenido. Deliberadamente no expongo parámetros visuales; la ausencia de esa palanca es la característica, no una limitación.</p>
+      <p>Con delphin-presupuestos la misma idea se aplica a los datos duros. Un presupuesto de obra pública no admite cifras plausibles: admite las del catálogo. El servidor impone esa disciplina desde el otro lado —base de solo lectura donde debe serlo, respaldo antes de escribir, negativa a operar con Delphin abierto— para que la velocidad de la IA nunca se pague con trazabilidad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 lg:py-32 relative overflow-hidden">
+  <div class="absolute inset-0 blueprint-bg" style="opacity:0.3"></div>
+  <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
+    <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más desarrollo propio</div>
+    <h2 class="display text-4xl md:text-5xl mb-10">
+      Explora el resto del<br><em>ecosistema de automatización</em>.
+    </h2>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="../index.html#ia-automatizacion" class="btn btn-outline">
+        Ver IA &amp; Automatización
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+      <a href="../index.html#aplicaciones" class="btn btn-ghost">Ver aplicaciones publicadas</a>
+      <a href="../index.html#contacto" class="btn btn-primary">
+        Conversemos
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-between gap-4">
+    <a href="../index.html" class="flex items-center gap-3">
+      <div class="text-sm font-medium">Luis Miguel Cruz Efus</div>
+    </a>
+    <div class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--muted);">
+      IA.02 · Servidores MCP
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
