@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15171c">
-<title>LM Metrados — Aplicación · Luis Miguel Cruz Efus</title>
+<title>CopiMetrados — Aplicación · Luis Miguel Cruz Efus</title>
 
 <link rel="icon" type="image/png" href="../imagenes/lm_ingenieria/marca_lm/logo.png">
 
@@ -263,7 +263,7 @@
 
     <div class="flex items-center justify-between mb-12">
       <div class="coord">N.05 / Aplicación</div>
-      <div class="coord hidden md:flex">NTP · Delphin Express</div>
+      <div class="coord hidden md:flex">NTP · Delphin Express · Gemini IA</div>
     </div>
 
     <div class="grid lg:grid-cols-12 gap-12 items-start">
@@ -271,17 +271,17 @@
         <div class="flex flex-wrap items-center gap-3 mb-8">
           <span class="chip accent">Metrados</span>
           <span class="chip">Delphin Express</span>
-          <span class="chip">QuestPDF</span>
+          <span class="chip">Reportes PDF/Excel</span>
           <span class="chip">Inteligencia Artificial</span>
         </div>
         <h1 class="display text-5xl md:text-6xl lg:text-7xl mb-10" data-reveal>
-          LM <em>Metrados</em>.
+          Copi<em>Metrados</em>.
         </h1>
         <p class="text-lg leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          Herramienta profesional para la elaboración de planillas de metrados (Resumen, Sustento y Acero de refuerzo) que funciona de forma integrada con el presupuesto de Delphin Express.
+          CopiMetrados v1.0.6 es la suite especializada de ingeniería civil para el cómputo métrico y automatización de planillas de metrados de obras de edificación y saneamiento, desarrollada bajo los criterios del Reglamento de Metrados para Obras de Edificación y Habilitaciones Urbanas y los pesos unitarios de varillas de acero ASTM A615. El software realiza la cuantificación rigurosa de partidas en planillas dinámicas de Resumen, Sustento y Acero de Refuerzo, calculando automáticamente longitudes de despiece, pesos nominales y ganchos doblados estandarizados a 90°, 180°, estribos y grapas sísmicas para varillas de acero estructural.
         </p>
         <p class="text-base leading-relaxed max-w-2xl" style="color: var(--text-dim);" data-reveal>
-          Diseñado con una interfaz dinámica estilo Notion, minimapa lateral interactivo y un asistente de Inteligencia Artificial (Gemini) capaz de automatizar metrados a partir de lenguaje natural, planos PDF o imágenes, y migrar históricos de Excel. Permite la exportación directa a hojas Excel con fórmulas vivas y PDFs con formatos normativos, optimizando la colaboración en paralelo del equipo.
+          El sistema ofrece una interoperabilidad fluida mediante la sincronización directa del árbol de partidas (WBS) con presupuestos de Delphin Express y la integración de un Asistente de Inteligencia Artificial capaz de extraer metrados desde planos en PDF, imágenes y documentos de obra. Permite la exportación a hojas de cálculo en Microsoft Excel (.xlsx) con fórmulas matemáticas vinculadas y la generación de planillas de metrados en PDF normadas para supervisión de obras. CopiMetrados se encuentra disponible para su descarga oficial en la Microsoft Store.
         </p>
         <div class="flex flex-wrap gap-4 mt-8" data-reveal>
           <a href="https://apps.microsoft.com/detail/9P4ZPPLQTH1M" target="_blank" class="btn btn-primary">
@@ -292,8 +292,8 @@
       </div>
 
       <div class="lg:col-span-5" data-reveal>
-        <div class="hero-cover" data-lightbox data-src="../imagenes/lm_ingenieria/lm_metrados/00_caratula.png" data-num="Carátula" data-caption="LM Metrados">
-          <img src="../imagenes/lm_ingenieria/lm_metrados/00_caratula.png" alt="LM Metrados">
+        <div class="hero-cover" data-lightbox data-src="../imagenes/lm_ingenieria/copimetrados/00_caratula.png" data-num="Carátula" data-caption="CopiMetrados">
+          <img src="../imagenes/lm_ingenieria/copimetrados/00_caratula.png" alt="CopiMetrados">
         </div>
         <p class="mono text-[0.66rem] uppercase tracking-[0.14em] mt-4 text-center" style="color: var(--muted);">Clic en la imagen para ampliar</p>
       </div>
@@ -302,8 +302,8 @@
     <div class="spec-strip mt-14" data-reveal>
         <div class="spec"><span class="k">Categoría</span><span class="v">Metrados y Presupuestos</span></div>
         <div class="spec"><span class="k">Normativa</span><span class="v">NTP (Perú) · Reglas de Metrados</span></div>
-        <div class="spec"><span class="k">Plataforma</span><span class="v">Escritorio · Windows</span><span class="sub">.NET 8 + SQLite</span></div>
-        <div class="spec"><span class="k">Acceso</span><span class="v">WebView2 + Delphin Express</span></div>
+        <div class="spec"><span class="k">Plataforma</span><span class="v">Escritorio · Windows</span><span class="sub">Procesamiento Local</span></div>
+        <div class="spec"><span class="k">Acceso</span><span class="v">Delphin Express · Excel · PDF</span></div>
     </div>
   </div>
 </section>
@@ -324,40 +324,41 @@
       </div>
       <div class="feature" data-reveal>
         <h4>Conexión con Delphin Express</h4>
-        <p>Lector directo de la base de datos SQLite de Delphin para importar el árbol de partidas, códigos, descripciones y unidades sin errores manuales.</p>
+        <p>Importación directa de la estructura de partidas, códigos y unidades del presupuesto de Delphin Express, eliminando errores de transcripción manual.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Edición Notion-Style y Reordenamiento</h4>
-        <p>Uso dinámico del teclado (Enter/Tab/Shift+Tab) y esquema lateral drag-and-drop para reordenar bloques jerárquicos completos con numeración en tiempo real.</p>
+        <h4>Estructuración y reordenamiento de partidas</h4>
+        <p>Organización intuitiva de jerarquías de trabajo con renumeración automática de ítems en tiempo real para adaptarse a modificaciones del proyecto.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Asistente de IA (Gemini) con rotación de claves</h4>
-        <p>Generación de filas de metrados detalladas por conversación, extracción de datos desde planos PDF o imágenes e importación automática de planillas antiguas.</p>
+        <h4>Asistente de IA para extracción de metrados</h4>
+        <p>Asistente inteligente para la cuantificación rápida de partidas a partir de lectura de planos PDF e imágenes de detalles constructivos.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Inyector determinista y visualizador de especificaciones</h4>
-        <p>Consolidación de archivos .lmm directo a la base de datos de Delphin y dock lateral para consultar el pliego de especificaciones técnicas en Markdown.</p>
+        <h4>Sincronización de metrados y pliego técnico</h4>
+        <p>Consolidación de sustentos métricos en el presupuesto de obra y panel de consulta instantánea del pliego de especificaciones técnicas.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DEVELOPMENT NOTE -->
+
+<!-- ENGINEERING VALUE -->
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
   <div class="max-w-5xl mx-auto px-6 lg:px-10">
-    <div class="coord mb-6">§ C / Notas de desarrollo</div>
+    <div class="coord mb-6">§ B / Criterio de Metrados e Integración</div>
     <h2 class="display text-4xl md:text-5xl mb-10" data-reveal>
-      Cómo lo <em>construí</em>.
+      Consolidación sin errores y <em>presupuestos auditables</em>.
     </h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
       <p>
-        El aplicación nace para resolver el cuello de botella monousuario en la elaboración de presupuestos en Delphin Express. Diseñé una arquitectura desacoplada donde cada metrador trabaja de forma independiente offline en archivos de extensión propia (.lmm). Luego, un pipeline determinista en Python consolida e inyecta los datos directamente en la base de datos final de Delphin en segundos, garantizando consistencia anti-typo.
+        CopiMetrados fue diseñado para eliminar la congestión en la preparación de presupuestos de obras complejas. Permite que múltiples metradores elaboren planillas en paralelo sin duplicar partidas ni cometer errores de tipeo, conectando la métrica directamente con el WBS de Delphin Express.
       </p>
       <p>
-        Para el motor de escritorio, utilicé WinForms con WebView2 cargando la interfaz HTML/JS desde memoria interceptando recursos (origen real https://memoria.local), lo que asegura una comunicación fluida a través del puente de comunicación nativo. La exportación a Excel dinámico se realiza con ClosedXML, generando fórmulas vivas y referencias cruzadas, mientras que el PDF se genera bajo márgenes formales con QuestPDF.
+        Genera archivos de Excel (.xlsx) con fórmulas vivas y referencias cruzadas transparentes, así como memorias de sustento impresas en PDF con sustento de cálculo transparente, listas para soportar auditorías y revisiones de supervisión.
       </p>
       <p>
-        Finalmente, integré inteligencia artificial mediante la API de Gemini, diseñando un pool de claves con rotación automática para evitar interrupciones por límite de llamadas. Esto permite que la IA procese planos o planillas de Excel históricas devolviendo filas de metrado detalladas y auditables que el ingeniero puede verificar en todo momento.
+        La integración de inteligencia artificial acelera la extracción de metrados a partir de planos PDF e históricos de obra, manteniendo en todo momento la trazabilidad y la verificación obligatoria del ingeniero especialista.
       </p>
     </div>
   </div>
@@ -369,7 +370,7 @@
   <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
     <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más aplicaciones</div>
     <h2 class="display text-4xl md:text-5xl mb-10">
-      Hay <em>otros aplicaciones</em><br>en el ecosistema.
+      Hay <em>otras aplicaciones</em><br>en el ecosistema.
     </h2>
     <div class="flex flex-wrap justify-center gap-4">
       <a href="../index.html#aplicaciones" class="btn btn-outline">
@@ -392,7 +393,7 @@
       <div class="text-sm font-medium">Luis Miguel Cruz Efus</div>
     </a>
     <div class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--muted);">
-      Aplicación N.05 · LM Metrados
+      Aplicación N.05 · CopiMetrados
     </div>
   </div>
 </footer>

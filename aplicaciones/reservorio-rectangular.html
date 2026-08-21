@@ -370,7 +370,7 @@
     <div class="spec-strip mt-14" data-reveal>
         <div class="spec"><span class="k">Categoría</span><span class="v">Estructuras · Concreto Armado</span></div>
         <div class="spec"><span class="k">Normativa</span><span class="v">ACI 350-20 · E.060 · E.030</span></div>
-        <div class="spec"><span class="k">Plataforma</span><span class="v">Escritorio · Windows</span><span class="sub">.NET 8 + Autodesk Robot</span></div>
+        <div class="spec"><span class="k">Plataforma</span><span class="v">Escritorio · Windows</span><span class="sub">Integración nativa con Autodesk Robot</span></div>
         <div class="spec"><span class="k">Estado</span><span class="v">Publicado</span><span class="sub">2026</span></div>
     </div>
   </div>
@@ -395,7 +395,7 @@
       </div>
       <div class="feature" data-reveal>
         <h4>Modelo FEM en Robot</h4>
-        <p>Geometría, materiales, mallado, cargas y 22 combinaciones creadas automáticamente vía COM.</p>
+        <p>Geometría, materiales, mallado, cargas y 22 combinaciones de carga generadas de forma automatizada y directa en el modelo estructural.</p>
       </div>
       <div class="feature" data-reveal>
         <h4>Importación de resultados</h4>
@@ -410,12 +410,12 @@
         <p>Verificación de flotación, deslizamiento, volteo y presión de contacto (E.050).</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Diagramas SVG</h4>
+        <h4>Diagramas Gráficos Vectoriales</h4>
         <p>Presiones, cortes y armado integrados visualmente en la memoria.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Persistencia</h4>
-        <p>Guardado en JSON e impresión en PDF A4 con trazabilidad completa.</p>
+        <h4>Gestión de Proyectos y Memorias PDF</h4>
+        <p>Almacenamiento del expediente digital del proyecto e impresión de memorias de cálculo formales en PDF A4 con trazabilidad completa.</p>
       </div>
     </div>
   </div>
@@ -423,19 +423,19 @@
 
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
   <div class="max-w-5xl mx-auto px-6 lg:px-10">
-    <div class="coord mb-6">§ B / Notas de desarrollo</div>
+    <div class="coord mb-6">§ B / Integración con Autodesk Robot y Criterio ACI 350</div>
     <h2 class="display text-4xl md:text-5xl mb-10" data-reveal>
-      Cómo lo <em>construí</em>.
+      Cálculo hidráulico y <em>modelado FEM automático</em>.
     </h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
       <p>
-        Partí de la ACI 350-20 y ACI 350.3-20 para estructuras contenedoras de líquido, más las normas E.060 y E.030 para concreto armado y sismicidad peruana. Cada fórmula fue contrastada con ejemplos publicados y verificada numéricamente antes de escribir una sola línea de código.
+        Diseño estructural riguroso bajo los estándares ACI 350-20 (estructuras ambientales de concreto) y ACI 350.3-20 (cargas hidrodinámicas sísmicas impulsivas y convectivas), en estricta concordancia con las normas peruanas E.060, E.030 y E.050.
       </p>
       <p>
-        El diseño de un reservorio rectangular suele dispersarse entre la salida de Robot, hojas Excel de cuantías y memorias intermedias. Aquí se concentra en un flujo trazable: dimensionamiento → cargas sísmicas SRSS → modelo FEM automático → envolvente Wood &amp; Armer → diseño del refuerzo, con diagramas SVG integrados.
+        Consolida todo el flujo en una secuencia unificada: dimensionamiento hidráulico → cálculo hidrodinámico SRSS → generación automática del modelo tridimensional de elementos finitos (FEM) en Autodesk Robot → envolvente Wood &amp; Armer → diseño del refuerzo por flexotracción y verificación de flotación/volteo.
       </p>
       <p>
-        Aplicación de escritorio en C# sobre .NET 8 con integración COM a Autodesk Robot. El modelo se genera, se resuelve y se importan resultados sin salir del flujo de cálculo.
+        Genera memorias de cálculo completas en PDF A4 listas para revisión de supervisores, auditores o entidades del sector saneamiento (Vivienda/SEDAPAL/EPS), reduciendo a cero las observaciones por inconsistencias entre modelo y sustento impreso.
       </p>
     </div>
   </div>
@@ -446,7 +446,7 @@
   <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
     <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más aplicaciones</div>
     <h2 class="display text-4xl md:text-5xl mb-10">
-      Hay <em>otros aplicaciones</em><br>en el ecosistema.
+      Hay <em>otras aplicaciones</em><br>en el ecosistema.
     </h2>
     <div class="flex flex-wrap justify-center gap-4">
       <a href="../index.html#aplicaciones" class="btn btn-outline">

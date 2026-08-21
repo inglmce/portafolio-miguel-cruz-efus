@@ -343,7 +343,7 @@
           Cámara <em>Distribuidora</em>.
         </h1>
         <p class="text-lg leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          Herramienta de apoyo para diseñar y verificar cámaras de distribución de caudal por gravedad, con vertederos de cresta delgada (triangulares o rectangulares) y el método de coeficientes efectivos de Kindsvater-Carter. Automatiza desde la determinación de caudales por salida hasta la generación de planos en SVG, con trazabilidad completa de cada paso intermedio.
+          Herramienta de apoyo para diseñar y verificar cámaras de distribución de caudal por gravedad, con vertederos de cresta delgada (triangulares o rectangulares) y el método de coeficientes efectivos de Kindsvater-Carter. Automatiza desde la determinación de caudales por salida hasta la generación de planos hidráulicos a escala, con trazabilidad completa de cada paso intermedio.
         </p>
       </div>
 
@@ -382,7 +382,7 @@
     <div class="spec-strip mt-14" data-reveal>
         <div class="spec"><span class="k">Categoría</span><span class="v">Hidráulica · Agua Potable</span></div>
         <div class="spec"><span class="k">Referencia</span><span class="v">CONAGUA · PNSR · French</span></div>
-        <div class="spec"><span class="k">Plataforma</span><span class="v">Web · Navegador</span><span class="sub">HTML + JavaScript</span></div>
+        <div class="spec"><span class="k">Plataforma</span><span class="v">Multiplataforma</span><span class="sub">Ejecución liviana e inmediata</span></div>
         <div class="spec"><span class="k">Estado</span><span class="v">Publicado</span><span class="sub">2026</span></div>
     </div>
   </div>
@@ -418,7 +418,7 @@
         <p>Velocidad real en tuberías, carga requerida con coeficiente 1.56, detección de ahogamiento y alertas cuando la velocidad excede el límite admisible.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Planos SVG</h4>
+        <h4>Planos Hidráulicos a Escala</h4>
         <p>Vista en planta, corte longitudinal y vista frontal de vertederos generados automáticamente con escala ajustable e impresión directa.</p>
       </div>
       <div class="feature" data-reveal>
@@ -426,8 +426,8 @@
         <p>Pestaña con la teoría, ecuaciones, fuentes (French, Sotelo, CONAGUA, PNSR), tablas de coeficientes y reglas de validación que aplica el cálculo.</p>
       </div>
       <div class="feature" data-reveal>
-        <h4>Persistencia</h4>
-        <p>Guardado y carga de proyectos en JSON, con memoria de cálculo imprimible que incluye fórmulas, valores parciales y resumen de cumplimiento.</p>
+        <h4>Gestión de Proyectos</h4>
+        <p>Guardado y recuperación de proyectos, con memoria de cálculo imprimible que incluye fórmulas, valores parciales y resumen de cumplimiento.</p>
       </div>
     </div>
   </div>
@@ -435,19 +435,19 @@
 
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
   <div class="max-w-5xl mx-auto px-6 lg:px-10">
-    <div class="coord mb-6">§ B / Notas de desarrollo</div>
+    <div class="coord mb-6">§ B / Rigor Hidráulico e Integración</div>
     <h2 class="display text-4xl md:text-5xl mb-10" data-reveal>
-      Cómo lo <em>construí</em>.
+      Reparto de caudal y <em>planos hidráulicos automáticos</em>.
     </h2>
     <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
       <p>
-        El punto de partida fue French (Cap. 8), Sotelo y las guías de CONAGUA y PNSR para sistemas rurales por gravedad. Los coeficientes Kindsvater-Carter se implementaron a partir de las tablas de Bos (1976), interpoladas directamente en código.
+        Diseño hidráulico de cámaras de distribución de caudal por gravedad bajo las fórmulas de Kindsvater-Carter y referencias de CONAGUA, PNSR y Sotelo. Permite repartir el caudal entre 2 y 12 salidas con vertederos triangulares o rectangulares.
       </p>
       <p>
-        Diseñar una cámara distribuidora suele implicar ir y venir entre tablas de coeficientes, catálogos de tuberías y croquis a mano. Aquí se concentra en un flujo trazable: caudal total → geometría del vertedero → cámara de calma → verificación de salidas → tres planos SVG listos para imprimir.
+        Dimensiona la cámara de tranquilidad verificando velocidades de aproximación ($\le 0.40$ m/s), previene el ahogamiento en tuberías de salida y dibuja automáticamente los planos hidráulicos en planta, corte y elevación a escala.
       </p>
       <p>
-        Stack deliberadamente simple: HTML, CSS y JavaScript puros. Cero dependencias, cero instalación, funciona offline. El usuario abre un archivo y trabaja.
+        Genera memorias descriptivas y de cálculo completas con el sustento de ecuaciones e interpolaciones, listas para adjuntar a expedientes de agua potable y saneamiento rural o urbano.
       </p>
     </div>
   </div>
@@ -458,7 +458,7 @@
   <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
     <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más aplicaciones</div>
     <h2 class="display text-4xl md:text-5xl mb-10">
-      Hay <em>otros aplicaciones</em><br>en el ecosistema.
+      Hay <em>otras aplicaciones</em><br>en el ecosistema.
     </h2>
     <div class="flex flex-wrap justify-center gap-4">
       <a href="../index.html#aplicaciones" class="btn btn-outline">
