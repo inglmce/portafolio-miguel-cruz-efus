@@ -113,7 +113,7 @@ Si te incomoda HTML, lo más cómodo es:
 
 ## 📌 Pendientes recomendados (siguientes pasos)
 
-- [ ] Reemplazar `https://www.linkedin.com/in/` en el index por tu URL real de LinkedIn.
+- [x] Configurar URL real de LinkedIn (`https://www.linkedin.com/in/luis-miguel-cruz-efus-6968b6154/`).
 - [ ] Confirmar tu correo en la sección Contacto (actualmente `lmcruzef@gmail.com`).
 - [ ] Subir las capturas reales del Asistente Sísmico para reemplazar los placeholders.
 - [ ] Sumar PTAR Chota y un proyecto rural en los próximos meses.
