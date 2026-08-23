@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#15171c">
+<title>PTAR San Cristóbal — Caso de Estudio · Luis Miguel Cruz Efus</title>
+
+<link rel="icon" type="image/png" href="../imagenes/lm_ingenieria/marca_lm/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  :root{
+    --ink: oklch(0.16 0.012 250);
+    --ink-deep: oklch(0.12 0.012 250);
+    --surface: oklch(0.21 0.012 250);
+    --line: oklch(0.35 0.012 250 / 0.6);
+    --line-soft: oklch(0.35 0.012 250 / 0.25);
+    --text: oklch(0.94 0.008 80);
+    --text-dim: oklch(0.75 0.008 80);
+    --muted: oklch(0.6 0.012 250);
+    --accent: oklch(0.78 0.14 65);
+    --accent-deep: oklch(0.68 0.14 65);
+    --accent-soft: oklch(0.78 0.14 65 / 0.12);
+    --accent-2: oklch(0.72 0.10 245);
+    --accent-2-deep: oklch(0.60 0.11 245);
+    --accent-2-soft: oklch(0.72 0.10 245 / 0.12);
+  }
+  *{ -webkit-tap-highlight-color: transparent; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background: var(--ink);
+    color: var(--text);
+    font-family: 'Geist', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .serif{ font-family:'Instrument Serif', Georgia, serif; font-weight:400; }
+  .mono{ font-family:'JetBrains Mono', monospace; }
+  .display{ font-family:'Instrument Serif', serif; font-weight:400; letter-spacing:-0.018em; line-height:0.95; }
+  .display em{ font-style:italic; color: var(--accent); }
+
+  .blueprint-bg{
+    background-image:
+      linear-gradient(oklch(0.35 0.012 250 / 0.18) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.35 0.012 250 / 0.18) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .coord{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display:inline-flex; align-items:center; gap:0.5rem;
+  }
+  .coord::before{ content:""; width: 18px; height:1px; background: var(--accent); }
+
+  .chip{
+    display:inline-flex; padding: 4px 10px; border: 1px solid var(--line); border-radius: 99px;
+    font-family:'JetBrains Mono', monospace; font-size: 0.66rem;
+    color: var(--text-dim); letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .chip.accent{ border-color: var(--accent); color: var(--accent); }
+
+  .btn{
+    display:inline-flex; align-items:center; gap: 10px;
+    padding: 12px 20px; border-radius: 4px; font-weight: 500; font-size: 0.9rem;
+    transition: all .25s ease; border: 1px solid transparent; cursor: pointer;
+  }
+  .btn-ghost{ background:transparent; color:var(--text); border-color: var(--line); }
+  .btn-ghost:hover{ border-color: var(--accent); color: var(--accent); }
+  .btn-primary{ background: var(--accent); color: var(--ink-deep); }
+  .btn-primary:hover{ background: var(--accent-deep); }
+  .btn-outline{ background: transparent; color: var(--text); border-color: var(--accent); }
+  .btn-outline:hover{ background: var(--accent-soft); color: var(--accent); }
+
+  [data-reveal]{ opacity:0; transform:translateY(14px); transition: opacity .9s ease, transform .9s ease; }
+  [data-reveal].in{ opacity:1; transform:translateY(0); }
+
+  .nav-bg{
+    background: oklch(0.16 0.012 250 / 0.82);
+    backdrop-filter: blur(14px);
+  }
+
+  .logo-bezel{
+    width: 34px; height: 34px;
+    border: 1px solid var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; background: oklch(0.10 0.012 250);
+  }
+  .logo-bezel img{ width: 78%; height: 78%; object-fit: contain; }
+
+  .img-frame{
+    border: 1px solid var(--line-soft);
+    background: var(--surface);
+    overflow: hidden;
+    position: relative;
+  }
+  .img-frame::before, .img-frame::after{
+    content:""; position:absolute; width: 14px; height: 14px;
+    border: 1px solid var(--accent); z-index:2;
+  }
+  .img-frame::before{ top: 6px; left: 6px; border-right:none; border-bottom:none; }
+  .img-frame::after{ bottom: 6px; right: 6px; border-left:none; border-top:none; }
+  .img-frame img{ display:block; width:100%; height:auto; transition: transform .8s ease; cursor: zoom-in; }
+  .img-frame:hover img{ transform: scale(1.02); }
+
+  .img-caption{
+    padding: 10px 14px;
+    border-top: 1px solid var(--line-soft);
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    display: flex; justify-content: space-between; align-items: center;
+    background: oklch(0.18 0.012 250);
+  }
+  .img-caption .num{ color: var(--accent); }
+
+  .step-card{
+    background: var(--surface);
+    border: 1px solid var(--line-soft);
+    border-radius: 4px;
+    padding: 28px 28px 32px;
+    position: relative;
+  }
+  .step-card .step-num{
+    font-family:'Instrument Serif', serif;
+    font-size: 4rem; line-height: 1;
+    color: var(--accent); font-style: italic;
+    position: absolute;
+    top: 20px; right: 24px;
+    opacity: 0.5;
+  }
+  .step-card h3{
+    font-family:'Instrument Serif', serif;
+    font-size: 1.8rem;
+    line-height: 1.1;
+    margin-bottom: 18px;
+    max-width: 80%;
+  }
+  .step-card .label{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.66rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+
+  /* ============ CAROUSEL ============ */
+  .carousel{ position: relative; }
+  .carousel-track{
+    display: flex; gap: 18px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 4px 18px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
+  }
+  .carousel-track::-webkit-scrollbar{ height: 6px; }
+  .carousel-track::-webkit-scrollbar-track{ background: transparent; }
+  .carousel-track::-webkit-scrollbar-thumb{ background: var(--line); border-radius: 3px; }
+
+  .carousel-slide{
+    flex: 0 0 auto;
+    width: 300px;
+    scroll-snap-align: start;
+    cursor: zoom-in;
+    position: relative;
+    border: 1px solid var(--line-soft);
+    background: oklch(0.10 0.012 250);
+    overflow: hidden;
+    transition: border-color .25s ease, transform .25s ease;
+  }
+  @media (min-width: 640px){ .carousel-slide{ width: 380px; } }
+  @media (min-width: 1024px){ .carousel-slide{ width: 460px; } }
+  .carousel-slide:hover{ border-color: var(--accent); transform: translateY(-2px); }
+  .carousel-slide .img-wrap{
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    background: oklch(0.10 0.012 250);
+  }
+  .carousel-slide .img-wrap img{
+    width:100%; height:100%; object-fit: cover;
+    transition: transform .5s ease;
+  }
+  .carousel-slide:hover .img-wrap img{ transform: scale(1.04); }
+  .carousel-slide::before, .carousel-slide::after{
+    content:""; position:absolute; width: 12px; height: 12px;
+    border: 1px solid var(--accent); z-index: 3; pointer-events:none;
+  }
+  .carousel-slide::before{ top: 6px; left: 6px; border-right:none; border-bottom:none; }
+  .carousel-slide::after{ bottom: 6px; right: 6px; border-left:none; border-top:none; }
+  .carousel-slide .caption{
+    padding: 10px 14px;
+    border-top: 1px solid var(--line-soft);
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    background: oklch(0.18 0.012 250);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .carousel-slide .caption .num{ color: var(--accent); }
+  .carousel-slide .zoom-hint{
+    position:absolute; top: 10px; right: 10px;
+    background: oklch(0.10 0.012 250 / 0.8);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 4px 8px;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity .25s ease;
+  }
+  .carousel-slide:hover .zoom-hint{ opacity: 1; }
+
+  .carousel-nav{
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 44px; height: 44px; border-radius: 50%;
+    background: oklch(0.12 0.012 250 / 0.92);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--accent); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; z-index: 4;
+    transition: background .25s ease;
+  }
+  .carousel-nav:hover{ background: var(--accent); color: var(--ink-deep); }
+  .carousel-nav.prev{ left: -10px; }
+  .carousel-nav.next{ right: -10px; }
+  .carousel-nav:disabled{ opacity: 0.3; cursor: not-allowed; }
+  @media (max-width: 640px){ .carousel-nav{ display: none; } }
+
+  /* ============ LIGHTBOX ============ */
+  .lightbox{
+    position: fixed; inset: 0;
+    background: oklch(0.06 0.012 250 / 0.96);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    display: none;
+    align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  .lightbox.open{ display: flex; }
+  .lightbox-stage{
+    position: relative;
+    width: 100%; max-width: 1200px;
+    height: 100%; max-height: 92vh;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .lightbox-img{
+    max-width: 100%; max-height: 100%;
+    object-fit: contain;
+    transform-origin: center center;
+    transition: transform .3s ease;
+    cursor: zoom-in;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+  .lightbox-img.zoomed{ cursor: grab; }
+  .lightbox-img.dragging{ cursor: grabbing; transition: none; }
+  .lightbox-close, .lightbox-prev, .lightbox-next,
+  .lightbox-zoom-in, .lightbox-zoom-out, .lightbox-zoom-reset{
+    position: absolute;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: oklch(0.12 0.012 250 / 0.92);
+    border: 1px solid var(--accent); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; z-index: 5;
+    transition: background .25s ease;
+  }
+  .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover,
+  .lightbox-zoom-in:hover, .lightbox-zoom-out:hover, .lightbox-zoom-reset:hover{
+    background: var(--accent); color: var(--ink-deep);
+  }
+  .lightbox-close{ top: 16px; right: 16px; }
+  .lightbox-prev{ left: 16px; top: 50%; transform: translateY(-50%); }
+  .lightbox-next{ right: 16px; top: 50%; transform: translateY(-50%); }
+  .lightbox-controls{
+    position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 8px; z-index: 5;
+  }
+  .lightbox-controls > *{ position: static; transform: none; }
+  .lightbox-caption{
+    position: absolute; top: 16px; left: 16px;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.12em;
+    color: var(--text-dim); text-transform: uppercase;
+    background: oklch(0.12 0.012 250 / 0.9);
+    padding: 8px 14px;
+    border: 1px solid var(--line-soft);
+    z-index: 5;
+    max-width: calc(100% - 80px);
+  }
+  .lightbox-caption .num{ color: var(--accent); margin-right: 10px; }
+  .lightbox-counter{
+    position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%);
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.72rem; color: var(--text-dim);
+    letter-spacing: 0.14em; z-index: 5;
+  }
+  .lightbox-counter span{ color: var(--accent); }
+
+  /* ===== Capa viva (atmósfera) + logo limpio — mejora rev.03 ===== */
+  .atmosphere{ position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none; }
+  .atmosphere .orb{ position:absolute; border-radius:50%; filter:blur(120px); will-change:transform; }
+  .atmosphere .orb-amber{ width:46vw; height:46vw; min-width:360px; min-height:360px; background:radial-gradient(circle, oklch(0.78 0.14 65 / 0.50), transparent 68%); top:-16vh; right:-8vw; opacity:.5; animation:driftA 30s ease-in-out infinite alternate; }
+  .atmosphere .orb-blue{ width:52vw; height:52vw; min-width:400px; min-height:400px; background:radial-gradient(circle, oklch(0.62 0.12 245 / 0.55), transparent 68%); bottom:-22vh; left:-12vw; opacity:.55; animation:driftB 38s ease-in-out infinite alternate; }
+  .atmosphere .orb-cyan{ width:34vw; height:34vw; min-width:280px; min-height:280px; background:radial-gradient(circle, oklch(0.72 0.10 215 / 0.42), transparent 70%); top:36%; left:40%; opacity:.4; animation:driftC 34s ease-in-out infinite alternate; }
+  @keyframes driftA{ to{ transform:translate(-7vw,8vh) scale(1.12); } }
+  @keyframes driftB{ to{ transform:translate(8vw,-6vh) scale(1.15); } }
+  @keyframes driftC{ to{ transform:translate(-6vw,-7vh) scale(1.2); } }
+  @media (prefers-reduced-motion: reduce){ .atmosphere .orb{ animation:none; } }
+  /* Logo sin recuadro amarillo, más presencia */
+  .logo-bezel{ width:auto !important; height:42px !important; border:none !important; background:transparent !important; overflow:visible !important; padding:0 !important; }
+  .logo-bezel img{ width:auto !important; height:100% !important; max-width:175px; object-fit:contain; }
+
+  /* ===== Carrusel-hero ===== */
+  .hero-carousel{ position:relative; }
+  .hcar-stage{ position:relative; border:1px solid var(--line-soft); background:oklch(0.09 0.012 250); border-radius:8px; overflow:hidden; aspect-ratio:16/9; }
+  .hcar-stage::before{ content:""; position:absolute; inset:0; background-image:linear-gradient(oklch(0.35 0.012 250 / 0.10) 1px,transparent 1px),linear-gradient(90deg,oklch(0.35 0.012 250 / 0.10) 1px,transparent 1px); background-size:28px 28px; z-index:0; }
+  .hcar-frame::before,.hcar-frame::after{ content:""; position:absolute; width:16px; height:16px; border:1px solid var(--accent); z-index:6; pointer-events:none; }
+  .hcar-frame::before{ top:10px; left:10px; border-right:none; border-bottom:none; }
+  .hcar-frame::after{ bottom:10px; right:10px; border-left:none; border-top:none; }
+  .hcar-slide{ position:absolute; inset:0; opacity:0; transition:opacity .7s ease; display:flex; align-items:center; justify-content:center; z-index:1; cursor:zoom-in; }
+  .hcar-slide.is-active{ opacity:1; z-index:2; }
+  .hcar-slide img{ width:100%; height:100%; object-fit:contain; }
+  .hcar-slide.ph img{ display:none; }
+  .hcar-slide.ph::after{ content:"⊕ "attr(data-num); font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.16em; color:var(--muted); }
+  .hcar-nav{ position:absolute; top:50%; transform:translateY(-50%); width:46px; height:46px; border-radius:50%; background:oklch(0.10 0.012 250 / 0.7); backdrop-filter:blur(8px); border:1px solid var(--accent); color:var(--accent); display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:6; transition:background .25s ease,color .25s ease; }
+  .hcar-nav:hover{ background:var(--accent); color:var(--ink-deep); }
+  .hcar-nav.prev{ left:14px; } .hcar-nav.next{ right:14px; }
+  .hcar-zoom{ position:absolute; top:14px; right:14px; z-index:6; display:inline-flex; align-items:center; gap:7px; padding:7px 12px; background:oklch(0.10 0.012 250 / 0.72); backdrop-filter:blur(8px); border:1px solid var(--accent); color:var(--accent); font-family:'JetBrains Mono',monospace; font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:background .25s,color .25s; }
+  .hcar-zoom:hover{ background:var(--accent); color:var(--ink-deep); }
+  .hcar-caption{ position:absolute; left:14px; bottom:18px; z-index:6; display:flex; align-items:center; gap:10px; padding:8px 13px; background:oklch(0.10 0.012 250 / 0.8); backdrop-filter:blur(8px); border:1px solid var(--line-soft); font-family:'JetBrains Mono',monospace; font-size:0.66rem; letter-spacing:0.05em; color:var(--text-dim); max-width:calc(100% - 28px); }
+  .hcar-caption .num{ color:var(--accent); }
+  .hcar-progress{ position:absolute; left:0; right:0; bottom:0; height:3px; background:oklch(0.30 0.012 250 / 0.4); z-index:6; }
+  .hcar-progress span{ display:block; height:100%; width:0; background:var(--accent); }
+  .hcar-dots{ display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:16px; }
+  .hcar-dot{ width:34px; height:4px; border-radius:2px; background:var(--line); cursor:pointer; transition:background .25s ease,transform .25s ease; border:none; padding:0; }
+  .hcar-dot.is-active{ background:var(--accent); transform:scaleY(1.6); }
+  @media (max-width:640px){ .hcar-nav{ width:40px;height:40px; } .hcar-stage{ aspect-ratio:4/3; } }
+
+  /* ===== Ficha de aporte ===== */
+  .aporte-ficha{ border:1px solid var(--line-soft); border-radius:6px; background:oklch(0.18 0.012 250 / 0.5); }
+  .afi-row{ display:flex; flex-direction:column; gap:9px; padding:18px 20px; border-bottom:1px solid var(--line-soft); }
+  .afi-row:last-child{ border-bottom:none; }
+  .afi-k{ font-family:'JetBrains Mono',monospace; font-size:0.6rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); }
+  .afi-v{ font-size:0.98rem; color:var(--text); }
+  .afi-chips{ display:flex; flex-wrap:wrap; gap:7px; }
+  .plant-data{ display:flex; flex-direction:column; border-left:1px solid var(--accent); }
+  .pd-row{ display:flex; flex-direction:column; padding:11px 0 11px 16px; }
+  .pd-v{ font-family:'Instrument Serif',serif; font-size:1.55rem; line-height:1; color:var(--text); }
+  .pd-k{ font-family:'JetBrains Mono',monospace; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-top:6px; }
+</style>
+</head>
+<body>
+<div class="atmosphere" aria-hidden="true"><span class="orb orb-amber"></span><span class="orb orb-blue"></span><span class="orb orb-cyan"></span></div>
+
+<!-- NAV -->
+<header class="fixed top-0 left-0 right-0 z-50 nav-bg border-b" style="border-color: var(--line-soft);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between gap-4">
+    <a href="../index.html" class="flex items-center gap-3 group">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="color: var(--accent);"><path d="M13 7H1m0 0l5-5m-5 5l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span class="mono text-xs uppercase tracking-[0.18em]" style="color: var(--text-dim);">Volver al portafolio</span>
+    </a>
+    <div class="hidden md:flex items-center gap-3">
+      <span class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">Caso · San Cristóbal · Rev. 02</span>
+      <div class="logo-bezel">
+        <img src="../imagenes/lm_ingenieria/marca_lm/logo.png" alt="LM Ingeniería" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=&quot;serif&quot; style=&quot;color: var(--accent); font-size: 1.1rem;&quot;>LM</span>';">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
+  <div class="absolute inset-0 blueprint-bg" style="opacity:0.4"></div>
+  <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 50% at 20% 0%, oklch(0.21 0.012 250) 0%, transparent 70%);"></div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
+    <div class="flex items-center justify-between mb-12">
+      <div class="coord">N.04 / Caso de Estudio</div>
+      <div class="coord hidden md:flex">Pacaycasa — Ayacucho</div>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-7">
+        <div class="flex flex-wrap items-center gap-3 mb-8">
+          <span class="chip accent">Saneamiento privado</span>
+          <span class="chip">PTAR · MBBR</span>
+          <span class="chip">BIM integral</span>
+          <span class="chip">Reúso para riego</span>
+        </div>
+        <h1 class="display text-5xl md:text-6xl lg:text-7xl mb-10" data-reveal>
+          PTAR compacta para el<br><em>condominio</em> San<br>Cristóbal —&nbsp; Ayacucho.
+        </h1>
+        <p class="text-lg leading-relaxed max-w-2xl" style="color: var(--text-dim);" data-reveal>
+          Planta de tratamiento de aguas residuales del Condominio Tipo Club San Cristóbal, en Pacaycasa, Huamanga – Ayacucho. Realicé el <span style="color:var(--text);">modelado BIM integral de la PTAR</span> —arquitectura e hidráulica— de toda la planta.
+        </p>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="border-l pl-8 space-y-7" style="border-color: var(--line);">
+          <div>
+            <div class="coord mb-2">Rol</div>
+            <div class="text-lg">Modelado BIM integral</div>
+            <div class="text-sm mt-1" style="color: var(--muted);">Arquitectura · Hidráulica</div>
+          </div>
+          <div>
+            <div class="coord mb-2">Ubicación</div>
+            <div class="text-lg">Pacaycasa — Ayacucho</div>
+          </div>
+          <div>
+            <div class="coord mb-2">Periodo</div>
+            <div class="text-lg mono">2024 — 2025</div>
+          </div>
+          <div>
+            <div class="coord mb-2">Stack</div>
+            <div class="text-lg">Revit · Twinmotion · AutoCAD</div>
+          </div>
+          <div>
+            <div class="coord mb-2">Tipo de proyecto</div>
+            <div class="text-lg">Saneamiento privado · PTAR compacta MBBR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HERO CARRUSEL -->
+<section class="pb-16 lg:pb-20" data-reveal>
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="hero-carousel" data-hcar>
+      <div class="hcar-stage hcar-frame">
+        <div class="hcar-slide is-active" data-lightbox data-src="../imagenes/proyectos_bim/ptar_san_cristrobal_ayacucho/00_render_twinmotion_vista3d_lechos_secado.png" data-num="N.00" data-caption="Render 3D — lechos de secado">
+          <img src="../imagenes/proyectos_bim/ptar_san_cristrobal_ayacucho/00_render_twinmotion_vista3d_lechos_secado.png" alt="Render 3D — lechos de secado" onerror="this.closest('.hcar-slide').classList.add('ph')">
+        </div>
+        <div class="hcar-slide" data-lightbox data-src="../imagenes/proyectos_bim/ptar_san_cristrobal_ayacucho/01_render2_twinmotion_vista3d_sedimentador.png" data-num="N.01" data-caption="Render 3D — sedimentador">
+          <img src="../imagenes/proyectos_bim/ptar_san_cristrobal_ayacucho/01_render2_twinmotion_vista3d_sedimentador.png" alt="Render 3D — sedimentador" onerror="this.closest('.hcar-slide').classList.add('ph')">
+        </div>
+        <div class="hcar-slide" data-lightbox data-src="../imagenes/proyectos_bim/ptar_san_cristrobal_ayacucho/02_render3_twinmotion_vista3d_interior_mbbr_carriers_difusores.png" data-num="N.02" data-caption="Interior del MBBR — carriers y difusores">
+          <img src="../imagenes/proyectos_bim/ptar_san_cristrobal_ayacucho/02_render3_twinmotion_vista3d_interior_mbbr_carriers_difusores.png" alt="Interior del MBBR — carriers y difusores" onerror="this.closest('.hcar-slide').classList.add('ph')">
+        </div>
+        <div class="hcar-slide" data-lightbox data-src="../imagenes/proyectos_bim/ptar_san_cristrobal_ayacucho/03_vista3d_revit_ptar_completa.png" data-num="N.03" data-caption="Vista 3D de la PTAR completa">
+          <img src="../imagenes/proyectos_bim/ptar_san_cristrobal_ayacucho/03_vista3d_revit_ptar_completa.png" alt="Vista 3D de la PTAR completa" onerror="this.closest('.hcar-slide').classList.add('ph')">
+        </div>
+        <div class="hcar-slide" data-lightbox data-src="../imagenes/proyectos_bim/ptar_san_cristrobal_ayacucho/04_revit_planos_planta_ptar_sectores.png" data-num="N.04" data-caption="Planos de planta por sectores">
+          <img src="../imagenes/proyectos_bim/ptar_san_cristrobal_ayacucho/04_revit_planos_planta_ptar_sectores.png" alt="Planos de planta por sectores" onerror="this.closest('.hcar-slide').classList.add('ph')">
+        </div>
+        <button class="hcar-nav prev" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M9 1L3 7l6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+        <button class="hcar-nav next" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M5 1l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+        <button class="hcar-zoom" data-hcar-zoom><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Ampliar</button>
+        <div class="hcar-caption"><span class="num" data-hcar-num>N.00</span><span data-hcar-cap>Render 3D — lechos de secado</span></div>
+        <div class="hcar-progress"><span></span></div>
+      </div>
+      <div class="hcar-dots">
+        <button class="hcar-dot is-active" aria-label="Imagen 1"></button>
+        <button class="hcar-dot" aria-label="Imagen 2"></button>
+        <button class="hcar-dot" aria-label="Imagen 3"></button>
+        <button class="hcar-dot" aria-label="Imagen 4"></button>
+        <button class="hcar-dot" aria-label="Imagen 5"></button>
+      </div>
+    </div>
+    <p class="mono text-xs uppercase tracking-[0.14em] mt-5 text-center" style="color: var(--muted);">
+      El recorrido avanza solo · usa ‹ › o desliza · clic en la imagen para ampliar con zoom
+    </p>
+  </div>
+</section>
+
+<!-- APORTE TÉCNICO -->
+<section id="aporte" class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="flex items-baseline gap-5 mb-12">
+      <span class="mono text-sm" style="color: var(--accent);">§ A</span>
+      <h2 class="serif text-3xl lg:text-4xl">Aporte <em style="color: var(--accent); font-style:italic;">técnico</em></h2>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14">
+      <div class="lg:col-span-7 grid sm:grid-cols-2 gap-x-10 gap-y-9">
+        <div data-reveal><div class="coord mb-3">Rol desempeñado</div><p class="leading-relaxed" style="color:var(--text-dim);">Modelador BIM integral de la PTAR, en las especialidades de arquitectura e hidráulica.</p></div>
+        <div data-reveal><div class="coord mb-3">Alcance</div><p class="leading-relaxed" style="color:var(--text-dim);">Modelé toda la planta compacta: rejas y desarenador, trampa de grasas, bombeo, reactor MBBR, sedimentador secundario tipo Dortmund, lechos de secado y cisternas del efluente tratado.</p></div>
+        <div data-reveal><div class="coord mb-3">Aporte concreto</div><p class="leading-relaxed" style="color:var(--text-dim);">Modelo Revit y renders Twinmotion —incluyendo interiores del MBBR con carriers y difusores— para comunicar el funcionamiento, más planos de planta por sectores.</p></div>
+        <div data-reveal><div class="coord mb-3">Resultado / valor</div><p class="leading-relaxed" style="color:var(--text-dim);">Representación clara de una solución compacta orientada al reúso del efluente para riego y al control de olores en un condominio residencial.</p></div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="aporte-ficha">
+          <div class="afi-row"><span class="afi-k">Herramientas</span><div class="afi-chips"><span class="chip">Revit</span><span class="chip">Twinmotion</span><span class="chip">AutoCAD</span></div></div>
+          <div class="afi-row"><span class="afi-k">Especialidades modeladas</span><div class="afi-v">Arquitectura · Hidráulica</div></div>
+          <div class="afi-row"><span class="afi-k">Relación</span><div class="afi-chips"><span class="chip accent">BIM</span><span class="chip accent">Expediente técnico</span><span class="chip accent">Reúso</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-14" data-reveal>
+      <div class="coord mb-5">Sobre la planta</div>
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <p class="lg:col-span-8 leading-relaxed text-lg" style="color:var(--text-dim);">
+          Planta compacta para aguas residuales domésticas de un condominio de 435 lotes: rejas, desarenador con vertedero Sutro y Parshall, trampa de grasas, reactor MBBR como tratamiento biológico, sedimentador secundario tipo Dortmund y reúso parcial del efluente para riego de áreas verdes.
+        </p>
+        <div class="lg:col-span-4 plant-data">
+          <div class="pd-row"><span class="pd-v">6.18 L/s</span><span class="pd-k">Caudal medio a PTAR</span></div>
+          <div class="pd-row"><span class="pd-v">MBBR 133 m³</span><span class="pd-k">TRH ≈ 6 h</span></div>
+          <div class="pd-row"><span class="pd-v">900 m²/m³</span><span class="pd-k">Área específica · 45% relleno</span></div>
+          <div class="pd-row"><span class="pd-v">1.30 L/s</span><span class="pd-k">Reúso para riego</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 p-6 lg:p-8 border" style="border-color: var(--line-soft); border-radius: 4px; background: oklch(0.21 0.012 250 / 0.5);">
+      <div class="flex gap-4 items-start">
+        <div class="mono text-xs" style="color: var(--accent);">i</div>
+        <div>
+          <div class="mono text-[0.7rem] uppercase tracking-[0.18em] mb-2" style="color: var(--accent);">Nota de confidencialidad</div>
+          <p class="text-sm leading-relaxed" style="color: var(--text-dim);">
+            Las imágenes corresponden a entregables propios del rol BIM. Información comercial, datos del equipo y detalles contractuales del expediente se omiten por confidencialidad con la consultora y el cliente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 lg:py-32 relative overflow-hidden">
+  <div class="absolute inset-0 blueprint-bg" style="opacity:0.3"></div>
+  <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
+    <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Conversemos</div>
+    <h2 class="display text-4xl md:text-5xl lg:text-6xl mb-10" data-reveal>
+      ¿Tienes un proyecto similar?<br>
+      <em>Trabajemos juntos.</em>
+    </h2>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="../index.html#contacto" class="btn btn-outline">
+        Contactar
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+      <a href="../index.html#proyectos" class="btn btn-outline">Ver otros proyectos</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-between gap-4">
+    <a href="../index.html" class="flex items-center gap-3">
+      <div class="logo-bezel" style="width:30px;height:30px;">
+        <img src="../imagenes/lm_ingenieria/marca_lm/logo.png" alt="LM Ingeniería" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=&quot;serif&quot; style=&quot;color: var(--accent); font-size: 1rem;&quot;>LM</span>';">
+      </div>
+      <div class="text-sm font-medium">Luis Miguel Cruz Efus</div>
+    </a>
+    <div class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--muted);">
+      Caso · PTAR San Cristóbal · Rev. 02
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+  <div class="lightbox-caption" id="lightboxCaption"><span class="num">N.00</span><span id="lightboxCaptionText"></span></div>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
+    <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Anterior">
+    <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M9 1L3 7l6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </button>
+  <button class="lightbox-next" id="lightboxNext" aria-label="Siguiente">
+    <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M5 1l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lightbox-stage" id="lightboxStage">
+    <img class="lightbox-img" id="lightboxImg" alt="">
+  </div>
+  <div class="lightbox-counter"><span id="lightboxCounter">1</span> / <span id="lightboxTotal">0</span></div>
+  <div class="lightbox-controls">
+    <button class="lightbox-zoom-out" id="lightboxZoomOut" aria-label="Reducir zoom" title="Reducir">
+      <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M2 7h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+    <button class="lightbox-zoom-reset" id="lightboxZoomReset" aria-label="Restablecer" title="Restablecer">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <button class="lightbox-zoom-in" id="lightboxZoomIn" aria-label="Ampliar zoom" title="Ampliar">
+      <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+  /* ===== Carrusel-hero automático ===== */
+  document.querySelectorAll('[data-hcar]').forEach(car => {
+    const slides = Array.from(car.querySelectorAll('.hcar-slide'));
+    const dots = Array.from(car.querySelectorAll('.hcar-dot'));
+    const prog = car.querySelector('.hcar-progress span');
+    const capEl = car.querySelector('[data-hcar-cap]');
+    const numEl = car.querySelector('[data-hcar-num]');
+    const prev = car.querySelector('.hcar-nav.prev');
+    const next = car.querySelector('.hcar-nav.next');
+    const zoom = car.querySelector('[data-hcar-zoom]');
+    const stage = car.querySelector('.hcar-stage');
+    if(!slides.length) return;
+    let idx = 0, raf = null, t0 = 0;
+    const DUR = 4800;
+    function go(n){
+      idx = (n + slides.length) % slides.length;
+      slides.forEach((s,i)=>s.classList.toggle('is-active', i===idx));
+      dots.forEach((d,i)=>d.classList.toggle('is-active', i===idx));
+      const el = slides[idx];
+      if(capEl) capEl.textContent = ' ' + (el.dataset.caption||'');
+      if(numEl) numEl.textContent = el.dataset.num||'';
+      restart();
+    }
+    function tick(ts){ if(!t0) t0=ts; const p=Math.min(1,(ts-t0)/DUR); if(prog) prog.style.width=(p*100)+'%'; if(p>=1){ go(idx+1); return; } raf=requestAnimationFrame(tick); }
+    function restart(){ if(raf) cancelAnimationFrame(raf); t0=0; if(prog) prog.style.width='0%'; raf=requestAnimationFrame(tick); }
+    function pause(){ if(raf) cancelAnimationFrame(raf); raf=null; }
+    if(prev) prev.addEventListener('click', e=>{ e.stopPropagation(); go(idx-1); });
+    if(next) next.addEventListener('click', e=>{ e.stopPropagation(); go(idx+1); });
+    dots.forEach((d,i)=>d.addEventListener('click', e=>{ e.stopPropagation(); go(i); }));
+    if(zoom) zoom.addEventListener('click', e=>{ e.stopPropagation(); slides[idx].click(); });
+    car.addEventListener('mouseenter', pause);
+    car.addEventListener('mouseleave', restart);
+    let sx=0;
+    stage.addEventListener('touchstart', e=>{ sx=e.touches[0].clientX; pause(); }, {passive:true});
+    stage.addEventListener('touchend', e=>{ const dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>40){ go(idx+(dx<0?1:-1)); } else { restart(); } });
+    go(0);
+  });
+
+  document.querySelectorAll('[data-carousel]').forEach(carousel => {
+    const track = carousel.querySelector('[data-carousel-track]');
+    const prev = carousel.querySelector('.carousel-nav.prev');
+    const next = carousel.querySelector('.carousel-nav.next');
+    if (!track) return;
+    const scrollBy = (dir) => {
+      const slide = track.querySelector('.carousel-slide');
+      if (!slide) return;
+      const gap = 18;
+      const step = slide.offsetWidth + gap;
+      track.scrollBy({ left: dir * step, behavior: 'smooth' });
+    };
+    if (prev) prev.addEventListener('click', () => scrollBy(-1));
+    if (next) next.addEventListener('click', () => scrollBy(1));
+    const updateBtns = () => {
+      const max = track.scrollWidth - track.clientWidth - 4;
+      if (prev) prev.disabled = track.scrollLeft <= 4;
+      if (next) next.disabled = track.scrollLeft >= max;
+    };
+    track.addEventListener('scroll', updateBtns);
+    window.addEventListener('resize', updateBtns);
+    updateBtns();
+  });
+
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightboxImg');
+  const lbCaptionText = document.getElementById('lightboxCaptionText');
+  const lbCaptionNum = document.querySelector('#lightboxCaption .num');
+  const lbCounter = document.getElementById('lightboxCounter');
+  const lbTotal = document.getElementById('lightboxTotal');
+  const lbClose = document.getElementById('lightboxClose');
+  const lbPrev = document.getElementById('lightboxPrev');
+  const lbNext = document.getElementById('lightboxNext');
+  const lbZoomIn = document.getElementById('lightboxZoomIn');
+  const lbZoomOut = document.getElementById('lightboxZoomOut');
+  const lbZoomReset = document.getElementById('lightboxZoomReset');
+
+  const items = Array.from(document.querySelectorAll('[data-lightbox]'));
+  lbTotal.textContent = items.length;
+  let currentIdx = 0;
+  let zoom = 1, panX = 0, panY = 0;
+
+  function applyTransform(){
+    lbImg.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
+    lbImg.classList.toggle('zoomed', zoom > 1);
+  }
+  function show(idx){
+    currentIdx = (idx + items.length) % items.length;
+    const el = items[currentIdx];
+    lbImg.src = el.dataset.src;
+    lbCaptionText.textContent = ' ' + (el.dataset.caption || '');
+    lbCaptionNum.textContent = el.dataset.num || '';
+    lbCounter.textContent = currentIdx + 1;
+    zoom = 1; panX = 0; panY = 0;
+    applyTransform();
+  }
+  function open(idx){
+    show(idx);
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  items.forEach((el, i) => { el.addEventListener('click', () => open(i)); });
+
+  // Cover image: also openable in lightbox (find its index in items)
+  const cover = document.querySelector('[data-lightbox-cover]');
+  if (cover) {
+    cover.style.cursor = 'zoom-in';
+    cover.addEventListener('click', () => {
+      const idx = items.findIndex(it => it.dataset.src === cover.dataset.src);
+      if (idx >= 0) open(idx);
+      else open(0);
+    });
+  }
+
+  lbClose.addEventListener('click', close);
+  lbPrev.addEventListener('click', () => show(currentIdx - 1));
+  lbNext.addEventListener('click', () => show(currentIdx + 1));
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(currentIdx - 1);
+    if (e.key === 'ArrowRight') show(currentIdx + 1);
+    if (e.key === '+' || e.key === '=') { zoom = Math.min(zoom + 0.25, 4); applyTransform(); }
+    if (e.key === '-' || e.key === '_') { zoom = Math.max(zoom - 0.25, 1); if (zoom === 1) { panX = panY = 0; } applyTransform(); }
+    if (e.key === '0') { zoom = 1; panX = panY = 0; applyTransform(); }
+  });
+  lbZoomIn.addEventListener('click', () => { zoom = Math.min(zoom + 0.25, 4); applyTransform(); });
+  lbZoomOut.addEventListener('click', () => { zoom = Math.max(zoom - 0.25, 1); if (zoom === 1) { panX = panY = 0; } applyTransform(); });
+  lbZoomReset.addEventListener('click', () => { zoom = 1; panX = panY = 0; applyTransform(); });
+
+  lbImg.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (zoom > 1) { zoom = 1; panX = panY = 0; } else { zoom = 2; }
+    applyTransform();
+  });
+
+  let isDragging = false, dragStartX = 0, dragStartY = 0, panStartX = 0, panStartY = 0;
+  lbImg.addEventListener('mousedown', (e) => {
+    if (zoom <= 1) return;
+    isDragging = true;
+    lbImg.classList.add('dragging');
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    panStartX = panX; panStartY = panY;
+    e.preventDefault();
+  });
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    panX = panStartX + (e.clientX - dragStartX);
+    panY = panStartY + (e.clientY - dragStartY);
+    applyTransform();
+  });
+  window.addEventListener('mouseup', () => { isDragging = false; lbImg.classList.remove('dragging'); });
+
+  lbImg.addEventListener('touchstart', (e) => {
+    if (zoom <= 1 || e.touches.length !== 1) return;
+    isDragging = true;
+    dragStartX = e.touches[0].clientX;
+    dragStartY = e.touches[0].clientY;
+    panStartX = panX; panStartY = panY;
+  }, { passive: true });
+  lbImg.addEventListener('touchmove', (e) => {
+    if (!isDragging || e.touches.length !== 1) return;
+    panX = panStartX + (e.touches[0].clientX - dragStartX);
+    panY = panStartY + (e.touches[0].clientY - dragStartY);
+    applyTransform();
+    e.preventDefault();
+  }, { passive: false });
+  lbImg.addEventListener('touchend', () => { isDragging = false; });
+
+  lightbox.addEventListener('wheel', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    e.preventDefault();
+    const delta = -Math.sign(e.deltaY) * 0.2;
+    zoom = Math.max(1, Math.min(4, zoom + delta));
+    if (zoom === 1) { panX = panY = 0; }
+    applyTransform();
+  }, { passive: false });
+</script>
+
+</body>
+</html>
