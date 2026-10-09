@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15171c">
 <title>Automatización de presupuestos y entregables de obra · Luis Miguel Cruz Efus</title>
-<meta name="description" content="Pipeline propio en Python e IA que genera presupuestos contra un banco de 3 002 APUs, los inyecta en Delphin Express, deriva el cronograma CPM de los rendimientos y produce fletes, especificaciones técnicas y cotizaciones.">
+<meta name="description" content="Sistema para preparar presupuestos en Delphin Express, cronogramas CPM, especificaciones técnicas y hojas de flete.">
 <link rel="canonical" href="https://luismiguelcruzefus.com/ia/automatizacion-presupuestos.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="LM Ingeniería e Innovación — Luis Miguel Cruz Efus">
 <meta property="og:title" content="Automatización de presupuestos y entregables de obra · Luis Miguel Cruz Efus">
-<meta property="og:description" content="Pipeline propio en Python e IA que genera presupuestos contra un banco de 3 002 APUs, los inyecta en Delphin Express, deriva el cronograma CPM de los rendimientos y produce fletes, especificaciones técnicas y cotizaciones.">
+<meta property="og:description" content="Sistema para preparar presupuestos en Delphin Express, cronogramas CPM, especificaciones técnicas y hojas de flete.">
 <meta property="og:url" content="https://luismiguelcruzefus.com/ia/automatizacion-presupuestos.html">
 <meta property="og:image" content="https://luismiguelcruzefus.com/imagenes/lm_ingenieria/automatizacion_presupuestos/00_caratula.webp">
 <meta property="og:locale" content="es_PE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Automatización de presupuestos y entregables de obra · Luis Miguel Cruz Efus">
-<meta name="twitter:description" content="Pipeline propio en Python e IA que genera presupuestos contra un banco de 3 002 APUs, los inyecta en Delphin Express, deriva el cronograma CPM de los rendimientos y produce fletes, especificaciones técnicas y cotizaciones.">
+<meta name="twitter:description" content="Sistema para preparar presupuestos en Delphin Express, cronogramas CPM, especificaciones técnicas y hojas de flete.">
 <meta name="twitter:image" content="https://luismiguelcruzefus.com/imagenes/lm_ingenieria/automatizacion_presupuestos/00_caratula.webp">
 
-<link rel="icon" type="image/webp" href="../imagenes/lm_ingenieria/marca_lm/logo.webp">
+<link rel="icon" type="image/webp" href="../imagenes/lm_ingenieria/marca_lm/LOGO.webp">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -183,10 +183,10 @@
           Presupuestos<br><em>automatizados</em>.
         </h1>
         <p class="text-lg leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          Un expediente técnico no termina en el presupuesto: termina en el presupuesto <em>y</em> el cronograma, <em>y</em> las especificaciones técnicas, <em>y</em> el flete, <em>y</em> las cotizaciones que sustentan cada precio. Este sistema los produce en cadena desde una sola fuente —la base <span style="color: var(--text);">SQLite de Delphin Express</span> del proyecto— combinando Python para lo determinista con IA para lo que exige criterio.
+          Desarrollé un sistema que prepara presupuestos, cronogramas, especificaciones técnicas y fletes a partir de la base de Delphin Express del proyecto.
         </p>
         <p class="text-base leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          El corazón es un banco propio de <span style="color: var(--text);">3 002 análisis de precios unitarios</span> organizados en 25 grupos de costo, construido a partir de expedientes reales de saneamiento. La IA no inventa rendimientos: los busca ahí. Cada escritura sobre una base de Delphin va precedida de un respaldo numerado, la base original nunca se modifica y el resultado se verifica antes de abrirlo en el programa.
+          Usa un banco propio de 3 002 APUs, organizado en 25 grupos de costo. Python ejecuta los cálculos y la escritura de datos; la IA propone secuencias constructivas y redacta textos para revisión.
         </p>
         <div class="flex flex-wrap gap-4 mt-8" data-reveal>
           <a href="servidores-mcp.html" class="btn btn-outline">
@@ -217,97 +217,44 @@
   </div>
 </section>
 
-<!-- SECCION A -->
-<section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-
-    <div class="flex items-baseline gap-5 mb-12">
-      <span class="mono text-sm" style="color: var(--accent);">§ A</span>
-      <h2 class="serif text-3xl lg:text-4xl">Qué <em style="color: var(--accent); font-style:italic;">automatiza</em></h2>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
-      <div class="feature" data-reveal>
-        <h4>Presupuesto inyectado, no transcrito</h4>
-        <p>El presupuesto se valida en un formato intermedio y se escribe directamente en la base de Delphin Express. Validado de extremo a extremo en el programa real, no en una exportación.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Cronograma CPM desde los rendimientos</h4>
-        <p>Las duraciones se despejan del propio APU, la secuencia constructiva la razona la IA y el plazo se comprime al contractual. Un solo comando copia la base, secuencia, calcula el CPM, ajusta, inyecta y verifica.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>El cronograma vive dentro de Delphin</h4>
-        <p>Se escribe en la misma base, de modo que su módulo CPM lo reproduce al 100 % y exporta a MS Project por su cuenta. Sin doble digitación ni desincronización entre archivos.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Especificaciones técnicas desde las partidas</h4>
-        <p>Una biblioteca de plantillas por código de partida, con las cinco secciones estándar, se cruza con el presupuesto y produce el documento Word listo para imprimir; lo que no tiene plantilla se redacta con IA y queda marcado para revisión.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Flete terrestre y rural en Excel</h4>
-        <p>Genera el Excel de flete con fórmulas vinculadas y formato A4 imprimible, con tarifas por tipo de vía y factor de retorno vacío centralizadas en un único archivo de configuración.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Trazabilidad como requisito, no como extra</h4>
-        <p>Respaldo numerado antes de cada escritura, bases maestras de solo lectura, negativa a operar con Delphin abierto y verificación posterior de la base resultante.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- SECCION B -->
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
     <div class="flex items-baseline gap-5 mb-10">
-      <span class="mono text-sm" style="color: var(--accent);">§ B</span>
+      <span class="mono text-sm" style="color: var(--accent);">§ A</span>
       <h2 class="serif text-3xl lg:text-4xl">Los <em style="color: var(--accent); font-style:italic;">módulos</em> del pipeline</h2>
     </div>
 
     <div class="mt-2">
       <div class="tool-row" data-reveal>
         <div class="n">Núcleo de datos</div>
-        <div class="d">Base maestra de Delphin, diccionarios de conocimiento —rendimientos, pesos y volúmenes unitarios— y los esquemas del formato intermedio. Es la única fuente de verdad del sistema y se mantiene de solo lectura.</div>
+        <div class="d">Base maestra de Delphin y diccionarios de rendimientos, pesos y volúmenes unitarios, conservados como fuentes de consulta.</div>
       </div>
       <div class="tool-row" data-reveal>
         <div class="n">Banco de APUs</div>
-        <div class="d">3 002 análisis de precios unitarios en 25 grupos de costo, desde obras provisionales y movimiento de tierras hasta tuberías de saneamiento, plantas de tratamiento y fletes. Se cuida con herramientas propias de estadística, detección de duplicados, comparación y fusión.</div>
+        <div class="d">3 002 análisis de precios unitarios de expedientes de saneamiento, con herramientas de comparación, detección de duplicados y fusión.</div>
       </div>
       <div class="tool-row" data-reveal>
-        <div class="n">Módulo de presupuestos</div>
-        <div class="d">IA → presupuesto en formato intermedio → validador → inyector → base de Delphin. El validador es una compuerta: si no sale limpio, no se crea nada.</div>
+        <div class="n">Presupuestos</div>
+        <div class="d">Valida las partidas y escribe el presupuesto en una copia de la base de Delphin. Verifica el resultado antes de abrirlo.</div>
       </div>
       <div class="tool-row" data-reveal>
-        <div class="n">Módulo de cronogramas</div>
-        <div class="d">Duraciones desde los APUs, secuencia constructiva razonada por IA, CPM calculado y comprimido al plazo contractual, e inyectado dentro de la misma base de Delphin.</div>
+        <div class="n">Cronogramas</div>
+        <div class="d">Calcula duraciones desde los APUs y el CPM a partir de la secuencia propuesta. Ajusta el plazo e incorpora el cronograma en Delphin.</div>
       </div>
       <div class="tool-row" data-reveal>
-        <div class="n">Módulo de especificaciones</div>
-        <div class="d">Plantillas en Markdown por código de partida con frontmatter y las cinco secciones normativas —descripción, materiales, método de ejecución, método de medición y forma de pago— que se ensamblan en el Word final.</div>
+        <div class="n">Especificaciones técnicas</div>
+        <div class="d">Ensambla un documento Word desde plantillas por código de partida. Los textos propuestos por IA quedan señalados para revisión.</div>
       </div>
       <div class="tool-row" data-reveal>
-        <div class="n">Módulo de fletes</div>
-        <div class="d">Extrae materiales y cantidades del presupuesto, los cruza con el diccionario de pesos y volúmenes y emite el Excel de flete con fórmulas vinculadas.</div>
+        <div class="n">Fletes</div>
+        <div class="d">Cruza las cantidades de materiales con sus pesos y volúmenes y genera un archivo Excel con fórmulas vinculadas.</div>
       </div>
       <div class="tool-row" data-reveal>
-        <div class="n">Módulo de cotizaciones</div>
-        <div class="d">Solicitud y clasificación de cotizaciones para mantener los precios vivos con trazabilidad de su origen.</div>
+        <div class="n">Cotizaciones</div>
+        <div class="d">Organiza las cotizaciones y registra el origen de los precios de referencia.</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECCION C -->
-<section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
-  <div class="max-w-5xl mx-auto px-6 lg:px-10">
-    <div class="coord mb-6">§ C / Por qué lo construí</div>
-    <h2 class="display text-4xl md:text-5xl mb-10" data-reveal>
-      El expediente se atasca<br>en <em>lo repetitivo</em>.
-    </h2>
-    <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
-      <p>La parte difícil de un expediente de saneamiento no es la que consume el tiempo. El criterio —qué tecnología, qué secuencia constructiva, qué partidas— se decide relativamente rápido; lo que devora las semanas es transcribir ese criterio a cinco documentos distintos y mantenerlos cuadrados entre sí cuando algo cambia.</p>
-      <p>Por eso el sistema no parte de una plantilla en blanco sino de la base de datos del proyecto: si el presupuesto cambia, el cronograma, el flete y las especificaciones se vuelven a derivar de la misma fuente en lugar de corregirse a mano uno por uno. Ahí es donde se van los reprocesos y las observaciones por incoherencias entre tomos.</p>
-      <p>La división del trabajo es explícita: Python para lo que tiene una respuesta correcta —aritmética, CPM, formato, escritura en la base— e IA para lo que exige criterio —secuencia constructiva, redacción de una especificación sin plantilla, clasificación de cotizaciones—. Y todo lo que la IA propone queda marcado como propuesta hasta que un ingeniero lo firma.</p>
     </div>
   </div>
 </section>
@@ -318,7 +265,7 @@
   <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
     <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más desarrollo propio</div>
     <h2 class="display text-4xl md:text-5xl mb-10">
-      Explora el resto del<br><em>ecosistema de automatización</em>.
+      Más <em>automatización</em>.
     </h2>
     <div class="flex flex-wrap justify-center gap-4">
       <a href="../index.html#ia-automatizacion" class="btn btn-outline">
@@ -356,5 +303,3 @@
 </script>
 </body>
 </html>
-
-

@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15171c">
 <title>Servidores MCP — Delphin, Word y Excel para agentes de IA · Luis Miguel Cruz Efus</title>
-<meta name="description" content="Tres servidores MCP (Model Context Protocol) de desarrollo propio y ejecución local: delphin-presupuestos con 27 herramientas sobre la base SQLite de Delphin Express, más Word MCP y Excel MCP para entregables con maquetación profesional.">
+<meta name="description" content="Tres servidores MCP para trabajar con presupuestos de Delphin Express, documentos Word y libros Excel mediante agentes de IA.">
 <link rel="canonical" href="https://luismiguelcruzefus.com/ia/servidores-mcp.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="LM Ingeniería e Innovación — Luis Miguel Cruz Efus">
 <meta property="og:title" content="Servidores MCP — Delphin, Word y Excel para agentes de IA · Luis Miguel Cruz Efus">
-<meta property="og:description" content="Tres servidores MCP (Model Context Protocol) de desarrollo propio y ejecución local: delphin-presupuestos con 27 herramientas sobre la base SQLite de Delphin Express, más Word MCP y Excel MCP para entregables con maquetación profesional.">
+<meta property="og:description" content="Tres servidores MCP para trabajar con presupuestos de Delphin Express, documentos Word y libros Excel mediante agentes de IA.">
 <meta property="og:url" content="https://luismiguelcruzefus.com/ia/servidores-mcp.html">
 <meta property="og:image" content="https://luismiguelcruzefus.com/imagenes/lm_ingenieria/servidores_mcp/00_caratula.webp">
 <meta property="og:locale" content="es_PE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Servidores MCP — Delphin, Word y Excel para agentes de IA · Luis Miguel Cruz Efus">
-<meta name="twitter:description" content="Tres servidores MCP (Model Context Protocol) de desarrollo propio y ejecución local: delphin-presupuestos con 27 herramientas sobre la base SQLite de Delphin Express, más Word MCP y Excel MCP para entregables con maquetación profesional.">
+<meta name="twitter:description" content="Tres servidores MCP para trabajar con presupuestos de Delphin Express, documentos Word y libros Excel mediante agentes de IA.">
 <meta name="twitter:image" content="https://luismiguelcruzefus.com/imagenes/lm_ingenieria/servidores_mcp/00_caratula.webp">
 
-<link rel="icon" type="image/webp" href="../imagenes/lm_ingenieria/marca_lm/logo.webp">
+<link rel="icon" type="image/webp" href="../imagenes/lm_ingenieria/marca_lm/LOGO.webp">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -183,14 +183,14 @@
           Servidores <em>MCP</em>.
         </h1>
         <p class="text-lg leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          Un modelo de lenguaje sabe redactar, pero no sabe tocar tus archivos. El <span style="color: var(--text);">Model Context Protocol</span> es el estándar por el que un agente de IA recibe herramientas concretas, y estos tres servidores son las que yo le doy: <span style="color: var(--text);">delphin-presupuestos</span>, que abre la base SQLite de Delphin Express con 27 herramientas; <span style="color: var(--text);">Word MCP</span> y <span style="color: var(--text);">Excel MCP</span>, que producen los entregables ya maquetados. Los tres corren en mi propia máquina, sobre mis propios datos, sin subir nada a la nube.
+          Desarrollo tres servidores MCP para conectar agentes de IA con Delphin Express, Word y Excel. Reúnen 39 herramientas para consultar presupuestos y preparar entregables.
         </p>
         <p class="text-base leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          La regla de diseño es la misma en los tres: <span style="color: var(--text);">el agente describe el contenido y el servidor decide la presentación</span>. No hay parámetros para elegir tipografía, color ni bordes, y es deliberado —si el agente pudiera elegirlos, los elegiría mal, que es justamente el problema que estos servidores existen para eliminar. Lo mismo vale para los datos: las herramientas de presupuesto se niegan a inventar rendimientos o precios que ya están en el catálogo.
+          El agente aporta el contenido; los servidores aplican el formato del documento y las reglas de edición de los datos.
         </p>
         <div class="flex flex-wrap gap-4 mt-8" data-reveal>
           <a href="automatizacion-presupuestos.html" class="btn btn-outline">
-            Ver el pipeline de presupuestos
+            Ver automatización de presupuestos
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </a>
           <a href="../index.html#contacto" class="btn btn-ghost">
@@ -217,81 +217,28 @@
   </div>
 </section>
 
-<!-- SECCION A -->
-<section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-
-    <div class="flex items-baseline gap-5 mb-12">
-      <span class="mono text-sm" style="color: var(--accent);">§ A</span>
-      <h2 class="serif text-3xl lg:text-4xl">Qué <em style="color: var(--accent); font-style:italic;">resuelven</em></h2>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
-      <div class="feature" data-reveal>
-        <h4>Presupuestos sin salir del agente</h4>
-        <p>delphin-presupuestos consulta el banco de APUs, valida, crea el presupuesto en la base de Delphin Express y lo corrige en sitio, con respaldo numerado antes de cada escritura.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Ninguna cifra inventada</h4>
-        <p>Los rendimientos salen del APU y los precios del catálogo. Solo un insumo verdaderamente nuevo admite precio estimado, y debe declarar de dónde sale.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Corrección en sitio, nunca regeneración</h4>
-        <p>Regenerar un presupuesto cambia los identificadores de costo unitario y con ellos se pierden los metrados de las planillas y las dependencias del cronograma. Por eso las herramientas de edición existen y el servidor empuja hacia ellas.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Maquetación que el agente no puede estropear</h4>
-        <p>Word MCP aplica jerarquía de títulos, cabeceras sombreadas que se repiten entre páginas, columnas numéricas alineadas y pie con «Página X de Y», siempre igual en todo el documento.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Numeración que se recoloca sola</h4>
-        <p>Las leyendas de tabla y figura se insertan con campo SEQ, como lo hace Word: si se añade una tabla en medio, el resto se renumera solo en lugar de romperse.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Hojas de cálculo vivas, no capturas</h4>
-        <p>Excel MCP entrega libros con ancho de columna ajustado, formato numérico real, cabecera fija con autofiltro, fila de totales con SUBTOTAL que respeta el filtro y gráficos rotulados.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- SECCION B -->
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
     <div class="flex items-baseline gap-5 mb-10">
-      <span class="mono text-sm" style="color: var(--accent);">§ B</span>
+      <span class="mono text-sm" style="color: var(--accent);">§ A</span>
       <h2 class="serif text-3xl lg:text-4xl">Los tres <em style="color: var(--accent); font-style:italic;">servidores</em></h2>
     </div>
 
     <div class="mt-2">
       <div class="tool-row" data-reveal>
         <div class="n">delphin-presupuestos · 27 herramientas</div>
-        <div class="d">Trabaja directamente sobre las bases SQLite de Delphin Express. Consulta y compara APUs, busca insumos y precios de referencia, valida e inyecta presupuestos completos, edita partidas una a una, carga metrados desde planillas, ordena las carpetas del catálogo, cuida el banco de APUs (duplicados, fusiones, altas) y verifica la base antes de abrirla. Respalda de forma numerada antes de cada escritura y se niega a escribir si Delphin está abierto.</div>
+        <div class="d">Consulta APUs e insumos, crea y edita presupuestos, carga metrados y verifica bases SQLite de Delphin Express. Genera un respaldo antes de escribir y comprueba que Delphin esté cerrado.</div>
       </div>
       <div class="tool-row" data-reveal>
         <div class="n">Word MCP · 6 herramientas</div>
-        <div class="d">Crea el documento entero de una sola llamada a partir de bloques —títulos, párrafos, tablas, listas, imágenes, índice, citas— y aplica por su cuenta tipografía, sombreados, bordes y espaciados. También lee un .docx existente devolviéndolo en el mismo formato que acepta para crearlo, y rellena plantillas del cliente por reemplazo sin destrozar su encabezado ni su logo.</div>
+        <div class="d">Crea documentos con títulos, tablas, imágenes, índices y citas. También lee documentos existentes y rellena plantillas conservando encabezados y logotipos.</div>
       </div>
       <div class="tool-row" data-reveal>
         <div class="n">Excel MCP · 6 herramientas</div>
-        <div class="d">Crea el libro completo de una llamada: hojas con título, encabezados, filas, formatos por columna y gráficos declarados por nombre de columna. Exige los números como números y no como texto, que es el error que más estropea una hoja, y sabe dejar fórmulas vivas para plantillas de cálculo.</div>
+        <div class="d">Crea libros con formatos numéricos, fórmulas, filtros, totales y gráficos. Ajusta las columnas y conserva los números como valores de cálculo.</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECCION C -->
-<section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
-  <div class="max-w-5xl mx-auto px-6 lg:px-10">
-    <div class="coord mb-6">§ C / Por qué los construí</div>
-    <h2 class="display text-4xl md:text-5xl mb-10" data-reveal>
-      Los agentes redactan bien<br>y <em>maquetan mal</em>.
-    </h2>
-    <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
-      <p>No es falta de capacidad del modelo: maquetar exige acordarse de treinta detalles que nadie tiene en la cabeza mientras redacta. Los síntomas siempre son los mismos —tablas con la rejilla negra de Word, índices escritos como texto que no se actualizan, leyendas «Tabla 1» escritas a mano que se rompen a la primera inserción, números como 1234.5599999999999 alineados a la izquierda y, lo peor, plantillas del cliente destrozadas.</p>
-      <p>La solución no fue pedirle al agente que maquetara mejor, sino quitarle esa decisión: el servidor se queda con toda la presentación y el agente aporta únicamente estructura y contenido. Deliberadamente no expongo parámetros visuales; la ausencia de esa palanca es la característica, no una limitación.</p>
-      <p>Con delphin-presupuestos la misma idea se aplica a los datos duros. Un presupuesto de obra pública no admite cifras plausibles: admite las del catálogo. El servidor impone esa disciplina desde el otro lado —base de solo lectura donde debe serlo, respaldo antes de escribir, negativa a operar con Delphin abierto— para que la velocidad de la IA nunca se pague con trazabilidad.</p>
     </div>
   </div>
 </section>
@@ -302,7 +249,7 @@
   <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
     <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más desarrollo propio</div>
     <h2 class="display text-4xl md:text-5xl mb-10">
-      Explora el resto del<br><em>ecosistema de automatización</em>.
+      Más <em>automatización</em>.
     </h2>
     <div class="flex flex-wrap justify-center gap-4">
       <a href="../index.html#ia-automatizacion" class="btn btn-outline">
@@ -340,5 +287,3 @@
 </script>
 </body>
 </html>
-
-

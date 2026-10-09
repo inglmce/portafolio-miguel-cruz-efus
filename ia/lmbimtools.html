@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15171c">
 <title>LMBIMTools — Add-In de acero de refuerzo para Autodesk Revit · Luis Miguel Cruz Efus</title>
-<meta name="description" content="LMBIMTools: suite de nueve herramientas en C#/.NET para Autodesk Revit 2025, 2026 y 2027 que modela en 3D el acero de columnas, vigas, zapatas, muros y losas bajo la norma peruana E.060 y genera el despiece 2D acotado.">
+<meta name="description" content="Complemento para Autodesk Revit con nueve herramientas de modelado de acero de refuerzo, secciones y despiece.">
 <link rel="canonical" href="https://luismiguelcruzefus.com/ia/lmbimtools.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="LM Ingeniería e Innovación — Luis Miguel Cruz Efus">
 <meta property="og:title" content="LMBIMTools — Add-In de acero de refuerzo para Autodesk Revit · Luis Miguel Cruz Efus">
-<meta property="og:description" content="LMBIMTools: suite de nueve herramientas en C#/.NET para Autodesk Revit 2025, 2026 y 2027 que modela en 3D el acero de columnas, vigas, zapatas, muros y losas bajo la norma peruana E.060 y genera el despiece 2D acotado.">
+<meta property="og:description" content="Complemento para Autodesk Revit con nueve herramientas de modelado de acero de refuerzo, secciones y despiece.">
 <meta property="og:url" content="https://luismiguelcruzefus.com/ia/lmbimtools.html">
 <meta property="og:image" content="https://luismiguelcruzefus.com/imagenes/lm_ingenieria/lmbimtools/00_caratula.webp">
 <meta property="og:locale" content="es_PE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="LMBIMTools — Add-In de acero de refuerzo para Autodesk Revit · Luis Miguel Cruz Efus">
-<meta name="twitter:description" content="LMBIMTools: suite de nueve herramientas en C#/.NET para Autodesk Revit 2025, 2026 y 2027 que modela en 3D el acero de columnas, vigas, zapatas, muros y losas bajo la norma peruana E.060 y genera el despiece 2D acotado.">
+<meta name="twitter:description" content="Complemento para Autodesk Revit con nueve herramientas de modelado de acero de refuerzo, secciones y despiece.">
 <meta name="twitter:image" content="https://luismiguelcruzefus.com/imagenes/lm_ingenieria/lmbimtools/00_caratula.webp">
 
-<link rel="icon" type="image/webp" href="../imagenes/lm_ingenieria/marca_lm/logo.webp">
+<link rel="icon" type="image/webp" href="../imagenes/lm_ingenieria/marca_lm/LOGO.webp">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -183,10 +183,10 @@
           LMBIM<em>Tools</em>.
         </h1>
         <p class="text-lg leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          LMBIMTools es la pestaña <span style="color: var(--text);">LM BIM</span> que añado a Autodesk Revit: nueve herramientas escritas en C# sobre la API de Revit que se llevan el trabajo manual del acero de refuerzo. Selecciono las columnas, las vigas, las zapatas, los muros o las losas ya modeladas y el complemento genera los elementos <span style="color: var(--text);">Rebar</span> reales dentro del modelo —no líneas de dibujo—, con los espaciamientos, ganchos sísmicos y zonas de confinamiento que exige la norma peruana <span style="color: var(--text);">NTE E.060</span>.
+          Desarrollo LMBIMTools, un complemento para Revit con nueve herramientas para modelar el acero de columnas, vigas, zapatas, muros y losas, y preparar su despiece.
         </p>
         <p class="text-base leading-relaxed max-w-2xl mb-6" style="color: var(--text-dim);" data-reveal>
-          Un solo código fuente compila a dos DLLs por multi-targeting (.NET 8 para Revit 2025 y 2026, .NET 10 para Revit 2027), de modo que la suite entera se mantiene con una sola base de código. Se instala con un micro-instalador propio en un único EXE, sin permisos de administrador y sin dependencias externas: detecta las versiones de Revit presentes por registro y por carpeta de complementos, se detiene si Revit está abierto y publica las DLLs de forma atómica. Todo el paquete va firmado digitalmente y el empaquetado aborta si la firma no queda válida.
+          Es compatible con Revit 2025, 2026 y 2027. Se distribuye mediante un instalador firmado que detecta las versiones instaladas.
         </p>
         <div class="flex flex-wrap gap-4 mt-8" data-reveal>
           <a href="servidores-mcp.html" class="btn btn-outline">
@@ -217,105 +217,52 @@
   </div>
 </section>
 
-<!-- SECCION A -->
-<section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-
-    <div class="flex items-baseline gap-5 mb-12">
-      <span class="mono text-sm" style="color: var(--accent);">§ A</span>
-      <h2 class="serif text-3xl lg:text-4xl">Qué <em style="color: var(--accent); font-style:italic;">resuelve</em></h2>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
-      <div class="feature" data-reveal>
-        <h4>Acero modelado, no dibujado</h4>
-        <p>Las herramientas crean elementos Rebar, AreaReinforcement y PathReinforcement auténticos: cuantifican en las tablas de planificación, se ven en 3D y viajan con el modelo.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>La norma dentro del cuadro de diálogo</h4>
-        <p>Los espaciamientos llegan precargados con el máximo de la E.060 para cada caso —confinamiento de columnas, 2h en extremos de viga, bandeo de zapatas, dos capas en muros desde t = 200 mm— en lugar de dejarlos a criterio de quien modela.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Vista previa 2D antes de escribir en el modelo</h4>
-        <p>Cada herramienta dibuja la sección armada en vivo mientras se ajustan diámetros y separaciones, de modo que el error se ve antes de tocar el proyecto.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Despiece y planos, no solo geometría</h4>
-        <p>Detallar Sección genera las vistas perpendiculares, las etiquetas de armadura y el cuadro de armado con notación peruana, agrupando en una sola sección típica los elementos con idéntico armado.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Catálogo peruano de una vez y para siempre</h4>
-        <p>Tipos de Barra carga calibres de 6 mm a 1 3/8", ganchos sísmicos de 135° y recubrimientos de E.060 §7.7.1 de forma idempotente: ejecutarla dos veces no duplica nada.</p>
-      </div>
-      <div class="feature" data-reveal>
-        <h4>Multi-versión sin bifurcar el código</h4>
-        <p>Una sola clase concentra las diferencias entre las APIs de 2025 y 2027; compilar contra la API más antigua hace que el compilador detecte solo cualquier uso incompatible.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- SECCION B -->
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
     <div class="flex items-baseline gap-5 mb-10">
-      <span class="mono text-sm" style="color: var(--accent);">§ B</span>
+      <span class="mono text-sm" style="color: var(--accent);">§ A</span>
       <h2 class="serif text-3xl lg:text-4xl">Las nueve <em style="color: var(--accent); font-style:italic;">herramientas</em></h2>
     </div>
 
     <div class="mt-2">
       <div class="tool-row" data-reveal>
         <div class="n">Tipos de Barra</div>
-        <div class="d">Carga en el proyecto el catálogo peruano de acero de refuerzo: calibres de 6 mm a 1 3/8", ganchos sísmicos de 135° y recubrimientos de E.060 §7.7.1. Es prerrequisito del resto del panel y no duplica tipos al repetirse.</div>
+        <div class="d">Carga el catálogo peruano de barras, ganchos sísmicos y recubrimientos. Conserva los tipos ya existentes.</div>
       </div>
       <div class="tool-row" data-reveal>
         <div class="n">Acero en Columna</div>
-        <div class="d">Refuerzo longitudinal y estribos con las tres zonas de confinamiento en las columnas seleccionadas, con espaciamientos precargados según E.060 §21.6.4 (o §21.4.5 en sistemas de muros).</div>
+        <div class="d">Genera refuerzo longitudinal y estribos con zonas de confinamiento en las columnas seleccionadas.</div>
       </div>
       <div class="tool-row" data-reveal>
         <div class="n">Acero en Viga</div>
-        <div class="d">Acero corrido, bastones y estribos con confinamiento 2h en ambos extremos. Los puntos de corte de los bastones se fijan como fracción de la luz libre o en milímetros exactos.</div>
+        <div class="d">Modela acero corrido, bastones y estribos. Permite definir los cortes de barras por longitud o fracción de la luz.</div>
       </div>
       <div class="tool-row" data-reveal>
         <div class="n">Acero en Zapata</div>
-        <div class="d">Parrilla inferior —y superior opcional— más los arranques hacia la columna: bandeo de la dirección corta según E.060 §15.4.4.2, anclaje por desarrollo en compresión (§12.3.2) y empalme de arranques (§12.16.1 o §12.17.2.1).</div>
+        <div class="d">Genera parrillas inferiores, refuerzo superior opcional y arranques de columna.</div>
       </div>
       <div class="tool-row" data-reveal>
         <div class="n">Acero en Muro</div>
-        <div class="d">Malla del alma en una o dos capas y elementos de borde confinados: cuantías mínimas de §11.10.7 y §14.3.1, dos capas desde t = 200 mm (§21.9.4.3) y bordes con estribos sísmicos y ganchos estándar (§21.9.7).</div>
+        <div class="d">Modela la malla del alma en una o dos capas y los elementos de borde confinados.</div>
       </div>
       <div class="tool-row" data-reveal>
         <div class="n">Acero en Losa</div>
-        <div class="d">Parrilla de losas macizas y plateas, más los bastones de momento negativo en los bordes: cuantía mínima por retracción y temperatura (§9.7.2), espaciamientos de 3·t o 400 mm (§9.7.3) y 2·t en secciones críticas (§13.3.2).</div>
+        <div class="d">Genera parrillas en losas macizas y plateas, con bastones de momento negativo en los bordes.</div>
       </div>
       <div class="tool-row" data-reveal>
         <div class="n">Detallar Sección</div>
-        <div class="d">Documentación de despiece de columnas y vigas ya armadas: secciones perpendiculares, etiquetas de armadura, cuadro de armado con notación peruana y composición en el plano, con una sola sección típica por armado repetido.</div>
+        <div class="d">Crea secciones, etiquetas y cuadros de armado de columnas y vigas. Agrupa elementos con el mismo refuerzo.</div>
       </div>
       <div class="tool-row" data-reveal>
         <div class="n">Colorear Refuerzo</div>
-        <div class="d">Colorea las barras de la vista activa por diámetro o por función —estribo, longitudinal, bastón, arranque— mediante sobrescrituras gráficas: no toca el modelo y se revierte con un clic.</div>
+        <div class="d">Asigna colores por diámetro o función de la barra en la vista activa. Los cambios gráficos se pueden revertir.</div>
       </div>
       <div class="tool-row" data-reveal>
         <div class="n">Ajustar Recorte</div>
-        <div class="d">Ajusta la región de recorte de la vista activa, o de todas las secciones seleccionadas, a los límites reales de la geometría del modelo.</div>
+        <div class="d">Ajusta el recorte de las vistas a los límites de la geometría del modelo.</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECCION C -->
-<section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
-  <div class="max-w-5xl mx-auto px-6 lg:px-10">
-    <div class="coord mb-6">§ C / Por qué lo construí</div>
-    <h2 class="display text-4xl md:text-5xl mb-10" data-reveal>
-      El acero es donde el modelo BIM<br><em>se cae o se sostiene</em>.
-    </h2>
-    <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
-      <p>En la práctica, casi ningún proyecto llega a modelar el refuerzo: se dibuja en 2D aparte, se cuantifica a mano y el modelo deja de ser la fuente única de verdad justo en la partida que más pesa en el presupuesto. Modelarlo a mano en Revit es posible, pero tan lento que nadie lo sostiene bajo plazo de expediente.</p>
-      <p>LMBIMTools ataca exactamente ese cuello de botella. La decisión de diseño de fondo es que la norma viva en el código y no en la memoria de quien modela: los valores de E.060 llegan cargados por defecto en cada diálogo, y quien modela decide cuándo apartarse de ellos, no cuándo recordarlos.</p>
-      <p>La suite crece por registro declarativo: cada herramienta nueva es una carpeta y una entrada en una lista, con el núcleo de geometría y norma separado de la API de Revit para que pueda probarse sin abrir el programa. Es la misma disciplina con la que desarrollo el resto del ecosistema.</p>
     </div>
   </div>
 </section>
@@ -326,7 +273,7 @@
   <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
     <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 · Más desarrollo propio</div>
     <h2 class="display text-4xl md:text-5xl mb-10">
-      Explora el resto del<br><em>ecosistema de automatización</em>.
+      Más <em>automatización</em>.
     </h2>
     <div class="flex flex-wrap justify-center gap-4">
       <a href="../index.html#ia-automatizacion" class="btn btn-outline">
@@ -364,5 +311,3 @@
 </script>
 </body>
 </html>
-
-

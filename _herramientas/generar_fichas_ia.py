@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """Genera las 4 fichas de la seccion IA & Automatizacion del portafolio."""
 import io, os
+from pathlib import Path
 
-DEST = u"D:/LAPTOP_LMCE/PORTAFOLIO PROFESIONAL/ia"
+DEST = Path(__file__).resolve().parent.parent / "ia"
 
 CABECERA = u'''<!DOCTYPE html>
 <html lang="es">
@@ -18,14 +19,14 @@ CABECERA = u'''<!DOCTYPE html>
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="https://luismiguelcruzefus.com/ia/{slug}.html">
-<meta property="og:image" content="https://luismiguelcruzefus.com/imagenes/lm_ingenieria/{img}/00_caratula.png">
+<meta property="og:image" content="https://luismiguelcruzefus.com/imagenes/lm_ingenieria/{img}/00_caratula.webp">
 <meta property="og:locale" content="es_PE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{desc}">
-<meta name="twitter:image" content="https://luismiguelcruzefus.com/imagenes/lm_ingenieria/{img}/00_caratula.png">
+<meta name="twitter:image" content="https://luismiguelcruzefus.com/imagenes/lm_ingenieria/{img}/00_caratula.webp">
 
-<link rel="icon" type="image/png" href="../imagenes/lm_ingenieria/marca_lm/logo.png">
+<link rel="icon" type="image/webp" href="../imagenes/lm_ingenieria/marca_lm/LOGO.webp">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -193,7 +194,7 @@ CABECERA = u'''<!DOCTYPE html>
 
       <div class="lg:col-span-5" data-reveal>
         <div class="hero-cover">
-          <img src="../imagenes/lm_ingenieria/{img}/00_caratula.png" alt="{alt}" onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend', '<div class=&quot;fallback&quot;><div><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>{fb_kicker}</div><div class=&quot;serif text-3xl leading-tight&quot;>{fb_titulo}</div></div></div>');">
+          <img src="../imagenes/lm_ingenieria/{img}/00_caratula.webp" alt="{alt}" onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend', '<div class=&quot;fallback&quot;><div><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>{fb_kicker}</div><div class=&quot;serif text-3xl leading-tight&quot;>{fb_titulo}</div></div></div>');">
         </div>
         <p class="mono text-[0.66rem] uppercase tracking-[0.14em] mt-4 text-center" style="color: var(--muted);">{pie_caratula}</p>
       </div>
@@ -205,45 +206,17 @@ CABECERA = u'''<!DOCTYPE html>
   </div>
 </section>
 
-<!-- SECCION A -->
-<section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-
-    <div class="flex items-baseline gap-5 mb-12">
-      <span class="mono text-sm" style="color: var(--accent);">\u00a7 A</span>
-      <h2 class="serif text-3xl lg:text-4xl">{titulo_a}</h2>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
-{features}
-    </div>
-  </div>
-</section>
-
 <!-- SECCION B -->
 <section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
     <div class="flex items-baseline gap-5 mb-10">
-      <span class="mono text-sm" style="color: var(--accent);">\u00a7 B</span>
+      <span class="mono text-sm" style="color: var(--accent);">\u00a7 A</span>
       <h2 class="serif text-3xl lg:text-4xl">{titulo_b}</h2>
     </div>
 
     <div class="mt-2">
 {filas}
-    </div>
-  </div>
-</section>
-
-<!-- SECCION C -->
-<section class="py-20 lg:py-28 border-t" style="border-color: var(--line-soft); background: oklch(0.12 0.012 250 / 0.66);">
-  <div class="max-w-5xl mx-auto px-6 lg:px-10">
-    <div class="coord mb-6">\u00a7 C / {kicker_c}</div>
-    <h2 class="display text-4xl md:text-5xl mb-10" data-reveal>
-      {titulo_c}
-    </h2>
-    <div class="space-y-6 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
-{cierre}
     </div>
   </div>
 </section>
@@ -254,7 +227,7 @@ CABECERA = u'''<!DOCTYPE html>
   <div class="max-w-5xl mx-auto px-6 lg:px-10 relative text-center">
     <div class="coord justify-center mb-8" style="display:inline-flex;">N.99 \u00b7 M\u00e1s desarrollo propio</div>
     <h2 class="display text-4xl md:text-5xl mb-10">
-      Explora el resto del<br><em>ecosistema de automatizaci\u00f3n</em>.
+      M\u00e1s <em>automatizaci\u00f3n</em>.
     </h2>
     <div class="flex flex-wrap justify-center gap-4">
       <a href="../index.html#ia-automatizacion" class="btn btn-outline">
@@ -354,7 +327,7 @@ PAGINAS.append(dict(
     slug=u'lmbimtools',
     img=u'lmbimtools',
     title=u'LMBIMTools \u2014 Add-In de acero de refuerzo para Autodesk Revit \u00b7 Luis Miguel Cruz Efus',
-    desc=u'LMBIMTools: suite de nueve herramientas en C#/.NET para Autodesk Revit 2025, 2026 y 2027 que modela en 3D el acero de columnas, vigas, zapatas, muros y losas bajo la norma peruana E.060 y genera el despiece 2D acotado.',
+    desc='Complemento para Autodesk Revit con nueve herramientas de modelado de acero de refuerzo, secciones y despiece.',
     navlabel=u'IA.01 \u00b7 Complementos BIM',
     footlabel=u'IA.01 \u00b7 LMBIMTools',
     coord_izq=u'IA.01 / Complementos BIM',
@@ -366,8 +339,8 @@ PAGINAS.append(dict(
     fb_titulo=u'LMBIM<em style=&quot;color: var(--accent); font-style: italic;&quot;>Tools</em>',
     pie_caratula=u'Complemento propio \u00b7 distribuci\u00f3n directa',
     parrafos=parrafos([
-        u'LMBIMTools es la pesta\u00f1a <span style="color: var(--text);">LM BIM</span> que a\u00f1ado a Autodesk Revit: nueve herramientas escritas en C# sobre la API de Revit que se llevan el trabajo manual del acero de refuerzo. Selecciono las columnas, las vigas, las zapatas, los muros o las losas ya modeladas y el complemento genera los elementos <span style="color: var(--text);">Rebar</span> reales dentro del modelo \u2014no l\u00edneas de dibujo\u2014, con los espaciamientos, ganchos s\u00edsmicos y zonas de confinamiento que exige la norma peruana <span style="color: var(--text);">NTE E.060</span>.',
-        u'Un solo c\u00f3digo fuente compila a dos DLLs por multi-targeting (.NET 8 para Revit 2025 y 2026, .NET 10 para Revit 2027), de modo que la suite entera se mantiene con una sola base de c\u00f3digo. Se instala con un micro-instalador propio en un \u00fanico EXE, sin permisos de administrador y sin dependencias externas: detecta las versiones de Revit presentes por registro y por carpeta de complementos, se detiene si Revit est\u00e1 abierto y publica las DLLs de forma at\u00f3mica. Todo el paquete va firmado digitalmente y el empaquetado aborta si la firma no queda v\u00e1lida.',
+        'Desarrollo LMBIMTools, un complemento para Revit con nueve herramientas para modelar el acero de columnas, vigas, zapatas, muros y losas, y preparar su despiece.',
+        'Es compatible con Revit 2025, 2026 y 2027. Se distribuye mediante un instalador firmado que detecta las versiones instaladas.',
     ]),
     botones=botones([
         (u'Ver los servidores MCP', u'servidores-mcp.html', u'btn-outline', False),
@@ -379,33 +352,17 @@ PAGINAS.append(dict(
         (u'Normativa', u'NTE E.060', u'Cat\u00e1logo peruano de barras'),
         (u'Distribuci\u00f3n', u'Instalador firmado', u'Sin permisos de administrador'),
     ]),
-    titulo_a=u'Qu\u00e9 <em style="color: var(--accent); font-style:italic;">resuelve</em>',
-    features=features([
-        (u'Acero modelado, no dibujado', u'Las herramientas crean elementos Rebar, AreaReinforcement y PathReinforcement aut\u00e9nticos: cuantifican en las tablas de planificaci\u00f3n, se ven en 3D y viajan con el modelo.'),
-        (u'La norma dentro del cuadro de di\u00e1logo', u'Los espaciamientos llegan precargados con el m\u00e1ximo de la E.060 para cada caso \u2014confinamiento de columnas, 2h en extremos de viga, bandeo de zapatas, dos capas en muros desde t = 200 mm\u2014 en lugar de dejarlos a criterio de quien modela.'),
-        (u'Vista previa 2D antes de escribir en el modelo', u'Cada herramienta dibuja la secci\u00f3n armada en vivo mientras se ajustan di\u00e1metros y separaciones, de modo que el error se ve antes de tocar el proyecto.'),
-        (u'Despiece y planos, no solo geometr\u00eda', u'Detallar Secci\u00f3n genera las vistas perpendiculares, las etiquetas de armadura y el cuadro de armado con notaci\u00f3n peruana, agrupando en una sola secci\u00f3n t\u00edpica los elementos con id\u00e9ntico armado.'),
-        (u'Cat\u00e1logo peruano de una vez y para siempre', u'Tipos de Barra carga calibres de 6 mm a 1 3/8", ganchos s\u00edsmicos de 135\u00b0 y recubrimientos de E.060 \u00a77.7.1 de forma idempotente: ejecutarla dos veces no duplica nada.'),
-        (u'Multi-versi\u00f3n sin bifurcar el c\u00f3digo', u'Una sola clase concentra las diferencias entre las APIs de 2025 y 2027; compilar contra la API m\u00e1s antigua hace que el compilador detecte solo cualquier uso incompatible.'),
-    ]),
     titulo_b=u'Las nueve <em style="color: var(--accent); font-style:italic;">herramientas</em>',
     filas=filas([
-        (u'Tipos de Barra', u'Carga en el proyecto el cat\u00e1logo peruano de acero de refuerzo: calibres de 6 mm a 1 3/8", ganchos s\u00edsmicos de 135\u00b0 y recubrimientos de E.060 \u00a77.7.1. Es prerrequisito del resto del panel y no duplica tipos al repetirse.'),
-        (u'Acero en Columna', u'Refuerzo longitudinal y estribos con las tres zonas de confinamiento en las columnas seleccionadas, con espaciamientos precargados seg\u00fan E.060 \u00a721.6.4 (o \u00a721.4.5 en sistemas de muros).'),
-        (u'Acero en Viga', u'Acero corrido, bastones y estribos con confinamiento 2h en ambos extremos. Los puntos de corte de los bastones se fijan como fracci\u00f3n de la luz libre o en mil\u00edmetros exactos.'),
-        (u'Acero en Zapata', u'Parrilla inferior \u2014y superior opcional\u2014 m\u00e1s los arranques hacia la columna: bandeo de la direcci\u00f3n corta seg\u00fan E.060 \u00a715.4.4.2, anclaje por desarrollo en compresi\u00f3n (\u00a712.3.2) y empalme de arranques (\u00a712.16.1 o \u00a712.17.2.1).'),
-        (u'Acero en Muro', u'Malla del alma en una o dos capas y elementos de borde confinados: cuant\u00edas m\u00ednimas de \u00a711.10.7 y \u00a714.3.1, dos capas desde t = 200 mm (\u00a721.9.4.3) y bordes con estribos s\u00edsmicos y ganchos est\u00e1ndar (\u00a721.9.7).'),
-        (u'Acero en Losa', u'Parrilla de losas macizas y plateas, m\u00e1s los bastones de momento negativo en los bordes: cuant\u00eda m\u00ednima por retracci\u00f3n y temperatura (\u00a79.7.2), espaciamientos de 3\u00b7t o 400 mm (\u00a79.7.3) y 2\u00b7t en secciones cr\u00edticas (\u00a713.3.2).'),
-        (u'Detallar Secci\u00f3n', u'Documentaci\u00f3n de despiece de columnas y vigas ya armadas: secciones perpendiculares, etiquetas de armadura, cuadro de armado con notaci\u00f3n peruana y composici\u00f3n en el plano, con una sola secci\u00f3n t\u00edpica por armado repetido.'),
-        (u'Colorear Refuerzo', u'Colorea las barras de la vista activa por di\u00e1metro o por funci\u00f3n \u2014estribo, longitudinal, bast\u00f3n, arranque\u2014 mediante sobrescrituras gr\u00e1ficas: no toca el modelo y se revierte con un clic.'),
-        (u'Ajustar Recorte', u'Ajusta la regi\u00f3n de recorte de la vista activa, o de todas las secciones seleccionadas, a los l\u00edmites reales de la geometr\u00eda del modelo.'),
-    ]),
-    kicker_c=u'Por qu\u00e9 lo constru\u00ed',
-    titulo_c=u'El acero es donde el modelo BIM<br><em>se cae o se sostiene</em>.',
-    cierre=cierre([
-        u'En la pr\u00e1ctica, casi ning\u00fan proyecto llega a modelar el refuerzo: se dibuja en 2D aparte, se cuantifica a mano y el modelo deja de ser la fuente \u00fanica de verdad justo en la partida que m\u00e1s pesa en el presupuesto. Modelarlo a mano en Revit es posible, pero tan lento que nadie lo sostiene bajo plazo de expediente.',
-        u'LMBIMTools ataca exactamente ese cuello de botella. La decisi\u00f3n de dise\u00f1o de fondo es que la norma viva en el c\u00f3digo y no en la memoria de quien modela: los valores de E.060 llegan cargados por defecto en cada di\u00e1logo, y quien modela decide cu\u00e1ndo apartarse de ellos, no cu\u00e1ndo recordarlos.',
-        u'La suite crece por registro declarativo: cada herramienta nueva es una carpeta y una entrada en una lista, con el n\u00facleo de geometr\u00eda y norma separado de la API de Revit para que pueda probarse sin abrir el programa. Es la misma disciplina con la que desarrollo el resto del ecosistema.',
+        ('Tipos de Barra', 'Carga el catálogo peruano de barras, ganchos sísmicos y recubrimientos. Conserva los tipos ya existentes.'),
+        ('Acero en Columna', 'Genera refuerzo longitudinal y estribos con zonas de confinamiento en las columnas seleccionadas.'),
+        ('Acero en Viga', 'Modela acero corrido, bastones y estribos. Permite definir los cortes de barras por longitud o fracción de la luz.'),
+        ('Acero en Zapata', 'Genera parrillas inferiores, refuerzo superior opcional y arranques de columna.'),
+        ('Acero en Muro', 'Modela la malla del alma en una o dos capas y los elementos de borde confinados.'),
+        ('Acero en Losa', 'Genera parrillas en losas macizas y plateas, con bastones de momento negativo en los bordes.'),
+        ('Detallar Sección', 'Crea secciones, etiquetas y cuadros de armado de columnas y vigas. Agrupa elementos con el mismo refuerzo.'),
+        ('Colorear Refuerzo', 'Asigna colores por diámetro o función de la barra en la vista activa. Los cambios gráficos se pueden revertir.'),
+        ('Ajustar Recorte', 'Ajusta el recorte de las vistas a los límites de la geometría del modelo.'),
     ]),
 ))
 
@@ -416,7 +373,7 @@ PAGINAS.append(dict(
     slug=u'servidores-mcp',
     img=u'servidores_mcp',
     title=u'Servidores MCP \u2014 Delphin, Word y Excel para agentes de IA \u00b7 Luis Miguel Cruz Efus',
-    desc=u'Tres servidores MCP (Model Context Protocol) de desarrollo propio y ejecuci\u00f3n local: delphin-presupuestos con 27 herramientas sobre la base SQLite de Delphin Express, m\u00e1s Word MCP y Excel MCP para entregables con maquetaci\u00f3n profesional.',
+    desc='Tres servidores MCP para trabajar con presupuestos de Delphin Express, documentos Word y libros Excel mediante agentes de IA.',
     navlabel=u'IA.02 \u00b7 Model Context Protocol',
     footlabel=u'IA.02 \u00b7 Servidores MCP',
     coord_izq=u'IA.02 / Model Context Protocol',
@@ -428,11 +385,11 @@ PAGINAS.append(dict(
     fb_titulo=u'Servidores <em style=&quot;color: var(--accent); font-style: italic;&quot;>MCP</em>',
     pie_caratula=u'Infraestructura propia \u00b7 uso interno',
     parrafos=parrafos([
-        u'Un modelo de lenguaje sabe redactar, pero no sabe tocar tus archivos. El <span style="color: var(--text);">Model Context Protocol</span> es el est\u00e1ndar por el que un agente de IA recibe herramientas concretas, y estos tres servidores son las que yo le doy: <span style="color: var(--text);">delphin-presupuestos</span>, que abre la base SQLite de Delphin Express con 27 herramientas; <span style="color: var(--text);">Word MCP</span> y <span style="color: var(--text);">Excel MCP</span>, que producen los entregables ya maquetados. Los tres corren en mi propia m\u00e1quina, sobre mis propios datos, sin subir nada a la nube.',
-        u'La regla de dise\u00f1o es la misma en los tres: <span style="color: var(--text);">el agente describe el contenido y el servidor decide la presentaci\u00f3n</span>. No hay par\u00e1metros para elegir tipograf\u00eda, color ni bordes, y es deliberado \u2014si el agente pudiera elegirlos, los elegir\u00eda mal, que es justamente el problema que estos servidores existen para eliminar. Lo mismo vale para los datos: las herramientas de presupuesto se niegan a inventar rendimientos o precios que ya est\u00e1n en el cat\u00e1logo.',
+        'Desarrollo tres servidores MCP para conectar agentes de IA con Delphin Express, Word y Excel. Reúnen 39 herramientas para consultar presupuestos y preparar entregables.',
+        'El agente aporta el contenido; los servidores aplican el formato del documento y las reglas de edición de los datos.',
     ]),
     botones=botones([
-        (u'Ver el pipeline de presupuestos', u'automatizacion-presupuestos.html', u'btn-outline', False),
+        (u'Ver automatizaci\u00f3n de presupuestos', u'automatizacion-presupuestos.html', u'btn-outline', False),
         (u'Conversemos sobre integraci\u00f3n', u'../index.html#contacto', u'btn-ghost', False),
     ]),
     specs=specs([
@@ -441,27 +398,11 @@ PAGINAS.append(dict(
         (u'Alcance', u'3 servidores', u'39 herramientas expuestas'),
         (u'Ejecuci\u00f3n', u'100 % local', u'Sin env\u00edo de datos a la nube'),
     ]),
-    titulo_a=u'Qu\u00e9 <em style="color: var(--accent); font-style:italic;">resuelven</em>',
-    features=features([
-        (u'Presupuestos sin salir del agente', u'delphin-presupuestos consulta el banco de APUs, valida, crea el presupuesto en la base de Delphin Express y lo corrige en sitio, con respaldo numerado antes de cada escritura.'),
-        (u'Ninguna cifra inventada', u'Los rendimientos salen del APU y los precios del cat\u00e1logo. Solo un insumo verdaderamente nuevo admite precio estimado, y debe declarar de d\u00f3nde sale.'),
-        (u'Correcci\u00f3n en sitio, nunca regeneraci\u00f3n', u'Regenerar un presupuesto cambia los identificadores de costo unitario y con ellos se pierden los metrados de las planillas y las dependencias del cronograma. Por eso las herramientas de edici\u00f3n existen y el servidor empuja hacia ellas.'),
-        (u'Maquetaci\u00f3n que el agente no puede estropear', u'Word MCP aplica jerarqu\u00eda de t\u00edtulos, cabeceras sombreadas que se repiten entre p\u00e1ginas, columnas num\u00e9ricas alineadas y pie con \u00abP\u00e1gina X de Y\u00bb, siempre igual en todo el documento.'),
-        (u'Numeraci\u00f3n que se recoloca sola', u'Las leyendas de tabla y figura se insertan con campo SEQ, como lo hace Word: si se a\u00f1ade una tabla en medio, el resto se renumera solo en lugar de romperse.'),
-        (u'Hojas de c\u00e1lculo vivas, no capturas', u'Excel MCP entrega libros con ancho de columna ajustado, formato num\u00e9rico real, cabecera fija con autofiltro, fila de totales con SUBTOTAL que respeta el filtro y gr\u00e1ficos rotulados.'),
-    ]),
     titulo_b=u'Los tres <em style="color: var(--accent); font-style:italic;">servidores</em>',
     filas=filas([
-        (u'delphin-presupuestos \u00b7 27 herramientas', u'Trabaja directamente sobre las bases SQLite de Delphin Express. Consulta y compara APUs, busca insumos y precios de referencia, valida e inyecta presupuestos completos, edita partidas una a una, carga metrados desde planillas, ordena las carpetas del cat\u00e1logo, cuida el banco de APUs (duplicados, fusiones, altas) y verifica la base antes de abrirla. Respalda de forma numerada antes de cada escritura y se niega a escribir si Delphin est\u00e1 abierto.'),
-        (u'Word MCP \u00b7 6 herramientas', u'Crea el documento entero de una sola llamada a partir de bloques \u2014t\u00edtulos, p\u00e1rrafos, tablas, listas, im\u00e1genes, \u00edndice, citas\u2014 y aplica por su cuenta tipograf\u00eda, sombreados, bordes y espaciados. Tambi\u00e9n lee un .docx existente devolvi\u00e9ndolo en el mismo formato que acepta para crearlo, y rellena plantillas del cliente por reemplazo sin destrozar su encabezado ni su logo.'),
-        (u'Excel MCP \u00b7 6 herramientas', u'Crea el libro completo de una llamada: hojas con t\u00edtulo, encabezados, filas, formatos por columna y gr\u00e1ficos declarados por nombre de columna. Exige los n\u00fameros como n\u00fameros y no como texto, que es el error que m\u00e1s estropea una hoja, y sabe dejar f\u00f3rmulas vivas para plantillas de c\u00e1lculo.'),
-    ]),
-    kicker_c=u'Por qu\u00e9 los constru\u00ed',
-    titulo_c=u'Los agentes redactan bien<br>y <em>maquetan mal</em>.',
-    cierre=cierre([
-        u'No es falta de capacidad del modelo: maquetar exige acordarse de treinta detalles que nadie tiene en la cabeza mientras redacta. Los s\u00edntomas siempre son los mismos \u2014tablas con la rejilla negra de Word, \u00edndices escritos como texto que no se actualizan, leyendas \u00abTabla 1\u00bb escritas a mano que se rompen a la primera inserci\u00f3n, n\u00fameros como 1234.5599999999999 alineados a la izquierda y, lo peor, plantillas del cliente destrozadas.',
-        u'La soluci\u00f3n no fue pedirle al agente que maquetara mejor, sino quitarle esa decisi\u00f3n: el servidor se queda con toda la presentaci\u00f3n y el agente aporta \u00fanicamente estructura y contenido. Deliberadamente no expongo par\u00e1metros visuales; la ausencia de esa palanca es la caracter\u00edstica, no una limitaci\u00f3n.',
-        u'Con delphin-presupuestos la misma idea se aplica a los datos duros. Un presupuesto de obra p\u00fablica no admite cifras plausibles: admite las del cat\u00e1logo. El servidor impone esa disciplina desde el otro lado \u2014base de solo lectura donde debe serlo, respaldo antes de escribir, negativa a operar con Delphin abierto\u2014 para que la velocidad de la IA nunca se pague con trazabilidad.',
+        ('delphin-presupuestos · 27 herramientas', 'Consulta APUs e insumos, crea y edita presupuestos, carga metrados y verifica bases SQLite de Delphin Express. Genera un respaldo antes de escribir y comprueba que Delphin esté cerrado.'),
+        ('Word MCP · 6 herramientas', 'Crea documentos con títulos, tablas, imágenes, índices y citas. También lee documentos existentes y rellena plantillas conservando encabezados y logotipos.'),
+        ('Excel MCP · 6 herramientas', 'Crea libros con formatos numéricos, fórmulas, filtros, totales y gráficos. Ajusta las columnas y conserva los números como valores de cálculo.'),
     ]),
 ))
 
@@ -472,7 +413,7 @@ PAGINAS.append(dict(
     slug=u'automatizacion-presupuestos',
     img=u'automatizacion_presupuestos',
     title=u'Automatizaci\u00f3n de presupuestos y entregables de obra \u00b7 Luis Miguel Cruz Efus',
-    desc=u'Pipeline propio en Python e IA que genera presupuestos contra un banco de 3 002 APUs, los inyecta en Delphin Express, deriva el cronograma CPM de los rendimientos y produce fletes, especificaciones t\u00e9cnicas y cotizaciones.',
+    desc='Sistema para preparar presupuestos en Delphin Express, cronogramas CPM, especificaciones técnicas y hojas de flete.',
     navlabel=u'IA.03 \u00b7 Costos y entregables',
     footlabel=u'IA.03 \u00b7 Automatizaci\u00f3n de presupuestos',
     coord_izq=u'IA.03 / Costos y entregables',
@@ -484,8 +425,8 @@ PAGINAS.append(dict(
     fb_titulo=u'Presupuestos <em style=&quot;color: var(--accent); font-style: italic;&quot;>autom\u00e1ticos</em>',
     pie_caratula=u'Sistema interno \u00b7 saneamiento rural',
     parrafos=parrafos([
-        u'Un expediente t\u00e9cnico no termina en el presupuesto: termina en el presupuesto <em>y</em> el cronograma, <em>y</em> las especificaciones t\u00e9cnicas, <em>y</em> el flete, <em>y</em> las cotizaciones que sustentan cada precio. Este sistema los produce en cadena desde una sola fuente \u2014la base <span style="color: var(--text);">SQLite de Delphin Express</span> del proyecto\u2014 combinando Python para lo determinista con IA para lo que exige criterio.',
-        u'El coraz\u00f3n es un banco propio de <span style="color: var(--text);">3 002 an\u00e1lisis de precios unitarios</span> organizados en 25 grupos de costo, construido a partir de expedientes reales de saneamiento. La IA no inventa rendimientos: los busca ah\u00ed. Cada escritura sobre una base de Delphin va precedida de un respaldo numerado, la base original nunca se modifica y el resultado se verifica antes de abrirlo en el programa.',
+        'Desarrollé un sistema que prepara presupuestos, cronogramas, especificaciones técnicas y fletes a partir de la base de Delphin Express del proyecto.',
+        'Usa un banco propio de 3 002 APUs, organizado en 25 grupos de costo. Python ejecuta los cálculos y la escritura de datos; la IA propone secuencias constructivas y redacta textos para revisión.',
     ]),
     botones=botones([
         (u'Ver los servidores MCP que lo operan', u'servidores-mcp.html', u'btn-outline', False),
@@ -497,31 +438,15 @@ PAGINAS.append(dict(
         (u'Banco de datos', u'3 002 APUs', u'25 grupos de costo'),
         (u'Entregables', u'5 productos en cadena', u'Presupuesto \u00b7 CPM \u00b7 EETT \u00b7 flete \u00b7 precios'),
     ]),
-    titulo_a=u'Qu\u00e9 <em style="color: var(--accent); font-style:italic;">automatiza</em>',
-    features=features([
-        (u'Presupuesto inyectado, no transcrito', u'El presupuesto se valida en un formato intermedio y se escribe directamente en la base de Delphin Express. Validado de extremo a extremo en el programa real, no en una exportaci\u00f3n.'),
-        (u'Cronograma CPM desde los rendimientos', u'Las duraciones se despejan del propio APU, la secuencia constructiva la razona la IA y el plazo se comprime al contractual. Un solo comando copia la base, secuencia, calcula el CPM, ajusta, inyecta y verifica.'),
-        (u'El cronograma vive dentro de Delphin', u'Se escribe en la misma base, de modo que su m\u00f3dulo CPM lo reproduce al 100 % y exporta a MS Project por su cuenta. Sin doble digitaci\u00f3n ni desincronizaci\u00f3n entre archivos.'),
-        (u'Especificaciones t\u00e9cnicas desde las partidas', u'Una biblioteca de plantillas por c\u00f3digo de partida, con las cinco secciones est\u00e1ndar, se cruza con el presupuesto y produce el documento Word listo para imprimir; lo que no tiene plantilla se redacta con IA y queda marcado para revisi\u00f3n.'),
-        (u'Flete terrestre y rural en Excel', u'Genera el Excel de flete con f\u00f3rmulas vinculadas y formato A4 imprimible, con tarifas por tipo de v\u00eda y factor de retorno vac\u00edo centralizadas en un \u00fanico archivo de configuraci\u00f3n.'),
-        (u'Trazabilidad como requisito, no como extra', u'Respaldo numerado antes de cada escritura, bases maestras de solo lectura, negativa a operar con Delphin abierto y verificaci\u00f3n posterior de la base resultante.'),
-    ]),
     titulo_b=u'Los <em style="color: var(--accent); font-style:italic;">m\u00f3dulos</em> del pipeline',
     filas=filas([
-        (u'N\u00facleo de datos', u'Base maestra de Delphin, diccionarios de conocimiento \u2014rendimientos, pesos y vol\u00famenes unitarios\u2014 y los esquemas del formato intermedio. Es la \u00fanica fuente de verdad del sistema y se mantiene de solo lectura.'),
-        (u'Banco de APUs', u'3 002 an\u00e1lisis de precios unitarios en 25 grupos de costo, desde obras provisionales y movimiento de tierras hasta tuber\u00edas de saneamiento, plantas de tratamiento y fletes. Se cuida con herramientas propias de estad\u00edstica, detecci\u00f3n de duplicados, comparaci\u00f3n y fusi\u00f3n.'),
-        (u'M\u00f3dulo de presupuestos', u'IA \u2192 presupuesto en formato intermedio \u2192 validador \u2192 inyector \u2192 base de Delphin. El validador es una compuerta: si no sale limpio, no se crea nada.'),
-        (u'M\u00f3dulo de cronogramas', u'Duraciones desde los APUs, secuencia constructiva razonada por IA, CPM calculado y comprimido al plazo contractual, e inyectado dentro de la misma base de Delphin.'),
-        (u'M\u00f3dulo de especificaciones', u'Plantillas en Markdown por c\u00f3digo de partida con frontmatter y las cinco secciones normativas \u2014descripci\u00f3n, materiales, m\u00e9todo de ejecuci\u00f3n, m\u00e9todo de medici\u00f3n y forma de pago\u2014 que se ensamblan en el Word final.'),
-        (u'M\u00f3dulo de fletes', u'Extrae materiales y cantidades del presupuesto, los cruza con el diccionario de pesos y vol\u00famenes y emite el Excel de flete con f\u00f3rmulas vinculadas.'),
-        (u'M\u00f3dulo de cotizaciones', u'Solicitud y clasificaci\u00f3n de cotizaciones para mantener los precios vivos con trazabilidad de su origen.'),
-    ]),
-    kicker_c=u'Por qu\u00e9 lo constru\u00ed',
-    titulo_c=u'El expediente se atasca<br>en <em>lo repetitivo</em>.',
-    cierre=cierre([
-        u'La parte dif\u00edcil de un expediente de saneamiento no es la que consume el tiempo. El criterio \u2014qu\u00e9 tecnolog\u00eda, qu\u00e9 secuencia constructiva, qu\u00e9 partidas\u2014 se decide relativamente r\u00e1pido; lo que devora las semanas es transcribir ese criterio a cinco documentos distintos y mantenerlos cuadrados entre s\u00ed cuando algo cambia.',
-        u'Por eso el sistema no parte de una plantilla en blanco sino de la base de datos del proyecto: si el presupuesto cambia, el cronograma, el flete y las especificaciones se vuelven a derivar de la misma fuente en lugar de corregirse a mano uno por uno. Ah\u00ed es donde se van los reprocesos y las observaciones por incoherencias entre tomos.',
-        u'La divisi\u00f3n del trabajo es expl\u00edcita: Python para lo que tiene una respuesta correcta \u2014aritm\u00e9tica, CPM, formato, escritura en la base\u2014 e IA para lo que exige criterio \u2014secuencia constructiva, redacci\u00f3n de una especificaci\u00f3n sin plantilla, clasificaci\u00f3n de cotizaciones\u2014. Y todo lo que la IA propone queda marcado como propuesta hasta que un ingeniero lo firma.',
+        ('Núcleo de datos', 'Base maestra de Delphin y diccionarios de rendimientos, pesos y volúmenes unitarios, conservados como fuentes de consulta.'),
+        ('Banco de APUs', '3 002 análisis de precios unitarios de expedientes de saneamiento, con herramientas de comparación, detección de duplicados y fusión.'),
+        ('Presupuestos', 'Valida las partidas y escribe el presupuesto en una copia de la base de Delphin. Verifica el resultado antes de abrirlo.'),
+        ('Cronogramas', 'Calcula duraciones desde los APUs y el CPM a partir de la secuencia propuesta. Ajusta el plazo e incorpora el cronograma en Delphin.'),
+        ('Especificaciones técnicas', 'Ensambla un documento Word desde plantillas por código de partida. Los textos propuestos por IA quedan señalados para revisión.'),
+        ('Fletes', 'Cruza las cantidades de materiales con sus pesos y volúmenes y genera un archivo Excel con fórmulas vinculadas.'),
+        ('Cotizaciones', 'Organiza las cotizaciones y registra el origen de los precios de referencia.'),
     ]),
 ))
 
@@ -531,21 +456,21 @@ PAGINAS.append(dict(
 PAGINAS.append(dict(
     slug=u'agentes-ia',
     img=u'agentes_ia',
-    title=u'Ecosistema de agentes de inteligencia artificial \u00b7 Luis Miguel Cruz Efus',
-    desc=u'Agente aut\u00f3nomo de licitaciones de desarrollo propio: rastrea las convocatorias del SEACE, descarga y lee con IA las bases administrativas y los t\u00e9rminos de referencia, y los contrasta contra el perfil real del equipo para emitir un informe de viabilidad.',
+    title=u'Agentes de inteligencia artificial \u00b7 Luis Miguel Cruz Efus',
+    desc='Agentes de IA para consultar convocatorias del SEACE, analizar bases y contrastar requisitos con la experiencia del equipo.',
     navlabel=u'IA.04 \u00b7 Agentes aut\u00f3nomos',
     footlabel=u'IA.04 \u00b7 Agentes de IA',
     coord_izq=u'IA.04 / Agentes aut\u00f3nomos',
     coord_der=u'Python \u00b7 Gemini \u00b7 SEACE \u00b7 Ejecuci\u00f3n local',
     chips=chips([u'Desarrollo propio', u'Agentes aut\u00f3nomos', u'SEACE', u'Ejecuci\u00f3n local']),
     h1=u'Agentes<br><em>aut\u00f3nomos</em>.',
-    alt=u'Ecosistema de agentes de inteligencia artificial',
+    alt=u'Agentes de inteligencia artificial',
     fb_kicker=u'AI Agents',
     fb_titulo=u'Agentes <em style=&quot;color: var(--accent); font-style: italic;&quot;>aut\u00f3nomos</em>',
     pie_caratula=u'Sistemas internos \u00b7 uso propio',
     parrafos=parrafos([
-        u'Un agente no es un chat: es un programa que persigue un objetivo por su cuenta \u2014consulta fuentes, descarga archivos, los lee y responde una pregunta concreta\u2014 sin que nadie le d\u00e9 el siguiente paso. Construyo agentes para las tareas que hay que hacer <span style="color: var(--text);">todos los d\u00edas</span>, siempre igual, y que nadie quiere hacer todos los d\u00edas.',
-        u'El que sostengo en producci\u00f3n para el trabajo de consultor\u00eda vigila el <span style="color: var(--text);">SEACE</span>, el portal de contrataciones del Estado peruano. La arquitectura es la que repito en todos: orquestador en Python, modelo de lenguaje para la parte de juicio, panel web propio para operarlo y el criterio de decisi\u00f3n escrito en un archivo, no improvisado en cada consulta. Corre en mi m\u00e1quina; las bases descargadas y el perfil del equipo no salen de ah\u00ed.',
+        'Desarrollo agentes de IA para revisar convocatorias y documentos técnicos. El agente de licitaciones consulta el SEACE, descarga bases y TDR y compara los requisitos con la experiencia documentada del equipo.',
+        'Los análisis se consultan desde un panel web. El agente prepara un informe por convocatoria; el equipo decide si se presenta.',
     ]),
     botones=botones([
         (u'Ver los servidores MCP', u'servidores-mcp.html', u'btn-outline', False),
@@ -557,28 +482,12 @@ PAGINAS.append(dict(
         (u'Entregable', u'Informe de viabilidad', u'Una decisi\u00f3n por convocatoria'),
         (u'Ejecuci\u00f3n', u'100 % local', u'Panel web propio'),
     ]),
-    titulo_a=u'Qu\u00e9 <em style="color: var(--accent); font-style:italic;">hace solo</em>',
-    features=features([
-        (u'Busca en la fuente, no en una copia', u'Consulta el buscador del SEACE, lista los archivos de cada convocatoria y descarga los PDF de bases y t\u00e9rminos de referencia directamente del portal.'),
-        (u'Lee documentos largos y extrae lo que decide', u'Los PDF se analizan con un modelo de lenguaje para sacar requisitos, plazos, experiencia exigida y condiciones, en lugar de leerlos completos a mano.'),
-        (u'Contrasta contra el perfil real del equipo', u'El resultado se compara con la experiencia documentada \u2014proyectos, especialidades, colegiatura\u2014 para responder la \u00fanica pregunta que importa: si vale la pena presentarse.'),
-        (u'Descarta antes que maquillar', u'El perfil del equipo lleva escrita la regla de honestidad: no estirar fechas, no redondear a\u00f1os hacia arriba, no forzar equivalencias de tipolog\u00eda de obra. Si falta un requisito, el informe lo dice y recomienda no presentarse.'),
-        (u'Un informe por convocatoria, archivado', u'Cada an\u00e1lisis queda guardado y consultable desde el panel, de modo que la decisi\u00f3n de no presentarse tambi\u00e9n deja rastro y no se vuelve a evaluar dos veces lo mismo.'),
-        (u'El modelo se elige seg\u00fan el documento', u'La lista de modelos disponibles se consulta en vivo y se puede analizar tanto un PDF descargado a mano como uno tra\u00eddo directamente del portal.'),
-    ]),
     titulo_b=u'C\u00f3mo <em style="color: var(--accent); font-style:italic;">trabaja</em>',
     filas=filas([
-        (u'Agente de licitaciones (SEACE)', u'Busca convocatorias en el portal del SEACE, lista y descarga los PDF de bases administrativas y t\u00e9rminos de referencia, los analiza con un modelo de lenguaje y contrasta los requisitos contra el perfil documentado del equipo. Entrega un informe de viabilidad por convocatoria y conserva los reportes generados. Se opera desde un panel web local, con selecci\u00f3n de modelo y an\u00e1lisis tanto de PDF locales como tra\u00eddos del portal.'),
-        (u'El criterio, escrito una sola vez', u'El perfil del equipo vive en un archivo versionado \u2014experiencia laboral con fechas exactas, colegiatura, tipolog\u00edas de obra ejecutadas\u2014 y solo se modifica cuando hay un avance real y demostrable. Ah\u00ed est\u00e1 tambi\u00e9n la regla dura: nada de estirar fechas ni de forzar equivalencias para que un requisito encaje. El agente aplica ese criterio igual la primera vez que la mil\u00e9sima.'),
-        (u'Arquitectura y operaci\u00f3n', u'Orquestador en Python con interfaz de l\u00ednea de comandos y panel web propio; cada etapa \u2014buscar, descargar, leer, contrastar, informar\u2014 se ejecuta por separado para poder depurarla. Rutas relativas en todo el c\u00f3digo, rotaci\u00f3n de claves de API y ejecuci\u00f3n \u00edntegra en local: ni las bases descargadas ni el perfil del equipo salen de la m\u00e1quina.'),
-        (u'El resto del ecosistema', u'Con la misma arquitectura opero agentes internos de soporte al desarrollo \u2014auditor\u00eda de mis propias aplicaciones contra la norma, empaquetado y publicaci\u00f3n de versiones, transcripci\u00f3n de bibliograf\u00eda t\u00e9cnica\u2014. No son producto: son la infraestructura con la que se sostiene todo lo dem\u00e1s de esta secci\u00f3n.'),
-    ]),
-    kicker_c=u'Por qu\u00e9 los constru\u00ed',
-    titulo_c=u'La vigilancia diaria<br>es <em>trabajo de m\u00e1quina</em>.',
-    cierre=cierre([
-        u'Revisar el SEACE a diario es una tarea que ninguna consultora peque\u00f1a puede sostener bien: se hace a rachas, se revisa por encima y las convocatorias que encajaban se descubren cuando ya venci\u00f3 el plazo. No es un problema de criterio \u2014el criterio para descartar una convocatoria est\u00e1 claro\u2014 sino de constancia.',
-        u'Esa es exactamente la forma de un agente: objetivo estable, fuente fija, criterio escrito una vez y ejecuci\u00f3n sin cansancio. Lo que la IA aporta ah\u00ed no es creatividad, es lectura incansable de documentos largos y la capacidad de responder siempre la misma pregunta con el mismo est\u00e1ndar.',
-        u'El l\u00edmite est\u00e1 puesto a prop\u00f3sito: el agente busca, lee, contrasta y recomienda, pero la decisi\u00f3n queda del lado humano. No se presenta a ninguna licitaci\u00f3n ni firma nada. Automatizo el trabajo previo a la decisi\u00f3n, no la decisi\u00f3n.',
+        ('Consulta del SEACE', 'Busca convocatorias y descarga las bases administrativas y los términos de referencia desde el portal.'),
+        ('Análisis de requisitos', 'Identifica plazos, experiencia exigida y condiciones, y los compara con el perfil documentado del equipo. Señala los requisitos que no se cumplen.'),
+        ('Informes y seguimiento', 'Guarda un informe por convocatoria para consultar el análisis y evitar revisiones duplicadas.'),
+        ('Otras tareas', 'También uso agentes para revisar aplicaciones, preparar versiones y transcribir bibliografía técnica.'),
     ]),
 ))
 
