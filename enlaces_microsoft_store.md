@@ -1,6 +1,6 @@
 # 📱 Aplicativos en la Microsoft Store — Luis Miguel Cruz Efus
 
-Este documento recopila los enlaces y Store IDs oficiales de las 9 aplicaciones de ingeniería civil que se encuentran publicadas y disponibles en la Microsoft Store.
+Este documento recopila los enlaces y Store IDs oficiales de las 11 aplicaciones de ingeniería civil que se encuentran publicadas y disponibles en la Microsoft Store.
 
 ---
 
@@ -17,6 +17,8 @@ Este documento recopila los enlaces y Store IDs oficiales de las 9 aplicaciones 
 | 7 | **CopiMetrados** | `9NNWTS3BP9VZ` | [Ver en la Microsoft Store](https://apps.microsoft.com/detail/9NNWTS3BP9VZ?hl=es-pe&gl=PE&ocid=pdpshare) |
 | 8 | **CopiSanitario** | `9NMHFJ8HVTTW` | [Ver en la Microsoft Store](https://apps.microsoft.com/detail/9NMHFJ8HVTTW) |
 | 9 | **Muros de Sostenimiento** | `9N0758BVD70N` | [Ver en la Microsoft Store](https://apps.microsoft.com/detail/9N0758BVD70N) |
+| 10 | **CopiCronogramas** | `9NCZW6D9LFNF` | [Ver en la Microsoft Store](https://apps.microsoft.com/detail/9NCZW6D9LFNF) |
+| 11 | **CopiPluvial** | `9PBTDTX2KSF8` | [Ver en la Microsoft Store](https://apps.microsoft.com/detail/9PBTDTX2KSF8) |
 
 ---
 
@@ -67,5 +69,13 @@ Este documento recopila los enlaces y Store IDs oficiales de las 9 aplicaciones 
 * **URL:** `https://apps.microsoft.com/detail/9N0758BVD70N`
 * **Descripción:** Análisis geotécnico y dimensionamiento estructural en tiempo real de muros de contención en voladizo (E.060, E.050, ACI 318, Mononobe-Okabe, uña automática y Robot FEM).
 
+### 10. CopiCronogramas
+* **ID de la Tienda:** `9NCZW6D9LFNF`
+* **URL:** `https://apps.microsoft.com/detail/9NCZW6D9LFNF`
+* **Descripción:** Programación de obras desde Delphin Express, con cálculo CPM, ruta crítica, holguras, Gantt y curva S.
 
+### 11. CopiPluvial
+* **ID de la Tienda:** `9PBTDTX2KSF8`
+* **URL:** `https://apps.microsoft.com/detail/9PBTDTX2KSF8`
+* **Descripción:** Cálculo de lluvias, caudales y drenaje pluvial según RNE CE.040 e IS.010, con memorias en Excel y PDF.
 

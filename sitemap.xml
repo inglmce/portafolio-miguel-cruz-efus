@@ -56,8 +56,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://luismiguelcruzefus.com/aplicaciones/copicronogramas.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://luismiguelcruzefus.com/aplicaciones/copisanitario.html</loc>
     <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://luismiguelcruzefus.com/aplicaciones/copipluvial.html</loc>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

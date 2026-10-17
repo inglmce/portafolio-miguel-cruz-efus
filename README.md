@@ -16,7 +16,7 @@ PORTAFOLIO PROFESIONAL/
 │   ├── ptar-chota.html
 │   ├── ptar-san-cristobal.html
 │   └── ptap-tocache.html
-├── aplicaciones/               ← § 03 · Ecosistema de aplicaciones (9 fichas)
+├── aplicaciones/               ← § 03 · Ecosistema de aplicaciones (11 fichas)
 │   ├── asistente-sismico.html
 │   ├── copimetrados.html
 │   └── … (una por app publicada en Microsoft Store)
@@ -72,7 +72,7 @@ para que aparezca la carátula, sin tocar el HTML.
 ## ➕ Cómo añadir una **nueva aplicación**
 
 Igual que arriba, pero sobre `aplicaciones/` y la sección `<!-- ============ APLICACIONES ============ -->`.
-Recuerda actualizar el contador `9 publicados` de la cabecera de la sección y añadir el Store ID
+Recuerda actualizar el contador `11 publicados` de la cabecera de la sección y añadir el Store ID
 a `enlaces_microsoft_store.md`.
 
 ## ✏️ Cómo editar las **fichas de IA & Automatización**
