@@ -773,11 +773,11 @@
     <div class="grid md:grid-cols-12 gap-8 mb-16" data-reveal>
       <div class="md:col-span-7">
         <p class="text-lg leading-relaxed" style="color: var(--text-dim);">
-          Aplicaciones profesionales que desarrollo bajo mi marca <span style="color: var(--text);">LM Ingeniería e Innovación</span>: cada una automatiza un cálculo bajo normativa (E.030, E.060, IS.010, ACI 318, ACI 350, AASHTO 93, OS.090), con verificación trazable y memoria exportable. Diseñadas para una <span style="color: var(--text);">ejecución offline y alto rendimiento</span> en Windows.
+          Aplicaciones profesionales que desarrollo bajo mi marca <span style="color: var(--text);">LM Ingeniería e Innovación</span>: cada una automatiza un cálculo bajo normativa (E.030, E.060, IS.010, ACI 318, ACI 350, OS.090), con verificación trazable y memoria exportable. Diseñadas para una <span style="color: var(--text);">ejecución offline y alto rendimiento</span> en Windows.
         </p>
       </div>
       <div class="md:col-span-5 flex md:justify-end items-end">
-        <div class="tick-row w-full"><span>12 publicados</span></div>
+        <div class="tick-row w-full"><span>9 publicados</span></div>
       </div>
     </div>
 
@@ -943,67 +943,7 @@
         </div>
       </a>
 
-      <!-- App 9: Pavimentos — PUBLISHED -->
-      <a href="aplicaciones/pavimentos-flexibles.html" class="card group" data-reveal>
-        <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/pavimentos_flexibles/00_pav_flexibles.png" alt="Pavimentos Flexibles AASHTO 93 — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>AASHTO 93 — MTC</div><div class=&quot;serif text-3xl leading-tight&quot;>Pavimentos <em style=&quot;color: var(--accent); font-style: italic;&quot;>Flexibles</em></div></div></div>';">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="chip accent">Publicado</span>
-            <span class="chip">AASHTO 93 / MTC</span>
-          </div>
-          <h3 class="font-medium text-lg mb-2">Pavimentos Flexibles AASHTO 93</h3>
-          <p class="text-sm leading-relaxed" style="color: var(--muted);">
-            ESALs, Mr desde CBR, distribución de capas y validación de espesores mínimos MTC.
-          </p>
-          <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicación →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- App 10: Cámara Distribuidora — PUBLISHED -->
-      <a href="aplicaciones/camara-distribuidora.html" class="card group" data-reveal>
-        <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/camara_distribuidora/00_caratula_camara_distribuidora.png" alt="Cámara Distribuidora de Caudal — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>Hidráulica</div><div class=&quot;serif text-3xl leading-tight&quot;>Cámara <em style=&quot;color: var(--accent); font-style: italic;&quot;>Distribuidora</em></div></div></div>';">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="chip accent">Publicado</span>
-            <span class="chip">Hidráulica</span>
-          </div>
-          <h3 class="font-medium text-lg mb-2">Cámara Distribuidora de Caudal</h3>
-          <p class="text-sm leading-relaxed" style="color: var(--muted);">
-            Diseño de cámaras de reparto por gravedad con vertederos Kindsvater-Carter, verificación de salidas y planos hidráulicos a escala automáticos.
-          </p>
-          <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicación →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- App 11: Lechos de Secado — PUBLISHED -->
-      <a href="aplicaciones/lechos-de-secado.html" class="card group" data-reveal>
-        <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/lecho_secado_lodos/00_caratula_lechos_secado_lodos.png" alt="Lechos de Secado de Lodos — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>OS.090</div><div class=&quot;serif text-3xl leading-tight&quot;>Lechos de <em style=&quot;color: var(--accent); font-style: italic;&quot;>Secado</em></div></div></div>';">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="chip accent">Publicado</span>
-            <span class="chip">OS.090</span>
-          </div>
-          <h3 class="font-medium text-lg mb-2">Lechos de Secado de Lodos</h3>
-          <p class="text-sm leading-relaxed" style="color: var(--muted);">
-            Dimensionamiento de lechos para PTAR: producción de lodos, doble criterio de área, ciclo operativo y optimización de huella.
-          </p>
-          <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicación →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- App 12: Muros de Sostenimiento — PUBLISHED -->
+      <!-- App 9: Muros de Sostenimiento — PUBLISHED -->
       <a href="aplicaciones/muros-de-sostenimiento.html" class="card group" data-reveal>
         <div class="cover-portrait">
           <img src="imagenes/lm_ingenieria/muros_sostenimiento/00_caratula.png" alt="Muros de Sostenimiento — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>E.060 / E.050</div><div class=&quot;serif text-3xl leading-tight&quot;>Muros de <em style=&quot;color: var(--accent); font-style: italic;&quot;>Sostenimiento</em></div></div></div>';">
