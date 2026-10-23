@@ -1,0 +1,7 @@
+# Machine-local settings (absolute paths, per-device)
+.claude/
+
+# Documentos originales con datos personales no publicos (Ley N. 29733)
+terrenos/cajusol/PARTIDA REGISTRAL.pdf
+terrenos/cajusol/partida_registral.png
+
