@@ -33,7 +33,7 @@ window.LM_PREDIOS = Object.freeze([
     rolComercial: "Intermediario comercial",
     precio: null, // Dejar en null para mostrar 'A consultar / A tratar', o asignar número (p. ej. 85000)
     moneda: "USD", // 'USD' o 'PEN'
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Calle+Juan+Manuel+Iturregui,+Lambayeque,+Peru",
+    mapsUrl: "https://maps.app.goo.gl/3aX2tmAg5ktLYW1B8",
     whatsappNumero: "51926179993",
     whatsappMensaje: "Hola, me interesa el terreno en venta (Mz. M, Lote 2, 195.57 m², Lambayeque). Deseo recibir información o coordinar una visita.",
     fotos: [

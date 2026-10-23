@@ -801,10 +801,8 @@ img {
    FICHA TÉCNICA (Medidas y linderos SUNARP)
    ======================================================== */
 .technical-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 30px;
-  margin-top: 20px;
+  max-width: 840px;
+  margin: 20px auto 0;
 }
 
 .table-card {
