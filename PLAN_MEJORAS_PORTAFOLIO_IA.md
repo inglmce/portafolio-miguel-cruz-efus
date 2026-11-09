@@ -14,7 +14,7 @@
    * Headline del Hero: Modificar a algo como *"...software de ingeniería que automatiza flujos de trabajo"*.
    * Proyectos reales (PTAR y PTAP): Ayudar a decidir entre *"diseñadas"* vs *"desarrolladas bajo metodología BIM"*.
    * Reemplazo de *"automatiza el cálculo"*: Actualizarlo porque el software propio no solo calcula, sino que automatiza metrados, presupuestos, fletes, cronogramas y memorias técnicas.
-3. **Revisión profunda del espacio de trabajo:** Inspeccionar `APPS/`, `01_PRESUPUESTOS/`, `MCPs/`, `0_SKILLS/`, `.agents/`, `AGENTS.md` y `CV/0. BIOGRAFIA/00_Biografía.txt` para fundamentar la web en avances reales y tangibles.
+3. **Revisión profunda del espacio de trabajo:** Inspeccionar `APPS/`, `01_PRESUPUESTOS/`, `MCPs/`, `skills/`, `.agents/`, `AGENTS.md` y `CV/0. BIOGRAFIA/00_Biografía.txt` para fundamentar la web en avances reales y tangibles.
 4. **Depuración y Filtro de Elementos (Feedback directo del usuario):**
    * `LMBIMTools` (Plugins Revit): **SÍ VA**.
    * `CopiRobot / ETABS`: **NO VA** como tarjeta independiente (se mantiene integrado dentro de las apps de estructuras existentes).

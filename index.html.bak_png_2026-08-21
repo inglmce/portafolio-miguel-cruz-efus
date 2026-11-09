@@ -1,23 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#15171c">
-<title>Luis Miguel Cruz Efus — Ingeniero Civil · Especialista BIM · Experto en Inteligencia Artificial</title>
-<meta name="description" content="Portafolio profesional de Luis Miguel Cruz Efus. Expedientes con flujo BIM, saneamiento y PTAR, servidores MCP, agentes de inteligencia artificial y software de ingeniería.">
+<title>Luis Miguel Cruz Efus â€” Ingeniero Civil Â· Especialista BIM Â· Experto en Inteligencia Artificial</title>
+<meta name="description" content="Portafolio profesional de Luis Miguel Cruz Efus. Expedientes con flujo BIM, saneamiento y PTAR, servidores MCP, agentes de inteligencia artificial y software de ingenierÃ­a.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://luismiguelcruzefus.com/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="LM Ingeniería e Innovación — Luis Miguel Cruz Efus">
-<meta property="og:title" content="Luis Miguel Cruz Efus — Ingeniero Civil · Especialista BIM · Experto en Inteligencia Artificial">
-<meta property="og:description" content="Portafolio profesional de Luis Miguel Cruz Efus. Expedientes con flujo BIM, saneamiento y PTAR, servidores MCP, agentes de inteligencia artificial y software de ingeniería.">
+<meta property="og:site_name" content="LM IngenierÃ­a e InnovaciÃ³n â€” Luis Miguel Cruz Efus">
+<meta property="og:title" content="Luis Miguel Cruz Efus â€” Ingeniero Civil Â· Especialista BIM Â· Experto en Inteligencia Artificial">
+<meta property="og:description" content="Portafolio profesional de Luis Miguel Cruz Efus. Expedientes con flujo BIM, saneamiento y PTAR, servidores MCP, agentes de inteligencia artificial y software de ingenierÃ­a.">
 <meta property="og:url" content="https://luismiguelcruzefus.com/">
 <meta property="og:image" content="https://luismiguelcruzefus.com/imagenes/proyectos_bim/ptar_tocache/00_render_twinmotion.png">
 <meta property="og:locale" content="es_PE">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Luis Miguel Cruz Efus — Ingeniero Civil · Especialista BIM · Experto en Inteligencia Artificial">
-<meta name="twitter:description" content="Portafolio profesional de Luis Miguel Cruz Efus. Expedientes con flujo BIM, saneamiento y PTAR, servidores MCP, agentes de inteligencia artificial y software de ingeniería.">
+<meta name="twitter:title" content="Luis Miguel Cruz Efus â€” Ingeniero Civil Â· Especialista BIM Â· Experto en Inteligencia Artificial">
+<meta name="twitter:description" content="Portafolio profesional de Luis Miguel Cruz Efus. Expedientes con flujo BIM, saneamiento y PTAR, servidores MCP, agentes de inteligencia artificial y software de ingenierÃ­a.">
 <meta name="twitter:image" content="https://luismiguelcruzefus.com/imagenes/proyectos_bim/ptar_tocache/00_render_twinmotion.png">
 <script type="application/ld+json">
 {
@@ -29,7 +29,7 @@
   "familyName": "Cruz Efus",
   "url": "https://luismiguelcruzefus.com/",
   "image": "https://luismiguelcruzefus.com/imagenes/proyectos_bim/ptar_tocache/00_render_twinmotion.png",
-  "jobTitle": "Ingeniero Civil · Especialista BIM · Experto en Inteligencia Artificial",
+  "jobTitle": "Ingeniero Civil Â· Especialista BIM Â· Experto en Inteligencia Artificial",
   "worksFor": {
     "@type": "Organization",
     "name": "Hidroproject Consulting E.I.R.L."
@@ -44,17 +44,17 @@
     "addressCountry": "PE"
   },
   "knowsAbout": [
-    "Ingeniería Civil",
+    "IngenierÃ­a Civil",
     "BIM",
     "Revit",
     "Inteligencia Artificial",
     "Agentes de IA",
     "Servidores MCP (Model Context Protocol)",
-    "Automatización de Presupuestos",
+    "AutomatizaciÃ³n de Presupuestos",
     "Saneamiento",
     "PTAR",
     "PTAP",
-    "Ingeniería Estructural",
+    "IngenierÃ­a Estructural",
     "Presupuestos y Metrados"
   ],
   "sameAs": [
@@ -194,7 +194,7 @@
   .brackets::before{ top: -1px; left: -1px; border-right:none; border-bottom:none; }
   .brackets::after{ bottom: -1px; right: -1px; border-left:none; border-top:none; }
 
-  /* Buttons — equal hierarchy variants */
+  /* Buttons â€” equal hierarchy variants */
   .btn{
     display:inline-flex; align-items:center; gap: 10px;
     padding: 14px 22px;
@@ -211,7 +211,7 @@
   .btn-primary:hover{ background: var(--accent-deep); transform: translateY(-1px); }
   .btn-ghost{ background: transparent; color: var(--text); border-color: var(--line); }
   .btn-ghost:hover{ border-color: var(--accent); color: var(--accent); }
-  /* Parallel variant — same visual weight as ghost, but with accent border (for paired CTAs) */
+  /* Parallel variant â€” same visual weight as ghost, but with accent border (for paired CTAs) */
   .btn-outline{
     background: transparent;
     color: var(--text);
@@ -291,7 +291,7 @@
   }
   .stack-item:hover{ color: var(--accent); }
   .stack-item::after{
-    content:"·"; color: var(--accent); font-size: 2rem; margin-left: 14px;
+    content:"Â·"; color: var(--accent); font-size: 2rem; margin-left: 14px;
   }
 
   .field{
@@ -407,13 +407,13 @@
   }
   .mobile-menu a:last-child{ border-bottom: none; }
 
-  /* Canvas nebulosa-MEF — fondo interactivo */
+  /* Canvas nebulosa-MEF â€” fondo interactivo */
   #nebula-canvas{ position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none; display:block; }
-  /* Logo sin recuadro amarillo, más presencia */
+  /* Logo sin recuadro amarillo, mÃ¡s presencia */
   .logo-bezel{ width:auto !important; height:42px !important; border:none !important; background:transparent !important; overflow:visible !important; padding:0 !important; }
   .logo-bezel img{ width:auto !important; height:100% !important; max-width:175px; object-fit:contain; }
 
-  /* Hero — dos puertas principales */
+  /* Hero â€” dos puertas principales */
   .hero-cta-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; height:100%; }
   @media (max-width:560px){ .hero-cta-grid{ grid-template-columns:1fr; } }
   /* Apiladas a la derecha del hero */
@@ -459,10 +459,10 @@
     <a href="#top" class="nav-identity flex flex-col justify-center leading-none shrink-0 group">
       <div class="flex items-baseline gap-2.5 whitespace-nowrap mb-1.5">
         <span class="serif text-lg sm:text-xl leading-none" style="letter-spacing:-0.01em;">Luis Miguel Cruz Efus</span>
-        <span class="mono text-[0.56rem] uppercase tracking-[0.14em] hidden md:inline" style="color: var(--muted);">CIP N.° 339195</span>
+        <span class="mono text-[0.56rem] uppercase tracking-[0.14em] hidden md:inline" style="color: var(--muted);">CIP N.Â° 339195</span>
       </div>
       <div class="mono text-[0.55rem] sm:text-[0.62rem] uppercase tracking-[0.16em] flex items-center gap-1.5" style="color: var(--accent);">
-        <span style="font-size:0.7em;">◆</span> Ingeniero Civil <span style="color: var(--muted);">·</span> Especialista BIM <span style="color: var(--muted);">·</span> Experto en Inteligencia Artificial
+        <span style="font-size:0.7em;">â—†</span> Ingeniero Civil <span style="color: var(--muted);">Â·</span> Especialista BIM <span style="color: var(--muted);">Â·</span> Experto en Inteligencia Artificial
       </div>
     </a>
 
@@ -470,7 +470,7 @@
       <a href="#perfil" class="nav-link hover:text-white transition-colors">Perfil</a>
       <a href="#proyectos" class="nav-link hover:text-white transition-colors">Proyectos</a>
       <a href="#aplicaciones" class="nav-link hover:text-white transition-colors">Aplicaciones</a>
-      <a href="#ia-automatizacion" class="nav-link hover:text-white transition-colors">IA & Automatización</a>
+      <a href="#ia-automatizacion" class="nav-link hover:text-white transition-colors">IA & AutomatizaciÃ³n</a>
       <a href="#stack" class="nav-link hover:text-white transition-colors">Stack</a>
       <a href="#contacto" class="nav-link hover:text-white transition-colors">Contacto</a>
     </nav>
@@ -486,13 +486,13 @@
       <a class="nav-social hidden md:inline-flex" href="https://www.youtube.com/@lmingenieria-x1f" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
       </a>
-      <a class="nav-social hidden md:inline-flex" href="mailto:miguelefus@gmail.com" aria-label="Correo personal" title="miguelefus@gmail.com">
+      <a class="nav-social hidden md:inline-flex" href="mailto:contacto.lmingenieria@gmail.com" aria-label="Correo de contacto" title="contacto.lmingenieria@gmail.com">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>
       </a>
 
-      <a href="#contacto" class="btn btn-ghost !py-2 !px-4 !text-xs hidden sm:inline-flex">Conversemos →</a>
+      <a href="#contacto" class="btn btn-ghost !py-2 !px-4 !text-xs hidden sm:inline-flex">Conversemos â†’</a>
 
-      <button id="mobileToggle" class="lg:hidden nav-social" aria-label="Abrir menú">
+      <button id="mobileToggle" class="lg:hidden nav-social" aria-label="Abrir menÃº">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
@@ -502,7 +502,7 @@
     <a href="#perfil">Perfil</a>
     <a href="#proyectos">Proyectos</a>
     <a href="#aplicaciones">Aplicaciones</a>
-    <a href="#ia-automatizacion">IA & Automatización</a>
+    <a href="#ia-automatizacion">IA & AutomatizaciÃ³n</a>
     <a href="#stack">Stack</a>
     <a href="#contacto">Contacto</a>
   </div>
@@ -518,8 +518,8 @@
 
     <!-- Coordinate header line -->
     <div class="flex items-center justify-between mb-10 lg:mb-14">
-      <div class="coord">N.00 · Portafolio Profesional</div>
-      <div class="coord hidden md:flex">Rev. 02 · 2026 · LIM-PE</div>
+      <div class="coord">N.00 Â· Portafolio Profesional</div>
+      <div class="coord hidden md:flex">Rev. 02 Â· 2026 Â· LIM-PE</div>
     </div>
 
     <!-- Headline (left) + dos puertas principales (right, apiladas) -->
@@ -528,12 +528,12 @@
       <!-- Main display headline -->
       <div class="lg:col-span-7" data-reveal>
         <div class="mono text-[0.62rem] uppercase tracking-[0.2em] mb-6" style="color: var(--accent);">
-          ◆ &nbsp;Portafolio profesional &nbsp;·&nbsp; Saneamiento &nbsp;·&nbsp; BIM &nbsp;·&nbsp; IA & Agentes &nbsp;·&nbsp; Aplicaciones
+          â—† &nbsp;Portafolio profesional &nbsp;Â·&nbsp; Saneamiento &nbsp;Â·&nbsp; BIM &nbsp;Â·&nbsp; IA & Agentes &nbsp;Â·&nbsp; Aplicaciones
         </div>
         <h2 class="display text-[2.2rem] sm:text-[3rem] md:text-[3.4rem] lg:text-[4rem]">
-          Expedientes técnicos<br>
+          Expedientes tÃ©cnicos<br>
           con flujo <em>BIM</em>, <br>
-          y <em>software de ingeniería</em><br>
+          y <em>software de ingenierÃ­a</em><br>
           que automatiza flujos de trabajo.
         </h2>
       </div>
@@ -548,8 +548,8 @@
             </div>
             <div>
               <div class="hcp-kicker">Proyectos reales</div>
-              <h3 class="hcp-title">Casos de <em style="font-style:italic;color:var(--accent);">éxito</em></h3>
-              <p class="hcp-desc">PTAR y PTAP desarrolladas bajo metodología BIM: arquitectura, hidráulica, cálculo y presupuesto.</p>
+              <h3 class="hcp-title">Casos de <em style="font-style:italic;color:var(--accent);">Ã©xito</em></h3>
+              <p class="hcp-desc">PTAR y PTAP desarrolladas bajo metodologÃ­a BIM: arquitectura, hidrÃ¡ulica, cÃ¡lculo y presupuesto.</p>
             </div>
             <div class="hcp-foot">
               <span class="lbl">Ver proyectos</span>
@@ -564,7 +564,7 @@
             <div>
               <div class="hcp-kicker">Herramientas propias</div>
               <h3 class="hcp-title">Ecosistema de <em style="font-style:italic;color:var(--accent-2);">aplicaciones</em></h3>
-              <p class="hcp-desc">Software y automatizaciones que optimizan cálculos, presupuestos, metrados y entregables técnicos.</p>
+              <p class="hcp-desc">Software y automatizaciones que optimizan cÃ¡lculos, presupuestos, metrados y entregables tÃ©cnicos.</p>
             </div>
             <div class="hcp-foot">
               <span class="lbl">Ver aplicaciones</span>
@@ -578,11 +578,11 @@
     <!-- Resumen -->
     <div class="grid md:grid-cols-12 gap-10 mt-16 lg:mt-20 pt-12 border-t" style="border-color: var(--line-soft);" data-reveal>
       <div class="md:col-span-3">
-        <div class="mono text-[0.62rem] uppercase tracking-[0.2em]" style="color: var(--muted);">N.01 — Resumen</div>
+        <div class="mono text-[0.62rem] uppercase tracking-[0.2em]" style="color: var(--muted);">N.01 â€” Resumen</div>
       </div>
       <div class="md:col-span-9">
         <p class="text-lg leading-relaxed max-w-4xl" style="color: var(--text-dim);">
-          Cinco años de trayectoria —tres en obra, dos en consultoría— en saneamiento, PTAR, PTAP e infraestructura. Integro <span style="color: var(--text);">modelado BIM en Revit</span>, <span style="color: var(--text);">cálculo hidráulico</span> y presupuestos <span style="color: var(--text);">S10 / Delphin</span> con el desarrollo de <span style="color: var(--text);">software especializado, servidores MCP y agentes de inteligencia artificial</span> que automatizan flujos de trabajo de ingeniería.
+          Cinco aÃ±os de trayectoria â€”tres en obra, dos en consultorÃ­aâ€” en saneamiento, PTAR, PTAP e infraestructura. Integro <span style="color: var(--text);">modelado BIM en Revit</span>, <span style="color: var(--text);">cÃ¡lculo hidrÃ¡ulico</span> y presupuestos <span style="color: var(--text);">S10 / Delphin</span> con el desarrollo de <span style="color: var(--text);">software especializado, servidores MCP y agentes de inteligencia artificial</span> que automatizan flujos de trabajo de ingenierÃ­a.
         </p>
       </div>
     </div>
@@ -591,7 +591,7 @@
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-20 lg:mt-28 pt-10 border-t" style="border-color: var(--line-soft);" data-reveal>
       <div>
         <div class="stat-num"><em>05</em></div>
-        <div class="mono text-[0.7rem] uppercase tracking-[0.14em] mt-3" style="color: var(--muted);">Años de<br>experiencia</div>
+        <div class="mono text-[0.7rem] uppercase tracking-[0.14em] mt-3" style="color: var(--muted);">AÃ±os de<br>experiencia</div>
       </div>
       <div>
         <div class="stat-num"><em>10</em></div>
@@ -615,7 +615,7 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
     <div class="sec-label">
-      <span class="sec-num">§ 01</span>
+      <span class="sec-num">Â§ 01</span>
       <h2 class="sec-title">Perfil <em>profesional</em></h2>
       <span class="sec-rule"></span>
     </div>
@@ -623,14 +623,14 @@
     <div class="grid md:grid-cols-12 gap-10 lg:gap-16" data-reveal>
       <div class="md:col-span-7">
         <p class="serif text-3xl lg:text-4xl leading-[1.15]" style="color: var(--text);">
-          Reduzco reprocesos y tiempos de ingeniería combinando <em style="color: var(--accent); font-style: italic;">experiencia real en obra</em>, dominio de <em style="color: var(--accent); font-style: italic;">flujo BIM y presupuestos</em>, y la creación de <em style="color: var(--accent); font-style: italic;">agentes de IA y software especializado</em>.
+          Reduzco reprocesos y tiempos de ingenierÃ­a combinando <em style="color: var(--accent); font-style: italic;">experiencia real en obra</em>, dominio de <em style="color: var(--accent); font-style: italic;">flujo BIM y presupuestos</em>, y la creaciÃ³n de <em style="color: var(--accent); font-style: italic;">agentes de IA y software especializado</em>.
         </p>
         <div class="mt-10 space-y-5" style="color: var(--text-dim);">
           <p>
-            Mis primeros tres años los pasé en campo, liderando la construcción de 221 viviendas de interés social en Lambayeque. Los dos últimos años trabajo en Lima, dedicado a expedientes técnicos de saneamiento, PTAR, PTAP e infraestructura.
+            Mis primeros tres aÃ±os los pasÃ© en campo, liderando la construcciÃ³n de 221 viviendas de interÃ©s social en Lambayeque. Los dos Ãºltimos aÃ±os trabajo en Lima, dedicado a expedientes tÃ©cnicos de saneamiento, PTAR, PTAP e infraestructura.
           </p>
           <p>
-            En paralelo, desarrollo software de ingeniería, servidores MCP y agentes autónomos de inteligencia artificial para automatizar cálculos normativos (E.030, E.060, IS.010, ACI 318, ACI 350), pipelines de presupuestos (Delphin Express / SQLite) y complementos Add-In para Autodesk Revit. Es la demostración tangible de mi metodología: rigor técnico estricto, cero errores y máxima eficiencia operativa.
+            En paralelo, desarrollo software de ingenierÃ­a, servidores MCP y agentes autÃ³nomos de inteligencia artificial para automatizar cÃ¡lculos normativos (E.030, E.060, IS.010, ACI 318, ACI 350), pipelines de presupuestos (Delphin Express / SQLite) y complementos Add-In para Autodesk Revit. Es la demostraciÃ³n tangible de mi metodologÃ­a: rigor tÃ©cnico estricto, cero errores y mÃ¡xima eficiencia operativa.
           </p>
         </div>
       </div>
@@ -638,22 +638,22 @@
       <div class="md:col-span-5">
         <div class="border-l pl-8 space-y-8" style="border-color: var(--line);">
           <div>
-            <div class="coord mb-2">Ubicación</div>
-            <div class="text-lg">Lima, Perú</div>
+            <div class="coord mb-2">UbicaciÃ³n</div>
+            <div class="text-lg">Lima, PerÃº</div>
           </div>
           <div>
-            <div class="coord mb-2">Formación</div>
+            <div class="coord mb-2">FormaciÃ³n</div>
             <div class="text-lg">Ingeniero Civil</div>
             <div class="text-sm mt-1" style="color: var(--muted);">Universidad Nacional Pedro Ruiz Gallo</div>
           </div>
           <div>
             <div class="coord mb-2">Colegiatura</div>
-            <div class="text-lg mono">CIP N.° 339195</div>
+            <div class="text-lg mono">CIP N.Â° 339195</div>
           </div>
           <div>
             <div class="coord mb-2">Empleo actual</div>
             <div class="text-lg">Hidroproject Consulting E.I.R.L.</div>
-            <div class="text-sm mt-1" style="color: var(--muted);">Especialista BIM · Costos y Presupuestos</div>
+            <div class="text-sm mt-1" style="color: var(--muted);">Especialista BIM Â· Costos y Presupuestos</div>
           </div>
         </div>
       </div>
@@ -668,13 +668,13 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
 
     <div class="sec-label">
-      <span class="sec-num">§ 02</span>
-      <h2 class="sec-title">Casos de <em>éxito</em></h2>
+      <span class="sec-num">Â§ 02</span>
+      <h2 class="sec-title">Casos de <em>Ã©xito</em></h2>
       <span class="sec-rule"></span>
     </div>
 
     <p class="max-w-3xl mb-14 text-lg leading-relaxed" style="color: var(--text-dim);" data-reveal>
-      Plantas de agua potable y residual donde participé en el <span style="color: var(--text);">modelado BIM integral</span> (arquitectura e hidráulica), el <span style="color: var(--text);">cálculo hidráulico</span> y, en varios casos, el <span style="color: var(--text);">presupuesto</span>. Todos al mismo nivel — cada tarjeta abre su ficha técnica.
+      Plantas de agua potable y residual donde participÃ© en el <span style="color: var(--text);">modelado BIM integral</span> (arquitectura e hidrÃ¡ulica), el <span style="color: var(--text);">cÃ¡lculo hidrÃ¡ulico</span> y, en varios casos, el <span style="color: var(--text);">presupuesto</span>. Todos al mismo nivel â€” cada tarjeta abre su ficha tÃ©cnica.
     </p>
 
         <!-- Grilla uniforme de casos -->
@@ -682,25 +682,25 @@
 
       <a href="proyectos/ptar-tocache.html" class="card group block overflow-hidden">
         <div class="cover" style="aspect-ratio:16/10;">
-          <img src="imagenes/proyectos_bim/ptar_tocache/00_render_twinmotion.png" alt="PTAR Tocache — render Twinmotion del modelo BIM" loading="lazy" onerror="this.closest('.cover').classList.add('placeholder'); this.remove();">
+          <img src="imagenes/proyectos_bim/ptar_tocache/00_render_twinmotion.png" alt="PTAR Tocache â€” render Twinmotion del modelo BIM" loading="lazy" onerror="this.closest('.cover').classList.add('placeholder'); this.remove();">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="chip accent">PTAR</span>
-            <span class="chip">San Martín</span>
+            <span class="chip">San MartÃ­n</span>
           </div>
           <h3 class="serif text-2xl leading-tight">PTAR Tocache</h3>
           <div class="proj-meta">
-            <span><span class="k">Rol</span><span class="v">BIM integral · cálculo · presupuesto</span></span>
+            <span><span class="k">Rol</span><span class="v">BIM integral Â· cÃ¡lculo Â· presupuesto</span></span>
           </div>
-          <p class="text-sm leading-relaxed" style="color: var(--muted);">Reactores UASB/RAFA, lagunas facultativas, cloración y manejo de biogás.</p>
+          <p class="text-sm leading-relaxed" style="color: var(--muted);">Reactores UASB/RAFA, lagunas facultativas, cloraciÃ³n y manejo de biogÃ¡s.</p>
           <div class="proj-link mt-4">Ver caso <svg width="22" height="12" viewBox="0 0 22 12" fill="none"><path d="M1 6h19m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
       </a>
 
       <a href="proyectos/ptar-chota.html" class="card group block overflow-hidden">
         <div class="cover" style="aspect-ratio:16/10;">
-          <img src="imagenes/proyectos_bim/ptar_chota/00_twinmotion_3D_general.png" alt="PTAR Chota — vista general del modelo BIM en Twinmotion" loading="lazy" onerror="this.closest('.cover').classList.add('placeholder'); this.remove();">
+          <img src="imagenes/proyectos_bim/ptar_chota/00_twinmotion_3D_general.png" alt="PTAR Chota â€” vista general del modelo BIM en Twinmotion" loading="lazy" onerror="this.closest('.cover').classList.add('placeholder'); this.remove();">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
@@ -709,45 +709,45 @@
           </div>
           <h3 class="serif text-2xl leading-tight">PTAR Chota</h3>
           <div class="proj-meta">
-            <span><span class="k">Rol</span><span class="v">BIM integral · cálculo hidráulico</span></span>
+            <span><span class="k">Rol</span><span class="v">BIM integral Â· cÃ¡lculo hidrÃ¡ulico</span></span>
           </div>
-          <p class="text-sm leading-relaxed" style="color: var(--muted);">UASB + MBBR con sedimentadores, cloración y aprovechamiento de biogás.</p>
+          <p class="text-sm leading-relaxed" style="color: var(--muted);">UASB + MBBR con sedimentadores, cloraciÃ³n y aprovechamiento de biogÃ¡s.</p>
           <div class="proj-link mt-4">Ver caso <svg width="22" height="12" viewBox="0 0 22 12" fill="none"><path d="M1 6h19m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
       </a>
 
       <a href="proyectos/ptap-tocache.html" class="card group block overflow-hidden">
         <div class="cover" style="aspect-ratio:16/10;">
-          <img src="imagenes/proyectos_bim/ptap_tocache/00_render1_vista3d_twinmotion.png" alt="PTAP Tocache — render Twinmotion del modelo BIM" loading="lazy" onerror="this.closest('.cover').classList.add('placeholder'); this.remove();">
+          <img src="imagenes/proyectos_bim/ptap_tocache/00_render1_vista3d_twinmotion.png" alt="PTAP Tocache â€” render Twinmotion del modelo BIM" loading="lazy" onerror="this.closest('.cover').classList.add('placeholder'); this.remove();">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="chip accent">PTAP</span>
-            <span class="chip">San Martín</span>
+            <span class="chip">San MartÃ­n</span>
           </div>
           <h3 class="serif text-2xl leading-tight">PTAP Tocache</h3>
           <div class="proj-meta">
-            <span><span class="k">Rol</span><span class="v">BIM integral · cálculo · presupuesto hidráulico</span></span>
+            <span><span class="k">Rol</span><span class="v">BIM integral Â· cÃ¡lculo Â· presupuesto hidrÃ¡ulico</span></span>
           </div>
-          <p class="text-sm leading-relaxed" style="color: var(--muted);">Filtración rápida completa: floculación, sedimentación laminar y filtros duales.</p>
+          <p class="text-sm leading-relaxed" style="color: var(--muted);">FiltraciÃ³n rÃ¡pida completa: floculaciÃ³n, sedimentaciÃ³n laminar y filtros duales.</p>
           <div class="proj-link mt-4">Ver caso <svg width="22" height="12" viewBox="0 0 22 12" fill="none"><path d="M1 6h19m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
       </a>
 
       <a href="proyectos/ptar-san-cristobal.html" class="card group block overflow-hidden">
         <div class="cover" style="aspect-ratio:16/10;">
-          <img src="imagenes/proyectos_bim/ptar_san_cristrobal_ayacucho/00_render_twinmotion_vista3d_lechos_secado.png" alt="PTAR San Cristóbal — render Twinmotion del modelo BIM" loading="lazy" onerror="this.closest('.cover').classList.add('placeholder'); this.remove();">
+          <img src="imagenes/proyectos_bim/ptar_san_cristrobal_ayacucho/00_render_twinmotion_vista3d_lechos_secado.png" alt="PTAR San CristÃ³bal â€” render Twinmotion del modelo BIM" loading="lazy" onerror="this.closest('.cover').classList.add('placeholder'); this.remove();">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="chip accent">PTAR</span>
             <span class="chip">Ayacucho</span>
           </div>
-          <h3 class="serif text-2xl leading-tight">PTAR San Cristóbal</h3>
+          <h3 class="serif text-2xl leading-tight">PTAR San CristÃ³bal</h3>
           <div class="proj-meta">
             <span><span class="k">Rol</span><span class="v">BIM integral (Arq. + Hid.)</span></span>
           </div>
-          <p class="text-sm leading-relaxed" style="color: var(--muted);">Planta compacta MBBR para condominio, con reúso del efluente para riego.</p>
+          <p class="text-sm leading-relaxed" style="color: var(--muted);">Planta compacta MBBR para condominio, con reÃºso del efluente para riego.</p>
           <div class="proj-link mt-4">Ver caso <svg width="22" height="12" viewBox="0 0 22 12" fill="none"><path d="M1 6h19m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
       </a>
@@ -755,7 +755,7 @@
     </div>
 
     <p class="mono text-xs uppercase tracking-[0.14em] mt-10 text-center" style="color: var(--muted);" data-reveal>
-      ◆ &nbsp;&nbsp;Selección de expedientes e infraestructura de saneamiento</p>
+      â—† &nbsp;&nbsp;SelecciÃ³n de expedientes e infraestructura de saneamiento</p>
 
   </div>
 </section>
@@ -765,7 +765,7 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
     <div class="sec-label">
-      <span class="sec-num">§ 03</span>
+      <span class="sec-num">Â§ 03</span>
       <h2 class="sec-title">Ecosistema de <em>aplicaciones</em></h2>
       <span class="sec-rule"></span>
     </div>
@@ -773,7 +773,7 @@
     <div class="grid md:grid-cols-12 gap-8 mb-16" data-reveal>
       <div class="md:col-span-7">
         <p class="text-lg leading-relaxed" style="color: var(--text-dim);">
-          Aplicaciones profesionales que desarrollo bajo mi marca <span style="color: var(--text);">LM Ingeniería e Innovación</span>: cada una automatiza un cálculo bajo normativa (E.030, E.060, IS.010, ACI 318, ACI 350, OS.090), con verificación trazable y memoria exportable. Diseñadas para una <span style="color: var(--text);">ejecución offline y alto rendimiento</span> en Windows.
+          Aplicaciones profesionales que desarrollo bajo mi marca <span style="color: var(--text);">LM IngenierÃ­a e InnovaciÃ³n</span>: cada una automatiza un cÃ¡lculo bajo normativa (E.030, E.060, IS.010, ACI 318, ACI 350, OS.090), con verificaciÃ³n trazable y memoria exportable. DiseÃ±adas para una <span style="color: var(--text);">ejecuciÃ³n offline y alto rendimiento</span> en Windows.
         </p>
       </div>
       <div class="md:col-span-5 flex md:justify-end items-end">
@@ -783,70 +783,70 @@
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <!-- App 1: Asistente Sísmico — PUBLISHED -->
+      <!-- App 1: Asistente SÃ­smico â€” PUBLISHED -->
       <a href="aplicaciones/asistente-sismico.html" class="card group" data-reveal>
         <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/asistente_sismico_e030_2026/00_caratula.png" alt="Asistente Sísmico E.030 — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>N.E.030 — 2026</div><div class=&quot;serif text-3xl leading-tight&quot;>Asistente <em style=&quot;color: var(--accent); font-style: italic;&quot;>Sísmico</em></div></div></div>';">
+          <img src="imagenes/lm_ingenieria/asistente_sismico_e030_2026/00_caratula.png" alt="Asistente SÃ­smico E.030 â€” carÃ¡tula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>N.E.030 â€” 2026</div><div class=&quot;serif text-3xl leading-tight&quot;>Asistente <em style=&quot;color: var(--accent); font-style: italic;&quot;>SÃ­smico</em></div></div></div>';">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="chip accent">Publicado</span>
             <span class="chip">E.030</span>
           </div>
-          <h3 class="font-medium text-lg mb-2">Asistente Sísmico E.030 — 2026</h3>
+          <h3 class="font-medium text-lg mb-2">Asistente SÃ­smico E.030 â€” 2026</h3>
           <p class="text-sm leading-relaxed" style="color: var(--muted);">
-            Apoya la verificación sísmica: parámetros de sitio, espectros, cortantes estáticos, derivas, irregularidades y escalamiento dinámico. Importa resultados de ETABS y genera memoria normativa.
+            Apoya la verificaciÃ³n sÃ­smica: parÃ¡metros de sitio, espectros, cortantes estÃ¡ticos, derivas, irregularidades y escalamiento dinÃ¡mico. Importa resultados de ETABS y genera memoria normativa.
           </p>
           <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicación →</span>
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicaciÃ³n â†’</span>
           </div>
         </div>
       </a>
 
-      <!-- App 2: Reservorio Rectangular — PUBLISHED -->
+      <!-- App 2: Reservorio Rectangular â€” PUBLISHED -->
       <a href="aplicaciones/reservorio-rectangular.html" class="card group" data-reveal>
         <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/reservorios_rectangulares/00_reservorios_rectangulares.png" alt="Reservorio Rectangular ACI 350 — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>ACI 350 / E.060</div><div class=&quot;serif text-3xl leading-tight&quot;>Reservorio <em style=&quot;color: var(--accent); font-style: italic;&quot;>Rectangular</em></div></div></div>';">
+          <img src="imagenes/lm_ingenieria/reservorios_rectangulares/00_reservorios_rectangulares.png" alt="Reservorio Rectangular ACI 350 â€” carÃ¡tula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>ACI 350 / E.060</div><div class=&quot;serif text-3xl leading-tight&quot;>Reservorio <em style=&quot;color: var(--accent); font-style: italic;&quot;>Rectangular</em></div></div></div>';">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="chip accent">Publicado</span>
             <span class="chip">ACI 350 / E.060</span>
           </div>
-          <h3 class="font-medium text-lg mb-2">Reservorio Rectangular — ACI 350 + Robot</h3>
+          <h3 class="font-medium text-lg mb-2">Reservorio Rectangular â€” ACI 350 + Robot</h3>
           <p class="text-sm leading-relaxed" style="color: var(--muted);">
-            Memoria completa para reservorios de concreto armado, con modelo FEM automático en Robot, cargas sísmicas ACI 350.3-20 y diseño del refuerzo integrado.
+            Memoria completa para reservorios de concreto armado, con modelo FEM automÃ¡tico en Robot, cargas sÃ­smicas ACI 350.3-20 y diseÃ±o del refuerzo integrado.
           </p>
           <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicación →</span>
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicaciÃ³n â†’</span>
           </div>
         </div>
       </a>
 
-      <!-- App 3: Reservorio Circular — PUBLISHED -->
+      <!-- App 3: Reservorio Circular â€” PUBLISHED -->
       <a href="aplicaciones/reservorio-circular.html" class="card group" data-reveal>
         <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/reservorios_circulares/00_reservorios_circulares.png" alt="Reservorio Circular ACI 350 — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>ACI 350 / E.060</div><div class=&quot;serif text-3xl leading-tight&quot;>Reservorio <em style=&quot;color: var(--accent); font-style: italic;&quot;>Circular</em></div></div></div>';">
+          <img src="imagenes/lm_ingenieria/reservorios_circulares/00_reservorios_circulares.png" alt="Reservorio Circular ACI 350 â€” carÃ¡tula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>ACI 350 / E.060</div><div class=&quot;serif text-3xl leading-tight&quot;>Reservorio <em style=&quot;color: var(--accent); font-style: italic;&quot;>Circular</em></div></div></div>';">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="chip accent">Publicado</span>
             <span class="chip">ACI 350 / E.060</span>
           </div>
-          <h3 class="font-medium text-lg mb-2">Reservorio Circular — ACI 350</h3>
+          <h3 class="font-medium text-lg mb-2">Reservorio Circular â€” ACI 350</h3>
           <p class="text-sm leading-relaxed" style="color: var(--muted);">
-            Memoria de cálculo para reservorios circulares de concreto armado contenedores de líquido, con diseño del refuerzo y verificación sísmica ACI 350.3-20.
+            Memoria de cÃ¡lculo para reservorios circulares de concreto armado contenedores de lÃ­quido, con diseÃ±o del refuerzo y verificaciÃ³n sÃ­smica ACI 350.3-20.
           </p>
           <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicación →</span>
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicaciÃ³n â†’</span>
           </div>
         </div>
       </a>
 
-      <!-- App 4: CopiMetrados — PUBLISHED -->
+      <!-- App 4: CopiMetrados â€” PUBLISHED -->
       <a href="aplicaciones/copimetrados.html" class="card group" data-reveal>
         <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/copimetrados/00_caratula.png" alt="CopiMetrados — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>NTP / Delphin</div><div class=&quot;serif text-3xl leading-tight&quot;>Copi<em style=&quot;color: var(--accent); font-style: italic;&quot;>Metrados</em></div></div></div>';">
+          <img src="imagenes/lm_ingenieria/copimetrados/00_caratula.png" alt="CopiMetrados â€” carÃ¡tula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>NTP / Delphin</div><div class=&quot;serif text-3xl leading-tight&quot;>Copi<em style=&quot;color: var(--accent); font-style: italic;&quot;>Metrados</em></div></div></div>';">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
@@ -855,58 +855,58 @@
           </div>
           <h3 class="font-medium text-lg mb-2">CopiMetrados</h3>
           <p class="text-sm leading-relaxed" style="color: var(--muted);">
-            Planillas dinámicas de metrados (Resumen, Sustento, Acero) conectadas con Delphin Express, con edición ágil de alto rendimiento, asistente inteligente de validación y exportación a Excel y PDF.
+            Planillas dinÃ¡micas de metrados (Resumen, Sustento, Acero) conectadas con Delphin Express, con ediciÃ³n Ã¡gil de alto rendimiento, asistente inteligente de validaciÃ³n y exportaciÃ³n a Excel y PDF.
           </p>
           <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicación →</span>
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicaciÃ³n â†’</span>
           </div>
         </div>
       </a>
 
-      <!-- App 5: CopiSanitario — PUBLISHED -->
+      <!-- App 5: CopiSanitario â€” PUBLISHED -->
       <a href="aplicaciones/copisanitario.html" class="card group" data-reveal>
         <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/copisanitario/00_caratula.png" alt="CopiSanitario — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>IS.010 / IS.020 / OS.090</div><div class=&quot;serif text-3xl leading-tight&quot;>Copi<em style=&quot;color: var(--accent); font-style: italic;&quot;>Sanitario</em></div></div></div>';">
+          <img src="imagenes/lm_ingenieria/copisanitario/00_caratula.png" alt="CopiSanitario â€” carÃ¡tula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>IS.010 / IS.020 / OS.090</div><div class=&quot;serif text-3xl leading-tight&quot;>Copi<em style=&quot;color: var(--accent); font-style: italic;&quot;>Sanitario</em></div></div></div>';">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="chip accent">Publicado</span>
             <span class="chip">IS.010 / IS.020 / OS.090</span>
           </div>
-          <h3 class="font-medium text-lg mb-2">CopiSanitario — Suite Sanitarias</h3>
+          <h3 class="font-medium text-lg mb-2">CopiSanitario â€” Suite Sanitarias</h3>
           <p class="text-sm leading-relaxed" style="color: var(--muted);">
-            Suite de 13 módulos especializados para diseño, cálculo hidráulico (agua, desagüe, bombeo, tratamiento) y generación de memorias A4 auditables en Excel y PDF.
+            Suite de 13 mÃ³dulos especializados para diseÃ±o, cÃ¡lculo hidrÃ¡ulico (agua, desagÃ¼e, bombeo, tratamiento) y generaciÃ³n de memorias A4 auditables en Excel y PDF.
           </p>
           <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicación →</span>
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicaciÃ³n â†’</span>
           </div>
         </div>
       </a>
 
-      <!-- App 6: Muros de Corte — PUBLISHED -->
+      <!-- App 6: Muros de Corte â€” PUBLISHED -->
       <a href="aplicaciones/muros-de-corte.html" class="card group" data-reveal>
         <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/muros_de_corte_e060_aci318/00_caratula.png" alt="Muros de Corte E.060 / ACI 318 — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>ACI 318 / E.060</div><div class=&quot;serif text-3xl leading-tight&quot;>Muros de <em style=&quot;color: var(--accent); font-style: italic;&quot;>Corte</em></div></div></div>';">
+          <img src="imagenes/lm_ingenieria/muros_de_corte_e060_aci318/00_caratula.png" alt="Muros de Corte E.060 / ACI 318 â€” carÃ¡tula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>ACI 318 / E.060</div><div class=&quot;serif text-3xl leading-tight&quot;>Muros de <em style=&quot;color: var(--accent); font-style: italic;&quot;>Corte</em></div></div></div>';">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="chip accent">Publicado</span>
             <span class="chip">E.060 / ACI 318-25</span>
           </div>
-          <h3 class="font-medium text-lg mb-2">Muros de Corte CºAº — E.060 / ACI 318-25</h3>
+          <h3 class="font-medium text-lg mb-2">Muros de Corte CÂºAÂº â€” E.060 / ACI 318-25</h3>
           <p class="text-sm leading-relaxed" style="color: var(--muted);">
-            Diseña y verifica muros estructurales: análisis P-M por fibras, decisión de elementos de borde especiales, cortante directo y por capacidad, confinamiento y diagrama de interacción.
+            DiseÃ±a y verifica muros estructurales: anÃ¡lisis P-M por fibras, decisiÃ³n de elementos de borde especiales, cortante directo y por capacidad, confinamiento y diagrama de interacciÃ³n.
           </p>
           <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicación →</span>
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicaciÃ³n â†’</span>
           </div>
         </div>
       </a>
 
-      <!-- App 7: Vigas — PUBLISHED -->
+      <!-- App 7: Vigas â€” PUBLISHED -->
       <a href="aplicaciones/vigas-ca.html" class="card group" data-reveal>
         <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/vigas_ca/00_vigas_ca.png" alt="Vigas de Concreto Armado — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>E.060</div><div class=&quot;serif text-3xl leading-tight&quot;>Vigas <em style=&quot;color: var(--accent); font-style: italic;&quot;>CºAº</em></div></div></div>';">
+          <img src="imagenes/lm_ingenieria/vigas_ca/00_vigas_ca.png" alt="Vigas de Concreto Armado â€” carÃ¡tula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>E.060</div><div class=&quot;serif text-3xl leading-tight&quot;>Vigas <em style=&quot;color: var(--accent); font-style: italic;&quot;>CÂºAÂº</em></div></div></div>';">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
@@ -915,18 +915,18 @@
           </div>
           <h3 class="font-medium text-lg mb-2">Vigas de Concreto Armado</h3>
           <p class="text-sm leading-relaxed" style="color: var(--muted);">
-            Diseño por flexión, cortante y servicio. Cuantías normativas y despiece para detalle de planos.
+            DiseÃ±o por flexiÃ³n, cortante y servicio. CuantÃ­as normativas y despiece para detalle de planos.
           </p>
           <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicación →</span>
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicaciÃ³n â†’</span>
           </div>
         </div>
       </a>
 
-      <!-- App 8: Columnas — PUBLISHED -->
+      <!-- App 8: Columnas â€” PUBLISHED -->
       <a href="aplicaciones/columnas-rectangulares.html" class="card group" data-reveal>
         <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/columnas_rectangulares_ca/00_columnas_rectangulares.png" alt="Columnas Rectangulares — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>E.060 / E.030</div><div class=&quot;serif text-3xl leading-tight&quot;>Columnas <em style=&quot;color: var(--accent); font-style: italic;&quot;>RC</em></div></div></div>';">
+          <img src="imagenes/lm_ingenieria/columnas_rectangulares_ca/00_columnas_rectangulares.png" alt="Columnas Rectangulares â€” carÃ¡tula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>E.060 / E.030</div><div class=&quot;serif text-3xl leading-tight&quot;>Columnas <em style=&quot;color: var(--accent); font-style: italic;&quot;>RC</em></div></div></div>';">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
@@ -935,30 +935,30 @@
           </div>
           <h3 class="font-medium text-lg mb-2">Columnas Rectangulares</h3>
           <p class="text-sm leading-relaxed" style="color: var(--muted);">
-            Flexocompresión biaxial 3D, esbeltez, P–Δ y confinamiento sísmico. Importa Column Forces de ETABS.
+            FlexocompresiÃ³n biaxial 3D, esbeltez, Pâ€“Î” y confinamiento sÃ­smico. Importa Column Forces de ETABS.
           </p>
           <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicación →</span>
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicaciÃ³n â†’</span>
           </div>
         </div>
       </a>
 
-      <!-- App 9: Muros de Sostenimiento — PUBLISHED -->
+      <!-- App 9: Muros de Sostenimiento â€” PUBLISHED -->
       <a href="aplicaciones/muros-de-sostenimiento.html" class="card group" data-reveal>
         <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/muros_sostenimiento/00_caratula.png" alt="Muros de Sostenimiento — carátula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>E.060 / E.050</div><div class=&quot;serif text-3xl leading-tight&quot;>Muros de <em style=&quot;color: var(--accent); font-style: italic;&quot;>Sostenimiento</em></div></div></div>';">
+          <img src="imagenes/lm_ingenieria/muros_sostenimiento/00_caratula.png" alt="Muros de Sostenimiento â€” carÃ¡tula" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>E.060 / E.050</div><div class=&quot;serif text-3xl leading-tight&quot;>Muros de <em style=&quot;color: var(--accent); font-style: italic;&quot;>Sostenimiento</em></div></div></div>';">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="chip accent">Publicado</span>
             <span class="chip">E.060 / E.050</span>
           </div>
-          <h3 class="font-medium text-lg mb-2">Muros de Sostenimiento — E.060 / E.050</h3>
+          <h3 class="font-medium text-lg mb-2">Muros de Sostenimiento â€” E.060 / E.050</h3>
           <p class="text-sm leading-relaxed" style="color: var(--muted);">
-            Diseño geotécnico y estructural de muros en voladizo en tiempo real con Mononobe-Okabe, uña automática y análisis FEM bidireccional en Robot.
+            DiseÃ±o geotÃ©cnico y estructural de muros en voladizo en tiempo real con Mononobe-Okabe, uÃ±a automÃ¡tica y anÃ¡lisis FEM bidireccional en Robot.
           </p>
           <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicación →</span>
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver aplicaciÃ³n â†’</span>
           </div>
         </div>
       </a>
@@ -968,25 +968,25 @@
   </div>
 </section>
 
-<!-- ============ IA & AUTOMATIZACIÓN ============ -->
+<!-- ============ IA & AUTOMATIZACIÃ“N ============ -->
 <section id="ia-automatizacion" class="py-24 lg:py-32 relative">
   <div class="absolute inset-0 blueprint-bg-sm" style="opacity:0.35"></div>
   <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
 
     <div class="sec-label">
-      <span class="sec-num">§ 04</span>
-      <h2 class="sec-title">Inteligencia artificial &amp; <em>automatización</em></h2>
+      <span class="sec-num">Â§ 04</span>
+      <h2 class="sec-title">Inteligencia artificial &amp; <em>automatizaciÃ³n</em></h2>
       <span class="sec-rule"></span>
     </div>
 
     <div class="grid md:grid-cols-12 gap-8 mb-14" data-reveal>
       <div class="md:col-span-8">
         <p class="text-lg leading-relaxed" style="color: var(--text-dim);">
-          La otra mitad de mi trabajo no se entrega en planos: son <span style="color: var(--text);">complementos para Revit</span>, <span style="color: var(--text);">servidores MCP</span> que le dan manos a un agente de IA sobre Delphin, Word y Excel, y <span style="color: var(--text);">agentes autónomos</span> que resuelven solos la parte repetitiva de un expediente. Todo corre en local, sobre datos propios y con la norma peruana escrita en el código.
+          La otra mitad de mi trabajo no se entrega en planos: son <span style="color: var(--text);">complementos para Revit</span>, <span style="color: var(--text);">servidores MCP</span> que le dan manos a un agente de IA sobre Delphin, Word y Excel, y <span style="color: var(--text);">agentes autÃ³nomos</span> que resuelven solos la parte repetitiva de un expediente. Todo corre en local, sobre datos propios y con la norma peruana escrita en el cÃ³digo.
         </p>
       </div>
       <div class="md:col-span-4 flex md:justify-end items-end">
-        <div class="tick-row w-full"><span>4 líneas de desarrollo</span></div>
+        <div class="tick-row w-full"><span>4 lÃ­neas de desarrollo</span></div>
       </div>
     </div>
 
@@ -995,19 +995,19 @@
       <!-- IA 1: LMBIMTools -->
       <a href="ia/lmbimtools.html" class="card group" data-reveal>
         <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/lmbimtools/00_caratula.png" alt="LMBIMTools — Add-In para Autodesk Revit" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>Revit Add-In · .NET</div><div class=&quot;serif text-3xl leading-tight&quot;>LMBIM<em style=&quot;color: var(--accent); font-style: italic;&quot;>Tools</em></div></div></div>';">
+          <img src="imagenes/lm_ingenieria/lmbimtools/00_caratula.png" alt="LMBIMTools â€” Add-In para Autodesk Revit" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>Revit Add-In Â· .NET</div><div class=&quot;serif text-3xl leading-tight&quot;>LMBIM<em style=&quot;color: var(--accent); font-style: italic;&quot;>Tools</em></div></div></div>';">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="chip accent">Plugins BIM</span>
-            <span class="chip">Revit 2025–2027</span>
+            <span class="chip">Revit 2025â€“2027</span>
           </div>
-          <h3 class="font-medium text-lg mb-2">LMBIMTools — Add-In para Revit</h3>
+          <h3 class="font-medium text-lg mb-2">LMBIMTools â€” Add-In para Revit</h3>
           <p class="text-sm leading-relaxed" style="color: var(--muted);">
             Nueve herramientas en C#/.NET que modelan en 3D el acero de columnas, vigas, zapatas, muros y losas con los espaciamientos, ganchos y confinamientos de la E.060, y arman el despiece 2D acotado del plano.
           </p>
           <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver detalle →</span>
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver detalle â†’</span>
           </div>
         </div>
       </a>
@@ -1027,27 +1027,27 @@
             Tres servidores locales que le dan manos a un agente de IA: <strong style="color: var(--text-dim); font-weight:500;">delphin-presupuestos</strong> (27 herramientas sobre la base SQLite de Delphin Express), <strong style="color: var(--text-dim); font-weight:500;">Word MCP</strong> y <strong style="color: var(--text-dim); font-weight:500;">Excel MCP</strong>.
           </p>
           <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver detalle →</span>
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver detalle â†’</span>
           </div>
         </div>
       </a>
 
-      <!-- IA 3: Automatización de presupuestos -->
+      <!-- IA 3: AutomatizaciÃ³n de presupuestos -->
       <a href="ia/automatizacion-presupuestos.html" class="card group" data-reveal>
         <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/automatizacion_presupuestos/00_caratula.png" alt="Automatización de presupuestos y entregables de obra" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>Pipeline Python + IA</div><div class=&quot;serif text-3xl leading-tight&quot;>Presupuestos <em style=&quot;color: var(--accent); font-style: italic;&quot;>automáticos</em></div></div></div>';">
+          <img src="imagenes/lm_ingenieria/automatizacion_presupuestos/00_caratula.png" alt="AutomatizaciÃ³n de presupuestos y entregables de obra" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>Pipeline Python + IA</div><div class=&quot;serif text-3xl leading-tight&quot;>Presupuestos <em style=&quot;color: var(--accent); font-style: italic;&quot;>automÃ¡ticos</em></div></div></div>';">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="chip accent">Costos y entregables</span>
-            <span class="chip">Delphin · CPM</span>
+            <span class="chip">Delphin Â· CPM</span>
           </div>
-          <h3 class="font-medium text-lg mb-2">Automatización de presupuestos</h3>
+          <h3 class="font-medium text-lg mb-2">AutomatizaciÃ³n de presupuestos</h3>
           <p class="text-sm leading-relaxed" style="color: var(--muted);">
             Pipeline en Python que arma el presupuesto contra un banco propio de 3 002 APUs, lo inyecta en Delphin Express con respaldo previo, deriva el cronograma CPM de los rendimientos y saca fletes, especificaciones y cotizaciones.
           </p>
           <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver detalle →</span>
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver detalle â†’</span>
           </div>
         </div>
       </a>
@@ -1055,19 +1055,19 @@
       <!-- IA 4: Agentes de IA -->
       <a href="ia/agentes-ia.html" class="card group" data-reveal>
         <div class="cover-portrait">
-          <img src="imagenes/lm_ingenieria/agentes_ia/00_caratula.png" alt="Ecosistema de agentes de inteligencia artificial" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>AI Agents</div><div class=&quot;serif text-3xl leading-tight&quot;>Agentes <em style=&quot;color: var(--accent); font-style: italic;&quot;>autónomos</em></div></div></div>';">
+          <img src="imagenes/lm_ingenieria/agentes_ia/00_caratula.png" alt="Ecosistema de agentes de inteligencia artificial" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;absolute inset-0 flex items-center justify-center&quot;><div class=&quot;text-center px-6&quot;><div class=&quot;mono text-[0.62rem] uppercase tracking-[0.18em] mb-3&quot; style=&quot;color: var(--accent);&quot;>AI Agents</div><div class=&quot;serif text-3xl leading-tight&quot;>Agentes <em style=&quot;color: var(--accent); font-style: italic;&quot;>autÃ³nomos</em></div></div></div>';">
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
-            <span class="chip accent">Agentes autónomos</span>
-            <span class="chip">SEACE · Licitaciones</span>
+            <span class="chip accent">Agentes autÃ³nomos</span>
+            <span class="chip">SEACE Â· Licitaciones</span>
           </div>
           <h3 class="font-medium text-lg mb-2">Ecosistema de agentes de IA</h3>
           <p class="text-sm leading-relaxed" style="color: var(--muted);">
             Programas que persiguen solos un objetivo. El agente de <strong style="color: var(--text-dim); font-weight:500;">licitaciones</strong> rastrea las convocatorias del SEACE, descarga las bases y los TDR, los lee con IA y los contrasta contra el perfil real del equipo para decidir si vale la pena presentarse.
           </p>
           <div class="mt-5 flex items-center justify-between">
-            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver detalle →</span>
+            <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--accent);">Ver detalle â†’</span>
           </div>
         </div>
       </a>
@@ -1090,7 +1090,7 @@
       </div>
       <div class="border-l pl-5" style="border-color: var(--accent);">
         <div class="serif text-3xl leading-none" style="color: var(--accent);">100 %</div>
-        <div class="mono text-[0.62rem] uppercase tracking-[0.16em] mt-3" style="color: var(--muted);">Ejecución local<br>sobre datos propios</div>
+        <div class="mono text-[0.62rem] uppercase tracking-[0.16em] mt-3" style="color: var(--muted);">EjecuciÃ³n local<br>sobre datos propios</div>
       </div>
     </div>
 
@@ -1102,8 +1102,8 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10 mb-10">
     <div class="flex items-baseline justify-between flex-wrap gap-4">
       <div class="flex items-baseline gap-5">
-        <span class="sec-num">§ 05</span>
-        <span class="mono text-xs uppercase tracking-[0.18em]" style="color: var(--muted);">Stack tecnológico</span>
+        <span class="sec-num">Â§ 05</span>
+        <span class="mono text-xs uppercase tracking-[0.18em]" style="color: var(--muted);">Stack tecnolÃ³gico</span>
       </div>
       <span class="mono text-xs uppercase tracking-[0.14em]" style="color: var(--muted);">Dominio y herramientas probadas</span>
     </div>
@@ -1112,7 +1112,7 @@
   <div class="relative overflow-hidden">
     <div class="stack-track">
       <span class="stack-item">Revit</span>
-      <span class="stack-item">Revit API · Add-Ins</span>
+      <span class="stack-item">Revit API Â· Add-Ins</span>
       <span class="stack-item">AutoCAD</span>
       <span class="stack-item">Civil 3D</span>
       <span class="stack-item">S10 Costos</span>
@@ -1129,7 +1129,7 @@
       <span class="stack-item">Excel Avanzado</span>
       <span class="stack-item">INVIERTE.PE</span>
       <span class="stack-item">Revit</span>
-      <span class="stack-item">Revit API · Add-Ins</span>
+      <span class="stack-item">Revit API Â· Add-Ins</span>
       <span class="stack-item">AutoCAD</span>
       <span class="stack-item">Civil 3D</span>
       <span class="stack-item">S10 Costos</span>
@@ -1152,19 +1152,19 @@
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <div class="border-l pl-5" style="border-color: var(--accent);">
         <div class="mono text-[0.62rem] uppercase tracking-[0.18em] mb-2" style="color: var(--accent);">Avanzado</div>
-        <div class="text-sm leading-relaxed">Revit · AutoCAD · S10 · Delphin Express · Excel avanzado</div>
+        <div class="text-sm leading-relaxed">Revit Â· AutoCAD Â· S10 Â· Delphin Express Â· Excel avanzado</div>
       </div>
       <div class="border-l pl-5" style="border-color: var(--line);">
         <div class="mono text-[0.62rem] uppercase tracking-[0.18em] mb-2" style="color: var(--text-dim);">Intermedio</div>
-        <div class="text-sm leading-relaxed">MS Project · Robot Structural · Civil 3D</div>
+        <div class="text-sm leading-relaxed">MS Project Â· Robot Structural Â· Civil 3D</div>
       </div>
       <div class="border-l pl-5" style="border-color: var(--line);">
         <div class="mono text-[0.62rem] uppercase tracking-[0.18em] mb-2" style="color: var(--text-dim);">Operativo</div>
-        <div class="text-sm leading-relaxed">Twinmotion · INVIERTE.PE · SEACE · OSCE</div>
+        <div class="text-sm leading-relaxed">Twinmotion Â· INVIERTE.PE Â· SEACE Â· OSCE</div>
       </div>
       <div class="border-l pl-5" style="border-color: var(--accent);">
         <div class="mono text-[0.62rem] uppercase tracking-[0.18em] mb-2" style="color: var(--accent);">Diferencial</div>
-        <div class="text-sm leading-relaxed">Servidores MCP y agentes de IA · Add-Ins propios para Revit (LMBIMTools) · Automatización de presupuestos sobre Delphin / SQLite · Software de ingeniería publicado en Microsoft Store</div>
+        <div class="text-sm leading-relaxed">Servidores MCP y agentes de IA Â· Add-Ins propios para Revit (LMBIMTools) Â· AutomatizaciÃ³n de presupuestos sobre Delphin / SQLite Â· Software de ingenierÃ­a publicado en Microsoft Store</div>
       </div>
     </div>
   </div>
@@ -1180,13 +1180,13 @@
     <div class="grid lg:grid-cols-12 gap-12 lg:gap-20">
 
       <div class="lg:col-span-7">
-        <div class="coord mb-6">N.06 · Contacto</div>
+        <div class="coord mb-6">N.06 Â· Contacto</div>
         <h2 class="display text-5xl md:text-6xl lg:text-7xl mb-10" data-reveal>
           Hablemos de tu<br>
-          <em>próximo expediente</em>.
+          <em>prÃ³ximo expediente</em>.
         </h2>
         <p class="text-lg leading-relaxed mb-12 max-w-xl" style="color: var(--text-dim);" data-reveal>
-          Disponible para consultoría de expedientes, coordinación BIM, modelado hidráulico, presupuestos S10/Delphin y desarrollo de aplicaciones a medida. Lima, Perú — abierto a trabajo remoto.
+          Disponible para consultorÃ­a de expedientes, coordinaciÃ³n BIM, modelado hidrÃ¡ulico, presupuestos S10/Delphin y desarrollo de aplicaciones a medida. Lima, PerÃº â€” abierto a trabajo remoto.
         </p>
 
         <div class="space-y-4">
@@ -1224,13 +1224,13 @@
           </a>
 
 
-          <a href="mailto:miguelefus@gmail.com" class="flex items-center gap-5 py-4 border-b group transition-colors hover:border-[oklch(0.78_0.14_65)]" style="border-color: var(--line);">
+          <a href="mailto:contacto.lmingenieria@gmail.com" class="flex items-center gap-5 py-4 border-b group transition-colors hover:border-[oklch(0.78_0.14_65)]" style="border-color: var(--line);">
             <div class="w-12 h-12 border flex items-center justify-center transition-colors group-hover:border-[oklch(0.78_0.14_65)] group-hover:text-[oklch(0.78_0.14_65)]" style="border-color: var(--line); color: var(--text);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>
             </div>
             <div class="flex-1">
-              <div class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">Correo personal</div>
-              <div class="text-lg">miguelefus@gmail.com</div>
+              <div class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">Correo de contacto</div>
+              <div class="text-lg">contacto.lmingenieria@gmail.com</div>
             </div>
             <svg width="20" height="20" viewBox="0 0 14 14" fill="none" style="color: var(--text-dim);" class="group-hover:!text-[oklch(0.78_0.14_65)] transition-colors"><path d="M1 13L13 1m0 0H4m9 0v9" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
           </a>
@@ -1241,8 +1241,8 @@
       <!-- Form -->
       <div class="lg:col-span-5">
         <div class="card p-8 lg:p-10 brackets">
-          <div class="coord mb-6">N.07 · Formulario</div>
-          <h3 class="serif text-2xl mb-8">Cuéntame del proyecto.</h3>
+          <div class="coord mb-6">N.07 Â· Formulario</div>
+          <h3 class="serif text-2xl mb-8">CuÃ©ntame del proyecto.</h3>
           <form id="contactForm" class="space-y-6">
             <div>
               <label class="mono text-[0.62rem] uppercase tracking-[0.18em] block mb-1" style="color: var(--muted);">Nombre</label>
@@ -1277,11 +1277,11 @@
     <div class="flex flex-wrap items-center justify-between gap-6">
       <div class="flex items-center gap-3">
         <div class="logo-bezel" style="width:32px; height:32px;">
-          <img src="imagenes/lm_ingenieria/marca_lm/logo.png" alt="LM Ingeniería" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=&quot;serif&quot; style=&quot;color: var(--accent); font-size: 1.1rem;&quot;>LM</span>';">
+          <img src="imagenes/lm_ingenieria/marca_lm/logo.png" alt="LM IngenierÃ­a" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=&quot;serif&quot; style=&quot;color: var(--accent); font-size: 1.1rem;&quot;>LM</span>';">
         </div>
         <div>
           <div class="text-sm font-medium">Luis Miguel Cruz Efus</div>
-          <div class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">CIP 339195 · Lima, Perú</div>
+          <div class="mono text-[0.62rem] uppercase tracking-[0.18em]" style="color: var(--muted);">CIP 339195 Â· Lima, PerÃº</div>
         </div>
       </div>
       <div class="flex items-center gap-2">
@@ -1296,7 +1296,7 @@
         </a>
       </div>
       <div class="mono text-xs uppercase tracking-[0.14em] w-full md:w-auto md:text-right" style="color: var(--muted);">
-        © 2026 · Portafolio rev.02
+        Â© 2026 Â· Portafolio rev.02
       </div>
     </div>
   </div>
@@ -1322,7 +1322,7 @@
     mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
   }
 
-  // Contact form → WhatsApp
+  // Contact form â†’ WhatsApp
   document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const f = new FormData(e.target);

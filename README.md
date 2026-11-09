@@ -134,7 +134,7 @@ Las rutas y nombres de archivo son **sensibles a mayúsculas** en el servidor: `
 - [ ] **Regenerar la carátula de Agentes de IA**: la actual anuncia «agente secundario que vigila
       mercados», «histórico y cambios» y «alertas automáticas WhatsApp / correo». El agente del SEACE
       no tiene ninguna de esas tres cosas y el texto del sitio ya no las menciona.
-- [x] Correo de contacto confirmado: **`miguelefus@gmail.com`** es el único funcional. No debe
+- [x] Correo de contacto confirmado: **`contacto.lmingenieria@gmail.com`** es el único funcional. No debe
       aparecer ningún otro en el sitio.
 - [x] Redes sociales: solo WhatsApp, LinkedIn y YouTube (más GitHub en el `sameAs` del JSON-LD).
       **Sin Facebook ni Instagram** — no volver a añadirlos.
